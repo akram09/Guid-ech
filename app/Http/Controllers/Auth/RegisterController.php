@@ -46,12 +46,16 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function validator(array $data)      /* fonction systeme de validation des champs dans le formulaire d,inscription*/
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'country' => ['required'],
+            'city' => ['required'],
+            'address' => ['required'],
+
         ]);
     }
 
@@ -61,12 +65,15 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(array $data)     /* fonction creer user dapres les informations rempli dans le formulaire dinscription */
     {
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'country' => $data['country'],
+            'city' => $data['city'],
+            'address' => $data['address'],
         ]);
     }
 }

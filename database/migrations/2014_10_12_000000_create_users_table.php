@@ -11,14 +11,18 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() /* fonction pour creer la migration avc table users */
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email', 250);
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->increments('id');   /* champ id */
+            $table->string('name');     /* champ name */
+            $table->string('email', 250);   /* champ email*/
+            $table->timestamp('email_verified_at')->nullable();     
+            $table->string('password');   /* champ password */
+            $table->string('country');    /* champ country */
+            $table->string('city');      /* champ city */
+            $table->text('address');    /* champ address */
+            
             $table->rememberToken();
             $table->timestamps();
         });
