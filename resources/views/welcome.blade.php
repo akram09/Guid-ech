@@ -7,7 +7,7 @@
         <title>Guid-ech | Accueil</title>
      
 <!--appel des biblio de bootstrap**-->
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
