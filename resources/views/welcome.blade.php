@@ -14,7 +14,7 @@
 
      
 
-        <!-- Styles -
+        <!-- Styles 
         <style>
             html, body {
                 background-color: #9980FA;
@@ -67,6 +67,224 @@
                 margin-bottom: 30px;
             }
         </style-->
+<!-- style d'accueil-->
+
+
+<style>
+body{
+  background-image: url(images/"backgroun.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; 
+}
+
+
+/*style du login and sign up*/
+input{
+   
+	position: relative;
+	right:600px;
+	
+
+}
+button{
+	
+	position: relative;
+	right: 600px;
+	
+
+}
+#login{
+
+	position: relative;
+	right:100px;
+	
+
+}
+#sign{
+	position: relative;
+	right: 95px;
+	
+
+}
+/****************************/
+/*style de la liste*/
+
+.map__liste{
+	position: relative;
+	bottom: 250px;
+	left: 200px;
+	 width: 200px;
+    height: 270px;
+    background-color:#5cabdb;
+    margin-top: 40px;
+    margin-left: 40px;
+	overflow: scroll;
+	overflow-x: hidden;
+
+	list-style-type: none;
+	
+}
+ #list{
+	font-family: "arial";
+	color: black;
+	text-decoration:none;
+
+	
+}
+
+#list:hover{
+	font-size: 20px; 
+	text-decoration:underline;
+	color: #c62b3e
+}
+
+/******************************/
+.map__image{
+
+	width: 40%;
+	position: relative;
+	top: 200px;
+	right:100px;
+	left:800px;
+}
+.map__image path{
+fill: #e29587;
+stroke:#FFF; /*couleur blanche pour les lignes des frontieres entre les wilayas*/
+stroke-width:1px;/*pour rendre les frontieres entre les wilayas plus clair*/ 
+transition: fill 0.3s;
+}
+/*style des wilayas de centre*/
+.map__image , #DZ-22:hover{
+fill: #42b427;}
+.map__image , #DZ-20:hover{
+fill: #42b427;}
+.map__image , #DZ-14:hover{
+fill: #42b427;}
+.map__image , #DZ-17:hover{
+fill: #42b427;}
+.map__image , #DZ-07:hover{
+fill: #42b427;}
+.map__image , #DZ-28:hover{
+fill: #42b427;}
+.map__image , #DZ-05:hover{
+fill: #42b427;}
+.map__image , #DZ-40:hover{
+fill: #42b427;}
+.map__image , #DZ-12:hover{
+fill: #42b427;}
+.map__image , #DZ-04:hover{
+fill: #42b427;}
+.map__image , #DZ-41:hover{
+fill: #42b427;}
+.map__image , #DZ-24:hover{
+fill: #42b427;}
+.map__image , #DZ-25:hover{
+fill: #42b427;}
+.map__image , #DZ-43:hover{
+fill: #42b427;}
+.map__image , #DZ-19:hover{
+fill: #42b427;}
+.map__image , #DZ-34:hover{
+fill: #42b427;}
+.map__image , #DZ-10:hover{
+fill: #42b427;}
+.map__image , #DZ-26:hover{
+fill: #42b427;}
+.map__image , #DZ-38:hover{
+fill: #42b427;}
+.map__image , #DZ-44:hover{
+fill: #42b427;}
+.map__image , #DZ-48:hover{
+fill: #42b427;}
+.map__image , #DZ-38:hover{
+fill: #42b427;}
+.map__image , #DZ-29:hover{
+fill: #42b427;}
+.map__image , #DZ-22:hover{
+fill: #42b427;}
+.map__image , #DZ-09:hover{
+fill: #42b427;}
+
+/*****************************/
+/****styles des wilayas du nord*/
+.map__image , #DZ-31:hover{
+fill: #59b2d0;}
+.map__image , #DZ-13:hover{
+fill: #59b2d0;}
+.map__image , #DZ-46:hover{
+fill: #59b2d0;}
+.map__image , #DZ-16:hover{
+fill: #59b2d0;}
+.map__image , #DZ-15:hover{
+fill: #59b2d0;}
+.map__image , #DZ-27:hover{
+fill: #59b2d0;}
+.map__image , #DZ-02:hover{
+fill: #59b2d0;}
+.map__image , #DZ-42:hover{
+fill: #59b2d0;}
+.map__image , #DZ-35:hover{
+fill: #59b2d0;}
+.map__image , #DZ-06:hover{
+fill: #59b2d0;}
+.map__image , #DZ-18:hover{
+fill: #59b2d0;}
+.map__image , #DZ-21:hover{
+fill: #59b2d0;}
+.map__image , #DZ-23:hover{
+fill: #59b2d0;}
+.map__image , #DZ-36:hover{
+fill: #59b2d0;}
+/****************************/
+
+/*style des wilayas de sud*/
+.map__image  #DZ-03:hover{
+fill: #daa520;
+}
+.map__image, #DZ-30: hover{
+	fill: #daa520;
+}
+.map__image  #DZ-47:hover{
+fill: #daa520;
+}
+.map__image  #DZ-32:hover{
+fill: #daa520;
+}
+.map__image  #DZ-45:hover{
+fill: #daa520;
+}
+.map__image  #DZ-08:hover{
+fill: #daa520;
+}
+.map__image  #DZ-33:hover{
+fill: #daa520;
+}
+.map__image  #DZ-11:hover{
+fill: #daa520;
+}
+.map__image , #DZ-01:hover{
+fill: #daa520;
+}
+
+.map__image  #DZ-37:hover{
+fill: #daa520;
+}
+.map__image  #DZ-39:hover{
+fill: #daa520;
+}
+
+
+/**************************/
+.footer{
+
+background-color: #fff;
+height: 300px;
+
+}
+</style>
+<!--*****************************************************************************************************-->       
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -349,7 +567,7 @@
 
         <footer>
           <div class="footer"> 
-       <p>Its the footer babe</p>
+       <p>Its the footer</p>
 
           </div>
         </footer>
