@@ -72,7 +72,7 @@
 
 <style>
 body{
-  background-image: url(images/"backgroun.png");
+  background-image: url("/images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
