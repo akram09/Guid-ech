@@ -12,61 +12,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-     
-
-        <!-- Styles 
-        <style>
-            html, body {
-                background-color: #9980FA;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style-->
 <!-- style d'accueil-->
 
 
@@ -98,13 +43,13 @@ button{
 #login{
 
 	position: relative;
-	right:100px;
+	left:1200px;
 	
 
 }
 #sign{
 	position: relative;
-	right: 95px;
+	left: 1000px;
 	
 
 }
@@ -137,7 +82,7 @@ button{
 #list:hover{
 	font-size: 20px; 
 	text-decoration:underline;
-	color: #c62b3e
+	color: #c62b3e;
 }
 
 /******************************/
@@ -274,65 +219,115 @@ fill: #daa520;
 .map__image  #DZ-39:hover{
 fill: #daa520;
 }
-
+/**************************/
+   hr {
+  position: relative;
+  top: 20px;
+  width: 1000px;
+height: 0px;
+border: 1px gray solid;
+}
 
 /**************************/
-.footer{
+#copyright{
+        position: relative;
+        left: 0px;
+        top: 50px;
+    }
+    img{
+        height: 60px;
+        width: 70px;
 
-background-color: #fff;
-height: 300px;
+    }
+#team{
+  color: #c62b3e;
+   font-size: 20px;
+  position: relative;
+  left: 1000px;
+  bottom: 120px;
+}
+#team:hover{
+  color: black;
+}
+  
+#findus{
+
+  color: #c62b3e;
+  font-size: 20px;
+  position: relative;
+  bottom: 130px;
+  left: 100px;
+}
+#fb{
+  position: relative;
+  bottom: 70px;
+  height: 50px;
+  width: 50px;
+  right: 10px;
+}
+#insta{
+  position: relative;
+  bottom: 70px;
+  height: 50px;
+  width: 50px;
+  right: 10px;
 
 }
+#git{
+  position: relative;
+  bottom: 70px;
+  height: 50px;
+  width: 50px;
+  right: 10px;
+
+}
+
+
+
+
 </style>
 <!--*****************************************************************************************************-->       
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent"><!--ces classes et id sont speciaux dans la bib de bootsrap--> 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-
+                    <form  class="form-inline my-2 my-lg-0" >
+                  
+                   <a href="{{ route('login') }}" id="login"  class="btn btn-light" >Login</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                  
+                    <a href="{{ route('register') }}"  id="sign"  class="btn btn-light">Sign-up</a>
+                         @endif
+                    </form>   
                     @endauth
                 </div>
             @endif
+        
+    </nav>
 
             <div class="content">
                 <div class="title m-b-md">
-                guidech
                 </div>
-
-               
             </div>
-        </div>
+
 
       <!--*********************************mon code************************************-->
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent"><!--ces classes et id sont speciaux dans la bib de bootsrap--> 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <!--pour ajouter une liste si on veut-->
-    </ul>
+    <!--    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">--><!--ces classes et id sont speciaux dans la bib de bootsrap--> 
+ <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
       <button type="button" class="btn btn-light">OK</button>
     </form>
-  <form  class="form-inline my-2 my-lg-0" >
-          <button id="login" type="button" class="btn btn-light">Login</button>
-          <button id="sign" type="button" class="btn btn-light">Sign-up</button>
-
-
-</form>
-
   </div>
 </nav>
 
-    <!--***************************************************-->
+    -***************************************************-->-->
 
 
 
@@ -565,14 +560,27 @@ height: 300px;
   
     <script src="guidech.js" type="text/javascript"></script>
 
+    <hr>
         <footer>
-          <div class="footer"> 
-       <p>Its the footer</p>
-
-          </div>
-        </footer>
-    
-
+                        <!-- Copyright -->
+                         
+                        <div  id="copyright" class="footer-copyright text-center py-3">© 2019 Copyright:
+                           <h5 class="text"> Developed By "Guid-ech Team" <a href="http://www.esi-sba.dz" > ESI-SBA </a></h5>
+                         <h5 class="text"> Mme B.klouche <a href="http://www.esi-sba.dz/fr/index.php/ecole/annuaire/annuaire-enseignants/236-klouche-badia" > Plus </a></h5>
+                         <h5 class="text"> Mme A.Belalia <a href="http://www.esi-sba.dz/fr/index.php/ecole/annuaire/annuaire-enseignants/238-belalia-amina" > Plus </a></h5>
+                         <img src="images/Esi.jpg">
+                          <!-- Copyright -->
+                        </div>
+                      <a href="#" id="team">Our Team</a>
+                      <a id="findus">Find Us at: </a>
+                      <a href=""> <img id="fb" src="images/facebook.png"></a>
+                      <a href=""> <img id="insta" src="images/Instagram.png"></a> 
+                      <a href=""><img id="git" src="images/Github.png"></a>
+                  
+                     
+                    
+           
+         </footer>
 
  </body>
 </html>
