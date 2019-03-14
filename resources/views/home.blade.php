@@ -28,71 +28,71 @@ body{
 /*style du login and sign up*/
 input{
    
-	position: relative;
-	right:600px;
-	
+    position: relative;
+    right:600px;
+    
 
 }
 button{
-	
-	position: relative;
-	right: 600px;
-	
+    
+    position: relative;
+    right: 600px;
+    
 
 }
 #login{
 
-	position: relative;
-	left:1200px;
-	
+    position: relative;
+    left:1200px;
+    
 
 }
 #sign{
-	position: relative;
-	left: 1000px;
-	
+    position: relative;
+    left: 1000px;
+    
 
 }
 /****************************/
 /*style de la liste*/
 
 .map__liste{
-	position: relative;
-	bottom: 250px;
-	left: 200px;
-	 width: 200px;
+    position: relative;
+    bottom: 250px;
+    left: 200px;
+     width: 200px;
     height: 270px;
     background-color:#5cabdb;
     margin-top: 40px;
     margin-left: 40px;
-	overflow: scroll;
-	overflow-x: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
 
-	list-style-type: none;
-	
+    list-style-type: none;
+    
 }
  #list{
-	font-family: "arial";
-	color: black;
-	text-decoration:none;
+    font-family: "arial";
+    color: black;
+    text-decoration:none;
 
-	
+    
 }
 
 #list:hover{
-	font-size: 20px; 
-	text-decoration:underline;
-	color: #c62b3e;
+    font-size: 20px; 
+    text-decoration:underline;
+    color: #c62b3e;
 }
 
 /******************************/
 .map__image{
 
-	width: 40%;
-	position: relative;
-	top: 200px;
-	right:100px;
-	left:800px;
+    width: 40%;
+    position: relative;
+    top: 200px;
+    right:100px;
+    left:800px;
 }
 .map__image path{
 fill: #e29587;
@@ -189,7 +189,7 @@ fill: #59b2d0;}
 fill: #daa520;
 }
 .map__image, #DZ-30: hover{
-	fill: #daa520;
+    fill: #daa520;
 }
 .map__image  #DZ-47:hover{
 fill: #daa520;
@@ -584,3 +584,65 @@ border: 1px gray solid;
 
  </body>
 </html>
+
+
+@section('content') <!--la partie dynamique pour chaque utilisateur-->
+
+<style>
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+
+<div class="dropdown">
+  <button class="dropbtn">DropDown</button>
+  <div class="dropdown-content">
+    <a href="#">Mon Profil</a>
+    <a href="#">Déconnecter</a>
+    
+  </div>
+</div>
+@endsection
