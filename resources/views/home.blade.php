@@ -28,71 +28,71 @@ body{
 /*style du login and sign up*/
 input{
    
-    position: relative;
-    right:600px;
-    
+	position: relative;
+	right:600px;
+	
 
 }
 button{
-    
-    position: relative;
-    right: 600px;
-    
+	
+	position: relative;
+	right: 600px;
+	
 
 }
 #login{
 
-    position: relative;
-    left:1200px;
-    
+	position: relative;
+	left:1200px;
+	
 
 }
 #sign{
-    position: relative;
-    left: 1000px;
-    
+	position: relative;
+	left: 1000px;
+	
 
 }
 /****************************/
 /*style de la liste*/
 
 .map__liste{
-    position: relative;
-    bottom: 250px;
-    left: 200px;
-     width: 200px;
+	position: relative;
+	bottom: 250px;
+	left: 200px;
+	 width: 200px;
     height: 270px;
     background-color:#5cabdb;
     margin-top: 40px;
     margin-left: 40px;
-    overflow: scroll;
-    overflow-x: hidden;
+	overflow: scroll;
+	overflow-x: hidden;
 
-    list-style-type: none;
-    
+	list-style-type: none;
+	
 }
  #list{
-    font-family: "arial";
-    color: black;
-    text-decoration:none;
+	font-family: "arial";
+	color: black;
+	text-decoration:none;
 
-    
+	
 }
 
 #list:hover{
-    font-size: 20px; 
-    text-decoration:underline;
-    color: #c62b3e;
+	font-size: 20px; 
+	text-decoration:underline;
+	color: #c62b3e;
 }
 
 /******************************/
 .map__image{
 
-    width: 40%;
-    position: relative;
-    top: 200px;
-    right:100px;
-    left:800px;
+	width: 40%;
+	position: relative;
+	top: 200px;
+	right:100px;
+	left:800px;
 }
 .map__image path{
 fill: #e29587;
@@ -189,7 +189,7 @@ fill: #59b2d0;}
 fill: #daa520;
 }
 .map__image, #DZ-30: hover{
-    fill: #daa520;
+	fill: #daa520;
 }
 .map__image  #DZ-47:hover{
 fill: #daa520;
@@ -584,87 +584,3 @@ border: 1px gray solid;
 
  </body>
 </html>
-
-
-@section('content') <!--la partie dynamique pour chaque utilisateur-->
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
-
-<!-- Use any element to open the sidenav -->
-<span onclick="openNav()">open</span>
-
-<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-<div id="main">
-  ...
-</div>
-<style type="text/css">
- /* The side navigation menu */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-<script type="text/javascript">
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-}
-
-</script>
-@endsection
