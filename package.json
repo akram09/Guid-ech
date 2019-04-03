@@ -1,5 +1,5 @@
 {
-  "name": "guidech",
+  "name": "guid-ech",
   "version": "1.0.0",
   "private": true,
   "author": "",
@@ -18,10 +18,13 @@
     "laravel-echo": "^1.5.3",
     "pusher-js": "^4.4.0",
     "vue-multiselect": "^2.1.4",
-    "vuetify": "^1.5.6"
+    "vuetify": "^1.5.7"
   },
   "devDependencies": {
     "axios": "^0.18",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.0.0",
     "cross-env": "^5.2.0",
     "gulp-watch": "^5.0.1",
@@ -37,7 +40,8 @@
     "vue": "^2.6.9",
     "vue-cli-plugin-vuetify": "^0.5.0",
     "vue-template-compiler": "^2.6.9",
-    "vuetify-loader": "^1.0.5"
+    "vuetify-loader": "^1.0.5",
+    "webpack": "^4.29.6"
   },
   "bugs": {
     "url": "https://github.com/wahidmdn13/Guid-ech/issues"
