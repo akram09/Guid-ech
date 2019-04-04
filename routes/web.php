@@ -33,7 +33,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-
 Route::get('/resto', 'RestoController@index')->name('resto');
 Route::post('/reservation','ReservationController@reserve')->name('reservation.reserve');
 Route::post('/contact','ContactController@sendMessage')->name('contact.send');
@@ -56,3 +55,9 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
     Route::get('contact/{id}','ContactController@show')->name('contact.show');
     Route::delete('contact/{id}','ContactController@destroy')->name('contact.destroy');
 });
+Route::get('/vf', 'hotController@vf');
+
+Auth::routes();
+Route::get('/bauti', 'bautController@vf');
+
+Auth::routes();
