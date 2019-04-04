@@ -11,7 +11,9 @@ class CreateBoutiquesClassTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() 
+    
+    
     {
         Schema::create('boutiques_class', function (Blueprint $table) {
             $table->increments('id');

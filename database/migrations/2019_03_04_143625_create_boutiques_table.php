@@ -15,7 +15,15 @@ class CreateBoutiquesTable extends Migration
     {
         Schema::create('boutiques', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('description');
+            $table->string('password');
+            $table->string('email');
+            $table->string('catégorie');
+            $table->string('willaya');
+
             $table->timestamps();
+
         });
     }
 
@@ -29,3 +37,4 @@ class CreateBoutiquesTable extends Migration
         Schema::dropIfExists('boutiques');
     }
 }
+

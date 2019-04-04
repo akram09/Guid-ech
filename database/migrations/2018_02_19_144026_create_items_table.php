@@ -20,9 +20,7 @@ class CreateItemsTable extends Migration
             $table->text('description');
             $table->integer('price');
             $table->string('image');
-            $table->foreign('category_id')
-                ->references('id')->on('categories')
-                ->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
