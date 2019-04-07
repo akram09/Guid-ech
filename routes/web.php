@@ -32,6 +32,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/{wilayas_id}/restaurant', 'RestaurentController@afficher')->name('Restaurant');
+
+Route::get('/{wilayas_id}/Hotel', 'HotelController@afficher')->name('Hotel');
+
+Route::get('/{wilayas_id}/Boutique', 'BoutiqueController@afficher')->name('Boutique');
+Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affichercat')->name('Boutique');
+
+
 
 Route::get('/resto', 'RestoController@index')->name('resto');
 Route::post('/reservation','ReservationController@reserve')->name('reservation.reserve');
@@ -55,9 +63,3 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
     Route::get('contact/{id}','ContactController@show')->name('contact.show');
     Route::delete('contact/{id}','ContactController@destroy')->name('contact.destroy');
 });
-Route::get('/vf', 'hotController@vf');
-
-Auth::routes();
-Route::get('/bauti', 'bautController@vf');
-
-Auth::routes();
