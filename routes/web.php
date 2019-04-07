@@ -63,3 +63,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
     Route::get('contact/{id}','ContactController@show')->name('contact.show');
     Route::delete('contact/{id}','ContactController@destroy')->name('contact.destroy');
 });
+
+Route::get('/vf', 'hotController@vf');
+Auth::routes();
+Route::get('/bauti', 'bautController@vf');
+Auth::routes(); 
