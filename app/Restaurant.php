@@ -16,4 +16,7 @@ class Restaurant extends Model
     public function Resrervation(){
         return $this->HasMany('App/Resrervation');
     }
+    public function Slider(){
+        return $this->hasMany('App/Slider');
+    }
 }

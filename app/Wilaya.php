@@ -21,4 +21,7 @@ class Wilaya extends Model
     public function Boutique(){
         return $this->HasMany('App/Boutique');
     }
+    public function Slider(){
+        return $this->hasMany('App/Slider');
+    }
 }

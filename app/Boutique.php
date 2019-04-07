@@ -13,4 +13,7 @@ class Boutique extends Model
     public function boutiqueclass(){
         return $this->belongsTo('App/boutiqueclass');
     }
+    public function Slider(){
+        return $this->hasMany('App/Slider');
+    }
 }
