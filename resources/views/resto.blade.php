@@ -7,6 +7,8 @@
   
 
     <title>Guid-ech | Restaurant Service </title>
+      <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
           <!-- ========== Links ==========-->
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">

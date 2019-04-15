@@ -9,7 +9,7 @@
             </button>
             <a class="navbar-brand" href="#"> Hello, {{ Auth::user()->name }} </a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="navbar-header">
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">

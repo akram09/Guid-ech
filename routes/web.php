@@ -14,21 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+// authentication===========
 Auth::routes();
-
+//=============================
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+ //email verification =========================================
+Auth::routes(['verify' => true]); 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {  // to test protecting route
+    // Only verified users may enter...
+})->middleware('verified');
+//=====================================================
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -41,15 +39,21 @@ Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affich
 
 
 
+//restoservice   =============================================
+
 Route::get('/resto', 'RestoController@index')->name('resto');
 Route::post('/reservation','ReservationController@reserve')->name('reservation.reserve');
 Route::post('/contact','ContactController@sendMessage')->name('contact.send');
-
-//Route::get('/dashboard', function () {
-   // return view('admin.dashboard');
-// });
+//=========================================================
 
 
+//user profil   ============================================
+Route::get('/profile', 'UserController@profile')->name('profile');
+Route::post('profile', 'UserController@update_avatar');
+//========================================
+
+
+//admin       ===========================================
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], function (){
     Route::get('dashboard', 'DashboardController@index')->name('admin.dashboard');
     Route::resource('slider','SliderController');
@@ -63,7 +67,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], func
     Route::get('contact/{id}','ContactController@show')->name('contact.show');
     Route::delete('contact/{id}','ContactController@destroy')->name('contact.destroy');
 });
-
+//=====================================================
 Route::get('/vf', 'hotController@vf');
 Auth::routes();
 Route::get('/bauti', 'bautController@vf');

@@ -1,0 +1,160 @@
+.view,body,html{height:100%}@media (max-width:740px){.full-page-intro{height:1000px}}.carousel{height:50%}.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item{height:100%}@media (max-width:776px){.carousel{height:100%}}.navbar{background-color:rgba(0,0,0,.5)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
+
+
+
+
+.map__image{
+
+	width: 110%;
+/*position: relative; */
+/*	top: -200px;*/
+	right:50px;
+	left:900px;
+}
+.map__image path{
+fill: #e29587;
+stroke:#FFF; /*couleur blanche pour les lignes des frontieres entre les wilayas*/
+stroke-width:1px;/*pour rendre les frontieres entre les wilayas plus clair*/ 
+transition: fill 0.3s;
+}
+/*style des wilayas de centre*/
+.map__image , #DZ-22:hover{
+fill: #42b427;}
+.map__image , #DZ-20:hover{
+fill: #42b427;}
+.map__image , #DZ-14:hover{
+fill: #42b427;}
+.map__image , #DZ-17:hover{
+fill: #42b427;}
+.map__image , #DZ-07:hover{
+fill: #42b427;}
+.map__image , #DZ-28:hover{
+fill: #42b427;}
+.map__image , #DZ-05:hover{
+fill: #42b427;}
+.map__image , #DZ-40:hover{
+fill: #42b427;}
+.map__image , #DZ-12:hover{
+fill: #42b427;}
+.map__image , #DZ-04:hover{
+fill: #42b427;}
+.map__image , #DZ-41:hover{
+fill: #42b427;}
+.map__image , #DZ-24:hover{
+fill: #42b427;}
+.map__image , #DZ-25:hover{
+fill: #42b427;}
+.map__image , #DZ-43:hover{
+fill: #42b427;}
+.map__image , #DZ-19:hover{
+fill: #42b427;}
+.map__image , #DZ-34:hover{
+fill: #42b427;}
+.map__image , #DZ-10:hover{
+fill: #42b427;}
+.map__image , #DZ-26:hover{
+fill: #42b427;}
+.map__image , #DZ-38:hover{
+fill: #42b427;}
+.map__image , #DZ-44:hover{
+fill: #42b427;}
+.map__image , #DZ-48:hover{
+fill: #42b427;}
+.map__image , #DZ-38:hover{
+fill: #42b427;}
+.map__image , #DZ-29:hover{
+fill: #42b427;}
+.map__image , #DZ-22:hover{
+fill: #42b427;}
+.map__image , #DZ-09:hover{
+fill: #42b427;}
+
+/*****************************/
+/****styles des wilayas du nord*/
+.map__image , #DZ-31:hover{
+fill: #59b2d0;}
+.map__image , #DZ-13:hover{
+fill: #59b2d0;}
+.map__image , #DZ-46:hover{
+fill: #59b2d0;}
+.map__image , #DZ-16:hover{
+fill: #59b2d0;}
+.map__image , #DZ-15:hover{
+fill: #59b2d0;}
+.map__image , #DZ-27:hover{
+fill: #59b2d0;}
+.map__image , #DZ-02:hover{
+fill: #59b2d0;}
+.map__image , #DZ-42:hover{
+fill: #59b2d0;}
+.map__image , #DZ-35:hover{
+fill: #59b2d0;}
+.map__image , #DZ-06:hover{
+fill: #59b2d0;}
+.map__image , #DZ-18:hover{
+fill: #59b2d0;}
+.map__image , #DZ-21:hover{
+fill: #59b2d0;}
+.map__image , #DZ-23:hover{
+fill: #59b2d0;}
+.map__image , #DZ-36:hover{
+fill: #59b2d0;}
+/****************************/
+
+/*style des wilayas de sud*/
+.map__image  #DZ-03:hover{
+fill: #daa520;
+}
+.map__image, #DZ-30: hover{
+	fill: #daa520;
+}
+.map__image  #DZ-47:hover{
+fill: #daa520;
+}
+.map__image  #DZ-32:hover{
+fill: #daa520;
+}
+.map__image  #DZ-45:hover{
+fill: #daa520;
+}
+.map__image  #DZ-08:hover{
+fill: #daa520;
+}
+.map__image  #DZ-33:hover{
+fill: #daa520;
+}
+.map__image  #DZ-11:hover{
+fill: #daa520;
+}
+.map__image , #DZ-01:hover{
+fill: #daa520;
+}
+
+.map__image  #DZ-37:hover{
+fill: #daa520;
+}
+.map__image  #DZ-39:hover{
+fill: #daa520;
+}
+
+
+.active-purple-4 input[type=text]:focus:not([readonly]) {
+    border: 1px solid #ce93d8;
+    box-shadow: 0 0 0 1px #ce93d8;
+}
+
+
+.map-container-section {   /*map*/
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container-section iframe {
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+

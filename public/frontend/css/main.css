@@ -157,7 +157,7 @@ input.empty, textarea.empty {
 */
 .custom-navbar-default
 {
-	background-color: #b33939 ;
+	background-color: rgba(0,0,0,.3);
 	
 	border: 0px;
 	margin: 0px;
@@ -217,7 +217,7 @@ input.empty, textarea.empty {
 
 .navbar-default .navbar-collapse {
 	border-color: #eb4d4b;
-	background-color: #b33939;
+	background-color: rgba(0,0,0,.3);
 }
 
 /*
