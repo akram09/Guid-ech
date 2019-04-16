@@ -59,7 +59,9 @@
       <a class="navbar-brand" href="#" target="_blank">
         <strong>Guidech</strong>
       </a>
-
+<p style="font-weight:300;font-size:0.75rem">Password Change</p>
+&nbsp; &nbsp;
+&nbsp;
       <!-- Collapse -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -110,7 +112,7 @@
         
 
            <div class="dropdown">
-             <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
+             <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
                   <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
               </a>
 

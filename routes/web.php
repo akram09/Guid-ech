@@ -52,6 +52,10 @@ Route::get('/profile', 'UserController@profile')->name('profile');
 Route::post('profile', 'UserController@update_avatar');
 //========================================
 
+//password change ==========================================
+Route::get('/changePassword','HomeController@showChangePasswordForm');
+Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
+//================================================================
 
 //admin       ===========================================
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'admin'], function (){
