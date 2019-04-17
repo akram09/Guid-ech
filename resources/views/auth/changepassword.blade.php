@@ -180,9 +180,9 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-info">
+                            <div class="md-form mb-5">
+                                <div class="text-center mb-3">
+                                    <button type="submit" class="btn btn-info btn-block btn-rounded z-depth-1a">
                                         Change Password
                                     </button>
                                 </div>

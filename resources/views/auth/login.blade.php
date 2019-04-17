@@ -1,124 +1,163 @@
-
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Login</title>
+  <!-- CSRF Token -->
+ <meta name="csrf-token" content="{{ csrf_token() }}">
+ <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ asset('affichageDisplay/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
+  <!-- our custom styles (optional) ila bghitou tmodifiw -->
+  <link href="{{ asset('affichageDisplay/css/style.min.css') }}" rel="stylesheet">
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @media (max-width: 740px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 1000px;
+      }
+    }
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    @media (min-width: 800px) and (max-width: 850px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 650px;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+           .form-elegant .font-small {
+    font-size: 0.8rem; }
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+.form-elegant .modal-header {
+    border-bottom: none; }
 
-    <style>           /** style css pour les classes */
-         body{               /* desing d page font et background hoggar*/
-            margin: 0;    
-            padding: 0;
-            font-family: 'Comic sans MS';
-            background: url("/images/background.png"); 
-            background-position:center;
-            background-size:cover;}
-        .register-top-login {      /* positionnement de form */
-            margin-top:50px;
-            margin-right:100px;
-            margin-left:350px;
-        }
-        .register-container {    /* design le forme */
-            background:url("/images/background.png");; 
-            background-size:cover; 
-            border:2px solid:#c44569 ;
-            border-radius:8px; 
-            margin:0 auto; 
-            padding:50px;
-            
-        }
-        .no-padding { padding:0px; margin-left:60px;}   /* le champ remeber me */
-        .form-check-input{ margin-left:45px;} /*positionnement de check input du champ Remember me */
-        .margin-style{margin-top:2px;} /* le champ remember me */
-        .text-color{color:#130f40 ;margin-left:45px;}    /* coleur et postionnement de mot txt Guid-ech   */ 
-        a.forgot-link{color:#6D214F; margin-left:35px; text-decoration:none;}  /* lien forget password */
-        a.forgot-link:hover{color:#130f40} /* l'effet hover sur lien forget password */
-        .col-sm-12 input[type = "email"],.col-sm-12 input[type = "password"]{   /* design pour les champs e-mail et mot de de passe */
-              border:0;
-              background: url("/images/background.png");
-              background-size:cover;
-              display: block;
-              margin: 20px auto;
-              text-align: center;
-              border: 2px solid #130f40; 
-              padding: 14px 10px;
-              width: 200px;
-              outline: none;
-              color: #130f40;
-              border-radius: 24px;
-              transition:0.25s;
-            }
-        .col-sm-12 input[type = "email"]:focus,.col-sm-12 input[type = "password"]:focus{  /* application de l'effet focus sur les chaps email et mot de passe */
-                  width: 280px;
-                  border-color: #c44569; }
+.modal-dialog .form-elegant .btn .fab {
+    color: #2196f3!important; }
 
-        .col-sm-12 input[type = "submit"]{     /* design le button LOG IN */
-                  border:0;
-                  background: none;
-                  display: block;
-                  margin: 0px auto;
-                  text-align: center;
-                  border: 2px solid #130f40;
-                  padding: 7px 20px;
-                  outline: none;
-                  color:;
-                  border-radius: 24px;
-                  transition: 0.25s;
-                  cursor: pointer;
-}
-        .col-sm-12 input[type = "submit"]:hover{   /* application de l'effet hover sur le button LOG IN */
-                 background:#c44569 ;
-} 
-        .text{    /* couleur de txt au dessus de form */
-            color:#0c2461;
-            margin-left:30px
-        }
-       
-
-
-    </style>
-
+.form-elegant .modal-body, .form-elegant .modal-footer {
+    font-weight: 400; }
+  </style>
 </head>
-        <div class="col-sm-4"></div>
+
+<body>
+
+  <!-- Navbar  -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="#" target="_blank">
+        <strong>Guidech</strong>
+     </a>
+    <p style="font-weight:300;font-size:0.75rem">Login</p>
+&nbsp; &nbsp;
+&nbsp;
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/') }}"><i class="fas fa-arrow-circle-left"></i>back
+              
+            </a>
+          </li>
+          
+
+        </ul>
+        <!-- Collapsible content -->
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                
+
+  </div>
+  <!-- Collapsible content -->
+
+         
+
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Full Page Intro -->
+  <div class="view full-page-intro" style="background-image: url('/images/alg1.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
+  <div class="col-sm-4"></div>
             
              <div class="col-sm-4 register-top-login">
-                
+                <!-- Modal -->
+                    <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+
+                          <div class="modal-dialog" role="document">
+                             <!--Content-->
+                                 <div class="modal-content form-elegant">
+                           <!--Header-->
+                          <div class="modal-header text-center">
+                          <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                          </button>
+                           </div>
+                            <!--Body-->
+                            <div class="modal-body mx-4">
+
                     <form class= "form-horizontal register-container tb-padding" role="form" method="POST" action="{{ route('login') }}"> <!-- forme de login avec la meth POST -->
                         @csrf    <!-- génération de token -->
  
-                        <div class="form-group"> <!-- le champ text login to Guid-ech -->
-                                 <div class="col-sm-12">
-                                     <h3 class="text"><span class="text-color">Guid-ech</span></h3>
-                                 </div>
-                         </div>
+                       
 
 
 
 
 
-
-
-                        <div class="form-group ">  <!-- le champ e-mail de l'utilisateur -->
+                        <div class="md-form mb-5">  <!-- le champ e-mail de l'utilisateur -->
                             
 
                             <div class="col-sm-12">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder ="Email">
-
+                                <input id="Form-email1" type="email" class="form-control validate" name="email" value="{{ old('email') }}">
+                                          <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
                                 @if ($errors->has('email'))  <!-- errors= tableau des erreurs pour le champ email--> <!-- generation de erreurs de saisi-->
                                     <span class="help-block" > <!-- "help-block" est une classe de bootstrap pour pour indiquer un bloc  texte d'aide pour un contrôle de formulaire donné-->
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -127,11 +166,12 @@
                             </div>
                         </div>
 
-                        <div class="form-group "> <!-- le champ mot de passe de l'utilisateur -->
+                        <div class="md-form pb-3"> <!-- le champ mot de passe de l'utilisateur -->
                             
 
-                            <div class="col-sm-12">
-                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                             <div class="col-sm-12">
+                                <input id="Form-pass" type="password" class="form-control validate" name="password" >
+                                <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
 
                                 @if ($errors->has('password'))  <!-- errors= tableau des erreurs pour le champ mot de passe--> <!-- generation de erreurs de saisi-->
                                     <span class="help-block" >
@@ -139,49 +179,98 @@
                                     </span>
                                 @endif
                             </div>
+                            <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="{{ route('password.request') }}" class="blue-text ml-1">
+                                                          Password?</a></p>
                         </div>
 
                         <div class="form-group"> <!-- le champ mémoriser  l'utilisateur -->
-                            <div class="col-xs-2">  <!-- classe col extra small 2 -->
+                            <div class="form-check">  
                                 
-                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>   <!-- condition c la valeur de la meth old est remember donc verifier ca -->
+                                <input id="materialIndeterminate2" checked class="form-check-input" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>  
 
-                                <div class="col-xs-10 no-padding margin-style">Remember me</div>     <!-- utilisation des classes col extra small 10 et no-padding et margin style pour le txt Remember me -->
+                               <label class="form-check-label" for="materialIndeterminate2">Remember me</label>   
                                 
                             </div>
                         </div>
 
-                        <div class="form-group"> <!-- pour le button login -->
-                            <div class="col-sm-12">
-                           
-                            <input type="submit" value="LOG IN" class="btn">  <!--  le button login -->
-                               
+                        
+                         <div class="text-center mb-3">
+          <button type="submit" value="LOG IN" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
+        </div>
+                       
+                       <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
+          with:</p>
+           <div class="row my-3 d-flex justify-content-center">
+          <!--Facebook-->
+          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
+          <!--Twitter-->
+          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
+          <!--Google +-->
+          <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
+        </div>
+        <!--Footer-->
+      <div class="modal-footer mx-5 pt-3 mb-1">
+        <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="{{ route('register') }}" class="blue-text ml-1">
+            Sign Up</a></p>
+      </div>
 
-                            </div>
-                        </div>
-
-                        <div class="form-group"> <!-- le reintialisation de mot de passe -->
-                            <div class="col-sm-12">
-                           
-                            <i class="fa fa-lock"></i> <a href="{{ route('password.request') }}" class="forgot-link">Forgot your password ! </a>     <!-- utilisation l'icon lock de font-awesome et redirection vers le lien de page password reset  -->
-                               
-
-                                  
-                                   
-                            </div>
-
-                        </div>
+                    
                     </form>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                             <h5 class="text"> D'ont have an account !! <a href="{{ route('register') }}" > Sign up </a>
-                    <h5 class="text"> Developed By "Guid-ech Team" <a href="www.esi-sba.dz" > ESI-SBA </a></h5>
-                    <h5 class="text"> Mme B.klouche <a href="b.klouche@esi-sba.dz" > G-mail </a></h5>
-                
-            </div>
-        
-            </html>
+
+                  </div><!--body-->
+
+                     </div><!--Content-->
+                    </div>
+                    </div>
+                 <!-- Modal -->
+                    
+          
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm">Launch
+    modal Login Form</a>
+</div>      
+         
+    </div>
+    <!-- Mask & flexbox options-->
+
+  </div>
+  <!-- Full Page Intro -->
+
+   </div>
 
 
-           
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+  <!-- SCRIPTS -->
+    <!-- JQuery -->
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/jquery-3.3.1.min.js') }}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/popper.min.js') }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/bootstrap.min.js') }}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+
+</body>
+
+</html>
