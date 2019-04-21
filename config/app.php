@@ -161,8 +161,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Yoeunes\Toastr\ToastrServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
+        Yoeunes\Toastr\ToastrServiceProvider::class,  //notification
+        Intervention\Image\ImageServiceProvider::class,  //user avatar resize
+        Laravel\Socialite\SocialiteServiceProvider::class, // social media login
+        Kryptonit3\Counter\CounterServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -225,7 +227,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Image' => Intervention\Image\Facades\Image::class
+        'Image' => Intervention\Image\Facades\Image::class, // user avatar
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class, // social media login
+        'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
 
     ],
 

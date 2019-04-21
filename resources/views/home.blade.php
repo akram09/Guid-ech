@@ -87,7 +87,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#" target="_blank">bla bla 2</a>
           </li>
-          
+        
 
         </ul>
         <!-- Collapsible content -->
@@ -121,6 +121,9 @@
                               <a class="dropdown-item" href="{{ url('/logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
    </div>
         </div>
+
+
+         
 
 
         </ul>

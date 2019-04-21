@@ -76,6 +76,8 @@
           <li class="nav-item active">
             <a class="nav-link" href="#" target="_blank">bla bla 2</a>
           </li>
+          
+
 
         </ul>
         <!-- Collapsible content -->
@@ -107,6 +109,10 @@
           <li class="nav-item">
            <a href="" data-toggle="modal" data-target="#elegantModalForm" class="nav-link"   ><i class="fas fa-sign-in-alt"></i>Login</a>
 
+          </li>
+
+           <li class="nav-item">
+            <a class="nav-link" target="_blank">visitor counter<i class="fas fa-eye"></i>{{ Counter::showAndCount('welcome') }}</a> <!-- visitor counter for welcome.blade.php i can change it to get all hits for every page on the entire site-->
           </li>
         </ul>
 
@@ -419,6 +425,8 @@
                                   <label for="checkbox624" class="light-blue-text form-check-label">Accept the<a href="#" class="text-primary">
                                  Terms and Conditions</a></label>
                             </div>
+                            <hr>
+
 
                         </div>
 
@@ -432,7 +440,7 @@
           with:</p>
            <div class="row my-3 d-flex justify-content-center">
           <!--Facebook-->
-          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
+          <a type="button" href="{{ url('/auth/redirect/facebook') }}"  class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></a>
           <!--Twitter-->
           <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
           <!--Google +-->
@@ -459,6 +467,7 @@
          
     </div>
      <!---------------------------------------- /sign in form --------------------------------------------->
+<hr>
 
       <!---------------------------------------- /sign upform --------------------------------------------->
 <div class="col-sm-4 register-top-login"> 

@@ -12,7 +12,9 @@
         "brian2694/laravel-toastr": "^5.5",
         "fideloper/proxy": "^4.0",
         "intervention/image": "^2.4",
+        "kryptonit3/counter": "5.2.*",
         "laravel/framework": "5.7.*",
+        "laravel/socialite": "^4.1",
         "laravel/tinker": "^1.0",
         "yoeunes/toastr": "^1.1"
     },

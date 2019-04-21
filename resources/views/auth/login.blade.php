@@ -202,7 +202,7 @@
           with:</p>
            <div class="row my-3 d-flex justify-content-center">
           <!--Facebook-->
-          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
+          <button type="button" href="{{ url('/auth/redirect/facebook') }}" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
           <!--Twitter-->
           <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
           <!--Google +-->

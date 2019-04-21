@@ -19,6 +19,12 @@ Auth::routes();
 //=============================
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+Route::get('/callback/{provider}', 'SocialController@callback');
+
+
+
  //email verification =========================================
 Auth::routes(['verify' => true]); 
 
@@ -36,6 +42,7 @@ Route::get('/{wilayas_id}/Hotel', 'HotelController@afficher')->name('Hotel');
 
 Route::get('/{wilayas_id}/Boutique', 'BoutiqueController@afficher')->name('Boutique');
 Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affichercat')->name('Boutique');
+
 
 
 
@@ -76,3 +83,6 @@ Route::get('/vf', 'hotController@vf');
 Auth::routes();
 Route::get('/bauti', 'bautController@vf');
 Auth::routes(); 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

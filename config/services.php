@@ -40,4 +40,11 @@ return [
         ],
     ],
 
+
+    'facebook' => [
+     'client_id' => '1002366186625761', //app id
+     'client_secret' => 'ac3d24611bbce015dcdceeac1bd067fe', // app secret key
+     'redirect' => 'https://127.0.0.1:8000//Guid-ech/callback/facebook', // redirection url *invalid*
+   ], 
+
 ];
