@@ -32,6 +32,9 @@ class RestoController extends Controller
         $categories = Category::all();
         $items = Item::all();
         $names = Restaurant::where('owner_id', Auth::User()->id)->get();
-        return view('resto',compact('sliders','categories','items','names'));
+        // reservations : Pour les réservations actives
+        $reservations = DB::table('reservations')->where('own_id', Auth::User()->id)
+        ->where('status', '1')->get();
+        return view('resto',compact('sliders','categories','items','names','reservations'));
     }
 }
