@@ -15,6 +15,7 @@ class CreateRestaurantsClassTable extends Migration
     {
         Schema::create('restaurants_class', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('calsse');
             $table->timestamps();
         });
     }

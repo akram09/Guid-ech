@@ -17,6 +17,7 @@ class CreateBoutiquesClassTable extends Migration
     {
         Schema::create('boutiques_class', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('classe');
             $table->timestamps();
         });
     }

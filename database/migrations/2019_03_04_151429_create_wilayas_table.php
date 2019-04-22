@@ -15,7 +15,7 @@ class CreateWilayasTable extends Migration
     {
         Schema::create('wilayas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom');
+            $table->string('name');
             $table->timestamps();
         });
     }

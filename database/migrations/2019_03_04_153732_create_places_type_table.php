@@ -15,6 +15,7 @@ class CreatePlacesTypeTable extends Migration
     {
         Schema::create('places_type', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('type');
             $table->timestamps();
         });
     }
