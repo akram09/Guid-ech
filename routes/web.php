@@ -31,6 +31,7 @@ Auth::routes(['verify' => true]);
 Route::get('/home', function () {  // to test protecting route
     // Only verified users may enter...
 })->middleware('verified');
+Route::get('/logout', 'auth\LoginController@logout');
 //=====================================================
 
 
