@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
+use Auth;
 use App\Category;
 use App\Item;
 use App\Slider;
+use App\Restaurant;
 use Illuminate\Http\Request;
 
 class RestoController extends Controller
@@ -22,13 +24,14 @@ class RestoController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
     public function index()
     {
         $sliders = Slider::all();
         $categories = Category::all();
         $items = Item::all();
-        return view('resto',compact('sliders','categories','items'));
+        $names = Restaurant::where('owner_id', Auth::User()->id)->get();
+        return view('resto',compact('sliders','categories','items','names'));
     }
 }
