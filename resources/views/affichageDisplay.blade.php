@@ -14,6 +14,21 @@
   <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
   <!-- our custom styles (optional) ila bghitou tmodifiw -->
   <link href="css/style.min.css" rel="stylesheet">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<link href="{{ asset('css/preview.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -143,128 +158,34 @@
           <!--Grid column-->
 
           <!--Grid column-->
+          @foreach ($elements as $element)
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
             <h3 class="mb-3 font-weight-bold dark-grey-text">
-              <strong>resto 1</strong>
+              <strong>{{ $element -> name }}</strong>
             </h3>
-            <p class="grey-text">bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blavbla bla bla bla bla bla</p>
+            <p> 
+            <input id="input-1" name="input-1" 
+            class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" 
+            value="{{ $element -> averagerating }}" data-size="xs" disabled="">
+            </p>
             <a href="#" target="_blank"
               class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
             </a>
           </div>
-          <!--Grid column-->
+          @endforeach
 
-        </div>
-        
-        <!--Grid row-->
-
-        <hr class="mb-5">
-
-        <!--Grid row-->
-        <div class="row mt-3 wow fadeIn">
+          {{ $elements -> links() }}
 
           <!--Grid column-->
-          <div class="col-lg-5 col-xl-4 mb-4">
-            <!--Featured image-->
-            <div class="view overlay rounded z-depth-1">
-              <img src="#" class="img-fluid"
-                alt="">
-              <a href="#" target="_blank">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-          </div>
-          <!--Grid column-->
 
-          <!--Grid column-->
-          <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h3 class="mb-3 font-weight-bold dark-grey-text">
-              <strong>resto 2</strong>
-            </h3>
-            <p class="grey-text">bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blavbla bla bla bla bla bla</p>
-            <a href="#" target="_blank"
-              class="btn btn-primary btn-md">Visit
-              <i class="fas fa-play ml-2"></i>
-            </a>
-          </div>
-          <!--Grid column-->
 
         </div>
         <!--Grid row-->
 
         <hr class="mb-5">
 
-        <!--Grid row-->
-        <div class="row wow fadeIn">
-
-          <!--Grid column-->
-          <div class="col-lg-5 col-xl-4 mb-4">
-            <!--Featured image-->
-            <div class="view overlay rounded z-depth-1">
-              <img src="#" class="img-fluid" alt="">
-              <a href="#" target="_blank">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h3 class="mb-3 font-weight-bold dark-grey-text">
-              <strong>resto 3</strong>
-            </h3>
-            <p class="grey-text">bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blavbla bla bla bla bla bla</p>
-            <a href="#" target="_blank" class="btn btn-primary btn-md">visit
-              <i class="fas fa-play ml-2"></i>
-            </a>
-          </div>
-          <!--Grid column-->
-
-        </div>
-        <!--Grid row-->
-
-        <hr class="mb-5">
-
-        <!--Pagination-->
-        <nav class="d-flex justify-content-center wow fadeIn">
-          <ul class="pagination pg-blue">
-
-            <!--Arrow left-->
-            <li class="page-item disabled">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
-              </a>
-            </li>
-
-            <li class="page-item active">
-              <a class="page-link" href="#">1
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">5</a>
-            </li>
-
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+       
         <!--Pagination-->
 
       </section>
