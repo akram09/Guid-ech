@@ -19,4 +19,5 @@ class Restaurant extends Model
     public function Slider(){
         return $this->hasMany('App/Slider');
     }
+    use Rateable;
 }
