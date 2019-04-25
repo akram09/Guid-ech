@@ -20,6 +20,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('adresse');
             $table->integer('owner_id')->unsigned();
             $table->foreign('owner_id')->references('id')->on('users');
+            $table->float('averagerating')->unsigned();
             $table->timestamps();
             
         });
