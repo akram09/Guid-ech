@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravelista\Comments\Commentable;
+
 
 class Restaurant extends Model
 {
@@ -19,5 +21,6 @@ class Restaurant extends Model
     public function Slider(){
         return $this->hasMany('App/Slider');
     }
-    use Rateable;
+    use Rateable, use Commentable;
+
 }

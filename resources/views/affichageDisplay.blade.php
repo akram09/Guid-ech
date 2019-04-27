@@ -172,13 +172,29 @@
               class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
             </a>
+
+            
+
+             <div>                   <!-- comment section -->
+          @comments(['Restaurant' => $element -> id])
+          @endcomments
+            </div>
+
+
+
           </div>
+
+
+
+      
+
           @endforeach
 
           {{ $elements -> links() }}
 
           <!--Grid column-->
 
+        
 
         </div>
         <!--Grid row-->

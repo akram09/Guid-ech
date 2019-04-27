@@ -167,6 +167,7 @@ return [
         Kryptonit3\Counter\CounterServiceProvider::class,
         Ghanem\Rating\RatingServiceProvider::class,
         willvincent\Rateable\RateableServiceProvider::class, //rating system
+       
 
         /*
          * Package Service Providers...
