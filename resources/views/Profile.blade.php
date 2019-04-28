@@ -79,6 +79,7 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link" href="#" target="_blank">About us</a>
           </li>
@@ -88,6 +89,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#" target="_blank">bla bla 2</a>
           </li>
+        -->
 
         </ul>
         <!-- Collapsible content -->
@@ -130,18 +132,20 @@
   </nav>
   <!-- Navbar -->
 
+
   <!-- Full Page Intro -->
-  <div class="view full-page-intro" style="background-image: url('/images/alg2.jpg'); background-repeat: no-repeat; background-size: cover;">
+  <div class="view full-page-intro" style="background-image: url('/images/alger.jpg') ; background-repeat: no-repeat; background-size: cover;">
 
     <!-- Mask & flexbox options-->
-    <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> <!-- user photo update  -->
- <div class="card-body card-body-cascade text-center" style=" background-image: linear-gradient(to right top, #0c091f, #002c4e, #004f67, #007156, #088e19);"><!-- gardient color -->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
+      <!-- user photo update  -->
+ <div class="card-body card-body-cascade text-center" style=" background-image: linear-gradient(to right top, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF);"><!-- gardient color -->
       <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;"> 
 
-            <h2>{{ $user->name }}'s Profile</h2>
+            <h2>{{ $user->name }} Changez votre photo de profil</h2>
             <form enctype="multipart/form-data" action="/profile" method="POST">
                 
                      <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
