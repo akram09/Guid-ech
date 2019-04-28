@@ -24,10 +24,13 @@
     -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
     box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
 
-.form-elegant .z-depth-1-half,
-.form-elegant .btn:hover {
+.form-elegant .z-depth-1-half,.form-elegant .btn:hover
+  {
+
     -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
-    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+    box-shadow: 0 5px 11px 0 
+    rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); 
+  }
 
 .form-elegant .modal-header {
     border-bottom: none; }
@@ -57,10 +60,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Links -->
+      <!-- Links --
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <!-- Left -->
+        <!-- Left --
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">bla bla
@@ -80,6 +83,7 @@
 
 
         </ul>
+      -->
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- search button -->
 
@@ -112,7 +116,7 @@
           </li>
 
            <li class="nav-item">
-            <a class="nav-link" target="_blank">visitor counter<i class="fas fa-eye"></i>{{ Counter::showAndCount('welcome') }}</a> <!-- visitor counter for welcome.blade.php i can change it to get all hits for every page on the entire site-->
+            <a class="nav-link" target="_blank">visiteurs actuels<i class="fas fa-eye"></i>{{ Counter::showAndCount('welcome') }}</a> <!-- visitor counter for welcome.blade.php i can change it to get all hits for every page on the entire site-->
           </li>
         </ul>
 
@@ -124,7 +128,7 @@
   <!-- Navbar -->
 
   <!-- Full Page Intro -->
-  <div class="view full-page-intro" style="background-image: url('/images/alg1.jpg'); background-repeat: no-repeat; background-size: cover;">
+  <div class="view full-page-intro" style="background-image: url('/images/alger.jpg'); background-repeat: no-repeat; background-size: cover;">
 
     <!-- Mask & flexbox options-->
     <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -141,21 +145,21 @@
 <br>
 <br>
 
-            <h1 class="display-4 font-weight-bold">about guid-ech</h1>
+            <h1 class="display-4 font-weight-bold">Choisissez votre déstination..</h1>
 
             <hr class="hr-light">
 
             <p>
-              <strong>bla bla bla bla bla bla bla bla</strong>
+              <strong></strong>
             </p>
 
             <p class="mb-4 d-none d-md-block">
-              <strong>bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</strong>
+              <strong>Passez votre curseur sur les cartes pour voir les wilayas</strong>
             </p>
 
-            <a target="_blank" href="#" class="btn btn-indigo btn-lg">visit
+            <!--<a target="_blank" href="#" class="btn btn-indigo btn-lg">visit
              <i class="far fa-eye"></i>
-            </a>
+            </a>-->
 
           </div>
           <!--Grid column-->
@@ -653,11 +657,11 @@
     <!-- sign up form-->
       
 
-  <!--Main layout-->
+  <!--Main layout-------------------------------------------------------------------------->
   <main>
     <div class="container">
 
-      <!--Section: Main info-->
+      <!---------------------------Section: Main info------------------------------>
       <section class="mt-5 wow fadeIn">
 
         <!--Grid row-->
@@ -666,123 +670,38 @@
           <!--Grid column-->
           <div class="col-md-6 mb-4">
 
-            <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-main.jpg" class="img-fluid z-depth-1-half" alt="">
+            <img src="images/villes.jpg" class="img-fluid z-depth-1-half" 
+            alt="" width="70%">
 
           </div>
           <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-6 mb-4">
+           <div class="col-md-6 mb-4">
 
             <!-- Main heading -->
-            <h3 class="h3 mb-3">bla bla bla la bla</h3>
-            <p>bla bla bla bla bla bla bla bla
-              <strong>Guid-ech</strong> </p>
-            <p>bla bla bla bla bla bla bla bla</p>
+            <h3 class="h3 mb-3">Guidech</h3>
+          <h4> 
+          c'est l'idéal pour vous guidez dans différentes villes d'algérie
+          en vous assurant de trouver tous ce que vous cherchiez :
+          Restaurants, Hôtels, Boutiques, et beaucoup plus...
+          </h4>
             <!-- Main heading -->
-
-            <hr>
-
-            <p>
-              <strong>400+</strong> bla bla bla bla bla bla bla bla
-              <strong>600+</strong>bla bla bla bla bla bla bla bla
-              <strong>74</strong> bla bla bla bla bla bla bla bla
-              <strong>bla bla bla bla bla bla bla bla</strong>
-            </p>
-
-            <!-- CTA -->
-            <a target="_blank" href="#" class="btn btn-indigo btn-md">visit
-             <i class="fas fa-location-arrow"></i>
-            </a>
-
           </div>
           <!--Grid column-->
 
         </div>
+          <!--Grid column-->
+          
         <!--Grid row-->
 
       </section>
-      <!--Section: Main info-->
+      <!-----------------------------Section: Main info------------------------------->
 
       <hr class="my-5">
 
-      <!--Section: Main features & Quick Start-->
+      <!--------------------------------Section: Not enough------------------------------>
       <section>
 
-        <h3 class="h3 text-center mb-5">titre g1</h3>
-
-        <!--Grid row-->
-        <div class="row wow fadeIn">
-
-          <!--Grid column-->
-          <div class="col-lg-6 col-md-12 px-4">
-
-            <!--First row-->
-            <div class="row">
-              <div class="col-1 mr-3">
-                <i class="fas fa-code fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h5 class="feature-title">titre p1</h5>
-                <p class="grey-text">bla bla bla bla bla bla bla bla.</p>
-              </div>
-            </div>
-            <!--/First row-->
-
-            <div style="height:30px"></div>
-
-            <!--Second row-->
-            <div class="row">
-              <div class="col-1 mr-3">
-                <i class="fas fa-book fa-2x blue-text"></i>
-              </div>
-              <div class="col-10">
-                <h5 class="feature-title">titre p2</h5>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
-              </div>
-            </div>
-            <!--/Second row-->
-
-            <div style="height:30px"></div>
-
-            <!--Third row-->
-            <div class="row">
-              <div class="col-1 mr-3">
-                <i class="fas fa-graduation-cap fa-2x cyan-text"></i>
-              </div>
-              <div class="col-10">
-                <h5 class="feature-title">titre p3</h5>
-                <p class="grey-text">bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
-              </div>
-            </div>
-            <!--/Third row-->
-
-          </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-6 col-md-12">
-
-            <p class="h5 text-center mb-4">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
-            <div class="embed-responsive embed-responsive-16by9">
-             
-            </div>
-          </div>
-          <!--/Grid column-->
-
-        </div>
-        <!--/Grid row-->
-
-      </section>
-      <!--Section: Main features & Quick Start-->
-
-      <hr class="my-5">
-
-      <!--Section: Not enough-->
-      <section>
-
-        <h2 class="my-5 h3 text-center">titre g3 </h2>
+        <h2 class="my-5 h3 text-center">Découverons comment fonctionne votre Guidech! </h2>
 
         <!--First row-->
         <div class="row features-small mb-5 mt-3 wow fadeIn">
@@ -795,9 +714,10 @@
                 <i class="fas fa-check-circle fa-2x indigo-text"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</h6>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
+                <h4 class="feature-title">Choix de la ville:</h4>
+                <h6 class="grey-text">
+                   Guidech vous expose une simple manière pour trouver la ville que vouliez visiter avec un simple clique sur la carte d'algérie au dessous!
+                </h6>
                 <div style="height:15px"></div>
               </div>
             </div>
@@ -809,45 +729,24 @@
                 <i class="fas fa-check-circle fa-2x indigo-text"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">titre p4</h6>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
+                <h4 class="feature-title">Offres de Guidech pour visiteur</h4>
+                <h6 class="grey-text">
+                  Avec un design simple et utile on vous propose dans chaque ville tous ce qu'il faut visiter si vous êtes un visiteur , des lieux touristiques, des hôtels , des restaurants et memes des boutiques vous pouvez aussi voir quelques infos historiques de la ville choisis.
+                </h6>
                 <div style="height:15px"></div>
               </div>
             </div>
             <!--/Second row-->
 
-            <!--Third row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">titre p5</h6>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Third row-->
+            
 
-            <!--Fourth row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">titre p6</h6>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Fourth row-->
+            
           </div>
           <!--/First column-->
 
           <!--Second column-->
           <div class="col-md-4 flex-center">
-            <img src="https://mdbootstrap.com/img/Others/screens.png" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid">
+            <img src="images/gf.jpg" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid">
           </div>
           <!--/Second column-->
 
@@ -859,75 +758,129 @@
                 <i class="fas fa-check-circle fa-2x indigo-text"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">titre p7</h6>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
+                <h4 class="feature-title">Offres Guidech pour utilisateur</h4>
+                <h6 class="grey-text">   Quand vous inscrivez gratuitement vous aurez la possibilité d'évaluer un restaurant, hotel ou boutique et même envoyer votre feedback en méssage, vous aurez aussi accés à la carte de localisation  </h6>
                 <div style="height:15px"></div>
               </div>
             </div>
             <!--/First row-->
 
-            <!--Second row-->
+            <!--second row-->
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-check-circle fa-2x indigo-text"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">titre p8</h6>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
+                <h4 class="feature-title">Localisation de Guidech</h4>
+                <h6 class="grey-text">Vous quelques êtes part et vous voulez trouvez tous les boutiques , hôtels ou restaurants autourt de vous alors notre système de localisation va détecter ça pour vous vous devez qu'insérer votre emplacement et voir tous ce qui est disponible</h6>
                 <div style="height:15px"></div>
               </div>
             </div>
-            <!--/Second row-->
+            <!--/second row-->
 
-            <!--Third row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">titre p10</h6>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Third row-->
+            
 
-            <!--Fourth row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">titre p11</h6>
-                <p class="grey-text">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Fourth row-->
           </div>
           <!--/Third column-->
 
         </div>
         <!--/First row-->
-
+        <h2> Pour plus d'informations sur le fonctionnement de Guidech <a href="#">Cliquez ici</a></h2>
       </section>
-      <!--Section: Not enough-->
+      <!----------------------------------------Section: Not enough------------------------>
+
+      <hr class="my-5">
+
+      <!--------------------------Section: Main features & Quick Start---------------->
+      <section>
+
+        <h3 class="h3 text-center mb-5">Première visite pour une ville?</h3>
+        <h5>On vous propose quelques conseils:</h5>
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 px-4">
+
+            <!--First row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+               <img src="images/qst.png" width="250%">
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Conseil1</h5>
+                <p>le contenu de la conseil</p>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <div style="height:30px"></div>
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+               <img src="images/qst.png" width="250%">
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Conseil2</h5>
+                <p>le contenu de la conseil</p>
+              </div>
+            </div>
+            <!--/Second row-->
+
+            <div style="height:30px"></div>
+
+            <!--Third row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+               <img src="images/qst.png" width="250%">
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Conseil3</h5>
+                <p>contenu de la conseil</p>
+              </div>
+              <h2>Pour plus de conseils et d'articles de ce type <a href="#">Cliquez ici</a></h2>
+
+            </div>
+            <!--/Third row-->
+          </div>
+
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+              <img src="images/row2.jpg" width="85%">
+            <div class="embed-responsive embed-responsive-16by9">
+             
+            </div>
+
+          </div>
+          <!--/Grid column-->
+        </div>
+        <!--/Grid row-->
+    
+      </section>
+      <!----------------------------Section: Main features & Quick Start------------------>
 
       <hr class="mb-5">
 
-      <!--Section: More-->
+      <!---------------------------------------Section: More------------------------------->
+      <!--
       <section>
 
         <h2 class="my-5 h3 text-center">...and even more</h2>
-
+       -->
         <!--First row-->
+        <!--
         <div class="row features-small mt-5 wow fadeIn">
-
+        -->
           <!--Grid column-->
+          <!--
           <div class="col-xl-3 col-lg-6">
+          -->
             <!--Grid row-->
+            <!--
             <div class="row">
               <div class="col-2">
                 <i class="fab fa-firefox fa-2x mb-1 indigo-text" aria-hidden="true"></i>
@@ -938,13 +891,19 @@
                 </p>
               </div>
             </div>
+          -->
             <!--/Grid row-->
+            <!--
           </div>
+        -->
           <!--/Grid column-->
 
           <!--Grid column-->
+          <!--
           <div class="col-xl-3 col-lg-6">
+          -->
             <!--Grid row-->
+            <!--
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-level-up-alt fa-2x mb-1 indigo-text" aria-hidden="true"></i>
@@ -955,13 +914,19 @@
                 </p>
               </div>
             </div>
+          -->
             <!--/Grid row-->
+            <!--
           </div>
+        -->
           <!--/Grid column-->
 
           <!--Grid column-->
+          <!--
           <div class="col-xl-3 col-lg-6">
+          -->
             <!--Grid row-->
+            <!--
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-comments fa-2x mb-1 indigo-text" aria-hidden="true"></i>
@@ -972,13 +937,19 @@
                 </p>
               </div>
             </div>
+          -->
             <!--/Grid row-->
+            <!--
           </div>
+        -->
           <!--/Grid column-->
 
           <!--Grid column-->
+          <!--
           <div class="col-xl-3 col-lg-6">
+          -->
             <!--Grid row-->
+            <!--
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-code fa-2x mb-1 indigo-text" aria-hidden="true"></i>
@@ -989,19 +960,23 @@
                 </p>
               </div>
             </div>
+          -->
             <!--/Grid row-->
+            <!--
           </div>
+        -->
           <!--/Grid column-->
-
+        <!--
         </div>
+      -->
         <!--/First row-->
 
-        <!--Second row-->
-        <div class="row features-small mt-4 wow fadeIn">
+        <!--Second row--
+        <div class="row features-small mt-4 wow fadeIn">-->
 
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
+          <!--Grid column--
+          <div class="col-xl-3 col-lg-6">-->
+            <!--Grid row--
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-cubes fa-2x mb-1 indigo-text" aria-hidden="true"></i>
@@ -1010,14 +985,14 @@
                 <h5 class="feature-title font-bold mb-1">titre p17</h5>
                 <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
               </div>
-            </div>
-            <!--/Grid row-->
-          </div>
+            </div>-->
+            <!--/Grid row--
+          </div>-->
           <!--/Grid column-->
 
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
+          <!--Grid column--
+          <div class="col-xl-3 col-lg-6">-->
+            <!--Grid row--
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
@@ -1027,14 +1002,14 @@
                 <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
                 </p>
               </div>
-            </div>
-            <!--/Grid row-->
-          </div>
+            </div>-->
+            <!--/Grid row--
+          </div>-->
           <!--/Grid column-->
 
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
+          <!--Grid column--
+          <div class="col-xl-3 col-lg-6">-->
+            <!--Grid row--
             <div class="row">
               <div class="col-2">
                 <i class="fas fa-th fa-2x mb-1 indigo-text" aria-hidden="true"></i>
@@ -1043,14 +1018,14 @@
                 <h5 class="feature-title font-bold mb-1">titre p19</h5>
                 <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
               </div>
-            </div>
-            <!--/Grid row-->
-          </div>
+            </div>-->
+            <!--/Grid row--
+          </div>-->
           <!--/Grid column-->
 
-          <!--Grid column-->
-          <div class="col-xl-3 col-lg-6">
-            <!--Grid row-->
+          <!--Grid column--
+          <div class="col-xl-3 col-lg-6">-->
+            <!--Grid row--
             <div class="row">
               <div class="col-2">
                 <i class="far fa-file-code fa-2x mb-1 indigo-text" aria-hidden="true"></i>
@@ -1059,32 +1034,33 @@
                 <h5 class="feature-title font-bold mb-1">titre p20</h5>
                 <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
               </div>
-            </div>
-            <!--/Grid row-->
-          </div>
-          <!--/Grid column-->
+            </div>-->
+            <!--/Grid row--
+          </div>-->
+          <!--/Grid column--
 
-        </div>
-        <!--/Second row-->
+        </div>-->
+        <!--/Second row--
 
-      </section>
-      <!--Section: More-->
+      </section>-->
+      <!--Section: More--
 
-    </div>
-    <div> <!--co;;entqire wyqdq--></div>
-    <section><!-- Section: Features v.1 -->
-<section class="text-center my-5">
+    </div>-->
+    <!--
+    <div> <!--co;;entqire wyqdq--><!--</div>
+    <section><!-- Section: Features v.1 
+<section class="text-center my-5">-->
 
-  <!-- Section heading -->
+  <!-- Section heading -
   <h2 class="h1-responsive font-weight-bold my-5">Why is it so great?</h2>
-  <!-- Section description -->
+  <!-- Section description 
   <p class="lead grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 
-  <!-- Grid row -->
+  <!-- Grid row -
   <div class="row">
 
-    <!-- Grid column -->
+    <!-- Grid column --
     <div class="col-md-4">
 
       <i class="fas fa-chart-area fa-3x red-text"></i>
@@ -1096,7 +1072,7 @@
     </div>
     <!-- Grid column -->
 
-    <!-- Grid column -->
+    <!-- Grid column --
     <div class="col-md-4">
 
       <i class="fas fa-book fa-3x cyan-text"></i>
@@ -1108,7 +1084,7 @@
     </div>
     <!-- Grid column -->
 
-    <!-- Grid column -->
+    <!-- Grid column --
     <div class="col-md-4">
 
       <i class="far fa-comments fa-3x orange-text"></i>
@@ -1118,38 +1094,38 @@
       </p>
 
     </div>
-    <!-- Grid column -->
+    <!-- Grid column --
 
   </div>
-  <!-- Grid row -->
+  <!-- Grid row --
 
 </section>
-<!-- Section: Features v.1 --></section>
+<!-- Section: Features v.1 --</section>-->
   
 
 
 
-    <!-- Section: Testimonials v.2 -->
+    <!-- Section: Testimonials v.2 -
 <section class="text-center my-5">
 
-  <!-- Section heading -->
+  <!-- Section heading --
   <h2 class="h1-responsive font-weight-bold my-5">Testimonials</h2>
 
   <div class="wrapper-carousel-fix">
-    <!-- Carousel Wrapper -->
+    <!-- Carousel Wrapper --
     <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel"
       data-interval="false">
-      <!--Slides-->
+      <!--Slides--
       <div class="carousel-inner" role="listbox">
-        <!--First slide-->
+        <!--First slide--
         <div class="carousel-item active">
           <div class="testimonial">
-            <!--Avatar-->
+            <!--Avatar--
             <div class="avatar mx-auto mb-4">
               <img src="img/wahid.jpg" height=200px width=200px class="rounded-circle img-fluid"
                 alt="First sample avatar image">
             </div>
-            <!--Content-->
+            <!--Content--
             <p>
               <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
               eos
@@ -1159,7 +1135,7 @@
             </p>
             <h4 class="font-weight-bold"></h4>
             <h6 class="font-weight-bold my-3">travaille chez ..</h6>
-            <!--Review-->
+            <!--Review--
             <i class="fas fa-star blue-text"> </i>
             <i class="fas fa-star blue-text"> </i>
             <i class="fas fa-star blue-text"> </i>
@@ -1168,15 +1144,15 @@
           </div>
         </div>
         <!--First slide-->
-        <!--Second slide-->
+        <!--Second slide--
         <div class="carousel-item">
           <div class="testimonial">
-            <!--Avatar-->
+            <!--Avatar--
             <div class="avatar mx-auto mb-4">
               <img src="img/wahid.jpg" height=200px width=200px class="rounded-circle img-fluid"
                 alt="Second sample avatar image">
             </div>
-            <!--Content-->
+            <!--Content--
             <p>
               <i class="fas fa-quote-left"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
               odit
@@ -1185,7 +1161,7 @@
               non numquam eius modi tempora incidunt ut labore. </p>
             <h4 class="font-weight-bold">hiya</h4>
             <h6 class="font-weight-bold my-3">travaille chez ..</h6>
-            <!--Review-->
+            <!--Review--
             <i class="fas fa-star blue-text"> </i>
             <i class="fas fa-star blue-text"> </i>
             <i class="fas fa-star blue-text"> </i>
@@ -1193,16 +1169,16 @@
             <i class="fas fa-star blue-text"> </i>
           </div>
         </div>
-        <!--Second slide-->
-        <!--Third slide-->
+        <!--Second slide--
+        <!--Third slide--
         <div class="carousel-item">
           <div class="testimonial">
-            <!--Avatar-->
+            <!--Avatar--
             <div class="avatar mx-auto mb-4">
               <img src="img/wahid.jpg" height=200px width=200px class="rounded-circle img-fluid"
                 alt="Third sample avatar image">
             </div>
-            <!--Content-->
+            <!--Content--
             <p>
               <i class="fas fa-quote-left"></i> Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
@@ -1210,7 +1186,7 @@
               error sit voluptatem accusantium doloremque laudantium.</p>
             <h4 class="font-weight-bold">howa </h4>
             <h6 class="font-weight-bold my-3">Front-end Developer</h6>
-            <!--Review-->
+            <!--Review--
             <i class="fas fa-star blue-text"> </i>
             <i class="fas fa-star blue-text"> </i>
             <i class="fas fa-star blue-text"> </i>
@@ -1221,7 +1197,7 @@
         <!--Third slide-->
       </div>
       <!--Slides-->
-      <!--Controls-->
+      <!--Controls--
       <a class="carousel-control-prev left carousel-control" href="#carousel-example-1" role="button"
         data-slide="prev">
         <span class="icon-prev" aria-hidden="true"></span>
@@ -1232,12 +1208,12 @@
         <span class="icon-next" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-      <!--Controls-->
+      <!--Controls--
     </div>
-    <!-- Carousel Wrapper -->
+    <!-- Carousel Wrapper --
   </div>
 
-</section>
+</section>-->
 <!-- Section: Testimonials v.2 -->
 <!-- Section: Team v.2 -->
 <section class="team-section text-center my-5">
