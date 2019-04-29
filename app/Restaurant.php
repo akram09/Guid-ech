@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravelista\Comments\Commentable;
+use willvincent\Rateable\Rateable;
 
 
 class Restaurant extends Model
