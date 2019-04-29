@@ -119,8 +119,20 @@
 <div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
   @csrf
   <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
-    <a class="dropdown-item" href="{{ url('/logout') }}"  onclick="event.preventDefault();
-       document.getElementById('logout-form').submit();" ><i class="fas fa-sign-out-alt"></i>Logout</a>
+  <div >
+        <a href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+
+             <button type="button" class="btn btn-danger">Logout</button>
+
+        </a>
+
+     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+    </form>
+</div>
+    
  </div>
         </div>
 
