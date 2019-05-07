@@ -87,3 +87,8 @@ Auth::routes();
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//===== restaurant  localisation 
+
+Route::get('/localisation', function () {
+    return view('localisation');
+});
