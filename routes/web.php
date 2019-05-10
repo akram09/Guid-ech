@@ -92,3 +92,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/localisation', function () {
     return view('localisation');
 });
+
+Route::group(['prefix' => 'GuidechAdmin'], function () {
+    Voyager::routes();
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

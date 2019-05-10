@@ -10,7 +10,7 @@ use Laravelista\Comments\Commenter;
 
 
 
-class User extends Authenticatable implements MustVerifyEmail // email verification
+class User extends \TCG\Voyager\Models\User  implements MustVerifyEmail // email verification
 {
     use Notifiable, Commenter;
 
