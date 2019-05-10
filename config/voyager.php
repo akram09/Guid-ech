@@ -153,7 +153,7 @@ return [
             'App\Widgets\Restaurant',
             'App\Widgets\hotels',
             'App\Widgets\boutique',
-           /* 'App\Widgets\taxi',*/
+            'App\Widgets\taxi',
 
 
         ],

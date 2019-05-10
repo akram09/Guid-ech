@@ -5,7 +5,7 @@ namespace App\Widgets;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
-
+use DB;
 class Taxi extends BaseDimmer
 {
     /**
@@ -21,15 +21,15 @@ class Taxi extends BaseDimmer
      */
     public function run()
     {
-        $count = \App\GuidTaxi::count();
+        $count = DB::table('GuidTaxis')->count();
         $string = trans_choice('Taxi', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-bag',
+            'icon'   => 'voyager-truck',
             'title'  => "{$count} {$string}",
             'text'   => __('voyager::dimmer.user_text', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('Taxi'),
+                'text' => __('View all Taxis'),
                 'link' => route('home'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/03.jpg'),
