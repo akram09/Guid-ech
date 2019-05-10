@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHotelsTable extends Migration
+class CreatehotelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,13 +15,8 @@ class CreateHotelsTable extends Migration
     {
         Schema::create('hotels', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('déscription');
-            $table->string('password');
-            $table->string('email');
-            $table->string('étoiles');
-            $table->integer('owner id')->unsigned();
-            $table->foreign('owner id')->references('id')->on('users');
+            $table->string('Details');
+            $table->string('Himages');
             $table->timestamps();
         });
     }
