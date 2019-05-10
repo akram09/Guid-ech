@@ -125,7 +125,7 @@
             document.getElementById('logout-form').submit();">
 
           <button type="button" class="dropdown-item">
-          <i class="fas fa-user-edit"></i> Logout</button>
+          <i class="fas fa-power-off"></i> Logout</button>
         </a>
 
      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
