@@ -18,7 +18,7 @@ class GuidTaxiController extends Controller
     }
     public function affichertt(){
 
-        $elements = DB::table('GuidTaxi')->get();
+        $elements = DB::table('GuidTaxis')->get();
 
         return view('GuidTaxi' , compact('elements'));
     }
