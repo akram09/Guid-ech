@@ -207,7 +207,7 @@ html,
 <div class="view full-page-intro" style="background-image: url('/images/taxi.jpg') ; background-repeat: no-repeat; background-size: cover;">
 </div>
 <!----------------------->
-<h1 class="my-5 h1 text-center">Voici quelques numéros des taxieurs disponible </h1>
+<h1 class="my-5 h1 text-center">Voici quelques numéros des taxieurs disponibles </h1>
 <!-- Portfolio Gallery Grid -->
 <div class="row">
    @foreach($elements as $element)
