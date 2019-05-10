@@ -93,7 +93,7 @@ Route::get('/localisation', function () {
     return view('localisation');
 });
 
-Route::group(['prefix' => 'GuidechAdmin'], function () {
+Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
