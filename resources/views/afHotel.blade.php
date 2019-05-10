@@ -104,7 +104,8 @@
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
 
-             <button type="button" class="btn btn-danger">Logout</button>
+             <button type="button" class="dropdown-item">
+          <i class="fas fa-power-off"></i> Logout</button>
 
         </a>
 
