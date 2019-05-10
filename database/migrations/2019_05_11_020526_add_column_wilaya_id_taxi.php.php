@@ -13,10 +13,10 @@ class AddColumnWilayaIdTaxi extends Migration
      */
     public function up()
     {
-        Schema::table('GuidTaxi', function (Blueprint $table) {
+        Schema::table('GuidTaxis', function (Blueprint $table) {
             $table->integer('wilaya_id')->unsigned();
-            $table->foreign('wilaya_id')->references('id')->on('wilayas');
-        });
+            $table->foreign('wilaya_id')->references('id')->on('wilayas');    
+                });
     }
 
     /**
@@ -26,9 +26,9 @@ class AddColumnWilayaIdTaxi extends Migration
      */
     public function down()
     {
-        Schema::table('GuidTaxi', function (Blueprint $table) {
-            dropForeign(['wilaya_id']);
-            dropColumn('wilaya_id');
+        Schema::table('GuidTaxis', function (Blueprint $table) {
+             dropForeign(['wilaya_id']);
+             dropColumn('wilaya_id');
         });
     }
 }

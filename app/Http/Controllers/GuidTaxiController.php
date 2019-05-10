@@ -11,14 +11,14 @@ class GuidTaxiController extends Controller
         $this->middleware('auth');
     }
     public function afficher($wilayas_id){
-    	$elements = DB::table('GuidTaxi')->where('wilaya_id', strval($wilayas_id))->paginate(5);
+    	$elements = DB::table('GuidTaxis')->where('wilaya_id', strval($wilayas_id))->paginate(5);
 
         return view('GuidTaxi', compact('elements'));
 
     }
     public function affichertt(){
 
-        $elements = DB::table('GuidTaxi')->get();
+        $elements = DB::table('GuidTaxis')->get();
 
         return view('GuidTaxi' , compact('elements'));
     }
