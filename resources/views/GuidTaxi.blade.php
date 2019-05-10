@@ -5,7 +5,9 @@
 <title>GuidTaxi</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <!-- Bootstrap core CSS -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link href="{{ asset('affichageDisplay/css/bootstrap.min.css') }}" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
@@ -220,7 +222,7 @@ html,
   </div>
   @endforeach
 </div>
-     
+ </div>    
 
 <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
