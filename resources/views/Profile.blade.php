@@ -124,8 +124,8 @@
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
 
-             <button type="button" class="btn btn-danger">Logout</button>
-
+          <button type="button" class="dropdown-item">
+          <i class="fas fa-user-edit"></i> Logout</button>
         </a>
 
      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
