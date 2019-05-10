@@ -18,6 +18,7 @@
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 <style type="text/css">
+body{overflow-x: hidden;}
   h3{
     color: #ffffff;
   }
@@ -125,7 +126,7 @@
   <!-- Navbar ------------------------------------------------------------------->
 
     <!--Main Navigation-->
-<div  style="background-image: url('/images/btq.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 1350px;"> </div>
+<div  style="background-image: url('/images/btq.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 1250px;"> </div>
   <!--Main layout-->
 
 
