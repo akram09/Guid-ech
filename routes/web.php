@@ -92,11 +92,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/localisation', function () {
     return view('localisation');
 });
-
+/*=======================================*/
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
+/*================================================*/
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+/*===================================================*/
+
+/*========================================================================*/
+
+Route::get('lang/{locale}', 'MultilanguageController@index');/*this will ad session language when click to change language*/
