@@ -121,7 +121,8 @@
       <a class="dropdown-item" href="lang/en"><img src="{{ asset('/flag/en.png') }}"> English</a>
       <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="lang/fr"><img src="{{ asset('/flag/fr.png') }}"> francais</a>
-    <a class="dropdown-item" href="lang/ar"><img src="{{ asset('/flag/ar.png') }}"> عربي</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="lang/ar"><img src="{{ asset('/flag/ar.png') }}">  عربي</a>
   
   </div>
 </div>
