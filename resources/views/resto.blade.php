@@ -204,7 +204,7 @@
             <div class=" section-content">
                 <div class="row">
                     <div class="col-md-5 col-sm-6">
-                        <form class="reservation-form" method="post" action="{{ route('reservation.reserve') }}">
+                        <form class="reservation-form" method="post" action="{{ route('reservation.reserve' , [ 'id' => $last ]) }}">
                             @csrf  <!-- ========== token ==========--> 
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
