@@ -28,13 +28,14 @@ class RestoController extends Controller
      */
     public function index()
     {
+        
+        
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        $last = $uriSegments[3];
         $sliders = Slider::all();
         $categories = Category::all();
         $items = Item::all();
-        $names = Restaurant::where('owner_id', Auth::User()->id)->get();
-        // reservations : Pour les réservations actives
-        $reservations = DB::table('reservations')->where('own_id', Auth::User()->id)
-        ->where('status', '1')->get();
-        return view('resto',compact('sliders','categories','items','names','reservations'));
+        
+        return view('resto',compact('sliders','categories','items'));
     }
 }
