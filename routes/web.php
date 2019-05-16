@@ -49,8 +49,8 @@ Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidT
 
 //restoservice   =============================================
 
-Route::get('/resto', 'RestoController@index')->name('resto');
-Route::post('/reservation','ReservationController@reserve')->name('reservation.reserve');
+Route::get('/{wilaya_id}/restaurant/{id}', 'RestoController@index')->name('resto');
+Route::post('/reservation/{id}','ReservationController@reserve')->name('reservation.reserve');
 Route::post('/contact','ContactController@sendMessage')->name('contact.send');
 //=========================================================
 
