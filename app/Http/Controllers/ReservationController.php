@@ -16,12 +16,17 @@ class ReservationController extends Controller
             'email' => 'required|email',
             'dateandtime' => 'required'
         ]);
+        
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        $lasty = $uriSegments[2];
+        
         $reservation = new Reservation();
         $reservation->name = $request->name;
         $reservation->phone = $request->phone;
         $reservation->email = $request->email;
         $reservation->date_and_time = $request->dateandtime;
         $reservation->message = $request->message;
+        $reservation->reservations_id = $lasty;
         $reservation->status = false;
         $reservation->save();
         Toastr::success('Reservation request sent successfully. we will confirm to you shortly','Success',["positionClass" => "toast-top-right"]);
