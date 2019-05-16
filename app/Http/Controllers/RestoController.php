@@ -26,12 +26,15 @@ class RestoController extends Controller
      *
      * @return \Illuminate\Http\Response 
      */
-    public function index()
+    public function index($wilaya_id , $id)
     {
         
         
         $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
         $last = $uriSegments[3];
+        
+        $restaurant = DB::table('restaurants')->where('wilaya_id' , strval($id))
+        ->where('id' , strval($id));
         $sliders = Slider::all();
         $categories = Category::all();
         $items = Item::all();
