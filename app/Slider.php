@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Slider extends Model
 {
-    public function Hotel(){
-        return $this->belongsto('App/Hotel');
-    }
+   
     
     public function Place(){
         return $this->belongsto('App/Place');

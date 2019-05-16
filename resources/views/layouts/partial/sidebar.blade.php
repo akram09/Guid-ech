@@ -2,17 +2,19 @@
 
     <div class="logo">
         <a href="{{ route('admin.dashboard') }}" class="simple-text">
-            Guid-ech Admin Dashboard
+            Guid-ech
         </a>
     </div>
     <div class="sidebar-wrapper">
-        <ul class="nav">
+         <ul class="nav">
+    
             <li class="{{ Request::is('admin/dashboard*') ? 'active': '' }}">
                 <a href="{{ route('admin.dashboard') }}">
                     <i class="material-icons">dashboard</i>
                     <p>Dashboard</p>
                 </a>
             </li>
+          
             <li class="{{ Request::is('admin/slider*') ? 'active': '' }}">
                 <a href="{{ route('slider.index') }}">
                     <i class="material-icons">slideshow</i>
@@ -44,6 +46,7 @@
                 </a>
             </li>
 
-        </ul>
-    </div>
+</ul>
+</div>
+     
 </div>

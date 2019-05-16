@@ -97,7 +97,7 @@
 
                 <form class="form-inline ml-auto">
                  <div class="md-form my-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="text" placeholder="@lang('profile.search')" aria-label="Search">
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i></button>
                </form>
@@ -113,25 +113,27 @@
 
                   <div class="dropdown">
              <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
+                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} 
+                  <span class="caret"></span>
               </a>
 
 <div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
   @csrf
-  <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
+  <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>   @lang('profile.password_change')</a>
   <div >
         <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
 
           <button type="button" class="dropdown-item">
-          <i class="fas fa-power-off"></i> Logout</button>
+          <i class="fas fa-power-off"></i>  @lang('profile.logout')</button>
         </a>
 
      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
     </form>
 </div>
+
     
  </div>
         </div>
@@ -157,7 +159,7 @@
         <div class="col-md-10 col-md-offset-1">
             <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;"> 
 
-            <h2>{{ $user->name }} Changez votre photo de profil</h2>
+            <h2>{{ $user->name }} @lang('profile.photo_up')</h2>
             <form enctype="multipart/form-data" action="/profile" method="POST">
                 
                      <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>

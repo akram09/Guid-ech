@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet"> 
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
-
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
-<link href="{{ asset('css/preview.css') }}" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +15,8 @@
     <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
     <link href="{{ asset('backend/css/material-dashboard.css') }}" rel="stylesheet" />
-    
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="{{ asset('backend/css/demo.css') }}" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
@@ -68,22 +54,22 @@
     <script src="{{ asset('backend/js/perfect-scrollbar.jquery.min.js') }}"></script>
     <!--  Notifications Plugin    -->
     <script src="{{ asset('backend/js/bootstrap-notify.js') }}"></script>
-    
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Material Dashboard javascript methods -->
     <script src="{{ asset('backend/js/material-dashboard.js') }}"></script>
-    
+    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+    <script src="{{ asset('backend/js/demo.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
 
-            
+            // Javascript method's body can be found in assets/js/demos.js
             demo.initDashboardPageCharts();
 
         });
     </script>
-    
+    {!! Toastr::message() !!}
     @stack('scripts')
-
-    
 </body>
 </html>

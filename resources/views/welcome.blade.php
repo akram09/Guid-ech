@@ -91,7 +91,7 @@
 
                 <form class="form-inline ml-auto">
                  <div class="md-form my-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="text" placeholder="@lang('profile.search')" aria-label="Search">
                 </div>
                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i></button>
                </form>
@@ -117,7 +117,7 @@
     
 
   <!--Menu-->
-  <div class="dropdown-menu dropdown-primary">
+  <div class="dropdown-menu " aria-labelledby="dropdownMenu6">
       <a class="dropdown-item" href="lang/en"><img src="{{ asset('/flag/en.png') }}"> English</a>
       <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="lang/fr"><img src="{{ asset('/flag/fr.png') }}"> francais</a>

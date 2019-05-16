@@ -5,7 +5,7 @@
             <script>
                 document.write(new Date().getFullYear())
             </script>
-           by <a href="http://www.esi-sba.com">Guid-ech team</a>, and Developed by <a href="www.esi-sba.com">Guid-ech team</a>
+            Design by <a href="======">=====</a>, and Developed by <a href="***********">**********</a>
         </p>
     </div>
 </footer>

@@ -7,6 +7,7 @@
 @endpush
 
 @section('content')
+
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -17,7 +18,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category">Category / Item</p>
-                         <h3 class="title">{{ $categoryCount }}/{{ $itemCount }} 
+                            <h3 class="title">{{ $categoryCount }}/{{ $itemCount }}
                             </h3>
                         </div>
                         <div class="card-footer">
@@ -35,7 +36,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category">Slider Count</p>
-                          <h3 class="title">{{ $sliderCount }}</h3>  
+                            <h3 class="title">{{ $sliderCount }}</h3>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
@@ -51,7 +52,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category">Reservation</p>
-                            <h3 class="title">{{ $reservations->count() }}</h3> 
+                            <h3 class="title">{{ $reservations->count() }}</h3>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
@@ -67,7 +68,7 @@
                         </div>
                         <div class="card-content">
                             <p class="category">Contact</p>
-                             <h3 class="title">{{ $contactCount }}</h3> 
+                            <h3 class="title">{{ $contactCount }}</h3>
                         </div>
                         <div class="card-footer">
                             <div class="stats">
@@ -94,7 +95,7 @@
                                 <th>Action</th>
                                 </thead>
                                 <tbody>
-                                 @foreach($reservations as $key=>$reservation)
+                                @foreach($reservations as $key=>$reservation)
                                     <tr>
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $reservation->name }}</td>
@@ -128,17 +129,71 @@
                                                     document.getElementById('delete-form-{{ $reservation->id }}').submit();
                                                     }else {
                                                     event.preventDefault();
-                                                    }"><i class="material-icons">delete</i></button> 
+                                                    }"><i class="material-icons">delete</i></button>
+                                        </td>
                                     </tr>
-                                @endforeach 
+                                @endforeach
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
                 </div>
             </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-rose" data-background-color="orange">
+                            <i class="material-icons">collections</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Click  to add </p>
+                            <a href="{{ route('slider.create') }}"><strong>Slider</strong></a>
+                            
+                        </div>
+                        
+                     
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="green">
+                            <i class="material-icons">restaurant</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Click to add</p>
+                            <a href="{{ route('category.create') }}"><strong>Category</strong></a>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="red">
+                            <i class="material-icons">restaurant_menu</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Click to add</p>
+                            <a href="{{ route('item.create') }}"><strong>Item</strong></a>
+
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+
+                
+            </div>
         </div>
+
     </div>
+  
+               
+           
+               
 @endsection
 
 @push('scripts')
@@ -146,7 +201,7 @@
     <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
     <script>
         $(document).ready(function() {
-          $('#table').DataTable();
-       } );
+            $('#table').DataTable();
+        } );
     </script>
 @endpush
