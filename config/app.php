@@ -161,17 +161,19 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+     
+       
+
+        /*
+         * Package Service Providers...
+         */
         Yoeunes\Toastr\ToastrServiceProvider::class,  //notification
         Intervention\Image\ImageServiceProvider::class,  //user avatar resize
         Laravel\Socialite\SocialiteServiceProvider::class, // social media login
         Kryptonit3\Counter\CounterServiceProvider::class,
         Ghanem\Rating\RatingServiceProvider::class,
         willvincent\Rateable\RateableServiceProvider::class, //rating system
-       
-
-        /*
-         * Package Service Providers...
-         */
+        ConsoleTVs\Links\LinksServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -233,6 +235,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class, // user avatar
         'Socialite' => Laravel\Socialite\Facades\Socialite::class, // social media login
         'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class, //visitors counter
+        'Links' => ConsoleTVs\Links\Facades\Links::class,
 
     ],
 

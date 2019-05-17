@@ -10,9 +10,7 @@ class Hotel extends Model
         return $this->belongsto('App/Wilaya');
     }
 
-    public function Slider(){
-        return $this->hasMany('App/Slider');
-    }
+    
 }
 
 

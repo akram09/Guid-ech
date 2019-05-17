@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-
+{!! Links::track(true) !!}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -140,6 +140,7 @@
            <li class="nav-item">
             <a class="nav-link" target="_blank">@lang('welcome.visit_nav')<i class="fas fa-eye"></i>{{ Counter::showAndCount('welcome') }}</a> <!-- visitor counter for welcome.blade.php i can change it to get all hits for every page on the entire site-->
           </li>
+           
         </ul>
 
           

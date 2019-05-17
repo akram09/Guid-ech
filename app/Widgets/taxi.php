@@ -27,7 +27,7 @@ class Taxi extends BaseDimmer
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-truck',
             'title'  => "{$count} {$string}",
-            'text'   => __('voyager::dimmer.user_text', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('Click on button below to view all ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('View all Taxis'),
                 'link' => route('home'),

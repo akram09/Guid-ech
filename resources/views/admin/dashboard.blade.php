@@ -1,4 +1,5 @@
 @extends('layouts.app')
+{!! Links::track(true) !!}
 
 @section('title','Dashboard')
 

@@ -154,6 +154,8 @@ return [
             'App\Widgets\hotels',
             'App\Widgets\boutique',
             'App\Widgets\taxi',
+            'App\Widgets\stat',
+
 
 
         ],
