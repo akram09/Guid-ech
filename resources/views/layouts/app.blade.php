@@ -9,6 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
+  <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
+    
 
     <!-- Styles -->
     <!-- Bootstrap core CSS     -->

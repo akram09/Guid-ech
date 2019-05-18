@@ -7,6 +7,8 @@
   
 
     <title>Guid-ech | Restaurant Service </title>
+  <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
+    
       <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
           <!-- ========== Links ==========-->

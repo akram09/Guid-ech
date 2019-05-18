@@ -3,6 +3,8 @@
   <head>
     <meta charset='utf-8' />
     <title>Guid-ech</title>
+  <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
+    
 
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>welcome</title>
+
+  <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
+
  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -140,7 +143,7 @@
            <li class="nav-item">
             <a class="nav-link" target="_blank">@lang('welcome.visit_nav')<i class="fas fa-eye"></i>{{ Counter::showAndCount('welcome') }}</a> <!-- visitor counter for welcome.blade.php i can change it to get all hits for every page on the entire site-->
           </li>
-           
+
         </ul>
 
           

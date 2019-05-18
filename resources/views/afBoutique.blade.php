@@ -8,6 +8,8 @@
   @foreach($elements as $element)
   <title>Guid  </title>
   @endforeach
+  <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
