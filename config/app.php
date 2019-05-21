@@ -161,12 +161,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-     
-       
-
-        /*
-         * Package Service Providers...
-         */
         Yoeunes\Toastr\ToastrServiceProvider::class,  //notification
         Intervention\Image\ImageServiceProvider::class,  //user avatar resize
         Laravel\Socialite\SocialiteServiceProvider::class, // social media login
@@ -175,6 +169,12 @@ return [
         willvincent\Rateable\RateableServiceProvider::class, //rating system
         ConsoleTVs\Links\LinksServiceProvider::class,
 
+       
+
+        /*
+         * Package Service Providers...
+         */
+        
         /*
          * Application Service Providers...
          */

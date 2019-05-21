@@ -66,12 +66,12 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            // Javascript method's body can be found in assets/js/demos.js
+            
             demo.initDashboardPageCharts();
 
         });
     </script>
-    {!! Toastr::message() !!}
+    @toastr_render
     @stack('scripts')
 </body>
 </html>
