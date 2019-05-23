@@ -206,6 +206,16 @@
             <div class=" section-content">
                 <div class="row">
                     <div class="col-md-5 col-sm-6">
+                    
+                     <?php
+
+                         $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+                         $last = $uriSegments[3];  
+
+
+                        ?>
+                        
+                        
                         <form class="reservation-form" method="post" action="{{ route('reservation.reserve' , [ 'id' => $last ]) }}">
                             @csrf  <!-- ========== token ==========--> 
                             <div class="row">
