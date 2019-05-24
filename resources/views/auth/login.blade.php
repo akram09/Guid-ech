@@ -94,7 +94,7 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/') }}"><i class="fas fa-arrow-circle-left"></i>back
+            <a class="nav-link" href="{{ url('/') }}"><i class="fas fa-arrow-circle-left"></i>Accueil
               
             </a>
           </li>
@@ -119,7 +119,7 @@
   <!-- Navbar -->
 
   <!-- Full Page Intro -->
-  <div class="view full-page-intro" style="background-image: url('/images/alg1.jpg'); background-repeat: no-repeat; background-size: cover;">
+  <div class="view full-page-intro" style="background-image: url('/images/alger.jpg'); background-repeat: no-repeat; background-size: cover;">
 
     <!-- Mask & flexbox options-->
     <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
@@ -226,8 +226,7 @@
                     
           
 <div class="text-center">
-  <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm">Launch
-    modal Login Form</a>
+  <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm"  style="position: relative;right: 250px; bottom: 100px;">s'identifier</a>
 </div>      
          
     </div>
@@ -237,25 +236,6 @@
   <!-- Full Page Intro -->
 
    </div>
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
   <!-- SCRIPTS -->
     <!-- JQuery -->
   <script type="text/javascript" src="{{ asset('affichageDisplay/js/jquery-3.3.1.min.js') }}"></script>
