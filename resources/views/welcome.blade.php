@@ -100,8 +100,8 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="#" target="_blank">
-        <strong>Guidech</strong>
+      <a class="navbar-brand" href="" target="_blank">
+    <img src="{{ asset('/images/G.ico') }}" class="float-right" alt="...">
       </a>
 
       <!-- Collapse -->
@@ -109,31 +109,6 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Links --
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <!-- Left --
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">bla bla
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#" target="_blank">About us</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#" target="_blank">bla bla</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#" target="_blank">bla bla 2</a>
-          </li>
-          
-       
-
-        </ul>
-      -->
 
 
         <!-- Collapsible content -->
@@ -145,6 +120,7 @@
                 </div>
                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i></button>
                </form>
+     
 
   </div>
   <!-- Collapsible content -->
@@ -157,26 +133,7 @@
         <ul class="navbar-nav nav-flex-icons">
          
 
-<!--Dropdown primary-->
-<div class="dropdown">
 
-  <!--Trigger-->
-  <a class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-    aria-haspopup="false" aria-expanded="true">@lang('welcome.language')</a>
-
-    
-
-  <!--Menu-->
-  <div class="dropdown-menu " aria-labelledby="dropdownMenu6">
-      <a class="dropdown-item" href="lang/en"><img src="{{ asset('/flag/en.png') }}"> English</a>
-      <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="lang/fr"><img src="{{ asset('/flag/fr.png') }}"> francais</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="lang/ar"><img src="{{ asset('/flag/ar.png') }}">  عربي</a>
-  
-  </div>
-</div>
-<!--/Dropdown primary-->
           
           <li class="nav-item"> <!-- login & register -->
             <a href="" data-toggle="modal" data-target="#elegantModalForm1" class="nav-link" ><i class="fas fa-user-plus"></i>@lang('welcome.register_nav')</a>
@@ -1569,6 +1526,7 @@
     <!-- Footer Elements -->
     <div class="container">
 
+
       <!--Grid row-->
       <div class="row d-flex justify-content-center">
 
@@ -1587,6 +1545,51 @@
       <!--Grid row-->
 
     </div>
+    <!-- Button trigger modal-->
+<button type="button" class="btn  " style=" margin-left: 682px" aria-haspopup="false" aria-expanded="true" data-toggle="modal" data-target="#modalRelatedContent">@lang('welcome.language')</button>
+
+<!--Modal-->
+<div class="modal fade right" id="modalRelatedContent" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading">@lang('welcome.language')</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+       
+       <div class="row">
+
+      <ul> 
+
+ <li>
+      <a  href="lang/en"><img src="{{ asset('/flag/en.png') }}"> <p class="text-dark">English</p></a>
+ </li>
+ <li>
+      <a href="lang/fr"><img src="{{ asset('/flag/fr.png') }}"> <p class="text-dark">Francais</p></a>
+ </li>
+ <li>
+      <a href="lang/ar"><img src="{{ asset('/flag/ar.png') }}">  <p class="text-dark">Arabe</p></a>
+ </li>
+  
+      </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalRelatedContent-->
 
       <!-- Social buttons -->
       <ul class="list-unstyled list-inline text-center">

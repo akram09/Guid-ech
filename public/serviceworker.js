@@ -8,7 +8,13 @@ var filesToCache = [
     '/images/icons/icon-150x150.png',
     '/images/icons/icon-180x180.png',
     '/images/icons/icon-310x310.png',
-    
+    '/affichageDisplay/css/bootstrap.min.css',
+    '/affichageDisplay/css/mdb.min.css',
+    '/affichageDisplay/css/style.min.css',
+    '/affichageDisplay/js/jquery-3.3.1.min.js',
+    '/affichageDisplay/js/popper.min.js',
+    '/affichageDisplay/js/bootstrap.min.js',
+    '/affichageDisplay/js/mdb.min.js',
 ];
 
 // Cache on install

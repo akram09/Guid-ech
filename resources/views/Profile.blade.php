@@ -155,7 +155,7 @@
     <!-- Mask & flexbox options-->
     <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
       <!-- user photo update  -->
- <div class="card-body card-body-cascade text-center" style=" background-image: linear-gradient(to right top, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF);"><!-- gardient color -->
+ <div class="card-body card-body-cascade text-center" style="  background-image: linear-gradient(to right top, #633a07, #6d4610, #775218, #815f22, #8a6c2b);"><!-- gardient color -->
       <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">

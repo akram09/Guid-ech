@@ -6,8 +6,8 @@ return [
         'name' => 'Guidech',
         'short_name' => 'Gdc',
         'start_url' => '/',
-        'background_color' => '#ffffff',
-        'theme_color' => '#000000',
+        'background_color' => '#2169F3',
+        'theme_color' => '#2169F3',
         'display' => 'standalone',
         'orientation'=> 'any',
         'icons' => [
