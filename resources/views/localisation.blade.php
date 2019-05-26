@@ -278,28 +278,18 @@
   </head>
 
   <body>
-   <!--  <header>
-  	  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-    <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
- </header>  -->
+   <style>
+
+
+
+     #menu {
+         position: absolute;
+         background: #fff;
+         padding: 10px;
+         font-family: 'Open Sans', sans-serif;
+           }
+   </style>
+
 
 
     <div class='sidebar'>
@@ -368,6 +358,18 @@
 
 
     </div>
+    <div id='menu'>
+<input id='streets-v11' type='radio' name='rtoggle' value='streets' checked='checked'>
+<label for='streets'>streets</label>
+<input id='light-v10' type='radio' name='rtoggle' value='light'>
+<label for='light'>light</label>
+<input id='dark-v10' type='radio' name='rtoggle' value='dark'>
+<label for='dark'>dark</label>
+<input id='outdoors-v11' type='radio' name='rtoggle' value='outdoors'>
+<label for='outdoors'>outdoors</label>
+<input id='satellite-v9' type='radio' name='rtoggle' value='satellite'>
+<label for='satellite'>satellite</label>
+</div>
 
 
   <script>
@@ -387,12 +389,36 @@
     // container id specified in the HTML
     container: 'map',
     // style URL
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'mapbox://styles/mapbox/satellite-v9',
     // initial position in [long, lat] format
     center: [-1.316699, 34.881789 ],
     // initial zoom
     zoom: 13
   });
+          // Change the map style.
+   var layerList = document.getElementById('menu');
+   var inputs = layerList.getElementsByTagName('input');
+ 
+        function switchLayer(layer) {
+            var layerId = layer.target.id;
+            map.setStyle('mapbox://styles/mapbox/' + layerId);
+                                     }
+ 
+               for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].onclick = switchLayer;
+                                        }
+       // Add geolocate control to the map.
+map.addControl(new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+}));
+           // View full screen Map
+          map.addControl(new mapboxgl.FullscreenControl());
+          // Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+
       // stores data geojson
     var stores = {
     type: 'FeatureCollection',

@@ -105,3 +105,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*========================================================================*/
 
 Route::get('lang/{locale}', 'MultilanguageController@index');/*this will ad session language when click to change language*/
+Route::get('/dis', function () {
+    return view('dis');
+});
