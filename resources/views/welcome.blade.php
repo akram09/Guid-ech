@@ -101,7 +101,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand" href="" target="_blank">
-    <img src="{{ asset('/images/G.ico') }}" class="float-right" alt="...">
+    <img src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 
       <!-- Collapse -->

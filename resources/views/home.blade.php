@@ -60,8 +60,8 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="#" target="_blank">
-        <strong>Guidech</strong>
+      <a class="navbar-brand" href="" target="_blank">
+    <img src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 <p style="font-weight:300;font-size:0.75rem">Password Change</p>
 &nbsp; &nbsp;

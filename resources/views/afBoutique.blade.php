@@ -38,11 +38,9 @@ body{overflow-x: hidden;}
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="#" target="_blank">
-        <strong style="color: black;">Guidech</strong>
-        
+      <a class="navbar-brand" href="" target="_blank">
+    <img src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
-
       
 &nbsp; &nbsp;
 &nbsp;

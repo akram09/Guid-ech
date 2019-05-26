@@ -57,10 +57,9 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
 
-      <!-- Brand -->
-      <a class="navbar-brand" href="#" target="_blank">
-        <strong>Guidech</strong>
-        
+     <!-- Brand -->
+      <a class="navbar-brand" href="" target="_blank">
+    <img src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
       <p style="font-weight:300;font-size:0.75rem">user Profil</p>
 &nbsp; &nbsp;
