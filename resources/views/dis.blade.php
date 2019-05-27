@@ -13,10 +13,33 @@
     </style>
 </head>
 <body>
+     <style>
+
+
+
+     #menu {
+         position: absolute;
+         background: #fff;
+         padding: 10px;
+         font-family: 'Open Sans', sans-serif;
+           }
+   </style>
 
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js'></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css' />
 <div id='map'></div>
+   <div id='menu'>
+<input id='streets-v11' type='radio' name='rtoggle' value='streets' checked='checked'>
+<label for='streets'>streets</label>
+<input id='light-v10' type='radio' name='rtoggle' value='light'>
+<label for='light'>light</label>
+<input id='dark-v10' type='radio' name='rtoggle' value='dark'>
+<label for='dark'>dark</label>
+<input id='outdoors-v11' type='radio' name='rtoggle' value='outdoors'>
+<label for='outdoors'>outdoors</label>
+<input id='satellite-v9' type='radio' name='rtoggle' value='satellite'>
+<label for='satellite'>satellite</label>
+</div>
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoid2FoaWRtZG4iLCJhIjoiY2p0cnJ4MjczMG16bjN5bXJldWtwcGdrcCJ9.oYj-uNz_AUap9CfyskCupw';
@@ -26,6 +49,7 @@ var map = new mapboxgl.Map({
    center: [-1.316699, 34.881789 ],
     zoom: 13
 });
+    
 
 map.addControl(new MapboxDirections({
     accessToken: mapboxgl.accessToken
