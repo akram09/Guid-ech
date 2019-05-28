@@ -26,6 +26,6 @@ class Restaurant extends Model
     public function User(){
         return $this->belongsTo('App\User');
     }
-    use Rateable; use Commentable;
+    use Rateable; 
 
 }

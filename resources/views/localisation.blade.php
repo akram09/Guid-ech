@@ -272,7 +272,7 @@
               }
           }
 
-      /*add styles for mapboxgl-ctrl-geocoder here*/
+      
 
     </style>
   </head>
@@ -433,13 +433,10 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(213) 699338684 ',
-          phone: '699338684',
           address: 'bab wahran',
           city: 'Tlemcen',
-          country: 'Algeria',
           name: 'le cinq',
-          postalCode: '13000',
-          state: 'Tlm'
+          url: 'http://www.esi-sba.dz'
         }
       },
       {
@@ -453,15 +450,10 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(202) 507-8357',
-          phone: '2025078357',
           address: 'Moussa kazi, Boulevard Aïn Sbaa Ali',
           city: 'Tlemcen',
           name: 'l`equinoxe',
-          country: 'Algeria',
-          
-          postalCode: '13000',
-          state: 'tlm',
-         url: 'http://www.esi-sba.dz'
+          url: 'http://www.esi-sba.dz',
         }
       },
       {
@@ -474,15 +466,12 @@ map.addControl(new mapboxgl.NavigationControl());
           ]
         },
         properties: {
-          phoneFormatted: '(202) 387-9338',
-          phone: '2023879338',
+          phoneFormatted: '(202) 555555555',
           address: 'L`échappatoire, Boulevard Imama, 13000 Mansourah,',
           city: 'Tlemcen',
-          country: 'Algeria',
-          
-          postalCode: '13000',
-          state: 'Tlm'
-        }
+          url: 'http://www.esi-sba.dz',
+          name:'lechapatoire',
+         }
       },
       {
         type: 'Feature',
@@ -495,13 +484,10 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(202) 337-9338',
-          phone: '2023379338',
           address: ' Cafe SLIMANI, Boulevard Imama, 13000 Mansourah,',
           city: 'Tlemcen',
-          country: 'Algeria',
+          url: 'http://www.esi-sba.dz',
           name:'Restaurant Marocain',
-          postalCode: '13000',
-          state: 'Tlm'
         }
       },
       {
@@ -515,14 +501,11 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(202) 547-9338',
-          phone: '2025479338',
           address: ' Le Gourmet, Rue Mohamed Abdellaoui, 13000 Tlemcen',
           city: 'Tlemcen',
-          country: 'Algeria',
-         name:'Le Gourmet',
-          postalCode: '13000',
-          state: 'Tlm'
-        }
+          name:'Le Gourmet',
+          url: 'http://www.esi-sba.dz',
+         }
       },
       {
         type: 'Feature',
@@ -534,12 +517,13 @@ map.addControl(new mapboxgl.NavigationControl());
           ]
         },
         properties: {
+          phoneFormatted: '(202) 547-9338',
           address: ' Naftal, RN 22, 13000 Tlemcen, RADP',
           city: 'Tlemcen',
-          country: 'Algeria',
-          postalCode: '13000',
           name:'La marina',
-          state: 'Tlm'
+          url: 'http://www.esi-sba.dz',
+
+          
         }
       },
       {
@@ -553,10 +537,12 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(301) 654-7336',
-          phone: '3016547336',
+          
           address: '  Boulevard Aïn Sbaa Ali, 13000 Tlemcen, RADP',
            city: 'Tlemcen',
-          name:'Best Chiken'
+          name:'Best Chiken',
+          url: 'http://www.esi-sba.dz',
+
         }
       },
       {
@@ -570,13 +556,11 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(571) 203-0082',
-          phone: '5712030082',
           address: 'Mairie Annexe, Boulevard du 18 Fevrier, 13000 Mansourah, RADP',
           city: 'Tlemcen',
-          name:'Maxi FastFood'
-          
-         
-        }
+          name:'Maxi FastFood',
+          url: 'http://www.esi-sba.dz',
+}
       },
       {
         type: 'Feature',
@@ -589,11 +573,11 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(703) 522-2016',
-          phone: '7035222016',
           address: 'Rue Mohamed Abdellaoui, 13000 Tlemcen, RADP',
           city: 'Tlemcen',
-          name:'Le coq13'
-        }
+          name:'Le coq13',
+          url: 'http://www.esi-sba.dz',
+ }
       },
       {
         type: 'Feature',
@@ -606,11 +590,11 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(610) 642-9400',
-          phone: '6106429400',
           address: '  RN 2;RN 22, 130000 Tlemcen, RADP',
           city: 'Tlemcen',
-          name:'Restaurant Agadir'
-        } 
+          name:'Restaurant Agadir',
+          url: 'http://www.esi-sba.dz',
+} 
       },
       {
         type: 'Feature',
@@ -623,11 +607,11 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(215) 386-1365',
-          phone: '2153861365',
           address: ' 130000 Tlemcen, RADP',
           city: 'Tlemcen',
-          name:'Kraouti'
-        } 
+          name:'Kraouti',
+          url: 'http://www.esi-sba.dz',
+} 
       },
       {
         type: 'Feature',
@@ -640,12 +624,30 @@ map.addControl(new mapboxgl.NavigationControl());
         },
         properties: {
           phoneFormatted: '(202) 331-3355',
-          phone: '2023313355',
           address: ' 130000 Tlemcen, RADP',
           city: 'Tlemcen',
-          name:'Bekhchi'
+          name:'Bekhchi',
+          url: 'http://www.esi-sba.dz',
         }
-      }]
+      },
+         {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [
+            -1.32030,
+           34.88890
+          ]
+        },
+        properties: {
+          phoneFormatted: '(215) 2222222',
+          address: ' test test',
+          city: 'Tlemcen',
+          name:'test',
+          url: 'http://www.esi-sba.dz',
+} 
+      }
+      ]
   };
   // This adds the data to the map
   map.on('load', function (e) {

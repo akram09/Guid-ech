@@ -21,7 +21,7 @@ class Taxi extends BaseDimmer
      */
     public function run()
     {
-        $count = DB::table('GuidTaxis')->count();
+        $count = DB::table('Guid_Taxis')->count();
         $string = trans_choice('Taxi', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
