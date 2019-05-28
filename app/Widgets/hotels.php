@@ -27,9 +27,9 @@ class hotels extends BaseDimmer
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-logbook',
             'title'  => "{$count} {$string}",
-            'text'   => __('Click on button below to view all hotels', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __(' all hotels', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('View all hotels'),
+                'text' => __('View all '),
                 'link' => route('home'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),

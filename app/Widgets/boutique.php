@@ -27,9 +27,9 @@ class boutique extends BaseDimmer
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-bag',
             'title'  => "{$count} {$string}",
-            'text'   => __('Click on button below to view all boutique ', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('boutique ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('View all Boutique'),
+                'text' => __('View all '),
                 'link' => route('home'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/01.jpg'),

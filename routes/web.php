@@ -108,6 +108,7 @@ Route::get('lang/{locale}', 'MultilanguageController@index');/*this will ad sess
 Route::get('/dis', function () {
     return view('dis');
 });
+
 Route::get('/voyager', function () {
     dd(config('voyager.dashboard.widgets'));
 });

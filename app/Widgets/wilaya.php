@@ -5,10 +5,8 @@ namespace App\Widgets;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
-use DB;
 
-
-class stat extends BaseDimmer
+class hotels extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -23,18 +21,18 @@ class stat extends BaseDimmer
      */
     public function run()
     {
-        $count = DB::table('link_views')->count();
-        $string = trans_choice('Visit', $count);
+        $count = DB::table('wilaya')->count();
+        $string = trans_choice('wilaya', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-truck',
+            'icon'   => 'voyager-logbook',
             'title'  => "{$count} {$string}",
-            'text'   => __('statisiques', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('all wilaya ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('View all statisiques'),
-                'link' => url('guidechstat'),
+                'text' => __('View all'),
+                'link' => url('/admin/wilayas'),
             ],
-            'image' => voyager_asset('images/widget-backgrounds/03.jpg'),
+            'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
         ]));
     }
 

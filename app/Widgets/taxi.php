@@ -30,7 +30,7 @@ class Taxi extends BaseDimmer
             'text'   => __('Click on button below to view all ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('View all Taxis'),
-                'link' => route('home'),
+                'link' => url('/admin/guidtaxi'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/03.jpg'),
         ]));

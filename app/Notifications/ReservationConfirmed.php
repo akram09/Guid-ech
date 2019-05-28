@@ -12,7 +12,7 @@ class ReservationConfirmed extends Notification
     use Queueable;
 
     /**
-     * Create a new notification instance.
+     * Create a new notification instance by abdelwahed .
      *
      * @return void
      */
@@ -22,7 +22,7 @@ class ReservationConfirmed extends Notification
     }
 
     /**
-     * Get the notification's delivery channels.
+     * Get the notification's delivery channels by abdelwahed .
      *
      * @param  mixed  $notifiable
      * @return array
@@ -33,7 +33,7 @@ class ReservationConfirmed extends Notification
     }
 
     /**
-     * Get the mail representation of the notification.
+     * Get the mail representation of the notification abdelwahed.
      *
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
@@ -41,8 +41,8 @@ class ReservationConfirmed extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('Your reservation has been confirmed.')
-                    ->line('Thank you for using our application!');
+                    ->line('sahit mon frr reservation has been confirmed ')
+                    ->line('Thank you for using Guidech');
     }
 
     /**

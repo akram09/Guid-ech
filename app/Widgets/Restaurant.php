@@ -27,10 +27,10 @@ class Restaurant extends BaseDimmer
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-wineglass',
             'title'  => "{$count} {$string}",
-            'text'   => __('Click on button below to view all rastaurant', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('all rastaurant', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('View all Restaurants'),
-                'link' => route('home'),
+                'link' => url('/admin/restaurants'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/03.jpg'),
         ]));
