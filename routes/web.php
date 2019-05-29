@@ -45,6 +45,9 @@ Route::get('/{wilayas_id}/Boutique', 'BoutiqueController@afficher')->name('Bouti
 Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affichercat')->name('Boutique');
 
 Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidTaxi');
+Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidFood');
+
+
 
 
 //restoservice   =============================================
