@@ -156,6 +156,13 @@ return [
             'App\Widgets\boutique',
             'App\Widgets\taxi',
             'App\Widgets\stat',
+            'App\Widgets\wilaya',
+            'App\Widgets\contact',
+            'App\Widgets\guidfood',
+
+
+
+
 
 
 

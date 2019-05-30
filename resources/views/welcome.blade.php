@@ -66,6 +66,7 @@
   <link href="{{ asset('affichageDisplay/css/style.min.css') }}" rel="stylesheet">
  
   <style type="text/css">
+    body{ overflow-x: hidden; }
     .view,body,html{height:100%}@media (max-width:740px){.full-page-intro{height:1000px}}.carousel{height:50%}.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item{height:100%}@media (max-width:776px){.carousel{height:100%}}.navbar{background-color:rgba(0,0,0,.5)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
      .form-elegant .font-small {
     font-size: 0.8rem; }
@@ -1405,7 +1406,7 @@
 
   </main>
   <!--Main layout-->
-  <!-- Section: Contact v.2 -->
+  <!-- Section: Contact  -->
 <section class="my-5">
 
   <!-- Section heading -->
@@ -1415,65 +1416,7 @@
     Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
     eum porro a pariatur veniam.</p>
 
-  <div class="container contact-form" style="margin-top:100px">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    @if (session('warning'))
-                        <div class="alert alert-warning">
-                            {{ session('warning') }}
-                        </div>
-                    @endif
-            
-            <form method="post" action="{{ route('contactus.store') }}">
-          {{ csrf_field() }}
-                <h3>Contact Us</h3>
-               <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name *"  required />
-         @if ($errors->has('name'))
-                    <span class="help-block">
-                      <strong>{{ $errors->first('name') }}</strong>
-                    </span>
-         @endif
-                        </div>
-                        <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email *"  required />
-               @if ($errors->has('email'))
-                    <span class="help-block">
-                      <strong>{{ $errors->first('email') }}</strong>
-                    </span>
-               @endif
-                        </div>
-                        <div class="form-group {{ $errors->has('subject') ? ' has-error' : '' }}">
-                            <input type="text" name="subject" class="form-control" placeholder="Subject *"  />
-              @if ($errors->has('subject'))
-                    <span class="help-block">
-                      <strong>{{ $errors->first('subject') }}</strong>
-                    </span>
-               @endif
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="btnSubmit" class="btn btn-primary btn-round btn-sm" value="Send Message" />
-              
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
-                            <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
-           @if ($errors->has('message'))
-        <span class="help-block">
-        <strong>{{ $errors->first('message') }}</strong>
-        </span>
-          @endif
-                        </div>
-                    </div>
-                </div>
-            </form>
-</div>
+  
 
 </section>
 <!-- Section: Contact v.2 -->

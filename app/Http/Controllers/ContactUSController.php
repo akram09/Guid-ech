@@ -7,15 +7,6 @@ use Illuminate\Http\Request;
 use App\contactUs;
 class ContactUSController extends Controller
 {
-    /**
-    * 
-    *
-    * @return \Illuminate\Http\Response
-    */
-   public function contactUS()           /*return contact form */
-   {
-       return view('form');
-   }
 
    /**
     * 

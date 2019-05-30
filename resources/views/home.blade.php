@@ -1390,105 +1390,87 @@
   <!--Main layout-->
   <!-- Section: Contact v.2 -->
 <section class="my-5">
-
-  <!-- Section heading -->
-  <h2 class="h1-responsive font-weight-bold text-center my-5">Contact us</h2>
-  <!-- Section description -->
+  <h2 class="h1-responsive font-weight-bold text-center my-5">@lang('welcome.title_contact')</h2>
   <p class="text-center w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
     eum porro a pariatur veniam.</p>
 
-  <!-- Grid row -->
-  <div class="row">
 
-    <!-- Grid column -->
-    <div class="col-md-9 mb-md-0 mb-5">
+  <div class="container contact-form" style="margin-top:100px">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    @if (session('warning'))
+                        <div class="alert alert-warning">
+                            {{ session('warning') }}
+                        </div>
+                    @endif
+            <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
 
-      <form>
+            <form class="text-center" style="color: #757575;" method="post" action="{{ route('contactus.store') }}">
+          {{ csrf_field() }}
+                 <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Contact us</strong>
+                 </h5>
+               <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mt-3 {{ $errors->has('name') ? ' has-error' : '' }}">
+                            <input type="text" name="name" class="form-control"  required />
+                             <label for="materialContactFormName">Name</label>
+         @if ($errors->has('name'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+         @endif
+                        </div>
+                        <div class="md-form {{ $errors->has('email') ? ' has-error' : '' }}">
+                            <input type="email" name="email" class="form-control"   required />
+                              <label for="materialContactFormEmail">E-mail</label>
+               @if ($errors->has('email'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+               @endif
+                        </div>
 
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-6">
-            <div class="md-form mb-0">
-              <input type="text" id="contact-name" class="form-control">
-              <label for="contact-name" class="">Your name</label>
-            </div>
+       <div class="form-group {{ $errors->has('subject') ? ' has-error' : '' }}">
+                    <label for="materialContactFormEmail">Subject</label>
+                  <select class="browser-default custom-select mb-4">
+                      <option value="" disabled>Choose option</option>
+                      <option value="1" selected>Feedback</option>
+                      <option value="2">Report a bug</option>
+                      <option value="3">Feature request</option>
+                      <option value="4">Feature request</option>
+                  </select>
+              @if ($errors->has('subject'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('subject') }}</strong>
+                    </span>
+               @endif
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Send</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mt-3 {{ $errors->has('message') ? ' has-error' : '' }}">
+                            <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
+                              <label for="materialContactFormMessage">Message</label>
+           @if ($errors->has('message'))
+        <span class="help-block">
+        <strong>{{ $errors->first('message') }}</strong>
+        </span>
+          @endif
+                        </div>
+                    </div>
+                </div>
+            </form>
           </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-6">
-            <div class="md-form mb-0">
-              <input type="text" id="contact-email" class="form-control">
-              <label for="contact-email" class="">Your email</label>
-            </div>
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-12">
-            <div class="md-form mb-0">
-              <input type="text" id="contact-Subject" class="form-control">
-              <label for="contact-Subject" class="">Subject</label>
-            </div>
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-12">
-            <div class="md-form">
-              <textarea id="contact-message" class="form-control md-textarea" rows="3"></textarea>
-              <label for="contact-message">Your message</label>
-            </div>
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-      </form>
-
-      <div class="text-center text-md-left">
-           <a class="btn-floating btn-lg blue">
-                  <i class="far fa-paper-plane"></i>
-                </a>
-      </div>
-
-    </div>
-    <!-- Grid column -->
-
-    <!-- Grid column -->
-    <div class="col-md-3 text-center">
-      <ul class="list-unstyled mb-0">
-        <li>
-          <i class="fas fa-map-marker-alt fa-2x blue-text"></i>
-          <p>Adresse : BP 73, Bureau de poste EL WIAM, 22016 Sidi Bel Abbés, Algérie</p>
-        </li>
-        <li>
-          <i class="fas fa-phone fa-2x mt-4 blue-text"></i>
-          <p>+213 48 74 94 52 </p>
-        </li>
-        <li>
-          <i class="fas fa-envelope fa-2x mt-4 blue-text"></i>
-          <p class="mb-0">contact@example.com</p>
-        </li>
-      </ul>
-    </div>
-    <!-- Grid column -->
+</div>
+ 
 
   </div>
   <!-- Grid row -->

@@ -7,7 +7,7 @@ use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
 use DB;
 
-class wilaya extends BaseDimmer
+class contact extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -22,15 +22,15 @@ class wilaya extends BaseDimmer
      */
     public function run()
     {
-        $count = DB::table('wilayas')->count();
-        $string = trans_choice('wilaya', $count);
+        $count = DB::table('contactus')->count();
+        $string = trans_choice('messages', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-logbook',
             'title'  => "{$count} {$string}",
-            'text'   => __('all wilaya ', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('all messages ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('View all'),
+                'text' => __('check the mail'),
                 'link' => url('/admin/wilayas'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),

@@ -7,7 +7,7 @@ use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
 use DB;
 
-class wilaya extends BaseDimmer
+class Guidfood extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -22,16 +22,16 @@ class wilaya extends BaseDimmer
      */
     public function run()
     {
-        $count = DB::table('wilayas')->count();
-        $string = trans_choice('wilaya', $count);
+        $count = DB::table('guid_foods')->count();
+        $string = trans_choice('food delivery', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-logbook',
             'title'  => "{$count} {$string}",
-            'text'   => __('all wilaya ', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('all messages ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('View all'),
-                'link' => url('/admin/wilayas'),
+                'text' => __('view'),
+                'link' => url('/admin'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
         ]));
