@@ -112,3 +112,9 @@ Route::get('/dis', function () {
 Route::get('/voyager', function () {
     dd(config('voyager.dashboard.widgets'));
 });
+
+
+
+/*===============================================================================*/
+Route::get('contact-us', 'ContactUSController@contactUS'); /*contact us route*/
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);

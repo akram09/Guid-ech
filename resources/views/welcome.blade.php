@@ -1151,7 +1151,7 @@
           <div class="testimonial">
             <!--Avatar--
             <div class="avatar mx-auto mb-4">
-              <img src="img/wahid.jpg" height=200px width=200px class="rounded-circle img-fluid"
+              <img src="" height=200px width=200px class="rounded-circle img-fluid"
                 alt="First sample avatar image">
             </div>
             <!--Content--
@@ -1178,7 +1178,7 @@
           <div class="testimonial">
             <!--Avatar--
             <div class="avatar mx-auto mb-4">
-              <img src="img/wahid.jpg" height=200px width=200px class="rounded-circle img-fluid"
+              <img src="" height=200px width=200px class="rounded-circle img-fluid"
                 alt="Second sample avatar image">
             </div>
             <!--Content--
@@ -1204,7 +1204,7 @@
           <div class="testimonial">
             <!--Avatar--
             <div class="avatar mx-auto mb-4">
-              <img src="img/wahid.jpg" height=200px width=200px class="rounded-circle img-fluid"
+              <img src="" height=200px width=200px class="rounded-circle img-fluid"
                 alt="Third sample avatar image">
             </div>
             <!--Content--
@@ -1260,7 +1260,7 @@
     <!-- Grid column -->
     <div class="col-md-4 mb-md-0 mb-5">
       <div class="avatar mx-auto">
-        <img src="img/wahid.jpg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+        <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
       </div>
       <h4 class="font-weight-bold dark-grey-text my-4">Madani yousfi Abdelwahed</h4>
       <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>
@@ -1283,7 +1283,7 @@
  <!-- Grid column -->
  <div class="col-md-4">
   <div class="avatar mx-auto">
-    <img src="img/wahid.jpg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+    <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
   </div>
   <h4 class="font-weight-bold dark-grey-text my-4">Moncef Reggam</h4>
   <h6 class="text-uppercase grey-text mb-3"><strong>Esi student</strong></h6>
@@ -1306,7 +1306,7 @@
  <!-- Grid column -->
  <div class="col-md-4">
   <div class="avatar mx-auto">
-    <img src="img/wahid.jpg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+    <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
   </div>
   <h4 class="font-weight-bold dark-grey-text my-4">Malika Dermi</h4>
   <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>
@@ -1329,7 +1329,7 @@
  <!-- Grid column -->
  <div class="col-md-4">
   <div class="avatar mx-auto">
-    <img src="img/wahid.jpg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+    <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
   </div>
   <h4 class="font-weight-bold dark-grey-text my-4">Larbi riyane</h4>
   <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>
@@ -1352,7 +1352,7 @@
  <!-- Grid column -->
  <div class="col-md-4">
   <div class="avatar mx-auto">
-    <img src="img/wahid.jpg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+    <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
   </div>
   <h4 class="font-weight-bold dark-grey-text my-4">Said Bouabdallah</h4>
   <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>
@@ -1374,7 +1374,7 @@
     <!-- Grid column -->
     <div class="col-md-4">
       <div class="avatar mx-auto">
-        <img src="img/wahid.jpg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+        <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
       </div>
       <h4 class="font-weight-bold dark-grey-text my-4">Ikhlas Zeblah</h4>
       <h6 class="text-uppercase grey-text mb-3"><strong>Esi student</strong></h6>
@@ -1415,100 +1415,65 @@
     Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
     eum porro a pariatur veniam.</p>
 
-  <!-- Grid row -->
-  <div class="row">
-
-    <!-- Grid column -->
-    <div class="col-md-9 mb-md-0 mb-5">
-
-      <form>
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-6">
-            <div class="md-form mb-0">
-              <input type="text" id="contact-name" class="form-control">
-              <label for="contact-name" class="">Your name</label>
-            </div>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-6">
-            <div class="md-form mb-0">
-              <input type="text" id="contact-email" class="form-control">
-              <label for="contact-email" class="">Your email</label>
-            </div>
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-12">
-            <div class="md-form mb-0">
-              <input type="text" id="contact-Subject" class="form-control">
-              <label for="contact-Subject" class="">Subject</label>
-            </div>
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-12">
-            <div class="md-form">
-              <textarea id="contact-message" class="form-control md-textarea" rows="3"></textarea>
-              <label for="contact-message">Your message</label>
-            </div>
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-      </form>
-
-      <div class="text-center text-md-left">
-           <a class="btn-floating btn-lg blue">
-                  <i class="far fa-paper-plane"></i>
-                </a>
-      </div>
-
-    </div>
-    <!-- Grid column -->
-
-    <!-- Grid column -->
-    <div class="col-md-3 text-center">
-      <ul class="list-unstyled mb-0">
-        <li>
-          <i class="fas fa-map-marker-alt fa-2x blue-text"></i>
-          <p>Adresse : BP 73, Bureau de poste EL WIAM, 22016 Sidi Bel Abbés, Algérie</p>
-        </li>
-        <li>
-          <i class="fas fa-phone fa-2x mt-4 blue-text"></i>
-          <p>+213 48 74 94 52 </p>
-        </li>
-        <li>
-          <i class="fas fa-envelope fa-2x mt-4 blue-text"></i>
-          <p class="mb-0">contact@example.com</p>
-        </li>
-      </ul>
-    </div>
-    <!-- Grid column -->
-
-  </div>
-  <!-- Grid row -->
+  <div class="container contact-form" style="margin-top:100px">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    @if (session('warning'))
+                        <div class="alert alert-warning">
+                            {{ session('warning') }}
+                        </div>
+                    @endif
+            
+            <form method="post" action="{{ route('contactus.store') }}">
+          {{ csrf_field() }}
+                <h3>Contact Us</h3>
+               <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name *"  required />
+         @if ($errors->has('name'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+         @endif
+                        </div>
+                        <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email *"  required />
+               @if ($errors->has('email'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+               @endif
+                        </div>
+                        <div class="form-group {{ $errors->has('subject') ? ' has-error' : '' }}">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject *"  />
+              @if ($errors->has('subject'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('subject') }}</strong>
+                    </span>
+               @endif
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="btnSubmit" class="btn btn-primary btn-round btn-sm" value="Send Message" />
+              
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
+                            <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
+           @if ($errors->has('message'))
+        <span class="help-block">
+        <strong>{{ $errors->first('message') }}</strong>
+        </span>
+          @endif
+                        </div>
+                    </div>
+                </div>
+            </form>
+</div>
 
 </section>
 <!-- Section: Contact v.2 -->
