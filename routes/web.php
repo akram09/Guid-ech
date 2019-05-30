@@ -45,6 +45,9 @@ Route::get('/{wilayas_id}/Boutique', 'BoutiqueController@afficher')->name('Bouti
 Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affichercat')->name('Boutique');
 
 Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidTaxi');
+Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidFood');
+
+
 
 
 //restoservice   =============================================
@@ -112,9 +115,12 @@ Route::get('/dis', function () {
 Route::get('/voyager', function () {
     dd(config('voyager.dashboard.widgets'));
 });
+<<<<<<< HEAD
 
 
 
 /*===============================================================================*/
 Route::get('contact-us', 'ContactUSController@contactUS'); /*contact us route*/
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
+=======
+>>>>>>> 869c1c21352c8497d58aef838159391993902090
