@@ -95,6 +95,7 @@
 </head>
 
 <body>
+  <div class="preloader"></div>
 
   <!-- Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
@@ -1553,6 +1554,9 @@
   <script type="text/javascript">
     // Animations initialization
     new WOW().init();
+    $(window).load(function() {
+   $('.preloader').fadeOut('slow');
+});
   </script>
 
 </body>

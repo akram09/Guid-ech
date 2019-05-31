@@ -61,6 +61,7 @@ Route::post('/contact','ContactController@sendMessage')->name('contact.send');
 //user profil   ============================================
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::post('profile', 'UserController@update_avatar');
+Route::post('/profile', 'UserController@editCurrentUserProfile')->name('edit-profile');
 //========================================
 
 //password change ==========================================
@@ -120,7 +121,10 @@ Route::get('/voyager', function () {
 
 
 /*===============================================================================*/
-Route::get('contact-us', 'ContactUSController@contactUS'); /*contact us route*/
+            /*contact us route*/
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
+
+
+
 
 

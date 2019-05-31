@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('country');    /* champ country */
             $table->string('city');      /* champ city */
             $table->text('address');    /* champ address */
-            $table->string('avatar')->default('default.jpg'); // user avatar with default photo 
+            $table->string('avatar')->default('user.jpg'); // user avatar with default photo 
             $table->rememberToken();
             $table->timestamps();
         });

@@ -158,7 +158,7 @@
       <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;"> 
+            <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; border-style: double; border-color: #92a8d1; height:150px; float:left; border-radius:50%; margin-right:25px;"> 
 
             <h2>{{ $user->name }} @lang('profile.photo_up')</h2>
             <form enctype="multipart/form-data" action="/profile" method="POST">
@@ -175,11 +175,45 @@
 
 </div>
 
+
  </div>
+ <div class="container">
+    <div class="row">
+        <div class="col-md-9 personal-info">
+            
+            <form class="form-horizontal" method="POST" action="{{ route('profile') }}">
+                 {{ csrf_field() }}
+                 @if (isset($errors) && count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if (Session::has('message'))
+                    <div class="alert alert-info">{{ Session::get('message') }}</div>
+                @endif
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Name:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" placeholder="change your name" type="text" value="{{$user->name}}" name="name">
+                        <input type="submit" class="btn btn-primary" value="Save Changes">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
 
     </div>
     <!-- Mask & flexbox options-->
 
+</div>
   </div>
   <!-- Full Page Intro -->
 

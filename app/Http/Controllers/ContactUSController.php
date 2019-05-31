@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\contactUs;
 class ContactUSController extends Controller
 {
-
    /**
     * 
     *
