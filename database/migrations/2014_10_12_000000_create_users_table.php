@@ -18,8 +18,6 @@ class CreateUsersTable extends Migration
             $table->string('name');     /* champ name */
             $table->string('email', 250);   /* champ email*/
             $table->timestamp('email_verified_at')->nullable(); 
-           /* $table->string('provider');
-            $table->string('provider_id');   */    // facebook login
             $table->string('password');   /* champ password */
             $table->string('country');    /* champ country */
             $table->string('city');      /* champ city */

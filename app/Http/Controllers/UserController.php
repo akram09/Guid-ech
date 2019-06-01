@@ -21,7 +21,6 @@ class UserController extends Controller
         $this->middleware('web');
         $this->middleware('auth'); // Some reason adding both middleware is the only way to go
     }
-   
     /**
      * Get the current user profile
      *
