@@ -124,6 +124,11 @@ Route::get('/voyager', function () {
             /*contact us route*/
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
 
+/*=======================================================================*/
+
+Route::get('event', 'EventController@index')->name('events.index');
+Route::post('event', 'EventController@addEvent')->name('events.add');
+
 
 
 
