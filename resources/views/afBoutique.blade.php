@@ -39,7 +39,7 @@ body{overflow-x: hidden;}
 
       <!-- Brand -->
       <a class="navbar-brand" href="" target="_blank">
-    <img src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
+    <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
       
 &nbsp; &nbsp;

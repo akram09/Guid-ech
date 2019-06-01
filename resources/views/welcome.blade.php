@@ -103,7 +103,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand" href="" target="_blank">
-    <img src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
+    <img class="animated zoomIn" src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 
       <!-- Collapse -->
@@ -123,16 +123,7 @@
                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i></button>
                </form>
      
-
-  </div>
-  <!-- Collapsible content -->
-
-   
-
-        <!-- Right --> 
-          &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; 
-
-        <ul class="navbar-nav nav-flex-icons">
+   <ul class="navbar-nav nav-flex-icons">
          
 
 
@@ -151,6 +142,15 @@
           </li>
 
         </ul>
+  </div>
+  <!-- Collapsible content -->
+
+   
+
+        <!-- Right --> 
+          &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; 
+
+     
 
           
       </div>

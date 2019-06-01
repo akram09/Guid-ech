@@ -59,7 +59,7 @@
 
      <!-- Brand -->
       <a class="navbar-brand" href="" target="_blank">
-    <img src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
+    <img class="animated zoomIn" src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
       <p style="font-weight:300;font-size:0.75rem">user Profil</p>
 &nbsp; &nbsp;
@@ -158,7 +158,7 @@
       <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; border-style: double; border-color: #92a8d1; height:150px; float:left; border-radius:50%; margin-right:25px;"> 
+            <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; border-bottom-color: #92a8d1; height:150px; float:left; border-radius:50%; margin-right:25px;"> 
 
             <h2>{{ $user->name }} @lang('profile.photo_up')</h2>
             <form enctype="multipart/form-data" action="/profile" method="POST">
