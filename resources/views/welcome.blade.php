@@ -188,26 +188,14 @@
             <p class="mb-4 d-none d-md-block">
               <strong>@lang('welcome.title_sm')</strong>
             </p>
-
-            <!--<a target="_blank" href="#" class="btn btn-indigo btn-lg">visit
-             <i class="far fa-eye"></i>
-            </a>-->
-
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
           <div class="col-md-6 col-xl-5 mb-4">
-
-               
-                <div class="map__image">  <!--  map d'algérie -->
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 852 1000"  >
-              
-                      <!-- All areas are listed in the line below. You can use this list in your script. -->
-                      <!--{id:"DZ-01"},{id:"DZ-02"},{id:"DZ-03"},{id:"DZ-04"},{id:"DZ-05"},{id:"DZ-06"},{id:"DZ-07"},{id:"DZ-08"},{id:"DZ-09"},{id:"DZ-10"},{id:"DZ-11"},{id:"DZ-12"},{id:"DZ-13"},{id:"DZ-14"},{id:"DZ-15"},{id:"DZ-16"},{id:"DZ-17"},{id:"DZ-18"},{id:"DZ-19"},{id:"DZ-20"},{id:"DZ-21"},{id:"DZ-22"},{id:"DZ-23"},{id:"DZ-24"},{id:"DZ-25"},{id:"DZ-26"},{id:"DZ-27"},{id:"DZ-28"},{id:"DZ-29"},{id:"DZ-30"},{id:"DZ-31"},{id:"DZ-32"},{id:"DZ-33"},{id:"DZ-34"},{id:"DZ-35"},{id:"DZ-36"},{id:"DZ-37"},{id:"DZ-38"},{id:"DZ-39"},{id:"DZ-40"},{id:"DZ-41"},{id:"DZ-42"},{id:"DZ-43"},{id:"DZ-44"},{id:"DZ-45"},{id:"DZ-46"},{id:"DZ-47"},{id:"DZ-48"}-->
-              
-                  
-                  <g>
+<div class="map__image">  <!--  map d'algérie -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 852 1000"  >
+ <g>
                       <a  xlink:title="Adrar" xlink:href="file:///C:/Users/user/Desktop/page.html">
                       <path  id="DZ-01" d="M411.42,469.19L410.07,519.06L409.29,525.96L405.44,542.02L412.67,582.81L410.73,591.15L410.73,591.15L409.73,598.51L409.34,609.19L407.44,615.15L402.06,623.68L400.67,640.73L397.53,646.08L397.61,656.55L400.72,661.23L396.4,672.04L395.62,679.89L395.62,686.92L395,687.88L392.27,688.89L391.7,689.73L391.46,688.35L390.59,688.3L390.02,689.03L388.54,688.7L388.46,687.93L387.06,687.35L385.35,687.4L382.66,688.71L380.68,692.8L368.26,705.67L372.83,715.69L387.11,735.77L387.65,798.86L387.58,800.06L387.2,799.94L386.8,890.73L393.46,889.64L397.86,889.75L400.54,890.39L402.96,902L409.25,907.54L412.65,911.89L416.59,919.96L419.21,929.27L418.6,934.27L419.12,938.99L422.65,944.17L427.52,955.99L428.28,960.55L427.41,960.44L424.72,961.67L424.72,961.67L422.1,956.8L418.22,953.14L415.76,952.57L412.78,955.65L410.77,953.83L409.51,954.45L407.55,953.69L405.94,954.58L404.38,952.15L401.58,952.21L400.25,950.36L396.52,947.59L395.99,942.54L395.1,940.74L388.25,937.82L385.03,937.21L384.03,936.3L383.4,934.54L382.52,934.01L380.03,934.7L377.58,934.45L376.84,932.59L378.11,923.43L377.19,918.72L332.65,889.42L331.97,886.27L251.1,829.39L163.18,769.18L115.8,736.09L115.8,736.09L136.83,727.85L148.15,715.68L171.7,714.88L173.31,711.55L174.36,706.99L176.22,703.47L187.45,686.71L191.18,683.23L194.17,681.46L197.52,680.3L210.41,680.71L213.32,678.82L214.89,673.72L214.5,673.25L217.11,666.07L218.19,660.23L218.19,660.23L216.15,658.2L220.62,642.65L221.5,641.06L221.14,640.09L231.07,626.98L231.72,625.64L231.63,624.47L233.78,620.5L244.59,611.77L255.8,595.51L278.13,588.79L297.23,587.57L307.01,578.94L307.96,574.26L305.99,562.62L308.45,553.56L325.8,540.91L332.48,528.88L347.22,511.9L347.22,511.9L374.59,492.25z"/></a>
               
@@ -415,21 +403,21 @@
 
 
 
-                        <div class="md-form mb-5">  <!-- le champ e-mail de l'utilisateur -->
+                        <div class="md-form mb-5">  
                             
 
                             <div class="col-sm-12">
                                 <input id="Form-email1" type="email" class="form-control validate" name="email" value="{{ old('email') }}">
                                           <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
-                                @if ($errors->has('email'))  <!-- errors= tableau des erreurs pour le champ email--> <!-- generation de erreurs de saisi-->
-                                    <span class="help-block" > <!-- "help-block" est une classe de bootstrap pour pour indiquer un bloc  texte d'aide pour un contrôle de formulaire donné-->
+                                @if ($errors->has('email'))  
+                                    <span class="help-block" > 
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="md-form pb-3"> <!-- le champ mot de passe de l'utilisateur -->
+                        <div class="md-form pb-3"> 
                             
 
                              <div class="col-sm-12">
@@ -593,13 +581,6 @@
                          <option value="#"> Tunisie</option>
                          <option value="#"> France</option>
                          <option value="#"> Espagne</option>
-                         
-                        
-                        
-                        
-                        
-                        
-                        
                         </select>
                         @if ($errors->has('country')) <!-- generation des erreurs de saisi  -->
                                     <span class="help-block" >
@@ -892,361 +873,7 @@
         <!--/Grid row-->
     
       </section>
-      <!----------------------------Section: Main features & Quick Start------------------>
-
-      <hr class="mb-5">
-
-      <!---------------------------------------Section: More------------------------------->
-      <!--
-      <section>
-
-        <h2 class="my-5 h3 text-center">...and even more</h2>
-       -->
-        <!--First row-->
-        <!--
-        <div class="row features-small mt-5 wow fadeIn">
-        -->
-          <!--Grid column-->
-          <!--
-          <div class="col-xl-3 col-lg-6">
-          -->
-            <!--Grid row-->
-            <!--
-            <div class="row">
-              <div class="col-2">
-                <i class="fab fa-firefox fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2 pl-3">
-                <h5 class="feature-title font-bold mb-1">tire p13</h5>
-                <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
-              </div>
-            </div>
-          -->
-            <!--/Grid row-->
-            <!--
-          </div>
-        -->
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <!--
-          <div class="col-xl-3 col-lg-6">
-          -->
-            <!--Grid row-->
-            <!--
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-level-up-alt fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">titre p14</h5>
-                <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
-              </div>
-            </div>
-          -->
-            <!--/Grid row-->
-            <!--
-          </div>
-        -->
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <!--
-          <div class="col-xl-3 col-lg-6">
-          -->
-            <!--Grid row-->
-            <!--
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-comments fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">Active community</h5>
-                <p class="grey-text mt-2">Our society grows day by day. Visit our forum and check how it is to be a part of our family.
-                </p>
-              </div>
-            </div>
-          -->
-            <!--/Grid row-->
-            <!--
-          </div>
-        -->
-          <!--/Grid column-->
-
-          <!--Grid column-->
-          <!--
-          <div class="col-xl-3 col-lg-6">
-          -->
-            <!--Grid row-->
-            <!--
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-code fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">titre p16</h5>
-                <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
-              </div>
-            </div>
-          -->
-            <!--/Grid row-->
-            <!--
-          </div>
-        -->
-          <!--/Grid column-->
-        <!--
-        </div>
-      -->
-        <!--/First row-->
-
-        <!--Second row--
-        <div class="row features-small mt-4 wow fadeIn">-->
-
-          <!--Grid column--
-          <div class="col-xl-3 col-lg-6">-->
-            <!--Grid row--
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-cubes fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">titre p17</h5>
-                <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
-              </div>
-            </div>-->
-            <!--/Grid row--
-          </div>-->
-          <!--/Grid column-->
-
-          <!--Grid column--
-          <div class="col-xl-3 col-lg-6">-->
-            <!--Grid row--
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-question fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">titre p18</h5>
-                <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla
-                </p>
-              </div>
-            </div>-->
-            <!--/Grid row--
-          </div>-->
-          <!--/Grid column-->
-
-          <!--Grid column--
-          <div class="col-xl-3 col-lg-6">-->
-            <!--Grid row--
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-th fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">titre p19</h5>
-                <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
-              </div>
-            </div>-->
-            <!--/Grid row--
-          </div>-->
-          <!--/Grid column-->
-
-          <!--Grid column--
-          <div class="col-xl-3 col-lg-6">-->
-            <!--Grid row--
-            <div class="row">
-              <div class="col-2">
-                <i class="far fa-file-code fa-2x mb-1 indigo-text" aria-hidden="true"></i>
-              </div>
-              <div class="col-10 mb-2">
-                <h5 class="feature-title font-bold mb-1">titre p20</h5>
-                <p class="grey-text mt-2">bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla</p>
-              </div>
-            </div>-->
-            <!--/Grid row--
-          </div>-->
-          <!--/Grid column--
-
-        </div>-->
-        <!--/Second row--
-
-      </section>-->
-      <!--Section: More--
-
-    </div>-->
-    <!--
-    <div> <!--co;;entqire wyqdq--><!--</div>
-    <section><!-- Section: Features v.1 
-<section class="text-center my-5">-->
-
-  <!-- Section heading -
-  <h2 class="h1-responsive font-weight-bold my-5">Why is it so great?</h2>
-  <!-- Section description 
-  <p class="lead grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-
-  <!-- Grid row -
-  <div class="row">
-
-    <!-- Grid column --
-    <div class="col-md-4">
-
-      <i class="fas fa-chart-area fa-3x red-text"></i>
-      <h5 class="font-weight-bold my-4">titre1</h5>
-      <p class="grey-text mb-md-0 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-        maiores aperiam minima assumenda deleniti hic.
-      </p>
-
-    </div>
-    <!-- Grid column -->
-
-    <!-- Grid column --
-    <div class="col-md-4">
-
-      <i class="fas fa-book fa-3x cyan-text"></i>
-      <h5 class="font-weight-bold my-4">titre2</h5>
-      <p class="grey-text mb-md-0 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-        maiores aperiam minima assumenda deleniti hic.
-      </p>
-
-    </div>
-    <!-- Grid column -->
-
-    <!-- Grid column --
-    <div class="col-md-4">
-
-      <i class="far fa-comments fa-3x orange-text"></i>
-      <h5 class="font-weight-bold my-4">titre3</h5>
-      <p class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-        aperiam minima assumenda deleniti hic.
-      </p>
-
-    </div>
-    <!-- Grid column --
-
-  </div>
-  <!-- Grid row --
-
-</section>
-<!-- Section: Features v.1 --</section>-->
-  
-
-
-
-    <!-- Section: Testimonials v.2 -
-<section class="text-center my-5">
-
-  <!-- Section heading --
-  <h2 class="h1-responsive font-weight-bold my-5">Testimonials</h2>
-
-  <div class="wrapper-carousel-fix">
-    <!-- Carousel Wrapper --
-    <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel"
-      data-interval="false">
-      <!--Slides--
-      <div class="carousel-inner" role="listbox">
-        <!--First slide--
-        <div class="carousel-item active">
-          <div class="testimonial">
-            <!--Avatar--
-            <div class="avatar mx-auto mb-4">
-              <img src="" height=200px width=200px class="rounded-circle img-fluid"
-                alt="First sample avatar image">
-            </div>
-            <!--Content--
-            <p>
-              <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-              eos
-              id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Dolore cum accusamus eveniet molestias voluptatum inventore laboriosam labore
-              sit, aspernatur praesentium iste impedit quidem dolor veniam.
-            </p>
-            <h4 class="font-weight-bold"></h4>
-            <h6 class="font-weight-bold my-3">travaille chez ..</h6>
-            <!--Review--
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star-half-alt blue-text"> </i>
-          </div>
-        </div>
-        <!--First slide-->
-        <!--Second slide--
-        <div class="carousel-item">
-          <div class="testimonial">
-            <!--Avatar--
-            <div class="avatar mx-auto mb-4">
-              <img src="" height=200px width=200px class="rounded-circle img-fluid"
-                alt="Second sample avatar image">
-            </div>
-            <!--Content--
-            <p>
-              <i class="fas fa-quote-left"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-              odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-              porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore. </p>
-            <h4 class="font-weight-bold">hiya</h4>
-            <h6 class="font-weight-bold my-3">travaille chez ..</h6>
-            <!--Review--
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-          </div>
-        </div>
-        <!--Second slide--
-        <!--Third slide--
-        <div class="carousel-item">
-          <div class="testimonial">
-            <!--Avatar--
-            <div class="avatar mx-auto mb-4">
-              <img src="" height=200px width=200px class="rounded-circle img-fluid"
-                alt="Third sample avatar image">
-            </div>
-            <!--Content--
-            <p>
-              <i class="fas fa-quote-left"></i> Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-              error sit voluptatem accusantium doloremque laudantium.</p>
-            <h4 class="font-weight-bold">howa </h4>
-            <h6 class="font-weight-bold my-3">Front-end Developer</h6>
-            <!--Review--
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="fas fa-star blue-text"> </i>
-            <i class="far fa-star blue-text"> </i>
-          </div>
-        </div>
-        <!--Third slide-->
-      </div>
-      <!--Slides-->
-      <!--Controls--
-      <a class="carousel-control-prev left carousel-control" href="#carousel-example-1" role="button"
-        data-slide="prev">
-        <span class="icon-prev" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next right carousel-control" href="#carousel-example-1" role="button"
-        data-slide="next">
-        <span class="icon-next" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      <!--Controls--
-    </div>
-    <!-- Carousel Wrapper --
-  </div>
-
-</section>-->
-<!-- Section: Testimonials v.2 -->
-<!-- Section: Team v.2 -->
+   
 <section class="team-section text-center my-5">
 
   <!-- Section heading -->
@@ -1421,14 +1048,6 @@
 
 </section>
 <!-- Section: Contact v.2 -->
-
-
-
-  
-
-
-
-
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color darken-3 pt-4">
 
@@ -1554,9 +1173,6 @@
   <script type="text/javascript">
     // Animations initialization
     new WOW().init();
-    $(window).load(function() {
-   $('.preloader').fadeOut('slow');
-});
   </script>
 
 </body>

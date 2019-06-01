@@ -4,7 +4,7 @@ return [
     'name' => 'Guid-ech',
     'manifest' => [
         'name' => 'Guidech',
-        'short_name' => 'Gdc',
+        'short_name' => 'Guidech',
         'start_url' => '/',
         'background_color' => '#2169F3',
         'theme_color' => '#2169F3',
