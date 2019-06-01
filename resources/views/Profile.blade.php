@@ -181,7 +181,7 @@
     <div class="row">
         <div class="col-md-9 personal-info">
             
-            <form class="form-horizontal" method="POST" action="{{ route('profile') }}">
+            <form class="form-horizontal" method="POST" action="{{ route('edit-profile') }}">
                  {{ csrf_field() }}
                  @if (isset($errors) && count($errors) > 0)
                     <div class="alert alert-danger">

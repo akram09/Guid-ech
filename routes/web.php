@@ -61,7 +61,7 @@ Route::post('/contact','ContactController@sendMessage')->name('contact.send');
 //user profil   ============================================
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::post('profile', 'UserController@update_avatar');
-Route::post('/profile', 'UserController@editCurrentUserProfile')->name('edit-profile');
+Route::post('profiledit', 'UserController@editCurrentUserProfile')->name('edit-profile');
 //========================================
 
 //password change ==========================================
