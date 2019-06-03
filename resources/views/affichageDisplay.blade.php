@@ -19,17 +19,11 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet"> 
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
-
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
 <link href="{{ asset('css/preview.css') }}" rel="stylesheet">
 </head>
 
@@ -43,7 +37,7 @@
       <div class="container">
 
        <!-- Brand -->
-      <a class="navbar-brand" href="" target="_blank">
+      <a class="navbar-brand" href="{{route('home')}}" target="_blank">
     <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 
@@ -159,6 +153,13 @@
           </div>
           <!--Grid column-->
 
+              <!--To provide parametre for resto route -->
+          <?php 
+            $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $uriSegments[1];
+          ?>
+              <!------------------------------------------>
+
           <!--Grid column-->
           @foreach ($elements as $element)
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
@@ -166,21 +167,36 @@
               <strong>{{ $element -> name }}</strong>
             </h3>
             <p> 
-            <input id="input-1" name="input-1" 
-            class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" 
-            value="{{ $element -> averagerating }}" data-size="xs" disabled="">
+            <input id="input-1" name="input-1" class="rating rating-loading" 
+            data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}" 
+            data-size="" disabled="">
             </p>
-            <a href="#" target="_blank"
-              class="btn btn-primary btn-md">Visit
+            <form action="{{ route('rate')}}" method="POST">
+            {{ csrf_field() }}
+              <div class="rating"> 
+                <input id="input-1" name="rate" class="rating rating-loading" 
+                data-min="0" data-max="5" data-step="1" 
+                value="{{ $element->userAverageRating }}" data-size="">
+                <input type="hidden" name="id" required="" value="{{ $element->id }}">
+                <span class="review-no"></span>
+                <br/>
+                <button class="btn btn-primary btn-md">Submit Review</button>
+              </div>
+            </form>       
+            
+
+                     
+            <a href="{{ route('resto' , ['wilaya_id' => $wilaya_id , 'id'=> $element -> id ] )  }}" 
+            target="_blank"  class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
             </a>
 
+
             
 
-             <div>                   <!-- comment section -->
-          @comments(['Restaurant' => $element -> id])
-          @endcomments
-            </div>
+            
+
+             
 
 
 
