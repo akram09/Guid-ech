@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\GuidFood;
 
 class GuidFoodController extends Controller
 {
@@ -12,7 +12,7 @@ class GuidFoodController extends Controller
         $this->middleware('auth');
     }
     public function afficher($wilayas_id){
-    	$elements = DB::table('GuidFoods')->where('wilaya_id', strval($wilayas_id))->paginate(5);
+    	$elements = GuidFood::where('wilaya_id', strval($wilayas_id))->paginate(5);
 
         return view('GuidFood', compact('elements'));
 

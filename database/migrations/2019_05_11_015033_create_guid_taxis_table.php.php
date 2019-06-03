@@ -13,7 +13,7 @@ class CreateGuidTaxisTable extends Migration
      */
     public function up()
     {
-        Schema::create('GuidTaxis', function (Blueprint $table) {
+        Schema::create('guid_taxis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('NumTel');
             $table->string('Details');
@@ -29,6 +29,6 @@ class CreateGuidTaxisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('GuidTaxis');
+        Schema::dropIfExists('guid_taxis');
     }
 }

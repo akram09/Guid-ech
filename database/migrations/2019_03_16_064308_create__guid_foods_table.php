@@ -13,7 +13,7 @@ class CreateGuidFoodsTable extends Migration
      */
     public function up()
     {
-        Schema::create('GuidFoods', function (Blueprint $table) {
+        Schema::create('guid_foods', function (Blueprint $table) {
             $table->increments('id');
             $table->string('restPic');
             $table->string('menuPic');
@@ -30,6 +30,6 @@ class CreateGuidFoodsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('GuidFoods');
+        Schema::dropIfExists('guid_foods');
     }
 }
