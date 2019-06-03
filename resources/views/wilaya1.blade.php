@@ -242,12 +242,21 @@ z-index: 99;
         </div><!-- navbar-collapse -->
       </nav>
 <!--BODY-------------------------------------------------------------------------->
+
+<!-- Routes parametre ------------>
+
+          <?php 
+            $segments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $segments[1];
+          ?>
+
+<!--------------------------------->
 <div class="row">
   <div class="column" style="background-color:#FFFFFF;">
 <div class="lie">
 <div class="container">
       <h3 style="position: relative;left:3px;width: 1500px;" >Cliquez sur les cerlces et découvrez tous que vous avez besoin dans votre wilaya choisi!</h3>
- <a href=""><img src="/images/guidH.png" alt="hotel" class="image">
+ <a href="{{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}"><img src="/images/guidH.png" alt="hotel" class="image">
   <div class="overlay">
     <div class="text">GuidHôtels</div>
   </div>
@@ -256,8 +265,8 @@ z-index: 99;
 <div class="row" style="position: relative;left: 500px;bottom: 200px;">
   <div class="col-lg"> <h3>Vous partez en vacances ou en voyage d’affaires, vous recherchez une auberge de jeunesse ou un hôtel 5 étoiles, GuidHotel vous permet de trouver l'hôtel dans la wilaya que vous avez choisi.</h3></div></div>
  
-  <div class="container">
- <a href=""><img src="/images/guidR.png" alt="restaurant" class="image">
+   <div class="container">
+ <a href="{{ route('wilaya.restaurant' , ['wilaya_id' => $wilaya_id ] ) }}"><img src="/images/guidR.png" alt="restaurant" class="image">
  
   <div class="overlay">
     <div class="text"> GuidRestaurants</div>
@@ -272,7 +281,7 @@ z-index: 99;
  
   
 <div class="container">
- <a href=""><img src="/images/guidB.png" alt="boutique" class="image">
+ <a href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}"><img src="/images/guidB.png" alt="boutique" class="image">
 
   <div class="overlay">
     <div class="text"> GuidBoutiques</div>
@@ -285,7 +294,7 @@ z-index: 99;
 
 
  <div class="container">
- <a href=""><img src="/images/guidF.png" alt="food" class="image">
+ <a href="{{ route('GuidFood' , ['wilaya_id' => $wilaya_id ]) }}"><img src="/images/guidF.png" alt="food" class="image">
   <div class="overlay">
     <div class="text">GuidFood</div>
   </div></a></div>
@@ -293,7 +302,7 @@ z-index: 99;
   <div class="col-lg"> <h3>GuidFood vous offre des numéros des restaurants qui livrent dans votre wilaya choisi. </h3></div></div>
 
    <div class="container">
- <a href=""><img src="/images/guidT.png" alt="taxi" class="image">
+ <a href="{{ route('GuidTaxi' , ['wilaya_id' => $wilaya_id ]) }}"><img src="/images/guidT.png" alt="taxi" class="image">
   <div class="overlay">
     <div class="text">GuidTaxi</div>
   </div></a></div>
