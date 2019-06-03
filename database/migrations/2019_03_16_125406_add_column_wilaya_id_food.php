@@ -27,8 +27,8 @@ class AddColumnWilayaIdFood extends Migration
     public function down()
     {
         Schema::table('GuidFoods', function (Blueprint $table) {
-            dropForeign(['wilaya_id']);
-             dropColumn('wilaya_id');
+            $table->dropForeign(['wilaya_id']);
+            $table->dropColumn('wilaya_id');
              
         });
     }
