@@ -17,10 +17,5 @@ class GuidFoodController extends Controller
         return view('GuidFood', compact('elements'));
 
     }
-     public function affichertt(){
-
-        $elements = DB::table('GuidFoods')->get();
-
-        return view('GuidFood' , compact('elements'));
-    }
+    
 }
