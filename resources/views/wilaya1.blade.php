@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/flexslider.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/pricing.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">  
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -61,7 +60,7 @@ html,
   margin: 8px -16px;
 }
 
-/* Add padding BETWEEN each column (if you want) */
+/* Add padding BETWEEN each column  */
 .row,
 .row > .column {
   padding: 8px;
@@ -185,6 +184,7 @@ html,
   top: 0; /* At the top */
 z-index: 99;
 }
+
 </style>
 </head> 
 
@@ -214,9 +214,9 @@ z-index: 99;
 
 
          <form class="form-inline md-form mr-auto mb-4" style="position: relative;top: 40px; left: 400px;">
-  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
   <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit" style="position: relative;bottom: 15px;">OK</button>
-</form>
+</div>
                  <ul class="nav navbar-nav navbar-right"> <!-- navbar-nav nav-flex-icons"////affichage username et la photo -->
                   <div class="dropdown" style="position: relative;right: 50px; bottom: 16px;" >
              <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
@@ -253,12 +253,25 @@ z-index: 99;
   </div>
 </a>
 </div>
+<div class="row" style="position: relative;left: 500px;bottom: 200px;">
+  <div class="col-lg"> <h3>Vous partiez en vacances ou en voyage d’affaires, vous recherchez une auberge de jeunesse ou un hôtel 5 étoiles, GuidHotel vous permet de trouver l'hôtel dans la wilaya que vous avez choisi.</h3></div></div>
+ 
   <div class="container">
  <a href=""><img src="/images/guidR.png" alt="restaurant" class="image">
+ 
   <div class="overlay">
     <div class="text"> GuidRestaurants</div>
-  </div></a>
-</div> <div class="container">
+  </div>
+</a>
+</div>
+<div class="row" style="position: relative;left: 500px;bottom: 200px;">
+  <div class="col-lg">
+   <h3>  Trouvez de différentes catégories des restaurants dans la wilaya que vous avez choisi et profitez des offres de notre GuidRestaurants </h3>
+ </div>
+</div>
+ 
+  
+<div class="container">
  <a href=""><img src="/images/guidB.png" alt="boutique" class="image">
 
   <div class="overlay">
@@ -266,22 +279,37 @@ z-index: 99;
   </div>
 </a>
 </div>
+
+<div class="row" style="position: relative;left: 500px;bottom: 200px;">
+  <div class="col-lg"> <h3>GuidBoutiques facilite vos achats des habilles dans la wilaya que avez choisi on vous collecte les meilleurs boutiques, amusez-vous.</h3></div></div>
+
+
  <div class="container">
  <a href=""><img src="/images/guidF.png" alt="food" class="image">
   <div class="overlay">
     <div class="text">GuidFood</div>
   </div></a></div>
+  <div class="row" style="position: relative;left: 500px;bottom: 200px;">
+  <div class="col-lg"> <h3>GuidFood vous offre des numéros des restaurants qui livrent dans votre wilaya choisi. </h3></div></div>
+
    <div class="container">
  <a href=""><img src="/images/guidT.png" alt="taxi" class="image">
   <div class="overlay">
     <div class="text">GuidTaxi</div>
-  </div></a>
-</div><div class="container">
+  </div></a></div>
+  <div class="row" style="position: relative;left: 500px;bottom: 200px;">
+  <div class="col-lg"> <h3>GuidTaxi vous met à votre disposition pleins de numéros de taxieurs de la wilaya que vous avez choisi. </h3></div></div>
+
+<div class="container">
  <a href=""><img src="/images/p.png" alt="place" class="image">
   <div class="overlay">
-    <div class="text">GuidLieux</div>
+    <div class="text">GuidLieux & Infos</div>
   </div></a>
 </div>
+<div class="row" style="position: relative;left: 500px;bottom: 200px;">
+  <div class="col-lg"> <h3>GuidLieux vous fait découvrir les meilleurs lieux touristiques à visiter dans la wilaya que vous avez choisi, des infos, et quelques extraits historiques. </h3></div></div>
+
+
 </div>
 </div>
 </div>
@@ -289,59 +317,18 @@ z-index: 99;
 
 
 
-
-
-<!--Footer-->
-  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
-
- 
-
-    <hr class="my-4">
-
-    <!-- Social icons -->
-    <div class="pb-4">
-      <a href="#" target="_blank">
-        <i class="fab fa-facebook-f mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-twitter mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-youtube mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-google-plus-g mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-dribbble mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-github mr-3"></i>
-      </a>
-
-      <a href="#/" target="_blank">
-        <i class="fab fa-codepen mr-3"></i>
-      </a>
+<div class="footer" style="position: relative;top: 800px;">
+<!-- Footer -->
+<footer   style="background-color: #00004d;">
+    <div class="container text-center">
+      <small> 2019 &copy; Copyright Esi SBA</small>
     </div>
-    <!-- Social icons -->
-
-    <!--Copyright-->
-    <div class="footer-copyright py-3">
-      © 2019 Copyright:
-      <a href="#" target="_blank"> Esi-sba </a>
-    </div>
-    <!--/.Copyright-->
-
   </footer>
+</div>
+
+
+
+
   <!--/.Footer-->
 
 
@@ -369,20 +356,6 @@ document.getElementById("defaultOpen").click();
 
 </script>
 
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  <!-- ========== scripts ==========--> 
@@ -398,6 +371,6 @@ document.getElementById("defaultOpen").click();
 <script type="text/javascript" src="{{ asset('frontend/js/jquery.hoverdir.js') }}"></script>
 <script type="text/javascript" src="{{ asset('frontend/js/jQuery.scrollSpeed.js') }}"></script>
 <script src="{{ asset('frontend/js/script.js') }}"></script>
-<script src="{{ asset('frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</script>
+</body>
 </html>
