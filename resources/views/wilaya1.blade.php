@@ -254,7 +254,7 @@ z-index: 99;
 </a>
 </div>
 <div class="row" style="position: relative;left: 500px;bottom: 200px;">
-  <div class="col-lg"> <h3>Vous partiez en vacances ou en voyage d’affaires, vous recherchez une auberge de jeunesse ou un hôtel 5 étoiles, GuidHotel vous permet de trouver l'hôtel dans la wilaya que vous avez choisi.</h3></div></div>
+  <div class="col-lg"> <h3>Vous partez en vacances ou en voyage d’affaires, vous recherchez une auberge de jeunesse ou un hôtel 5 étoiles, GuidHotel vous permet de trouver l'hôtel dans la wilaya que vous avez choisi.</h3></div></div>
  
   <div class="container">
  <a href=""><img src="/images/guidR.png" alt="restaurant" class="image">
