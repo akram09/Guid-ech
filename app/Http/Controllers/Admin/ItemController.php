@@ -11,9 +11,9 @@ use App\Http\Controllers\Controller;
 class ItemController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     *  this function allow to Display all items 
+     *@return \Illuminate\Http\Response
+     *@author Abdelwahed Madani Yousfi
      */
     public function index()
     {
@@ -23,9 +23,9 @@ class ItemController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
+     *  this function allow to Show the form for creating a new item
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed Madani Yousfi
      */
     public function create()
     {
@@ -34,10 +34,11 @@ class ItemController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * this function alllow to Store a newly created item in storage db
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed Madani Yousfi
      */
     public function store(Request $request)
     {
@@ -74,10 +75,11 @@ class ItemController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * this funtion allow to Display the specified item.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed Madani Yousfi
      */
     public function show($id)
     {
@@ -85,10 +87,11 @@ class ItemController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     *this function allow to  Show the form for editing the item.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed Madani Yousfi
      */
     public function edit($id)
     {
@@ -98,11 +101,12 @@ class ItemController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * this function allow to Update the specified item .
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed Madani Yousfi
      */
     public function update(Request $request, $id)
     {
@@ -141,10 +145,11 @@ class ItemController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * this function allow to Remove the specified item from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed Madani Yousfi
      */
     public function destroy($id)
     {

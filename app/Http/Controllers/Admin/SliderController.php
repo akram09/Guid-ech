@@ -10,9 +10,10 @@ use App\Http\Controllers\Controller;
 class SliderController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * this function allow to Display a listing of sliders.
      *
      * @return \Illuminate\Http\Response
+    *@author Abdelwahed  Madan yousfi 
      */
     public function index()
     {
@@ -21,20 +22,22 @@ class SliderController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * this function allow to Show the form for creating a new slider.
      *
      * @return \Illuminate\Http\Response
-     */
+     *@author Madan yousfi Abdelwahed 
+      */
     public function create()
     {
         return view('admin.slider.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     *  this function allow to Store a newly created slider in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed  Madan yousfi 
      */
     public function store(Request $request)
     {
@@ -67,10 +70,11 @@ class SliderController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified slider.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed  Madan yousfi 
      */
     public function show($id)
     {
@@ -78,10 +82,11 @@ class SliderController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * this function allow to Show the form for editing the specified slider.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed  Madan yousfi 
      */
     public function edit($id)
     {
@@ -90,11 +95,12 @@ class SliderController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * this function allow to Update the specified slider in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     *@author Abdelwahed  Madan yousfi 
      */
     public function update(Request $request, $id)
     {
@@ -127,10 +133,11 @@ class SliderController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * this function allow to Remove the specified slider from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+    *@author Abdelwahed  Madan yousfi 
      */
     public function destroy($id)
     {

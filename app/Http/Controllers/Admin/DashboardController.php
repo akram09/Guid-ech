@@ -12,6 +12,11 @@ use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
+	/** 
+     * 
+     *@return \Illuminate\Http\Response : this function allow to display all elements count in dashboard
+     *@author Abdelwahed Madani Yousfi
+     */
     public function index()
     {
         $categoryCount = Category::count();

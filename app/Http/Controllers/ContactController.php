@@ -7,7 +7,13 @@ use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
-{
+{ 
+    /**
+     * this function allow to send message to the admin 
+     *
+     * @return \Illuminate\Http\Response
+    *@author Abdelwahed  Madan yousfi 
+     */
     public function sendMessage(Request $request)
     {
         $this->validate($request,[

@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/test', function () {
+    return view('test2');
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,7 +49,7 @@ Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affich
 
 Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidTaxi');
 Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidFood');
-Route::get('/{id}/wilaya', 'wilayaController@afficher')->name('Wilaya');
+Route::get('/{wilaya}', 'wilayaController@afficher')->name('Wilaya');
 
 
 
@@ -88,7 +91,7 @@ Route::group(['prefix'=>'admin','middleware'=>'admin','namespace'=>'admin'], fun
 
 //=====================================================
 Route::get('/vf', 'hotController@vf');
-Auth::routes();
+
 Route::get('/bauti', 'bautController@vf');
 Auth::routes(); 
 Auth::routes();

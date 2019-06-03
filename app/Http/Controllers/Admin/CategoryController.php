@@ -8,23 +8,22 @@ use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {
-    /**
+    /** 
      * 
-     *
-     * @return \Illuminate\Http\Response
+     *@return \Illuminate\Http\Response : this function allow to display all category
+     *@author Abdelwahed Madani Yousfi
      */
-    public function index()  /* this function allow to display all category  */
+    public function index()  
     {
         $categories = Category::all();
         return view('admin.category.index',compact('categories'));
     }
 
     /**
-     * 
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response : this function allow to show the form for create new category
+     *@author  Abdelwahed Madani yousfi  
      */
-    public function create() /* this function allow to show the form for create new category  */
+    public function create() 
     {
         return view('admin.category.create');
     }
@@ -33,9 +32,10 @@ class CategoryController extends Controller
      * 
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response :this function allow to store new category 
+     *@author  Abdelwahed Madani yousfi 
      */
-    public function store(Request $request)  /* this function allow to store new category  */
+    public function store(Request $request)  
     {
         $this->validate($request,[
             'name' => 'required'
@@ -52,6 +52,7 @@ class CategoryController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+    * @author  Abdelwahed Madani yousfi 
      */
     public function show($id)
     {
@@ -62,9 +63,10 @@ class CategoryController extends Controller
      * 
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response :this function allow to show the form  for edit category 
+     *@author  Abdelwahed Madani yousfi 
      */
-    public function edit($id) /* this function allow to show the form  for edit category  */
+    public function edit($id) 
     {
         $category = Category::find($id);
         return view('admin.category.edit',compact('category'));
@@ -75,9 +77,10 @@ class CategoryController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response : this function allow to update changes in storage 
+     *@author  Abdelwahed Madani yousfi
      */
-    public function update(Request $request, $id) /* this function allow to update changes in storage  */
+    public function update(Request $request, $id) 
     {
         $this->validate($request,[
             'name'=>'required'
@@ -94,9 +97,10 @@ class CategoryController extends Controller
      * 
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response :this function allow to delete  category
+     *@author  Abdelwahed Madani yousfi
      */
-    public function destroy($id)  /* this function allow to delete  category  */
+    public function destroy($id)  
     {
        Category::find($id)->delete();
        return redirect()->back()->with('successMsg','Category Successfully Delete');
