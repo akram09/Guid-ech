@@ -13,7 +13,7 @@ class AddColumnWilayaIdTaxi extends Migration
      */
     public function up()
     {
-        Schema::table('GuidTaxis', function (Blueprint $table) {
+        Schema::table('guid_taxis', function (Blueprint $table) {
             $table->integer('wilaya_id')->unsigned();
             $table->foreign('wilaya_id')->references('id')->on('wilayas');    
                 });
@@ -26,9 +26,9 @@ class AddColumnWilayaIdTaxi extends Migration
      */
     public function down()
     {
-        Schema::table('GuidTaxis', function (Blueprint $table) {
-             dropForeign(['wilaya_id']);
-             dropColumn('wilaya_id');
+        Schema::table('guid_taxis', function (Blueprint $table) {
+            $table->dropForeign(['wilaya_id']);
+            $table->dropColumn('wilaya_id');
         });
     }
 }

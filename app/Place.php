@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Place extends Model
 {
     public function Wilaya(){
-        return $this->belongsto('App/Wilaya');
+        return $this->belongsto('App\Wilaya');
     }
 
     public function Slider(){
-        return $this->hasMany('App/Slider');
+        return $this->hasMany('App\Slider');
     }
 }

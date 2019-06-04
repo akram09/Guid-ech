@@ -34,16 +34,21 @@ Route::get('/logout', 'auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/{wilayas_id}/restaurant', 'RestaurentController@afficher')->name('Restaurant');
+Route::get('/{wilayas_id}/restaurant', 'RestaurentController@afficher')->name('wilaya.restaurant');
 
-Route::get('/{wilayas_id}/Hotel', 'HotelController@afficher')->name('Hotel');
+Route::get('/{wilayas_id}/Hotel', 'HotelController@afficher')->name('wilaya.hotel');
 
-Route::get('/{wilayas_id}/Boutique', 'BoutiqueController@afficher')->name('Boutique');
-Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affichercat')->name('Boutique');
+Route::get('/{wilayas_id}/Boutique', 'BoutiqueController@afficher')->name('wilaya.boutique');
+Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affichercat')->name('boutique.cat');
 
 Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidTaxi');
 Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidFood');
+<<<<<<< HEAD
 Route::get('/{id}/wilaya', 'wilayaController@afficher')->name('Wilaya');
+=======
+Route::get('/{wilaya}', 'wilayaController@afficher')->name('Wilaya');
+Route::post('/rate' , 'restoController@rateresto')->name('rate');
+>>>>>>> cc4f8f7bd4921ae3dd9fa5acd945a4a4a3ea7104
 
 
 
@@ -84,9 +89,7 @@ Route::group(['prefix'=>'admin','middleware'=>'admin','namespace'=>'admin'], fun
 });
 
 //=====================================================
-Route::get('/vf', 'hotController@vf');
 
-Route::get('/bauti', 'bautController@vf');
 Auth::routes(); 
 Auth::routes();
 
