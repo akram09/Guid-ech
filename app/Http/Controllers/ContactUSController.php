@@ -6,7 +6,7 @@ use App\contactUs;
 class ContactUSController extends Controller
 {
    /**
-    * 
+    * @author Madani Yousfi Abdelwahed 
     *
     * @return \Illuminate\Http\Response
     */

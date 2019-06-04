@@ -81,7 +81,7 @@
 
                 <form class="form-inline ml-auto">
                  <div class="md-form my-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="text" placeholder="@lang('profile.search')" aria-label="Search">
                 </div>
                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i></button>
                </form>
@@ -99,7 +99,7 @@
 
 <div class="dropdown-menu dropdown-primary">
                                 <a class="dropdown-item" href="{{ url('/profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
-                              <a class="dropdown-item" href="{{ url('/logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                              <a class="dropdown-item" href="{{ url('/logout') }}"><i class="fas fa-sign-out-alt"></i>@lang('profile.logout')</a>
    </div>
         </div>
 
@@ -140,7 +140,7 @@
 <br>
 <br>
 
-            <h1 class="display-4 font-weight-bold">Choisissez votre déstination..</h1>
+            <h1 class="display-4 font-weight-bold">@lang('welcome.title')</h1>
 
             <hr class="hr-light">
 
@@ -149,7 +149,7 @@
             </p>
 
             <p class="mb-4 d-none d-md-block">
-              <strong>Passez votre curseur sur les cartes pour voir les wilayas</strong>
+              <strong>@lang('welcome.title_sm')</strong>
             </p>
 
             <!--<a target="_blank" href="#" class="btn btn-indigo btn-lg">visit
@@ -348,308 +348,6 @@
 
   </div>
   <!-- Full Page Intro -->
-
-
-   <!------------------------------------------------------------Sign up form -------------------------------------------->
-       <div class="col-sm-4 register-top-login">
-                <!-- Modal -->
-                    <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                         aria-hidden="true">
-
-                          <div class="modal-dialog" role="document">
-                             <!--Content-->
-                                 <div class="modal-content form-elegant">
-                           <!--Header-->
-                          <div class="modal-header text-center">
-                          <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <span aria-hidden="true">&times;</span>
-                          </button>
-                           </div>
-                            <!--Body-->
-                            <div class="modal-body mx-4">
-
-                    <form class= "form-horizontal register-container tb-padding" role="form" method="POST" action="{{ route('login') }}"> <!-- forme de login avec la meth POST -->
-                        @csrf    <!-- génération de token -->
- 
-                       
-
-
-
-
-
-                        <div class="md-form mb-5">  <!-- le champ e-mail de l'utilisateur -->
-                            
-
-                            <div class="col-sm-12">
-                                <input id="Form-email1" type="email" class="form-control validate" name="email" value="{{ old('email') }}">
-                                          <label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
-                                @if ($errors->has('email'))  <!-- errors= tableau des erreurs pour le champ email--> <!-- generation de erreurs de saisi-->
-                                    <span class="help-block" > <!-- "help-block" est une classe de bootstrap pour pour indiquer un bloc  texte d'aide pour un contrôle de formulaire donné-->
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="md-form pb-3"> <!-- le champ mot de passe de l'utilisateur -->
-                            
-
-                             <div class="col-sm-12">
-                                <input id="Form-pass" type="password" class="form-control validate" name="password" >
-                                <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
-
-                                @if ($errors->has('password'))  <!-- errors= tableau des erreurs pour le champ mot de passe--> <!-- generation de erreurs de saisi-->
-                                    <span class="help-block" >
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                            <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="{{ route('password.request') }}" class="blue-text ml-1">
-                                                          Password?</a></p>
-                        </div>
-
-                        <div class="form-group"> <!-- le champ mémoriser  l'utilisateur -->
-                            <div class="form-check">  
-                                
-                                <input id="materialIndeterminate2" checked class="form-check-input" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>  
-
-                               <label class="form-check-label" for="materialIndeterminate2">Remember me</label>  
-                                
-                            </div>
-
-                            <div class="form-check">
-                                 
-                                  <input class="form-check-input" type="checkbox" id="checkbox624">
-                                  <label for="checkbox624" class="light-blue-text form-check-label">Accept the<a href="#" class="text-primary">
-                                 Terms and Conditions</a></label>
-                            </div>
-                            <hr>
-
-
-                        </div>
-
-
-                        
-                         <div class="text-center mb-3">
-          <button type="submit" value="LOG IN"class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
-        </div>
-                       
-                       <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
-          with:</p>
-           <div class="row my-3 d-flex justify-content-center">
-          <!--Facebook-->
-          <a type="button" href="{{ url('/auth/redirect/facebook') }}"  class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></a>
-          <!--Twitter-->
-          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
-          <!--Google +-->
-          <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
-        </div>
-        <!--Footer-->
-      <div class="modal-footer mx-5 pt-3 mb-1">
-        <p class="font-small grey-text d-flex justify-content-end">Not a member? <a data-toggle="modal" data-target="#elegantModalForm1" class="blue-text ml-1">
-            Sign Up</a></p>
-      </div>
-
-                    
-                    </form>
-
-                  </div><!--body-->
-
-                     </div><!--Content-->
-                    </div>
-                    </div>
-                 <!-- Modal -->
-                    
-          
-    
-         
-    </div>
-     <!---------------------------------------- /sign in form --------------------------------------------->
-<hr>
-
-      <!---------------------------------------- /sign upform --------------------------------------------->
-<div class="col-sm-4 register-top-login"> 
-  
-
-
-   <div class="modal fade" id="elegantModalForm1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-          aria-hidden="true">
-     
-                               <div class="modal-dialog" role="document">
-                            <div class="modal-content form-elegant">
-                                <!--Header-->
-                          <div class="modal-header text-center">
-                              <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign up</strong></h3>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                   <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                             <!--/Header-->
-   <!--Body-->
-   <div class="modal-body mx-4">
-                   <form class="form-horizontal register-container tb-padding"method="POST" action="{{ route('register') }}"> <!--forme avc methode post --> 
-                        @csrf      <!--generation de token--> 
-                       
-                    
-                        <div class="md-form mb-5"> 
-                            <label for="name" data-error="wrong" data-success="right">Name</label> <!-- le champ nom de l'utilisateur -->
-                                 
-
-                            <div class="col-sm-6 col-sm-2"> <!-- generation de erreurs de saisi-->
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block" ><!-- "help-block" est une classe de bootstrap pour pour indiquer un bloc de texte d'aide pour un contrôle de formulaire donné-->
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="md-form mb-5">
-                            <label for="email" data-error="wrong" data-success="right">E-mail</label> <!-- le champ Email de l'utilisateur -->
-
-                            <div class="col-sm-6 col-sm-2"> <!-- generation de erreurs de saisi-->
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block" ><!-- "help-block" est une classe de bootstrap pour pour indiquer un bloc texte d'aide pour un contrôle de formulaire donné-->
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="md-form pb-3">
-                            <label for="password" data-error="wrong" data-success="right">Password</label> <!-- le champ mot de passe  -->
-
-                            <div class="col-sm-6 col-sm-2 "> <!-- generation de erreurs de saisi-->
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block" >
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="md-form pb-3"> <!-- le champ confirmer le mot de passe -->
-                            <label for="password-confirm" data-error="wrong" data-success="right" >Confirm Password</label>
-
-                            <div class="col-sm-6 col-sm-2">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-
-                     <label for="country" data-error="wrong" data-success="right">Country</label>
-                        <div class="md-form mb-5"> <!-- le champ country -->
-                       
-                        <div class="col-sm-6 col-sm-2">
-                          
-                        <select class="form-group" name="country" id="country">  <!-- selection de pays -->
-                          
-                         <option value="#"> Algérie</option>
-                         <option value="#"> Maroc</option>
-                         <option value="#"> Tunisie</option>
-                         <option value="#"> France</option>
-                         <option value="#"> Espagne</option>
-                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        </select>
-                        @if ($errors->has('country')) <!-- generation des erreurs de saisi  -->
-                                    <span class="help-block" >
-                                        <strong>{{ $errors->first('country') }}</strong>
-                                    </span>
-                         @endif
-                        </div>
-                        </div>
-
-                        <div class="md-form mb-5">    <!-- champ ville -->
-                        
-                        <label for="city" data-error="wrong" data-success="right">City</label>
-                        
-                        <div class="col-sm-6 col-sm-2">
-
-                        <input id="city"type="text"class="form-control" name="city" value="{{ old('city') }}" required autofocus>
-
-                        @if ($errors->has('city')) <!-- generation des erreurs de saisi  -->
-                                    <span class="help-block" >
-                                        <strong>{{ $errors->first('city') }}</strong>
-                                    </span>
-                         @endif
-                        </div>
-                        </div>
-
-
-                        <div class="md-form mb-5" >    <!-- champ address -->
-                       
-                        <label for="address" data-error="wrong" data-success="right">Address</label>
-                       
-                        <div class="col-sm-6 col-sm-2">
-
-                        <input id="address"type="text"class="form-control" name="address" value="{{ old('address') }}" required autofocus>
-
-                        @if ($errors->has('address')) <!-- generation des erreurs de saisi  -->
-                                    <span class="help-block" >
-                                        <strong>{{ $errors->first('address') }}</strong>
-                                    </span>
-                         @endif
-                        </div>
-                        </div>
-
-                            <div class="form-check">
-                                 
-                                  <input class="form-check-input" type="checkbox" id="checkbox624">
-                                  <label for="checkbox624" class="light-blue-text form-check-label">Accept the<a href="#" class="text-primary">
-                                 Terms and Conditions</a></label>
-                            </div>
-
-
-
-
-
-
-                        <div class="md-form mb-5">
-                            <div class="col-sm-12">
-                                <button type="submit"    value="register" class="btn blue-gradient btn-block btn-rounded z-depth-1a" >
-                                    {{__('Register')}}
-                                </button>
-
-                                                 <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign up
-          with:</p>
-           <div class="row my-3 d-flex justify-content-center">
-          <!--Facebook-->
-          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
-          <!--Twitter-->
-          <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
-          <!--Google +-->
-          <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
-        </div>
-        <!--Footer-->
-      <div class="modal-footer mx-5 pt-3 mb-1">
-        <p class="font-small grey-text d-flex justify-content-end"> a member? <a data-toggle="modal" data-target="#elegantModalForm"class="blue-text ml-1" >
-            Sign In</a></p>
-      </div>
-                            </div>
-                        </div>
-                    </form>
-  </div>     <!-- /body-->                
-
-                            </div>
-                               </div>
-   </div>
-
-
-    </div>
-    <!-- sign up form-->
       
 
   <!--Main layout-------------------------------------------------------------------------->
@@ -675,9 +373,7 @@
             <!-- Main heading -->
             <h3 class="h3 mb-3">Guidech</h3>
           <h4> 
-          c'est l'idéal pour vous guidez dans différentes villes d'algérie
-          en vous assurant de trouver tous ce que vous cherchiez :
-          Restaurants, Hôtels, Boutiques, et beaucoup plus...
+         @lang('welcome.descreption')
           </h4>
             <!-- Main heading -->
           </div>
@@ -696,7 +392,7 @@
       <!--------------------------------Section: Not enough------------------------------>
       <section>
 
-        <h2 class="my-5 h3 text-center">Découverons comment fonctionne votre Guidech! </h2>
+        <h2 class="my-5 h3 text-center">@lang('welcome.title_fonct')</h2>
 
         <!--First row-->
         <div class="row features-small mb-5 mt-3 wow fadeIn">
@@ -709,9 +405,9 @@
                 <i class="fas fa-check-circle fa-2x indigo-text"></i>
               </div>
               <div class="col-10">
-                <h4 class="feature-title">Choix de la ville:</h4>
+                <h4 class="feature-title">@lang('welcome.title_md_1')</h4>
                 <h6 class="grey-text">
-                   Guidech vous expose une simple manière pour trouver la ville que vouliez visiter avec un simple clique sur la carte d'algérie au dessous!
+                 @lang('welcome.title_sm_1')
                 </h6>
                 <div style="height:15px"></div>
               </div>
@@ -724,9 +420,9 @@
                 <i class="fas fa-check-circle fa-2x indigo-text"></i>
               </div>
               <div class="col-10">
-                <h4 class="feature-title">Offres de Guidech pour visiteur</h4>
+                <h4 class="feature-title">@lang('welcome.title_md_2')</h4>
                 <h6 class="grey-text">
-                  Avec un design simple et utile on vous propose dans chaque ville tous ce qu'il faut visiter si vous êtes un visiteur , des lieux touristiques, des hôtels , des restaurants et memes des boutiques vous pouvez aussi voir quelques infos historiques de la ville choisis.
+                  @lang('welcome.title_sm_2')
                 </h6>
                 <div style="height:15px"></div>
               </div>
@@ -753,8 +449,8 @@
                 <i class="fas fa-check-circle fa-2x indigo-text"></i>
               </div>
               <div class="col-10">
-                <h4 class="feature-title">Offres Guidech pour utilisateur</h4>
-                <h6 class="grey-text">   Quand vous inscrivez gratuitement vous aurez la possibilité d'évaluer un restaurant, hotel ou boutique et même envoyer votre feedback en méssage, vous aurez aussi accés à la carte de localisation  </h6>
+                <h4 class="feature-title">@lang('welcome.title_md_3')</h4>
+                <h6 class="grey-text">  @lang('welcome.title_sm_3') </h6>
                 <div style="height:15px"></div>
               </div>
             </div>
@@ -766,8 +462,8 @@
                 <i class="fas fa-check-circle fa-2x indigo-text"></i>
               </div>
               <div class="col-10">
-                <h4 class="feature-title">Localisation de Guidech</h4>
-                <h6 class="grey-text">Vous quelques êtes part et vous voulez trouvez tous les boutiques , hôtels ou restaurants autourt de vous alors notre système de localisation va détecter ça pour vous vous devez qu'insérer votre emplacement et voir tous ce qui est disponible</h6>
+                <h4 class="feature-title">@lang('welcome.title_md_4')</h4>
+                <h6 class="grey-text">@lang('welcome.title_sm_4')</h6>
                 <div style="height:15px"></div>
               </div>
             </div>
@@ -780,7 +476,7 @@
 
         </div>
         <!--/First row-->
-        <h2> Pour plus d'informations sur le fonctionnement de Guidech <a href="#">Cliquez ici</a></h2>
+        <h2> @lang('welcome.title_plus')<a href="#">@lang('welcome.title_plus_clic')</a></h2>
       </section>
       <!----------------------------------------Section: Not enough------------------------>
 
@@ -789,8 +485,8 @@
       <!--------------------------Section: Main features & Quick Start---------------->
       <section>
 
-        <h3 class="h3 text-center mb-5">Première visite pour une ville?</h3>
-        <h5>On vous propose quelques conseils:</h5>
+        <h3 class="h3 text-center mb-5">@lang('welcome.title_first_visit')</h3>
+        <h5>@lang('welcome.title_propo')</h5>
 
         <!--Grid row-->
         <div class="row wow fadeIn">
@@ -804,8 +500,8 @@
                <img src="images/qst.png" width="250%">
               </div>
               <div class="col-10">
-                <h5 class="feature-title">Conseil1</h5>
-                <p>le contenu de la conseil</p>
+                <h5 class="feature-title">@lang('welcome.title_c1')</h5>
+                <p>@lang('welcome.title_contenu1')</p>
               </div>
             </div>
             <!--/First row-->
@@ -818,8 +514,8 @@
                <img src="images/qst.png" width="250%">
               </div>
               <div class="col-10">
-                <h5 class="feature-title">Conseil2</h5>
-                <p>le contenu de la conseil</p>
+                <h5 class="feature-title">@lang('welcome.title_c2')</h5>
+                <p>@lang('welcome.title_contenu2')</p>
               </div>
             </div>
             <!--/Second row-->
@@ -832,10 +528,10 @@
                <img src="images/qst.png" width="250%">
               </div>
               <div class="col-10">
-                <h5 class="feature-title">Conseil3</h5>
-                <p>contenu de la conseil</p>
+                <h5 class="feature-title">@lang('welcome.title_c3')</h5>
+                <p>@lang('welcome.title_contenu3')</p>
               </div>
-              <h2>Pour plus de conseils et d'articles de ce type <a href="#">Cliquez ici</a></h2>
+              <h2>@lang('welcome.title_plus_tip') <a href="#">@lang('welcome.title_clic'))</a></h2>
 
             </div>
             <!--/Third row-->
@@ -861,7 +557,7 @@
 <section class="team-section text-center my-5">
 
   <!-- Section heading -->
-  <h2 class="h1-responsive font-weight-bold my-5">Our team</h2>
+  <h2 class="h1-responsive font-weight-bold my-5">@lang('welcome.title_team')</h2>
   <!-- Section description -->
   <p class="grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam
@@ -1043,7 +739,7 @@
             <form class="text-center" style="color: #757575;" method="post" action="{{ route('contactus.store') }}">
           {{ csrf_field() }}
                  <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Contact us</strong>
+        <strong>@lang('welcome.title_contact')</strong>
                  </h5>
                <div class="row">
                     <div class="col-md-6">
@@ -1103,18 +799,8 @@
  
 
   </div>
-  <!-- Grid row -->
 
 </section>
-<!-- Section: Contact v.2 -->
-
-
-
-  
-
-
-
-
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color darken-3 pt-4">
 

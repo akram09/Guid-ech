@@ -22,13 +22,7 @@ Auth::routes();
 //=============================
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
-Route::get('/callback/{provider}', 'SocialController@callback');
-
-
-
- //email verification =========================================
+//email verification =========================================
 Auth::routes(['verify' => true]); 
 
 Route::get('/home', function () {  // to test protecting route
@@ -49,7 +43,7 @@ Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affich
 
 Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidTaxi');
 Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidFood');
-Route::get('/{wilaya}', 'wilayaController@afficher')->name('Wilaya');
+Route::get('/{id}/wilaya', 'wilayaController@afficher')->name('Wilaya');
 
 
 
