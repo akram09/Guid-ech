@@ -18,6 +18,8 @@ class CreateGuidFoodsTable extends Migration
             $table->string('restPic');
             $table->string('menuPic');
             $table->string('details'); 
+            $table->integer('wilaya_id')->unsigned();
+            $table->foreign('wilaya_id')->references('id')->on('wilayas'); 
             $table->timestamps();
 
         });

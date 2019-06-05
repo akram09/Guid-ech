@@ -17,6 +17,8 @@ class CreatehotelsTable extends Migration
             $table->increments('id');
             $table->string('Details');
             $table->string('Himages');
+            $table->integer('wilaya_id')->unsigned();
+            $table->foreign('wilaya_id')->references('id')->on('wilayas'); 
             $table->timestamps();
         });
     }

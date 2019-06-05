@@ -15,11 +15,15 @@ class CreateRestaurantsTable extends Migration
     {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('classe')->unsigned();
+            $table->foreign('classe')->references('id')->on('restaurants_class');
+            $table->integer('wilaya_id')->unsigned();
+            $table->foreign('wilaya_id')->references('id')->on('wilayas');
             $table->string('name');
             $table->string('déscription');
             $table->string('adresse');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             
         });

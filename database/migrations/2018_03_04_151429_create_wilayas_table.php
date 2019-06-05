@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnWilayaIdTaxi extends Migration
+class CreateWilayasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class AddColumnWilayaIdTaxi extends Migration
      */
     public function up()
     {
-        Schema::table('guid_taxis', function (Blueprint $table) {
+        Schema::create('wilayas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
             $table->integer('wilaya_id')->unsigned();
-            $table->foreign('wilaya_id')->references('id')->on('wilayas');    
-                });
+            $table->foreign('wilaya_id')->references('id')->on('wilayas');  
+            $table->timestamps();
+        });
     }
 
     /**
@@ -26,9 +29,6 @@ class AddColumnWilayaIdTaxi extends Migration
      */
     public function down()
     {
-        Schema::table('guid_taxis', function (Blueprint $table) {
-            $table->dropForeign(['wilaya_id']);
-            $table->dropColumn('wilaya_id');
-        });
+        Schema::dropIfExists('wilayas');
     }
 }
