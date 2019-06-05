@@ -16,8 +16,6 @@ class CreateWilayasTable extends Migration
         Schema::create('wilayas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('wilaya_id')->unsigned();
-            $table->foreign('wilaya_id')->references('id')->on('wilayas');  
             $table->timestamps();
         });
     }
