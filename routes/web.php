@@ -43,12 +43,12 @@ Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affich
 
 Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidTaxi');
 Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidFood');
-<<<<<<< HEAD
+
 Route::get('/{id}/wilaya', 'wilayaController@afficher')->name('Wilaya');
-=======
-Route::get('/{wilaya}', 'wilayaController@afficher')->name('Wilaya');
+
+
 Route::post('/rate' , 'restoController@rateresto')->name('rate');
->>>>>>> cc4f8f7bd4921ae3dd9fa5acd945a4a4a3ea7104
+
 
 
 

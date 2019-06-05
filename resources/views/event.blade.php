@@ -7,24 +7,32 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">  
   <!-- CSRF Token -->
  <meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
 
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="{{ asset('affichageDisplay/css/bootstrap.min.css') }}" rel="stylesheet">
+ <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
 </head>
 
+
 <body>
+  
 <div class="container">
 @if (\Session::has('success'))
       <div class="alert alert-success">
         <p>{{ \Session::get('success') }}</p>
       </div><br />
      @endif
- <div class="panel panel-primary">
-              <div class="panel-heading">Guidech events</div>
-              <div class="panel-body" >
+ <div class="card">
+              <div class="card-header" style="background-color: #1C2331"><h2 class="text-info text-center"><strong>Guidech events</strong></h2></div>
+              <div class="card-body" >
                   {!! $calendar_details->calendar() !!}
               </div>
             </div>
+
+<script type="text/javascript" src="{{ asset('affichageDisplay/js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('affichageDisplay/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('affichageDisplay/js/mdb.min.js') }}"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
