@@ -14,8 +14,8 @@ class AddColumnSlidersRestauId extends Migration
     public function up()
     {
         Schema::table('sliders', function (Blueprint $table) {
-            $table->integer('restau')->unsigned();
-            $table->foreign('restau')->references('id')->on('restaurants');
+            $table->integer('restaurant_id')->unsigned();
+            $table->foreign('restaurant_id')->references('id')->on('restaurants');
         });
     }
 
@@ -27,8 +27,8 @@ class AddColumnSlidersRestauId extends Migration
     public function down()
     {
         Schema::table('sliders', function (Blueprint $table) {
-            $table->dropForeign(['restau']);
-            $table->dropColumn('restau');
+            $table->dropForeign(['restaurant_id']);
+            $table->dropColumn('restaurant_id');
         });
     }
 }

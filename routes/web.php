@@ -47,7 +47,7 @@ Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidF
 Route::get('/{id}/wilaya', 'wilayaController@afficher')->name('Wilaya');
 
 
-Route::post('/rate' , 'restoController@rateresto')->name('rate');
+Route::post('/rate' , 'RestaurentController@rateresto')->name('rate');
 
 
 
@@ -56,7 +56,7 @@ Route::post('/rate' , 'restoController@rateresto')->name('rate');
 
 //restoservice   =============================================
 
-Route::get('/{wilaya_id}/restaurant/{id}', 'RestoController@index')->name('resto');
+Route::get('/{wilaya_id}/restaurant/{id}', 'RestaurentController@index')->name('resto');
 Route::post('/reservation/{id}','ReservationController@reserve')->name('reservation.reserve');
 Route::post('/contact','ContactController@sendMessage')->name('contact.send');
 //=========================================================
