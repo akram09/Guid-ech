@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Notifications\ReservationConfirmed;
 use App\Reservation;
+use App\Restaurant;
+use Auth;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Controllers\Controller;
@@ -14,11 +16,12 @@ class ReservationController extends Controller
     /**
      * this function allow to Display all reservations requests
      *@return \Illuminate\Http\Response
-     *@author Abdelwahed Madani Yousfi
+     *@author Moncef Reggam
      */
     public function index()
     {
-        $reservations = Reservation::all();
+        $restaurant = Restaurant::where('id' , Auth::user()->id)->pluck('id');  
+        $reservations = Reservation::where('status',false)->where('restaurant_id' , $restaurant)->get();
         return view('admin.reservation.index',compact('reservations'));
     }
     /**

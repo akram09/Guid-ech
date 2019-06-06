@@ -34,6 +34,18 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group label-floating">
+                                            <label class="control-label">Restaurant</label>
+                                            <select class="form-control" name="restaurant_id">
+                                                @foreach($restaurants as $restaurant)
+                                                    <option value="{{ $restaurant->id }}">{{ $restaurant->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
                                             <label class="control-label">Name</label>
                                             <input type="text" class="form-control" name="name">
                                         </div>

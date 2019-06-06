@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Slider;
+use Auth;
+use App\Restaurant;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,11 +15,11 @@ class SliderController extends Controller
      * this function allow to Display a listing of sliders.
      *
      * @return \Illuminate\Http\Response
-    *@author Abdelwahed  Madan yousfi 
+    *@author Abdelwahed  Madan yousfi / Moncef reggam
      */
     public function index()
     {
-        $sliders = Slider::all();
+        $sliders = Slider::where('user_id' , Auth::user()->id)->get();
         return view('admin.slider.index',compact('sliders'));
     }
 
@@ -25,11 +27,12 @@ class SliderController extends Controller
      * this function allow to Show the form for creating a new slider.
      *
      * @return \Illuminate\Http\Response
-     *@author Madan yousfi Abdelwahed 
+     *@author Madan yousfi Abdelwahed / Moncef reggam
       */
     public function create()
     {
-        return view('admin.slider.create');
+        $restaurants = Restaurant::where('user_id' , Auth::user()->id)->get();
+        return view('admin.slider.create' , compact('restaurants'));
     }
 
     /**
@@ -45,6 +48,7 @@ class SliderController extends Controller
             'title' => 'required',
             'sub_title' => 'required',
             'image' => 'required|mimes:jpeg,jpg,bmp,png',
+            'restaurant_id' => 'required',
         ]);
         $image = $request->file('image');
         $slug = str_slug($request->title);
@@ -65,6 +69,8 @@ class SliderController extends Controller
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
         $slider->image = $imagename;
+        $slider->user_id = Auth::user()->id;
+        $slider->restaurant_id = $request->restaurant_id;
         $slider->save();
         return redirect()->route('slider.index')->with('successMsg','Slider Successfully Saved');
     }
@@ -128,6 +134,8 @@ class SliderController extends Controller
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
         $slider->image = $imagename;
+        $item->user_id = Auth::user()->id;
+        $item->restaurant_id = $request->restaurant_id;
         $slider->save();
         return redirect()->route('slider.index')->with('successMsg','Slider Successfully Updated');
     }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Item;
+use Auth;
+use App\Restaurant;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,11 +15,11 @@ class ItemController extends Controller
     /**
      *  this function allow to Display all items 
      *@return \Illuminate\Http\Response
-     *@author Abdelwahed Madani Yousfi
+     *@author Moncef Reggam
      */
     public function index()
     {
-        $items = Item::all();
+        $items = Item::where('user_id' , Auth::user()->id)->get();
         return view('admin.item.index',compact('items'));
 
     }
@@ -25,12 +27,13 @@ class ItemController extends Controller
     /**
      *  this function allow to Show the form for creating a new item
      * @return \Illuminate\Http\Response
-     *@author Abdelwahed Madani Yousfi
+     *@author Abdelwahed Madani Yousfi / Moncef Reggam
      */
     public function create()
     {
+        $restaurants = Restaurant::where('user_id' , Auth::user()->id)->get();
         $categories = Category::all();
-        return view('admin.item.create',compact('categories'));
+        return view('admin.item.create',compact('categories','restaurants'));
     }
 
     /**
@@ -70,6 +73,8 @@ class ItemController extends Controller
         $item->description = $request->description;
         $item->price = $request->price;
         $item->image = $imagename;
+        $item->user_id = Auth::user()->id;
+        $item->restaurant_id = $request->restaurant_id;
         $item->save();
         return redirect()->route('item.index')->with('successMsg','Item Successfully Saved');
     }

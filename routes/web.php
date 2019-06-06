@@ -58,7 +58,7 @@ Route::post('/rate' , 'RestaurentController@rateresto')->name('rate');
 
 Route::get('/{wilaya_id}/restaurant/{id}', 'RestaurentController@index')->name('resto');
 Route::post('/reservation/{id}','ReservationController@reserve')->name('reservation.reserve');
-Route::post('/contact','ContactController@sendMessage')->name('contact.send');
+Route::post('/contact/{id}','ContactController@sendMessage')->name('contact.send');
 //=========================================================
 
 

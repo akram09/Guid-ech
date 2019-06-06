@@ -312,7 +312,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                 <div class="row">
-                    <form class="contact-form" method="post" action="{{ route('contact.send') }}">
+                    <form class="contact-form" method="post" action="{{ route('contact.send' , ['id' => $last ]) }}">
                         @csrf
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">

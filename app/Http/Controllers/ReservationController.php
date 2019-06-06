@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Reservation;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
+use Auth;
 
 
 class ReservationController extends Controller
@@ -26,7 +27,8 @@ class ReservationController extends Controller
         $reservation->email = $request->email;
         $reservation->date_and_time = $request->dateandtime;
         $reservation->message = $request->message;
-        $reservation->reservations_id = $lasty;
+        $reservation->restaurant_id = $lasty;
+        $reservation->user_id = Auth::user()->id;
         $reservation->status = false;
         $reservation->save();
         Toastr::success('Reservation request sent successfully. we will confirm to you shortly','Success',["positionClass" => "toast-top-right"]);
