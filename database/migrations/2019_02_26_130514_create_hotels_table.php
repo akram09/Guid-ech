@@ -15,8 +15,9 @@ class CreatehotelsTable extends Migration
     {
         Schema::create('hotels', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->string('Details');
-            $table->string('Himages');
+            $table->string('images');
             $table->integer('wilaya_id')->unsigned();
             $table->foreign('wilaya_id')->references('id')->on('wilayas'); 
             $table->timestamps();

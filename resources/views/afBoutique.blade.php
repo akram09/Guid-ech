@@ -277,7 +277,7 @@ de votre wilaya choisi.</h2>
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1">
-              <img src="{{$element->Bimages}}" class="img-fluid"
+              <img src="{{$element->images}}" class="img-fluid"
                 alt="bt1">
               <a href="#" target="_blank">
                 <div class="mask rgba-white-slight"></div>

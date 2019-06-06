@@ -15,8 +15,9 @@ class CreateboutiquesTable extends Migration
     {
         Schema::create('boutiques', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->string('Details');
-            $table->string('Bimages');
+            $table->string('images');
             $table->integer('wilaya_id')->unsigned();
             $table->foreign('wilaya_id')->references('id')->on('wilayas'); 
             $table->integer('classe')->unsigned();
