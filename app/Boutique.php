@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Boutique extends Model
 {
+
+    /********
+     * 
+     * 
+     * Moncef Reggam
+     * 
+     * *******/
+
     public function Wilaya(){
         return $this->belongsto('App\Wilaya');
     }
@@ -13,7 +21,5 @@ class Boutique extends Model
     public function boutiqueclass(){
         return $this->belongsTo('App\boutiqueclass');
     }
-    public function Slider(){
-        return $this->hasMany('App\Slider');
-    }
+
 }

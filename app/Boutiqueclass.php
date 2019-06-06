@@ -6,7 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Boutiqueclass extends Model
 {
-    public function Boutique() {
+
+    /********
+     * 
+     * 
+     * Moncef Reggam
+     * 
+     * *******/
+    
+    public function Boutiques() {
         return $this->hasMany('App\Boutique');
     }
 }

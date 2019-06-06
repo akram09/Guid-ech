@@ -6,6 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wilaya extends Model
 {
+    /********
+     * 
+     * 
+     * Moncef Reggam
+     * 
+     * *******/
+    
     public function Hotel(){
         return $this->HasMany('App\Hotel');
     }
@@ -21,14 +28,12 @@ class Wilaya extends Model
     public function Boutique(){
         return $this->HasMany('App\Boutique');
     }
-    public function Slider(){
-        return $this->hasMany('App\Slider');
-    }
+
     public function GuidFood(){
         return $this->hasMany('App\GuidFood');
     }
 
     public function GuidTaxi(){
-        return $this->hasAmny('App\GuidTaxi');
+        return $this->hasMany('App\GuidTaxi');
     }
 }

@@ -6,11 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Place extends Model
 {
+    /********
+     * 
+     * 
+     * Moncef Reggam
+     * 
+     * *******/
+    
     public function Wilaya(){
-        return $this->belongsto('App\Wilaya');
+        return $this->belongsTo('App\Wilaya');
     }
 
-    public function Slider(){
-        return $this->hasMany('App\Slider');
+    public function Placetype(){
+        return $this->belongsTo('App\Placestype');
     }
 }

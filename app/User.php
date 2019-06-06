@@ -12,6 +12,13 @@ use Laravelista\Comments\Commenter;
 
 class User extends \TCG\Voyager\Models\User  implements MustVerifyEmail // email verification
 {
+    /********
+     * 
+     * 
+     * Moncef Reggam / Madani Youcefi Abdelwahed
+     * 
+     * *******/
+
     use Notifiable, Commenter;
 
     /**
@@ -40,4 +47,16 @@ class User extends \TCG\Voyager\Models\User  implements MustVerifyEmail // email
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Restaurants(){
+        return $this->hasMany('App\Restaurant');
+    }
+
+    public function Contacts(){
+        return $this->hasMany('App\Contact');
+    }
+    
+    public function Sliders(){
+        return $this->hasMany('App\Sliders');
+    }
 }

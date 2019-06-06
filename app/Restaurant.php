@@ -9,6 +9,13 @@ use willvincent\Rateable\Rateable;
 
 class Restaurant extends Model
 {
+    /********
+     * 
+     * 
+     * Moncef Reggam
+     * 
+     * *******/
+    
     public function Wilaya(){
         return $this->belongsto('App\Wilaya');
     }

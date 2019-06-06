@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Placestype extends Model
 {
-
     /********
      * 
      * 
@@ -14,8 +13,7 @@ class Category extends Model
      * 
      * *******/
     
-    public function items()
-    {
-        return $this->hasMany('App\Item');
+    public function Places(){
+        return $this->hasMany('App\Place');
     }
 }
