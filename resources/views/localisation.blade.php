@@ -282,7 +282,7 @@
     <div class='sidebar'>
 
       <div class='heading'>
-        <img src="{{ asset('/images/CLA.png') }}" width="175" height="40" class="head" alt="...">
+        <img src="{{ asset('/images/CLA.png') }}" class="head" alt="..."> 
       </div>
 
     <div id='listings' class='listings'></div>

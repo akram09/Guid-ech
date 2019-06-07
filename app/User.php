@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail; // email verification
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravelista\Comments\Commenter;
+
 
 
 
@@ -19,7 +19,7 @@ class User extends \TCG\Voyager\Models\User  implements MustVerifyEmail // email
      * 
      * *******/
 
-    use Notifiable, Commenter;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.

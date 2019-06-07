@@ -143,7 +143,7 @@
 <div id='map'></div>
    <div id='menu'>
        <div class='heading'>
-        <img src="{{ asset('/images/GRIS.png') }}" class=" head" alt="..."> 
+        <img src="{{ asset('/images/GRIS.png') }}" class="head" alt="..."> 
       </div>
 <input id='streets-v11' type='radio' name='rtoggle' value='streets' checked='checked'>
 <label for='streets'>streets</label>
