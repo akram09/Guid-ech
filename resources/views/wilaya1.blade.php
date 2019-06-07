@@ -193,13 +193,23 @@ z-index: 99;
 <body >
    
 
+<!-- Routes parametre ------------>
+
+<?php 
+            $segments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $segments[1];
+          ?>
+
+<!--------------------------------->
 
 <!--==  Navigation ==-->
 <nav id="nv">
 
             <!-- LOGO -->
       <a class="navbar-brand" href="" target="_blank">
-    <img class="animated zoomIn" src="{{ asset('/images/CLA.png') }}" width="175" height="50"  class="float-right" alt="..." style="position: relative;left: 50px; top: 40px;">
+    <img class="animated zoomIn" src="{{ asset('/images/CLA.png') }}" 
+    width="175" height="50"  class="float-right" alt="..." style="position: 
+    relative;left: 50px; top: 40px;">
       </a>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -213,8 +223,11 @@ z-index: 99;
         
 
 
-         <form class="form-inline md-form mr-auto mb-4" style="position: relative;top: 40px; left: 400px;">
-  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+         <form class="form-inline md-form mr-auto mb-4" 
+         style="position: relative;top: 40px; left: 400px; " 
+         action="#">
+
+  <input class="form-control" type="text" name="term" placeholder="Search" aria-label="Search">
   <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit" style="position: relative;bottom: 15px;">OK</button>
 </div>
                  <ul class="nav navbar-nav navbar-right"> <!-- navbar-nav nav-flex-icons"////affichage username et la photo -->
@@ -243,14 +256,6 @@ z-index: 99;
       </nav>
 <!--BODY-------------------------------------------------------------------------->
 
-<!-- Routes parametre ------------>
-
-          <?php 
-            $segments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-            $wilaya_id = $segments[1];
-          ?>
-
-<!--------------------------------->
 <div class="row">
   <div class="column" style="background-color:#FFFFFF;">
 <div class="lie">
