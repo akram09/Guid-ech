@@ -6,10 +6,21 @@
  use App\User;
  class SocialController extends Controller
  {
+
+  /**
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
  public function redirect($provider)
  {
      return Socialite::driver($provider)->redirect();
  }
+ /**
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
  public function callback($provider)
  {
    $getInfo = Socialite::driver($provider)->user(); 
@@ -17,6 +28,11 @@
    auth()->login($user); 
    return redirect()->to('/home');
  }
+ /**
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
  function createUser($getInfo,$provider){
  $user = User::where('provider_id', $getInfo->id)->first();
  if (!$user) {

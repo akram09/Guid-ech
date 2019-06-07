@@ -6,7 +6,13 @@ use App\Reservation;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Auth;
-
+ 
+ /**   
+     * this allow to user send a reservation request 
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
 
 class ReservationController extends Controller
 {

@@ -8,7 +8,7 @@ class Admin
 {
     /**
      * Handle an incoming request.
-     *
+     *  @author Abdelwahed Madani Yousfi
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
      * @return mixed

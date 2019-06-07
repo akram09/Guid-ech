@@ -7,6 +7,13 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ asset('affichageDisplay/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
+  <!-- our custom styles (optional) ila bghitou tmodifiw -->
+  <link href="{{ asset('affichageDisplay/css/style.min.css') }}" rel="stylesheet">
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -117,14 +124,10 @@
 </head>
 <body>
      <style>
-
-
-
-     #menu {
+ #menu {
          position: absolute;
-         background: #fff;
-         padding: 10px;
-         font-family: 'Open Sans', sans-serif;
+         background-color: rgba(0, 0, 0, 0.1);
+         padding: 5px;
            }
    </style>
 
@@ -181,6 +184,7 @@ map.addControl(new mapboxgl.NavigationControl());
 map.addControl(new MapboxDirections({
     accessToken: mapboxgl.accessToken
 }), 'top-right');
+
    // stores data geojson
     var stores = {
     type: 'FeatureCollection',
@@ -423,11 +427,8 @@ map.addControl(new MapboxDirections({
         "features": [] // Notice that initially there are no features
       }
     });
-      // Initialize the list
-    buildLocationList(stores);
-
-
-    map.addControl(geocoder, 'top-left');
+  
+  map.addControl(geocoder, 'top-left');
   });
 
   // This is where your interactions with the symbol layer used to be
@@ -483,59 +484,14 @@ map.addControl(new MapboxDirections({
           .addTo(map);
   }
 
-
-  function buildLocationList(data) {
-    for (i = 0; i < data.features.length; i++) {
-      var currentFeature = data.features[i];
-      var prop = currentFeature.properties;
-
-      var listings = document.getElementById('listings');
-      var listing = listings.appendChild(document.createElement('div'));
-      listing.className = 'item';
-      listing.id = "listing-" + i;
-
-      var link = listing.appendChild(document.createElement('a'));
-      link.href = '#';
-      link.className = 'title';
-      link.dataPosition = i;
-      link.innerHTML = prop.address;
-
-      var details = listing.appendChild(document.createElement('div'));
-      details.innerHTML = prop.city;
-      if (prop.phone) {
-        details.innerHTML += ' &middot; ' + prop.phoneFormatted;
-      }
-
-      if (prop.distance) {
-  var roundedDistance = Math.round(prop.distance * 100) / 100;
-  details.innerHTML += '<p><strong>' + roundedDistance + ' kilometers away</strong></p>';
-}
-
-
-
-
-      link.addEventListener('click', function(e){
-        // Update the currentFeature to the store associated with the clicked link
-        var clickedListing = data.features[this.dataPosition];
-
-        // 1. Fly to the point
-        flyToStore(clickedListing);
-
-        // 2. Close all other popups and display popup for clicked store
-        createPopUp(clickedListing);
-
-        // 3. Highlight listing in sidebar (and remove highlight for all other listings)
-        var activeItem = document.getElementsByClassName('active');
-
-        if (activeItem[0]) {
-           activeItem[0].classList.remove('active');
-        }
-        this.parentNode.classList.add('active');
-
-      });
-    }
-  }
 </script>
-
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/jquery-3.3.1.min.js') }}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/popper.min.js') }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/bootstrap.min.js') }}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
 </body>
 </html>

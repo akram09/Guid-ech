@@ -11,13 +11,25 @@ use Validator;
 use App\Event;
 use Calendar;
 class EventController extends Controller
-{
+{ 
+    /** 
+    *   this allow to show form to create an event
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return response
+    */
     public function createEvent()
     {
         return view('createevent');
     }
+    /**
+    *   this function show the events views
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
 
-public function index(){
+    public function index(){
     	$events = Event::get();
     	$event_list = [];
     	foreach ($events as $key => $event) {
@@ -33,6 +45,12 @@ public function index(){
         return view('event', compact('calendar_details') );
     }
 
+    /**
+    * this function allow to create the event
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
     public function addEvent(Request $request)
     {
         $validator = Validator::make($request->all(), [

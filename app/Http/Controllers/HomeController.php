@@ -29,12 +29,23 @@ class HomeController extends Controller
         return view('home');
     }
 
-
+     /**
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
     
      public function showChangePasswordForm(){ // return change password view get*
        
         return view('auth.changepassword');
     }
+     
+     /**
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
+
      public function changePassword(Request $request){ // change password function  post*
        
         if (!(Hash::check($request->get('current-password'), Auth::user()->password))) { // The passwords matches

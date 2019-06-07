@@ -13,7 +13,7 @@ class contactus extends Mailable
 
     /**
      * Create a new message instance.
-     *
+     *  @author Madani Yousfi Abdelwahed 
      * @return void
      */
     public function __construct()
@@ -23,7 +23,7 @@ class contactus extends Mailable
 
     /**
      * Build the message.
-     *
+     *  @author Madani yousfi Abdelwahed
      * @return $this
      */
     public function build()

@@ -37,6 +37,13 @@ class RestaurentController extends Controller
         return view('affichageDisplay' , compact('elements'));
     }
 
+
+    /**
+    * @author Madani Yousfi Abdelwahed 
+                                       Updated by Moncef Reggam
+    *
+    * @return \Illuminate\Http\Response
+    */
     public function index($wilaya_id , $id)
     {
                        

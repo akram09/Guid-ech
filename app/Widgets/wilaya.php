@@ -15,10 +15,11 @@ class wilaya extends BaseDimmer
      * @var array
      */
     protected $config = [];
+    
 
-    /**
-     * Treat this method as a controller action.
-     * Return view() or other content to display.
+     /**
+     *  @author Abdelwahed Madani Yousfi 
+     * this allow to return Wilaya widget to super admin dash 
      */
     public function run()
     {

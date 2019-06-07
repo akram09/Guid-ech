@@ -17,7 +17,8 @@ class DashboardController extends Controller
 	/** 
      * 
      *@return \Illuminate\Http\Response : this function allow to display all elements count in dashboard
-     *@author Moncef reggam
+     *@author  Abdelwahed Madani Yousfi 
+                                          Updated by Moncef reggam
      */
     public function index()
     {

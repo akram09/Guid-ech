@@ -6,13 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {   
-
-    /********
+    
+    /**
+     *  @author Moncef reggam / Abdelwahed Madani Yousfi 
      * 
-     * 
-     * Moncef Reggam
-     * 
-     * *******/
+     */
     
     public function category()
     {

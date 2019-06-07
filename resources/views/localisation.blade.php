@@ -13,35 +13,10 @@
       </script><script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
       <link href='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.css' rel='stylesheet' />
 
-
-<!--       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
-      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' /> -->
-      <!-- Geocoder plugin -->
       <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.js'></script>
       <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css' type='text/css' />
       <!-- Turf.js plugin -->
       <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
-<!--     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
-      Geocoder plugin
-   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.js'></script>
-   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css' type='text/css' />
-
-      Turf.js plugin
-   <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script> --> 
-
-
-
-   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="css/style.min.css" rel="stylesheet">
 
     <style>
 
@@ -286,7 +261,8 @@
          position: absolute;
          background: #fff;
          padding: 10px;
-         font-family: 'Open Sans', sans-serif;
+         left: 66%;
+         top:10;
            }
    </style>
 
@@ -389,7 +365,7 @@
     // container id specified in the HTML
     container: 'map',
     // style URL
-    style: 'mapbox://styles/mapbox/satellite-v9',
+    style: 'mapbox://styles/mapbox/streets-v11',
     // initial position in [long, lat] format
     center: [-1.316699, 34.881789 ],
     // initial zoom
@@ -756,7 +732,7 @@ createPopUp(stores.features[0]);
   });
 
   // This is where your interactions with the symbol layer used to be
-  // Now you have interactions with DOM markers instead
+  
   stores.features.forEach(function(marker, i) {
     // Create an img element for the marker
     var el = document.createElement('div');
@@ -861,19 +837,5 @@ createPopUp(stores.features[0]);
     }
   }
     </script>
-      <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Initializations -->
-  <script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
-  </script>
   </body>
 </html>

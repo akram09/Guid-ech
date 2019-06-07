@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App;
 
-/*
- by 
-abdelwahed
-madani yousfi
-*/
+    /**
+    * @author Madani Yousfi Abdelwahed 
+    *
+    * @return \Illuminate\Http\Response
+    */
 class MultilanguageController extends Controller 
 {  
 	                   /*this function allow to change the language by setLocale method and store it in the session*/

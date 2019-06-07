@@ -15,9 +15,9 @@ class Restaurant extends BaseDimmer
      */
     protected $config = [];
 
-    /**
-     * Treat this method as a controller action.
-     * Return view() or other content to display.
+   /**
+     *  @author Abdelwahed Madani Yousfi 
+     * this allow to return Restaurant widget to super admin dash 
      */
     public function run()
     {
@@ -38,7 +38,8 @@ class Restaurant extends BaseDimmer
 
     /**
      * Determine if the widget should be displayed.
-     *
+     *  @author Abdelwahed Madani Yousfi
+     * 
      * @return bool
      */
     public function shouldBeDisplayed()

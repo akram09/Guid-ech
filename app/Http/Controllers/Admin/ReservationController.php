@@ -16,7 +16,8 @@ class ReservationController extends Controller
     /**
      * this function allow to Display all reservations requests
      *@return \Illuminate\Http\Response
-     *@author Moncef Reggam
+     *@author Madani yousfi Abdelwahed 
+                                        Updated by Moncef Reggam
      */
     public function index()
     {

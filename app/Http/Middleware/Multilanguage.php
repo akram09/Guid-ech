@@ -9,7 +9,7 @@ class multilanguage
 {
     /**
      * Handle an incoming request.
-     * by abdelwahed madani yousfi
+     * @author Abdelwahed madani yousfi
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
      * @return mixed

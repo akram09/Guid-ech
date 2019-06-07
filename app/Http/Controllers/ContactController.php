@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 { 
     /**
-     * this function allow to send message to the admin 
+     * this function allow to send message to admin 
      *
      * @return \Illuminate\Http\Response
     *@author Abdelwahed  Madan yousfi 

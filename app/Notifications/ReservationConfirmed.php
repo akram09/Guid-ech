@@ -13,7 +13,7 @@ class ReservationConfirmed extends Notification
 
     /**
      * Create a new notification instance by abdelwahed .
-     *
+     * @author Abdelwahed Madani Yousfi
      * @return void
      */
     public function __construct()
@@ -23,7 +23,7 @@ class ReservationConfirmed extends Notification
 
     /**
      * Get the notification's delivery channels by abdelwahed .
-     *
+     * @author Madani yousfi Abdelwahed
      * @param  mixed  $notifiable
      * @return array
      */
@@ -34,7 +34,7 @@ class ReservationConfirmed extends Notification
 
     /**
      * Get the mail representation of the notification abdelwahed.
-     *
+     * @author Abdelwahed Madani yousfi 
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
@@ -47,7 +47,7 @@ class ReservationConfirmed extends Notification
 
     /**
      * Get the array representation of the notification.
-     *
+     *  @author Abdelwahed Madani Yousfi
      * @param  mixed  $notifiable
      * @return array
      */
