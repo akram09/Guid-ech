@@ -5,11 +5,15 @@
  Projet pluridisciplinaire
 Création d’une application web : Guidech
 
-Réalisé par :                   Encadré par: 
- * Abdelwahed Madani Yousfi                  Mme B.klouche et Mme A.Belalia                    
+Réalisé par :                   
+ * Abdelwahed Madani Yousfi                                      
  * Malika Dermi
  * Moncef Reggam                                    
  * Riyane Larbi                                         
  * Said Bouabdellah                 
  * Ikhlass Zeblah                                                   
-                                                                                      Année universitaire : 2018-2019
+                                                                                     
+Encadré par: 
+* Mme B.klouche et  * Mme A.Belalia
+
+                                                                                                                
