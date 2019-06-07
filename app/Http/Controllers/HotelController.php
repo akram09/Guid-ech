@@ -7,6 +7,11 @@ use App\Hotel;
 
 class HotelController extends Controller
 {
+    /********
+     * 
+     * Moncef Reggam
+     * 
+     * *******/
    
     public function __construct()
     {

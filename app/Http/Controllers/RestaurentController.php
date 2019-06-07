@@ -10,6 +10,12 @@ use Illuminate\Http\Request;
 
 class RestaurentController extends Controller
 {
+    /********
+     * 
+     * 
+     * Moncef Reggam
+     * 
+     * *******/
 
     /**
      * Create a new controller instance.
@@ -44,7 +50,7 @@ class RestaurentController extends Controller
     }
 
     
-    public function rateresto(Request $request){
+    public function rate(Request $request){
 
         request()->validate(['rate' => 'required']);
 

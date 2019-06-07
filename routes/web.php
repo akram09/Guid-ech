@@ -1,15 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 Route::get('/test', function () {
     return view('test2');
 });
@@ -36,9 +27,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/{wilayas_id}/restaurant', 'RestaurentController@afficher')->name('wilaya.restaurant');
 
-Route::get('/{wilayas_id}/Hotel', 'HotelController@afficher')->name('wilaya.hotel');
+Route::get('/{wilayas_id}/Hotel', 'HotelController@affichertt')->name('wilaya.hotel');
 
-Route::get('/{wilayas_id}/Boutique', 'BoutiqueController@afficher')->name('wilaya.boutique');
+Route::get('/{wilayas_id}/Boutique', 'BoutiqueController@affichertt')->name('wilaya.boutique');
 Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affichercat')->name('boutique.cat');
 
 Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidTaxi');
@@ -47,7 +38,9 @@ Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidF
 Route::get('/{id}/wilaya', 'wilayaController@afficher')->name('Wilaya');
 
 
-Route::post('/rate' , 'RestaurentController@rateresto')->name('rate');
+Route::post('/rater' , 'RestaurentController@rate')->name('rateresto');
+Route::post('/rateh' , 'HotelController@rate')->name('ratehotel');
+Route::post('/rateb' , 'BoutiqueController@rate')->name('ratebout');
 
 
 
@@ -131,6 +124,9 @@ Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@
 
 Route::get('event', 'EventController@index')->name('events.index');
 Route::post('event', 'EventController@addEvent')->name('events.add');
+
+/*=======================================================================*/
+Route::get('/{wilaya_id}' , 'WilayaController@search')->name('search');
 
 
 
