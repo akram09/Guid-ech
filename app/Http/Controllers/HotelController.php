@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
 use App\Http\Requests\HotelRequest;
 use Illuminate\Http\Request;
 use App\Hotel;
@@ -13,16 +12,31 @@ class HotelController extends Controller
     {
         $this->middleware('auth');
     }
-public function affichertt(){
-    $elements = DB::table('hotels')->get();
-    return view('afHotel' , compact('elements'));
-}
-public function afficher($wilayas_id){
+    public function afficher($wilaya_id , $id){
+        $elements = Hotel::where('wilaya_id', strval($wilayas_id))
+                     ->where('id', strval($id))->get();
+        return view('afHotel' , compact('elements'));
+    }
+    public function affichertt($wilayas_id){
     
-$elements = DB::table('hotels')->where('wilaya_id', strval($wilayas_id))->get();
-    return view('afHotel' , compact('elements'));
+        $elements = Hotel::where('wilaya_id', strval($wilayas_id))->paginate(3);
+        return view('afHotel' , compact('elements'));
     
-}
+    }
+
+     public function rate(Request $request){
+
+        request()->validate(['rate' => 'required']);
+
+        $Hotel = Hotel::find($request->id);
+
+        $rating = new \willvincent\Rateable\Rating;
+        $rating->rating = $request->rate;
+        $rating->user_id = \Auth::id();
+
+        $Hotel->ratings()->save($rating);
+        return back();
+    }
    
 }
 
