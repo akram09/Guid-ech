@@ -17,6 +17,14 @@
       <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.0.1/mapbox-gl-geocoder.css' type='text/css' />
       <!-- Turf.js plugin -->
       <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+       <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ asset('affichageDisplay/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
+  <!-- our custom styles (optional) ila bghitou tmodifiw -->
+  <link href="{{ asset('affichageDisplay/css/style.min.css') }}" rel="stylesheet">
 
     <style>
 
@@ -223,7 +231,13 @@
   .view {
       height: 100%;
     }
-
+   .head 
+        {
+          top:4;
+          right: 5%;
+          width:175;
+          height: 40;
+        }
     @media (max-width: 740px) {
       html,
       body,
@@ -254,12 +268,9 @@
 
   <body>
    <style>
-
-
-
-     #menu {
+        #menu {
          position: absolute;
-         background: #fff;
+         background-color: rgba(0, 0, 0, 0.1);
          padding: 10px;
          left: 66%;
          top:10;
@@ -271,7 +282,7 @@
     <div class='sidebar'>
 
       <div class='heading'>
-        <h1>Guid-ech</h1>
+        <img src="{{ asset('/images/CLA.png') }}" width="175" height="40" class="head" alt="...">
       </div>
 
     <div id='listings' class='listings'></div>
@@ -837,5 +848,19 @@ createPopUp(stores.features[0]);
     }
   }
     </script>
+        <!-- JQuery -->
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/jquery-3.3.1.min.js') }}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/popper.min.js') }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{ asset('affichageDisplay/js/bootstrap.min.js') }}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+  
   </body>
 </html>

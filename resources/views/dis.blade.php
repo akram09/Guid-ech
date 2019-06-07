@@ -95,6 +95,13 @@
        .view {
       height: 100%;
     }
+     .head 
+        {
+          top:4;
+          right: 5%;
+          width:175;
+          height: 40;
+        }
 
     @media (max-width: 740px) {
       html,
@@ -135,6 +142,9 @@
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css' type='text/css' />
 <div id='map'></div>
    <div id='menu'>
+       <div class='heading'>
+        <img src="{{ asset('/images/GRIS.png') }}" class=" head" alt="..."> 
+      </div>
 <input id='streets-v11' type='radio' name='rtoggle' value='streets' checked='checked'>
 <label for='streets'>streets</label>
 <input id='light-v10' type='radio' name='rtoggle' value='light'>
