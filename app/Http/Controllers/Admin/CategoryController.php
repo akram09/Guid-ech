@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
+use Auth;
+use App\Restaurant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,20 +14,23 @@ class CategoryController extends Controller
      * 
      *@return \Illuminate\Http\Response : this function allow to display all category
      *@author Abdelwahed Madani Yousfi
+                                         updated by reggam Moncef
      */
     public function index()  
     {
-        $categories = Category::all();
+        $categories = Category::where('user_id' , Auth::user()->id)->get();
         return view('admin.category.index',compact('categories'));
     }
 
     /**
      * @return \Illuminate\Http\Response : this function allow to show the form for create new category
      *@author  Abdelwahed Madani yousfi  
+                                         updated by reggam Moncef
      */
     public function create() 
     {
-        return view('admin.category.create');
+        $restaurants = Restaurant::where('user_id' , Auth::user()->id)->get();
+        return view('admin.category.create',compact('restaurants'));
     }
 
     /**
@@ -43,6 +48,8 @@ class CategoryController extends Controller
         $category = new Category();
         $category->name = $request->name;
         $category->slug = str_slug($request->name);
+        $category->user_id = Auth::user()->id;
+        $category->restaurant_id = $request->restaurant_id;
         $category->save();
         return redirect()->route('category.index')->with('successMsg','Category Successfully Saved');
     }

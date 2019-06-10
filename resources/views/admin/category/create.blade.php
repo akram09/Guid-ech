@@ -27,6 +27,18 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Restaurant</label>
+                                            <select class="form-control" name="restaurant_id">
+                                                @foreach($restaurants as $restaurant)
+                                                    <option value="{{ $restaurant->id }}">{{ $restaurant->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                                 <a href="{{ route('category.index') }}" class="btn btn-danger">Back</a>
                                 <button type="submit" class="btn btn-primary">Save</button>
                             </form>

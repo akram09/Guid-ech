@@ -23,7 +23,7 @@ class DashboardController extends Controller
     public function index()
     {
         
-        $categoryCount = Category::count();
+        $categoryCount = Category::where('user_id' , Auth::user()->id)->count();
 
         $itemCount = Item::where('user_id' , Auth::user()->id)->count();
         
