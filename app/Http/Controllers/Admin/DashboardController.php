@@ -30,6 +30,8 @@ class DashboardController extends Controller
         //$restaurant : to retrieve all restaurant's ids owned by admin to filter shown data 
         $restaurant = Restaurant::where('user_id' , Auth::user()->id)->pluck('id');
 
+        $categoryCount = Category::where('user_id' , Auth::user()->id);
+
         $reservations = Reservation::where('status',false)->whereIn('restaurant_id' , $restaurant)->get();
         
         $contactCount = Contact::whereIn('restaurant_id' , $restaurant)->count();
