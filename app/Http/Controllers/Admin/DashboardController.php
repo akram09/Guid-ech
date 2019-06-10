@@ -11,6 +11,7 @@ use Auth;
 use App\restaurant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use ConsoleTVs\Charts\Charts;
 
 class DashboardController extends Controller
 {
@@ -23,7 +24,13 @@ class DashboardController extends Controller
     public function index()
     {
         
+<<<<<<< HEAD
         $categoryCount = Category::where('user_id' , Auth::user()->id)->count();
+=======
+        $categoryCount = Category::count();
+        
+        $reservationsCount = Reservation::count();
+>>>>>>> 1af5a1444675a5f1fb85b7aa591225375ffc5d76
 
         $itemCount = Item::where('user_id' , Auth::user()->id)->count();
         
@@ -35,7 +42,14 @@ class DashboardController extends Controller
         $reservations = Reservation::where('status',false)->whereIn('restaurant_id' , $restaurant)->get();
         
 
+        $reservations = Reservation::where('status',false)->where('restaurant_id' , $restaurant)->get();
+      
+        $contactCount = Contact::where('restaurant_id' , $restaurant)->count();
+        return view('admin.dashboard',compact('categoryCount','itemCount','sliderCount','reservations','contactCount','reservationsCount'));
+
+
         $contactCount = Contact::whereIn('restaurant_id' , $restaurant)->count();
         return view('admin.dashboard',compact('categoryCount','itemCount','sliderCount','reservations','contactCount'));
+
     }
 }

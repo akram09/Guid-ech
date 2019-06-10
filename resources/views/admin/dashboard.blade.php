@@ -190,6 +190,23 @@
             </div>
         </div>
 
+  <div class="col-md-12">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="red">
+                            
+                        </div>
+                        <div class="card-content">
+                             {!!
+                                ConsoleTVs\Charts\Charts::database($reservations , 'line', 'material')
+                                    ->setTitle($t = 'Total')->setDimensions(0, 300)->setResponsive(true)
+                                    ->setElementLabel($t)->setColors(['#0275d8'])->lastByDay(7, true)->render();
+                            !!}
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+
     </div>
   
                

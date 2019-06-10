@@ -11,7 +11,7 @@
     <title>@yield('title')</title>
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
     
-
+{!! ConsoleTVs\Charts\Charts::assets() !!}
     <!-- Styles -->
     <!-- Bootstrap core CSS     -->
     <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet" />
