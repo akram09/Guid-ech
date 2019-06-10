@@ -133,9 +133,6 @@ class SliderController extends Controller
         $slider->title = $request->title;
         $slider->sub_title = $request->sub_title;
         $slider->image = $imagename;
-        $item->user_id = Auth::user()->id;
-        $item->restaurant_id = $request->restaurant_id;
-        $slider->save();
         return redirect()->route('slider.index')->with('successMsg','Slider Successfully Updated');
     }
 

@@ -59,4 +59,7 @@ class User extends \TCG\Voyager\Models\User  implements MustVerifyEmail // email
     public function Sliders(){
         return $this->hasMany('App\Sliders');
     }
+    public function Categories(){
+        return $this->hasMany('App\Category');
+    }
 }

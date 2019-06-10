@@ -25,21 +25,29 @@ class DashboardController extends Controller
     public function index()
     {
         
+<<<<<<< HEAD
         $categoryCount = Category::count();
         
         
         
 
 
+=======
+>>>>>>> 37e9f7621a1e216020dcada7c5db9f9fcc37ca67
         $itemCount = Item::where('user_id' , Auth::user()->id)->count();
         
         $sliderCount = Slider::where('user_id' , Auth::user()->id)->count();
         //$restaurant : to retrieve all restaurant's ids owned by admin to filter shown data 
         $restaurant = Restaurant::where('user_id' , Auth::user()->id)->pluck('id');
 
-        
+        $categoryCount = Category::where('user_id' , Auth::user()->id)->count();
+
         $reservations = Reservation::where('status',false)->whereIn('restaurant_id' , $restaurant)->get();
+<<<<<<< HEAD
       
+=======
+        
+>>>>>>> 37e9f7621a1e216020dcada7c5db9f9fcc37ca67
         $contactCount = Contact::whereIn('restaurant_id' , $restaurant)->count();
         return view('admin.dashboard',compact('categoryCount','itemCount','sliderCount','reservations','contactCount'));
 

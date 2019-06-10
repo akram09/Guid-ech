@@ -49,9 +49,9 @@ class RestaurentController extends Controller
                        
         $Restaurants = Restaurant::where('wilaya_id' , strval($wilaya_id))
         ->where('id' , strval($id));
-        $sliders = Slider::all();
-        $categories = Category::all();
-        $items = Item::all();
+        $sliders = Slider::where('restaurant_id' , $id )->get();
+        $categories = Category::where('restaurant_id' , $id )->get();
+        $items = Item::where('restaurant_id' , $id )->get();
         
         return view('resto',compact('sliders','categories','items','Restaurants'));
     }
