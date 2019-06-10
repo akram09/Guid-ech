@@ -108,7 +108,12 @@
     <!-- Grid column -->
     <div class="col-md-6">
 
-      
+      <!------------------------------------------>
+      <?php 
+            $segments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $segments[1];
+          ?>
+      <!------------------------------------------>    
       <a href="#!" class="green-text">
         <h6 class="font-weight-bold mb-3"><i class="fas fa-utensils pr-2"></i>restaurants</h6>
       </a>
@@ -116,7 +121,8 @@
      
       <p> Trouvez de différentes catégories des restaurants dans la wilaya que vous avez choisi et profitez des offres de notre GuidRestaurants </p>
      
-      <a class="btn btn-success btn-md"> more</a>
+      <a class="btn btn-success btn-md"
+      href="{{ route('wilaya.restaurant' , ['wilaya_id' => $wilaya_id ] ) }}"> more</a>
 
     </div>
     <!-- Grid column -->
@@ -139,9 +145,11 @@
       <!-- Post title -->
       <h3 class="font-weight-bold mb-3"><strong>bla bla </strong></h3>
       <!-- Excerpt -->
-      <p>Vous partez en vacances ou en voyage d’affaires, vous recherchez une auberge de jeunesse ou un hôtel 5 étoiles, GuidHotel vous permet de trouver l'hôtel dans la wilaya que vous avez choisi.</p>
+      <p>Vous partez en vacances ou en voyage d’affaires, vous recherchez une auberge de jeunesse 
+      ou un hôtel 5 étoiles, GuidHotel vous permet de trouver l'hôtel dans la wilaya que vous avez choisi.</p>
      
-      <a class="btn btn-pink btn-md mb-lg-0 mb-4">more</a>
+      <a class="btn btn-pink btn-md mb-lg-0 mb-4" href="
+      {{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}">more</a>
 
     </div>
     <!-- Grid column -->
@@ -195,7 +203,8 @@
       <p>GuidBoutiques facilite vos achats des habilles dans la wilaya que avez choisi on vous collecte les meilleurs boutiques, amusez-vous.</p>
       
       <!-- Read more button -->
-      <a class="btn btn-indigo btn-md">more</a>
+      <a class="btn btn-indigo btn-md"
+      href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}">more</a>
 
     </div>
     
@@ -220,7 +229,8 @@
       
       <p>GuidTaxi vous met à votre disposition pleins de numéros de taxieurs de la wilaya que vous avez choisi. </p>
      
-      <a class="btn btn-success btn-md mb-lg-0 mb-4">more</a>
+      <a class="btn btn-success btn-md mb-lg-0 mb-4"
+      href="{{ route( 'GuidTaxi' , ['wilaya_id' => $wilaya_id ] ) }}">more</a>
 
     </div>
     
@@ -269,7 +279,8 @@
       <p>GuidFood vous offre des numéros des restaurants qui livrent dans votre wilaya choisi. </p>
       
       
-      <a class="btn btn-indigo btn-md">more</a>
+      <a class="btn btn-indigo btn-md"
+      href="{{ route( 'GuidFood' , ['wilaya_id' => $wilaya_id ] ) }}">more</a>
 
     </div>
    

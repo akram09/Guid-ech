@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use App\Restaurant;
 
 
+
+
 class ContactController extends Controller
 {
     /** 
@@ -19,8 +21,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $restaurant = Restaurant::where('id' , Auth::user()->id)->pluck('id');  
-        $contacts = Contact::where('restaurant_id' , $restaurant)->get();
+        $restaurant = Restaurant::where('user_id' , Auth::user()->id)->pluck('id');  
+        $contacts = Contact::whereIn('restaurant_id' , $restaurant)->get();
         return view('admin.contact.index',compact('contacts'));
     }
     /** 

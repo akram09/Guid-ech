@@ -171,7 +171,7 @@
             data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}" 
             data-size="" disabled="">
             </p>
-            <form action="{{ route('rate')}}" method="POST">
+            <form action="{{ route('rateresto')}}" method="POST">
             {{ csrf_field() }}
               <div class="rating"> 
                 <input id="input-1" name="rate" class="rating rating-loading" 
@@ -189,22 +189,8 @@
             <a href="{{ route('resto' , ['wilaya_id' => $wilaya_id , 'id'=> $element -> id ] )  }}" 
             target="_blank"  class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
-            </a>
-
-
-            
-
-            
-
-             
-
-
-
+            </a>    
           </div>
-
-
-
-      
 
           @endforeach
 

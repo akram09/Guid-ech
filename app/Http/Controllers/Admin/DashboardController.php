@@ -32,11 +32,20 @@ class DashboardController extends Controller
         
         $sliderCount = Slider::where('user_id' , Auth::user()->id)->count();
         //$restaurant : to retrieve all restaurant's ids owned by admin to filter shown data 
-        $restaurant = Restaurant::where('id' , Auth::user()->id)->pluck('id');
+        $restaurant = Restaurant::where('user_id' , Auth::user()->id)->pluck('id');
+
         
+        $reservations = Reservation::where('status',false)->whereIn('restaurant_id' , $restaurant)->get();
+        
+
         $reservations = Reservation::where('status',false)->where('restaurant_id' , $restaurant)->get();
       
         $contactCount = Contact::where('restaurant_id' , $restaurant)->count();
         return view('admin.dashboard',compact('categoryCount','itemCount','sliderCount','reservations','contactCount','reservationsCount'));
+
+
+        $contactCount = Contact::whereIn('restaurant_id' , $restaurant)->count();
+        return view('admin.dashboard',compact('categoryCount','itemCount','sliderCount','reservations','contactCount'));
+
     }
 }
