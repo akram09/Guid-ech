@@ -143,8 +143,8 @@
     <!-- Mask & flexbox options-->
     <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
       <!-- user photo update  -->
- <div class="card-body card-body-cascade text-center" style="  background-image: linear-gradient(to right top, #633a07, #6d4610, #775218, #815f22, #8a6c2b);"><!-- gardient color -->
-      <div class="container">
+ <div class="card" style="background-color:#ffffff"><!-- gardient color -->
+      <div class="card-body">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; border-bottom-color: #92a8d1; height:150px; float:left; border-radius:50%; margin-right:25px;"> 
@@ -180,14 +180,10 @@
                 @endif
                 <div class="form-group">
                     <label class="col-lg-3 control-label"></label>
-                    <div class="col-lg-8">
+                    <div class="md-form">
                         <input class="form-control" placeholder="change your name" type="text" value="{{$user->name}}" name="name">
-                        <input type="submit" class="btn btn-primary" value="Save Changes">
+                        <input type="submit" class="btn btn-primary" value="Save">
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-3 control-label"></label>
-                    
                 </div>
             </form>
         </div>
