@@ -12,6 +12,7 @@ use App\restaurant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use ConsoleTVs\Charts\Charts;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -26,7 +27,9 @@ class DashboardController extends Controller
         
         $categoryCount = Category::count();
         
-        $reservationsCount = Reservation::count();
+        
+        
+
 
         $itemCount = Item::where('user_id' , Auth::user()->id)->count();
         
@@ -36,14 +39,7 @@ class DashboardController extends Controller
 
         
         $reservations = Reservation::where('status',false)->whereIn('restaurant_id' , $restaurant)->get();
-        
-
-        $reservations = Reservation::where('status',false)->where('restaurant_id' , $restaurant)->get();
       
-        $contactCount = Contact::where('restaurant_id' , $restaurant)->count();
-        return view('admin.dashboard',compact('categoryCount','itemCount','sliderCount','reservations','contactCount','reservationsCount'));
-
-
         $contactCount = Contact::whereIn('restaurant_id' , $restaurant)->count();
         return view('admin.dashboard',compact('categoryCount','itemCount','sliderCount','reservations','contactCount'));
 

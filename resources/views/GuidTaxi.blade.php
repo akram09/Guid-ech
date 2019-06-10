@@ -86,25 +86,6 @@ html,
   display: block;
 }
 
-/* Style the buttons 
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-}*/
-
-/* Add a grey background color on mouse-over 
-.btn:hover {
-  background-color: #ddd;
-}
-*/
-/* Add a dark background color to the active button 
-.btn.active {
-  background-color: #666;
-   color: white;
-}*/
 
   </style>
 
@@ -138,19 +119,7 @@ html,
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">bla bla</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">bla bla 2</a>
-          </li>
-        -->
-
-        </ul>
+       </ul>
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -204,7 +173,7 @@ html,
   <!-- Navbar -->
 
 <!-- Full Page Intro -->
-<div class="view full-page-intro" style="background-image: url('/images/taxi.jpg') ; background-repeat: no-repeat; background-size: cover;">
+<div class="view full-page-intro img-fluid" style="background-image: url('/images/taxi.jpg') ; background-repeat: no-repeat; background-size: cover;">
 </div>
 <!----------------------->
 <h1 class="my-5 h1 text-center">Voici quelques numéros des taxieurs disponibles </h1>

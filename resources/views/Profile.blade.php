@@ -80,18 +80,7 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">bla bla</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">bla bla 2</a>
-          </li>
-        -->
-
+        
         </ul>
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -172,13 +161,7 @@
             </form>
         </div>
     </div>
-
-</div>
-
-
- </div>
- <div class="container">
-    <div class="row">
+     <div class="row">
         <div class="col-md-9 personal-info">
             
             <form class="form-horizontal" method="POST" action="{{ route('edit-profile') }}">
@@ -196,7 +179,7 @@
                     <div class="alert alert-info">{{ Session::get('message') }}</div>
                 @endif
                 <div class="form-group">
-                    <label class="col-lg-3 control-label">Name:</label>
+                    <label class="col-lg-3 control-label"></label>
                     <div class="col-lg-8">
                         <input class="form-control" placeholder="change your name" type="text" value="{{$user->name}}" name="name">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
@@ -209,6 +192,11 @@
             </form>
         </div>
     </div>
+
+</div>
+
+
+ </div>
 
     </div>
     <!-- Mask & flexbox options-->
