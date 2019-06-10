@@ -32,6 +32,10 @@ class Restaurant extends Model
     public function User(){
         return $this->belongsTo('App\User');
     }
+    
+    public function Category(){
+        return $this->hasmany('App\Category');
+    }
     use Rateable; 
 
 }
