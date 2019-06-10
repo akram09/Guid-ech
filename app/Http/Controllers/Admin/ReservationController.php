@@ -22,7 +22,7 @@ class ReservationController extends Controller
     public function index()
     {
         $restaurant = Restaurant::where('user_id' , Auth::user()->id)->pluck('id');  
-        $reservations = Reservation::where('status',false)->whereIn('restaurant_id' , $restaurant)->get();
+        $reservations = Reservation::whereIn('restaurant_id' , $restaurant)->get();
         return view('admin.reservation.index',compact('reservations'));
     }
     /**
