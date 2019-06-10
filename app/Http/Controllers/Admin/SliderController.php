@@ -48,7 +48,6 @@ class SliderController extends Controller
             'title' => 'required',
             'sub_title' => 'required',
             'image' => 'required|mimes:jpeg,jpg,bmp,png',
-            'restaurant_id' => 'required',
         ]);
         $image = $request->file('image');
         $slug = str_slug($request->title);
