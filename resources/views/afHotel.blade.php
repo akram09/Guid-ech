@@ -60,17 +60,6 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">bla bla</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" target="_blank">bla bla 2</a>
-          </li>
-        -->
 
         </ul>
         <!-- Collapsible content -->

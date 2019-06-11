@@ -60,39 +60,26 @@ html,
                   background:#1C2331!important;
               }
           }
-
-
-
 .row {
   margin: 8px -16px;
 }
-
-/* Add padding BETWEEN each column (if you want) */
 .row,
 .row > .column {
   padding: 8px;
 }
-
-/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 33.33%;
 }
-
-/* Clear floats after rows */ 
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
-/* Content */
 .content {
   background-color: white;
   padding: 10px;
 }
-
-/* The "show" class is added to the filtered elements */
 .show {
   display: block;
 }
@@ -232,30 +219,13 @@ html,
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
 
-      <a href="#" target="_blank">
-        <i class="fab fa-dribbble mr-3"></i>
-      </a>
 
-      <a href="#" target="_blank">
-        <i class="fab fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-github mr-3"></i>
-      </a>
-
-      <a href="#/" target="_blank">
-        <i class="fab fa-codepen mr-3"></i>
-      </a>
-    </div>
-    <!-- Social icons -->
-
-    <!--Copyright-->
+    
     <div class="footer-copyright py-3">
       © 2019 Copyright:
       <a href="#" target="_blank"> Esi-sba </a>
     </div>
-    <!--/.Copyright-->
+    
 
   </footer>
   <!--/.Footer-->

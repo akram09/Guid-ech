@@ -65,26 +65,6 @@
             </li>
           </ul>
 
-          <!-- Right -->
-          <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a href="#" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link border border-light rounded waves-effect"
-                target="_blank">
-                <i class="fab fa-github mr-2"></i>Guid-ech GitHub
-              </a>
-            </li>
-          </ul>
-
         </div>
 
       </div>
@@ -245,17 +225,6 @@
       <a href="#" target="_blank">
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
-
-     
-
-      <a href="#" target="_blank">
-        <i class="fab fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-github mr-3"></i>
-      </a>
-
       
     </div>
     <!-- Social icons -->

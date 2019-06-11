@@ -9,19 +9,11 @@
   
   
   <!-- CSRF Token -->
- <meta name="csrf-token" content="{{ csrf_token() }}">
-
-  
-  
+ <meta name="csrf-token" content="{{ csrf_token() }}"> 
 </head>
 
 <body>
-
-  
-
-  
-    
-    <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
+<div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
       <h2>Hello Admin,</h2>
 <p>You received an email from : {{ $name }}</p>
 <p>Here are the details:</p>
@@ -30,9 +22,7 @@
 <p>Subject: {{ $subject }}</p>
 <p>Message: {{ $user_message }}</p>
 <p>Thank You</p>
- 
-
-    </div>
+ </div>
     
   
 </body>

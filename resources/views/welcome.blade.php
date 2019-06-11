@@ -149,11 +149,7 @@
 
         <!-- Right --> 
           &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; 
-
-     
-
-          
-      </div>
+  </div>
 
     </div>
   </nav>
@@ -237,12 +233,6 @@
                     <form class= "form-horizontal register-container tb-padding" role="form" method="POST" action="{{ route('login') }}"> <!-- forme de login avec la meth POST -->
                         @csrf    <!-- génération de token -->
  
-                       
-
-
-
-
-
                         <div class="md-form mb-5">  
                             
 
