@@ -64,14 +64,14 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#"> <!--==  for logo ==-->
-                <img id="logo" src="#" class="logo img-responsive">
+                <img  src="{{ asset('/images/CLA.png') }}" width="175" height="50"  class="logo img-responsive">
             </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="Food-fair-toggle">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">about</a></li>
+                
                 <li><a href="#menu-list">menu list</a></li>
                 <li><a href="#reserve">reservation</a></li>
                 <li><a href="#contact">contact</a></li>
@@ -94,34 +94,6 @@
         </div>
     @endforeach
 </section>
-
-
-
-<!--==  About us ==-->
-<section id="about" class="about">
-    <img src="{{ asset('frontend/images/icons/about.png') }}" class="img-responsive section-icon hidden-sm hidden-xs">
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row dis-table">
-                <div class="hidden-xs col-sm-6 section-bg about-bg dis-table-cell">
-
-                </div>
-                <div class="col-xs-12 col-sm-6 dis-table-cell">
-                    <div class="section-content">
-                        <h2 class="section-content-title">About us</h2>
-                        <p class="section-content-para">
-                          Guidech team descreption
-                        </p>
-                        <p class="section-content-para">
-                           Guidech team descreption
-                        </p>
-                    </div> <!-- section-content -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container-fluid -->
-    </div> <!-- wrapper -->
-</section> <!-- /#about -->
-
 
 <!--==  Menu   ==-->
 <section id="menu-list" class="menu-list">
@@ -167,10 +139,6 @@
                         @endforeach
                     </ul>
 
-                    <!-- <div class="text-center">
-                            <a id="loadPricingContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span class="caret"></span></a>
-                    </div> -->
-
                 </div>
             </div>
         </div>
@@ -182,7 +150,6 @@
 
 <!--==  Reserve A Table! ==-->
 <section id="reserve" class="reserve">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ asset('frontend/images/icons/reserve.png') }}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
@@ -200,7 +167,6 @@
 
 
 <section class="reservation">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{ asset('frontend/images/icons/reserve_color.png') }}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class=" section-content">
