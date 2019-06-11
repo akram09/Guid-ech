@@ -85,22 +85,23 @@
                 </div>
                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i></button>
                </form>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 <!-- Right -->
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+       
+  
         <ul class="navbar-nav nav-flex-icons">
-         
-
-        
-
-           <div class="dropdown">
+          <div class="dropdown">
              <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
                   <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
               </a>
 
-<div class="dropdown-menu dropdown-primary">
-                                <a class="dropdown-item" href="{{ url('/profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
-                              <a class="dropdown-item" href="{{ url('/logout') }}"><i class="fas fa-sign-out-alt"></i>@lang('profile.logout')</a>
-   </div>
+         <div class="dropdown-menu dropdown-primary">
+                                <a class="dropdown-item" href="{{ url('/profile') }}"><i class="fas fa-user-circle"></i> Profile</a>
+                              <a class="dropdown-item" href="{{ url('/logout') }}"><i class="fas fa-sign-out-alt"></i> @lang('profile.logout')</a>
+              @if (Auth::user()->is_admin == 1)
+       <a class="dropdown-item" href="{{ url('/admin/dashboard') }}"><i class="fas fa-user-circle"></i> dashboard</a>
+              @endif
+        </div>
         </div>
 
 
@@ -395,12 +396,12 @@
 
   <div class="container contact-form" style="margin-top:100px">
                     @if (session('status'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
                     @if (session('warning'))
-                        <div class="alert alert-warning">
+                        <div class="alert alert-danger" role="alert">
                             {{ session('warning') }}
                         </div>
                     @endif
@@ -434,8 +435,9 @@
                         </div>
 
        <div class="form-group {{ $errors->has('subject') ? ' has-error' : '' }}">
+        
                     <label for="materialContactFormEmail">Subject</label>
-                  <select class="browser-default custom-select mb-4">
+                  <select  name="subject" class="form-control"   required  class="browser-default custom-select mb-4">
                       <option value="" disabled>Choose option</option>
                       <option value="1" selected>Feedback</option>
                       <option value="2">Report a bug</option>
@@ -454,7 +456,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="md-form mt-3 {{ $errors->has('message') ? ' has-error' : '' }}">
-                            <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
+                            <textarea type="text" name="message" required id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
+                            
                               <label for="materialContactFormMessage">Message</label>
            @if ($errors->has('message'))
         <span class="help-block">

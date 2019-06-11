@@ -25,7 +25,7 @@ class ContactUSController extends Controller
        array(
            'name' => $request->get('name'),
            'email' => $request->get('email'),
-		   'subject' => $request->get('subject'),
+		       'subject' => $request->get('subject'),
            'user_message' => $request->get('message')
        ), 
 

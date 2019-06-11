@@ -178,11 +178,8 @@
 
             <hr class="hr-light">
 
-            <p>
-              <strong></strong>
-            </p>
-
             <p class="mb-4 d-none d-md-block">
+              
           
             </p>
           </div>

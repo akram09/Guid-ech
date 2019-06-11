@@ -235,8 +235,8 @@
         {
           top:4;
           right: 5%;
-          width:175;
-          height: 40;
+          width:150;
+          height: 60px;
         }
     @media (max-width: 740px) {
       html,

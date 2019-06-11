@@ -15,7 +15,7 @@
 </head>
 
 
-<body>
+<body style=" background-image: url('/images/alger.jpg');  background-repeat: no-repeat; background-size: cover;">
   
 <div class="container">
 @if (\Session::has('success'))
