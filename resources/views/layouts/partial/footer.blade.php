@@ -5,7 +5,7 @@
             <script>
                 document.write(new Date().getFullYear())
             </script>
-            Design by <a href="======">=====</a>, and Developed by <a href="***********">**********</a>
+             Developed by <a href="***********">Guidech team</a>
         </p>
     </div>
 </footer>

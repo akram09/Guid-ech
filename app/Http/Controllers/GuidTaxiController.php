@@ -21,9 +21,5 @@ class GuidTaxiController extends Controller
 
     }
 
-   /*
-    public function index()
-    {
-        return view('GuidTaxi');
-    }*/
+
 

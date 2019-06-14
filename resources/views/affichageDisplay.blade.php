@@ -259,17 +259,6 @@
       <a href="#" target="_blank">
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
-
-     
-
-      <a href="#" target="_blank">
-        <i class="fab fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-github mr-3"></i>
-      </a>
-
       
     </div>
     <!-- Social icons -->

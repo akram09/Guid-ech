@@ -199,25 +199,6 @@
 
 </div>
   </div>
-  <!-- Full Page Intro -->
-
- 
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
 
   <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
@@ -242,22 +223,6 @@
 
       <a href="#" target="_blank">
         <i class="fab fa-google-plus-g mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-dribbble mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fab fa-github mr-3"></i>
-      </a>
-
-      <a href="#/" target="_blank">
-        <i class="fab fa-codepen mr-3"></i>
       </a>
     </div>
     <!-- Social icons -->
