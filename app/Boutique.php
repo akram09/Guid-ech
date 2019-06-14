@@ -20,8 +20,8 @@ class Boutique extends Model
         return $this->belongsto('App\Wilaya');
     }
 
-    public function boutiqueclass(){
-        return $this->belongsTo('App\boutiqueclass');
+    public function Classe(){
+        return $this->belongsTo('App\Classe');
     }
 
 }

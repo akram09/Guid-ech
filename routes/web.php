@@ -52,6 +52,10 @@ Route::post('/rateb' , 'BoutiqueController@rate')->name('ratebout');
 Route::get('/{wilaya_id}/restaurant/{id}', 'RestaurentController@index')->name('resto');
 Route::post('/reservation/{id}','ReservationController@reserve')->name('reservation.reserve');
 Route::post('/contact/{id}','ContactController@sendMessage')->name('contact.send');
+
+Route::get('/{wilaya_id}/restaurant/search' , 'wilayaController@searchresto')->name('searchresto');
+Route::get('/{wilaya_id}/boutique/search' , 'searchController@searchbout')->name('searchbout');
+Route::get('/{wilaya_id}/hotel/search' , 'searchController@searchhot')->name('searchhot');
 //=========================================================
 
 
@@ -126,7 +130,7 @@ Route::get('event', 'EventController@index')->name('events.index');
 Route::post('event', 'EventController@addEvent')->name('events.add');
 
 /*=======================================================================*/
-Route::get('/{wilaya_id}' , 'WilayaController@search')->name('search');
+
 
 
 

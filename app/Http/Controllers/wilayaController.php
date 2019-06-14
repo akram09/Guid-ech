@@ -17,29 +17,10 @@ class wilayaController extends Controller
      $this->middleware('auth');
     }
     
-    public function afficher($id){
-    	$elements = Wilaya::where('id', strval($id))->get();
+    public function afficher(){
 
-        return view('wilaya1', compact('elements'));
+        return view('test2');
 
     }
-
-    public function search(REQUEST $request){
-
-        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-        $wilaya = $uriSegments[1];
-
-        $search = $request -> get('term');
-
-        $elements = Restaurant::whereLike(['name' , 'déscription' , 'adresse'] , '%'.$search.'%' )
-                                ->where('wilaya_id' , $wilaya )->paginate(5);
-
-        $hotels = Hotel::whereLike(['name' , 'déscription' ] , '%'.$search.'%')
-                      ->where('wilaya_id' , $wilaya)->paginate(5);
-                      
-        $boutiques = Boutique::whereLike(['name' , 'déscription'] , '%'.$search.'%')
-                            ->where('wilaya_id' , $wilaya)->paginate(5);         
-
-        return view('affichageDisplay', compact('elements','hotels','boutiques'));                        
-    }
+    
 }

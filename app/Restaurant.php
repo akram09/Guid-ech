@@ -18,8 +18,8 @@ class Restaurant extends Model
     public function Wilaya(){
         return $this->belongsto('App\Wilaya');
     }
-    public function Restauclass(){
-        return $this->belongsTo('App\Restauclass');
+    public function Classe(){
+        return $this->belongsTo('App\Classe');
     }
 
     public function Resrervation(){
@@ -34,7 +34,7 @@ class Restaurant extends Model
     }
     
     public function Category(){
-        return $this->hasmany('App\Category');
+        return $this->hasMany('App\Category');
     }
     use Rateable; 
 

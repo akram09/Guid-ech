@@ -74,13 +74,24 @@
 
         </ul>
         <!-- Collapsible content -->
+        
+              <!--To provide parametre for resto route -->
+              <?php 
+            $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $uriSegments[1];
+          ?>
+              <!------------------------------------------>
+              
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <form class="form-inline ml-auto">
+                <form class="form-inline ml-auto"
+                action=" {{ route('searchhot' , ['wilaya_id' => $wilaya_id]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input id="search" class="form-control" name ="term" 
+                type="text" placeholder="Search" aria-label="Search">
                 </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i> OK</button>
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" 
+                   type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
 
   </div>
@@ -145,7 +156,7 @@ de votre wilaya choisi.</h2>
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1">
-              <img src="{{$element->Himages}}" class="img-fluid"
+              <img src="{{$element->images}}" class="img-fluid"
                 alt="bt1">
               <a href="#" target="_blank">
                 <div class="mask rgba-white-slight"></div>
@@ -156,7 +167,7 @@ de votre wilaya choisi.</h2>
 
           <!--Grid column-->
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h4 class="black-text">{{ $element->Details }}</h4>
+            <h4 class="black-text">{{ $element->name}}</h4>
             <a href="#" target="_blank"
               class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
@@ -175,44 +186,11 @@ de votre wilaya choisi.</h2>
         <hr class="mb-5">
 
         <!--Pagination-->
-        <nav class="d-flex justify-content-center wow fadeIn">
-          <ul class="pagination pg-blue">
+        
 
-            <!--Arrow left-->
-            <li class="page-item disabled">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
-              </a>
-            </li>
+        {{ $elements -> links() }}
 
-            <li class="page-item active">
-              <a class="page-link" href="#">1
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">5</a>
-            </li>
-
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!--Pagination-->
+           
 
       </section>
       <!--Section: Cards-->

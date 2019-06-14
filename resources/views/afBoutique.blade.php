@@ -204,17 +204,25 @@ body{overflow-x: hidden;}
             <a class="nav-link" href="#" target="_blank">bla bla 2</a>
           </li>
         -->
+        <?php
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        $wilaya = $uriSegments[1];
+        ?>
+        
 
         </ul>
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 
-                <form class="form-inline ml-auto">
+                <form class="form-inline ml-auto" 
+                action=" {{ route('searchbout' , ['wilaya_id' => $wilaya]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input id="search" class="form-control" name="term" type="text" 
+                placeholder="Search" aria-label="Search">
                 </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i> OK</button>
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"  
+                   type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
 
   </div>
@@ -288,7 +296,9 @@ de votre wilaya choisi.</h2>
 
           <!--Grid column-->
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h4 class="black-text">{{ $element->Details }}</h4>
+            <h4 class="black-text">{{ $element->name }}</h4>
+
+            <h6 class="black-text">{{ $element->déscription }}</h4>
             <a href="#" target="_blank"
               class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>

@@ -24,7 +24,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-<link href="{{ asset('css/preview.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -45,10 +44,13 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
+          
         </button>
 
         <!-- Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
 
           <!-- Left -->
           <ul class="navbar-nav mr-auto">
@@ -77,12 +79,24 @@
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link border border-light rounded waves-effect"
-                target="_blank">
-                <i class="fab fa-github mr-2"></i>Guid-ech GitHub
-              </a>
-            </li>
+            
+              <!--To provide parametre for resto route -->
+          <?php 
+            $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $uriSegments[1];
+          ?>
+              <!------------------------------------------>
+
+
+                <form class="form-inline ml-auto" action=" {{ route('searchresto' , ['wilaya_id' => $wilaya_id]) }} ">
+                 <div class="md-form my-0">
+                <input id="search" class="form-control" name="term" type="text" 
+                placeholder="Search" aria-label="Search">
+                </div>
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"  
+                   type="submit"><i class="fas fa-search"></i> OK</button>
+               </form>
+
           </ul>
 
         </div>
@@ -169,14 +183,14 @@
             <p> 
             <input id="input-1" name="input-1" class="rating rating-loading" 
             data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}" 
-            data-size="" disabled="">
+            data-size="xs" disabled="">
             </p>
             <form action="{{ route('rateresto')}}" method="POST">
             {{ csrf_field() }}
               <div class="rating"> 
                 <input id="input-1" name="rate" class="rating rating-loading" 
                 data-min="0" data-max="5" data-step="1" 
-                value="{{ $element->userAverageRating }}" data-size="">
+                value="{{ $element->userAverageRating }}" data-size="xs">
                 <input type="hidden" name="id" required="" value="{{ $element->id }}">
                 <span class="review-no"></span>
                 <br/>
