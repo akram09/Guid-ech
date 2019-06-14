@@ -7,15 +7,11 @@ use App\Category;
 use App\Item;
 use App\Slider;
 use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
 
 class RestaurentController extends Controller
 {
-    /********
-     * 
-     * 
-     * Moncef Reggam
-     * 
-     * *******/
+    
 
     /**
      * Create a new controller instance.
@@ -31,6 +27,7 @@ class RestaurentController extends Controller
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response 
+     * @author Moncef Reggam
      */
     public function afficher($wilayas_id){
         $elements = Restaurant::where('wilaya_id', strval($wilayas_id))->paginate(5);
@@ -56,6 +53,12 @@ class RestaurentController extends Controller
         return view('resto',compact('sliders','categories','items','Restaurants'));
     }
 
+    /********
+     * 
+     * 
+     * Moncef Reggam
+     * 
+     * *******/
     
     public function rate(Request $request){
 
@@ -63,12 +66,21 @@ class RestaurentController extends Controller
 
         $Restaurant = Restaurant::find($request->id);
 
+        $rating = $Restaurant->ratings()->where('user_id' , Auth::user()->id)->first();
+
+        if(is_null($rating)){
+
         $rating = new \willvincent\Rateable\Rating;
         $rating->rating = $request->rate;
         $rating->user_id = \Auth::id();
-
         $Restaurant->ratings()->save($rating);
-        return back();
+        return redirect()->back(); }
+        else {
+
+        $rating->rating = $request->rate;
+        $Restaurant->ratings()->save($rating);
+        return redirect()->back();
+        }
     }
 }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Boutique;
 use App\Http\Requests\BoutiqueRequest;
 use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
 
 class BoutiqueController extends Controller
 {
@@ -46,14 +47,23 @@ class BoutiqueController extends Controller
 
        request()->validate(['rate' => 'required']);
 
-        $boutique = Boutique::find($request->id);
+        $Boutique = Boutique::find($request->id);
+        
+        $rating = $Boutique->ratings()->where('user_id' , Auth::user()->id)->first();
 
+        if(is_null($rating)){
         $rating = new \willvincent\Rateable\Rating;
         $rating->rating = $request->rate;
         $rating->user_id = \Auth::id();
-
         $Boutique->ratings()->save($rating);
         return back();
+        }
+        else {
+
+            $rating->rating = $request->rate;
+            $Boutique->ratings()->save($rating);
+            return redirect()->back();
+            }
 
     }
    
