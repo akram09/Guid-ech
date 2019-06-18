@@ -49,6 +49,7 @@ class CategoryController extends Controller
         $category->name = $request->name;
         $category->slug = str_slug($request->name);
         $category->user_id = Auth::user()->id;
+        $category->restaurant_id = $request->restaurant_id;
        /* $category->restaurant_id = $request->restaurant_id;*/
         $category->save();
         return redirect()->route('category.index')->with('successMsg','Category Successfully Saved');
