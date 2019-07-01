@@ -117,7 +117,7 @@ return [
         'fav'            => '',     // eg: fav.png
         'fa_v4_shims'    => true, // Add FontAwesome v4 shims prevent BC break
         'colors'         => [
-            'primary'    => '#787AF6',
+            'primary'    => '#2c2c54',
             'secondary'  => '#2b9cf2'
         ],
     ],
