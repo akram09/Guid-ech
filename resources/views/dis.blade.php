@@ -95,7 +95,7 @@
        .view {
       height: 100%;
     }
-     .head 
+     .head
         {
           top:4;
           right: 5%;
@@ -143,7 +143,7 @@
 <div id='map'></div>
    <div id='menu'>
        <div class='heading'>
-        <img src="{{ asset('/images/GRIS.png') }}" class="head" alt="..."> 
+        <img src="{{ asset('/images/GRIS.png') }}" class="head" alt="...">
       </div>
 <input id='streets-v11' type='radio' name='rtoggle' value='streets' checked='checked'>
 <label for='streets'>streets</label>
@@ -169,12 +169,12 @@ var map = new mapboxgl.Map({
       // Change the map style.
    var layerList = document.getElementById('menu');
    var inputs = layerList.getElementsByTagName('input');
- 
+
         function switchLayer(layer) {
             var layerId = layer.target.id;
             map.setStyle('mapbox://styles/mapbox/' + layerId);
                                      }
- 
+
                for (var i = 0; i < inputs.length; i++) {
                     inputs[i].onclick = switchLayer;
                                         }
@@ -299,7 +299,7 @@ map.addControl(new MapboxDirections({
           name:'La marina',
           url: 'http://www.esi-sba.dz',
 
-          
+
         }
       },
       {
@@ -313,7 +313,7 @@ map.addControl(new MapboxDirections({
         },
         properties: {
           phoneFormatted: '(301) 654-7336',
-          
+
           address: '  Boulevard Aïn Sbaa Ali, 13000 Tlemcen, RADP',
            city: 'Tlemcen',
           name:'Best Chiken',
@@ -370,7 +370,7 @@ map.addControl(new MapboxDirections({
           city: 'Tlemcen',
           name:'Restaurant Agadir',
           url: 'http://www.esi-sba.dz',
-} 
+}
       },
       {
         type: 'Feature',
@@ -387,7 +387,7 @@ map.addControl(new MapboxDirections({
           city: 'Tlemcen',
           name:'Kraouti',
           url: 'http://www.esi-sba.dz',
-} 
+}
       },
       {
         type: 'Feature',
@@ -421,7 +421,7 @@ map.addControl(new MapboxDirections({
           city: 'Tlemcen',
           name:'test',
           url: 'http://www.esi-sba.dz',
-} 
+}
       }
       ]
   };
@@ -437,7 +437,7 @@ map.addControl(new MapboxDirections({
         "features": [] // Notice that initially there are no features
       }
     });
-  
+
   map.addControl(geocoder, 'top-left');
   });
 

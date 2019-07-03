@@ -34,7 +34,7 @@ class ReservationConfirmed extends Notification
 
     /**
      * Get the mail representation of the notification abdelwahed.
-     * @author Abdelwahed Madani yousfi 
+     * @author Abdelwahed Madani yousfi
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
@@ -42,7 +42,7 @@ class ReservationConfirmed extends Notification
     {
         return (new MailMessage)
                     ->line('sahit mon frr reservation has been confirmed ')
-                    ->line('Thank you for using Guidech');
+                    ->line('Thank you for using Guidech wow omg');
     }
 
     /**

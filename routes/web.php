@@ -14,7 +14,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //email verification =========================================
-Auth::routes(['verify' => true]); 
+Auth::routes(['verify' => true]);
 
 Route::get('/home', function () {  // to test protecting route
     // Only verified users may enter...
@@ -87,11 +87,11 @@ Route::group(['prefix'=>'admin','middleware'=>'admin','namespace'=>'admin'], fun
 
 //=====================================================
 
-Auth::routes(); 
+Auth::routes();
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//===== restaurant  localisation 
+//===== restaurant  localisation
 
 Route::get('/localisation', function () {
     return view('localisation');
@@ -109,6 +109,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*========================================================================*/
 
 Route::get('lang/{locale}', 'MultilanguageController@index');/*this will ad session language when click to change language*/
+
 Route::get('/dis', function () {
     return view('dis');
 });
@@ -130,9 +131,3 @@ Route::get('event', 'EventController@index')->name('events.index');
 Route::post('event', 'EventController@addEvent')->name('events.add');
 
 /*=======================================================================*/
-
-
-
-
-
-
