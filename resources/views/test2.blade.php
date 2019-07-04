@@ -87,8 +87,8 @@
 <section class="my-5">
 
  
-  <h2 class="h1-responsive font-weight-bold text-center my-5">welcome</h2>
-  <p class="text-center w-responsive mx-auto mb-5">Cliquez sur les cerlces et découvrez tous que vous avez besoin dans votre wilaya choisi!</p>
+  <h2 class="h1-responsive font-weight-bold text-center my-5">Welcome dans GuidWilaya</h2>
+  <p class="text-center w-responsive mx-auto mb-5">Cliquez sur "visiter" pour voir plus de détails.</p>
   <div class="row d-flex justify-content-center">
 
   
@@ -96,16 +96,21 @@
 
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <img class="img-fluid" src="{{ asset('/images/alger.jpg') }}" alt="Sample image">
-        <a>
-          <div class="mask rgba-black-strong"><p class=" text-center text-white text-monospace">GuidRestaurant</p></div>
+         <?php 
+            $segments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $segments[1];
+          ?>
+        <img class="img-fluid" src="{{ asset('/images/GRestaurants.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+        <a href="{{ route('wilaya.restaurant' ,
+             ['wilaya_id' => $wilaya_id ] ) }}" >
+          <div class="mask rgba-black-strong">
+
+        </div>
         </a>
       </div>
 
     </div>
-    <!-- Grid column -->
-
-    <!-- Grid column -->
+    
     <div class="col-md-6">
 
       <!------------------------------------------>
@@ -115,14 +120,13 @@
           ?>
       <!------------------------------------------>    
       <a href="#!" class="green-text">
-        <h6 class="font-weight-bold mb-3"><i class="fas fa-utensils pr-2"></i>restaurants</h6>
+        <h6 class="font-weight-bold mb-3"><i class="fas fa-utensils pr-2"></i>Restaurants</h6>
       </a>
-      <h3 class="font-weight-bold mb-3"><strong>bla bla bla </strong></h3>
      
       <p> Trouvez de différentes catégories des restaurants dans la wilaya que vous avez choisi et profitez des offres de notre GuidRestaurants </p>
      
       <a class="btn btn-success btn-md"
-      href="{{ route('wilaya.restaurant' , ['wilaya_id' => $wilaya_id ] ) }}"> more</a>
+      href="{{ route('wilaya.restaurant' , ['wilaya_id' => $wilaya_id ] ) }}"> Visiter</a>
 
     </div>
     <!-- Grid column -->
@@ -143,13 +147,12 @@
         <h6 class="font-weight-bold mb-3"><i class="far fa-building pr-2"></i>Hotels</h6>
       </a>
       <!-- Post title -->
-      <h3 class="font-weight-bold mb-3"><strong>bla bla </strong></h3>
       <!-- Excerpt -->
       <p>Vous partez en vacances ou en voyage d’affaires, vous recherchez une auberge de jeunesse 
-      ou un hôtel 5 étoiles, GuidHotel vous permet de trouver l'hôtel dans la wilaya que vous avez choisi.</p>
+      ou un hôtel 5 étoiles, GuidHotel vous permet de trouver ce que vous cherchiez dans la wilaya que vous avez choisi.</p>
      
       <a class="btn btn-pink btn-md mb-lg-0 mb-4" href="
-      {{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}">more</a>
+      {{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}">Visiter</a>
 
     </div>
     <!-- Grid column -->
@@ -159,9 +162,10 @@
 
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-2">
-        <img class="img-fluid" src="{{ asset('/images/hotel.jpg') }}" alt="Sample image">
-        <a>
-          <div class="mask rgba-black-strong"><p class=" text-center text-white text-monospace">GuidHotel</p></div>
+        <img class="img-fluid" src="{{ asset('/images/Ghotel.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+        <a href="
+      {{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}">
+          <div class="mask rgba-black-strong"></div>
         </a>
       </div>
 
@@ -181,9 +185,9 @@
 
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <img class=" img-fluid" src="{{ asset('/images/btq.jpg') }}" alt="Sample image">
-         <a>
-          <div class="mask rgba-black-strong"><p class=" text-center text-white text-monospace">GuidBoutiques</p></div>
+        <img class=" img-fluid" src="{{ asset('/images/Gbtq.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+         <a href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}">
+          <div class="mask rgba-black-strong"></div>
         </a>
       </div>
 
@@ -198,13 +202,12 @@
         <h6 class="font-weight-bold mb-3"><i class="fas fa-store pr-2"></i></i>Boutiques</h6>
       </a>
       <!-- Post title -->
-      <h3 class="font-weight-bold mb-3"><strong>bla bla bla </strong></h3>
       <!-- Excerpt -->
       <p>GuidBoutiques facilite vos achats des habilles dans la wilaya que avez choisi on vous collecte les meilleurs boutiques, amusez-vous.</p>
       
       <!-- Read more button -->
       <a class="btn btn-indigo btn-md"
-      href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}">more</a>
+      href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}">Visiter</a>
 
     </div>
     
@@ -225,12 +228,11 @@
         <h6 class="font-weight-bold mb-3"><i class="fas fa-taxi pr-2"></i></i>GuidTaxi</h6>
       </a>
       
-      <h3 class="font-weight-bold mb-3"><strong>bla bla </strong></h3>
       
       <p>GuidTaxi vous met à votre disposition pleins de numéros de taxieurs de la wilaya que vous avez choisi. </p>
      
       <a class="btn btn-success btn-md mb-lg-0 mb-4"
-      href="{{ route( 'GuidTaxi' , ['wilaya_id' => $wilaya_id ] ) }}">more</a>
+      href="{{ route( 'GuidTaxi' , ['wilaya_id' => $wilaya_id ] ) }}">Visiter</a>
 
     </div>
     
@@ -238,9 +240,9 @@
 
      
       <div class="view overlay rounded z-depth-2">
-        <img class="img-fluid" src="{{ asset('/images/taxi.jpg') }}" alt="Sample image">
-        <a>
-          <div class="mask rgba-black-strong"><p class=" text-center text-white text-monospace">GuidTaxi</p></div>
+        <img class="img-fluid" src="{{ asset('/images/Gtaxi.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+        <a  href="{{ route( 'GuidTaxi' , ['wilaya_id' => $wilaya_id ] ) }}">
+          <div class="mask rgba-black-strong"></div>
         </a>
       </div>
 
@@ -259,9 +261,9 @@
 
       
       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <img class=" img-fluid" src="{{ asset('/images/Guidfood.jpg') }}" alt="Sample image">
-       <a>
-          <div class="mask rgba-black-strong"><p class=" text-center text-white text-monospace">GuidFood</p></div>
+        <img class=" img-fluid" src="{{ asset('/images/GFood.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+       <a href="{{ route( 'GuidFood' , ['wilaya_id' => $wilaya_id ] ) }}">
+          <div class="mask rgba-black-strong"></div>
         </a>
       </div>
 
@@ -274,13 +276,12 @@
         <h6 class="font-weight-bold mb-3"><i class="fas fa-pizza-slice pr-2"></i>GuidFood</h6>
       </a>
       
-      <h3 class="font-weight-bold mb-3"><strong>bla bla bla </strong></h3>
       
       <p>GuidFood vous offre des numéros des restaurants qui livrent dans votre wilaya choisi. </p>
       
       
       <a class="btn btn-indigo btn-md"
-      href="{{ route( 'GuidFood' , ['wilaya_id' => $wilaya_id ] ) }}">more</a>
+      href="{{ route( 'GuidFood' , ['wilaya_id' => $wilaya_id ] ) }}">Visiter</a>
 
     </div>
    
@@ -300,11 +301,10 @@
         <h6 class="font-weight-bold mb-3"><i class="fas fa-images pr-2"></i>GuidLieux & Infos</h6>
       </a>
       
-      <h3 class="font-weight-bold mb-3"><strong>bla bla </strong></h3>
       <!-- Excerpt -->
       <p>GuidLieux vous fait découvrir les meilleurs lieux touristiques à visiter dans la wilaya que vous avez choisi, des infos, et quelques extraits historiques.</p>
      
-      <a class="btn btn-pink btn-md mb-lg-0 mb-4">more</a>
+      <a class="btn btn-pink btn-md mb-lg-0 mb-4">Visiter</a>
 
     </div>
     <!-- Grid column -->
@@ -314,9 +314,9 @@
 
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-2">
-        <img class="img-fluid" src="{{ asset('/images/p.png') }}" alt="Sample image">
+        <img class="img-fluid" src="{{ asset('/images/Glieux.jpg') }}" alt="Sample image"style="width: 500px;height: 300px;">
          <a>
-          <div class="mask rgba-black-strong"><p class=" text-center text-white text-monospace">Guidlieux</p></div>
+          <div class="mask rgba-black-strong"></div>
         </a>
       </div>
 
