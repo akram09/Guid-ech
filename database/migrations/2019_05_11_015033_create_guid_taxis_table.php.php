@@ -15,6 +15,7 @@ class CreateGuidTaxisTable extends Migration
     {
         Schema::create('guid_taxis', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->integer('wilaya_id')->unsigned();
             $table->foreign('wilaya_id')->references('id')->on('wilayas'); 
             $table->string('NumTel');

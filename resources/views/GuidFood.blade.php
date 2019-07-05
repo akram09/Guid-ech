@@ -94,10 +94,7 @@ html,
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="#" target="_blank">
-        <strong>GuiFood</strong>
-        
-      </a>
+      <img class="animated zoomIn"  src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
 
       
 &nbsp; &nbsp;
@@ -122,9 +119,16 @@ html,
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <form class="form-inline ml-auto">
+       <!--To provide parametre for resto route -->
+       <?php 
+            $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $uriSegments[1];
+          ?>
+              <!------------------------------------------>
+
+                <form class="form-inline ml-auto" action="{{ route('searchfood' , ['wilaya_id' => $wilaya_id]) }}">
                  <div class="md-form my-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="text" name="term" placeholder="Search" aria-label="Search">
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
@@ -184,13 +188,15 @@ html,
       <img src="{{ $element->restPic }} "  style="width: 70%">
 
       <!--code jquery of show and hide pic -->
-<button class="btn btn-warning" style="position: relative;right: 10px;">Clicker pour afficher le menu</button>
+<button class="btn btn-warning" style="position: relative;right: 10px;">Cliquer pour afficher les menus</button>
 <img class="pic" src="{{ $element->menuPic }} "style="width: 70%;cursor: pointer; display: none;">
       <!---------------------------------------->
-      <p>{{ $element->details }}</p>
+      <p>Numéro de Téléphone : {{ $element->NumTel }}</p>
     </div>
   </div>
   @endforeach
+  
+  {{ $elements -> links() }}
 </div>
  </div>    
 

@@ -15,6 +15,8 @@ class CreateGuidFoodsTable extends Migration
     {
         Schema::create('guid_foods', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('NumTel');
             $table->string('restPic');
             $table->string('menuPic');
             $table->string('details'); 

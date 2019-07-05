@@ -84,8 +84,8 @@ html,
     <div class="container">
 
      <!-- Brand -->
-      <a class="navbar-brand" href="" target="_blank">
-    <img class="animated zoomIn" src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
+      <a class="navbar-brand" target="_blank">
+    <img class="animated zoomIn" src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
       
 &nbsp; &nbsp;
@@ -110,9 +110,16 @@ html,
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <form class="form-inline ml-auto">
+       <!--To provide parametre for resto route -->
+       <?php 
+            $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $uriSegments[1];
+          ?>
+              <!------------------------------------------>
+
+                <form class="form-inline ml-auto" action="{{ route('searchtaxi' , ['wilaya_id' => $wilaya_id]) }}">
                  <div class="md-form my-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="text" name="term" placeholder="Search" aria-label="Search">
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
@@ -177,6 +184,9 @@ html,
     
   </div>
   @endforeach
+
+  
+  {{ $elements -> links() }}
 </div>
  </div>    
 
@@ -210,7 +220,7 @@ html,
     <!--Copyright-->
     <div class="footer-copyright py-3">
       © 2019 Copyright:
-      <a href="#" target="_blank"> Esi-sba </a>
+      <a href="http://www.esi-sba.dz" target="_blank"> Esi-sba </a>
     </div>
     <!--/.Copyright-->
 
