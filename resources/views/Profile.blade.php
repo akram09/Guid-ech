@@ -85,12 +85,7 @@
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <form class="form-inline ml-auto">
-                 <div class="md-form my-0">
-                <input class="form-control" type="text" placeholder="@lang('profile.search')" aria-label="Search">
-                </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i></button>
-               </form>
+                
 
   </div>
   <!-- Collapsible content -->
