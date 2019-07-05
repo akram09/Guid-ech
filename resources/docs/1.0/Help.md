@@ -19,11 +19,19 @@
 ### Pour vous s'inscrire, appuyez simplement sur `Registre`comme indiqué :
 ![image](/Images/wow/9.png)
 ### Et remplir le formulaire suivant:
+<<<<<<< HEAD
+![image](/Images/wow/17.png)
+### Si vous avez déja un compte, appuyez sur `s'identifier`:
+![image](/Images/wow/10.png)
+### En cas où mot de passe oublié, vous pouvez recupérer votre compte :
+![image](/Images/wow/18.png)
+=======
 ![image](/Images/wow/23.png)
 ### Si vous avez déja un compte, appuyez sur `s'identifier`:
 ![image](/Images/wow/10.png)
 ### En cas où mot de passe oublié, vous pouvez recupérer votre compte :
 ![image](/Images/wow/25.png)
+>>>>>>> ea486d6d5e362eecd0a998a65c8998b04fd07461
 <a name="section-4"></a>
 ## profile d'utilisateur
  # Profile:
@@ -49,16 +57,28 @@
 ---
 ### Guid-ech supporte 3 langues :
 ![image](/Images/wow/8.png)
+<<<<<<< HEAD
+![image](/Images/wow/19.png)
+=======
 ![image](/Images/wow/22.png)
+>>>>>>> ea486d6d5e362eecd0a998a65c8998b04fd07461
 <a name="section-5"></a>
 # Service de restaurant
 ---
 ### voir tous les Restaurants dispo, Choisissez, Reservez, et donnez votre feedback:
+<<<<<<< HEAD
+![image](/Images/wow/22.png)
+<larecipe-progress type="primary" :value="100"></larecipe-progress>
+![image](/Images/wow/12.png)
+<larecipe-progress type="primary" :value="100"></larecipe-progress>
+![image](/Images/wow/23.png)
+=======
 ![image](/Images/wow/24.png)
 <larecipe-progress type="primary" :value="100"></larecipe-progress>
 ![image](/Images/wow/12.png)
 <larecipe-progress type="primary" :value="100"></larecipe-progress>
 ![image](/Images/wow/26.png)
+>>>>>>> ea486d6d5e362eecd0a998a65c8998b04fd07461
 <a name="section-6"></a>
 
 # Localisation et Directions :
@@ -72,11 +92,19 @@ avec differents styles de map ,
 <larecipe-progress type="primary" :value="100"></larecipe-progress>
 ![image](/Images/wow/16.png)
 <larecipe-progress type="primary" :value="100"></larecipe-progress>
+<<<<<<< HEAD
+![image](/Images/wow/24.png)
+<larecipe-progress type="primary" :value="100"></larecipe-progress>
+![image](/Images/wow/25.png)
+<larecipe-progress type="primary" :value="100"></larecipe-progress>
+![image](/Images/wow/26.png)
+=======
 ![image](/Images/wow/28.png)
 <larecipe-progress type="primary" :value="100"></larecipe-progress>
 ![image](/Images/wow/30.png)
 <larecipe-progress type="primary" :value="100"></larecipe-progress>
 ![image](/Images/wow/33.png)
+>>>>>>> ea486d6d5e362eecd0a998a65c8998b04fd07461
 <a name="section-7"></a>
 
 # Admin Restaurant
@@ -98,4 +126,8 @@ avec differents styles de map ,
 ## comment je vous contacte ?
 # Contactez nous
 ---
+<<<<<<< HEAD
+![image](/Images/wow/27.png)
+=======
 ![image](/Images/wow/34.png)
+>>>>>>> ea486d6d5e362eecd0a998a65c8998b04fd07461

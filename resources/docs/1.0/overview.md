@@ -40,4 +40,8 @@ réaliser une application Web dont ce dernier est  Guid-ech. Six Etudiants se so
 
  <a name="section-3"></a>
  # Notre Vision
+<<<<<<< HEAD
+
+=======
+>>>>>>> ea486d6d5e362eecd0a998a65c8998b04fd07461
 ###  Au tant que nouveaux étudiants résidants dans la wilaya de ``Sidi Bel Abbes`` on a trouvé des difficultés pour découvrir plus les lieux de la wilaya, partant de ce problème on a remarqué également que dans ``l'Algérie`` ya pas un moyen facile et pratique qui aide les nouveaux visiteurs et même les habitants d'une wilaya donnée et les guider, dans ce cadre on était inspiré pour faire cette application ``Guidech`` car notre but sera toujours d'offrir l'aide du Guide et développer la culture du tourisme dans notre pays et encourager chacun d'entre nous à rester curieux et ouvert d'esprit afin que nous puissions tous profiter de la beauté de ``l'Algérie``.

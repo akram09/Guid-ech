@@ -7,7 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>User Profil</title>
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
-  
+
   <!-- CSRF Token -->
  <meta name="csrf-token" content="{{ csrf_token() }}">
  <!-- Font Awesome -->
@@ -80,7 +80,7 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-        
+
         </ul>
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -95,15 +95,15 @@
   </div>
   <!-- Collapsible content -->
 
-         
+
 
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons"> <!-- affichage username et la photo -->
-         
+
 
                   <div class="dropdown">
              <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} 
+                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }}
                   <span class="caret"></span>
               </a>
 
@@ -124,7 +124,7 @@
     </form>
 </div>
 
-    
+
  </div>
         </div>
 
@@ -141,21 +141,21 @@
   <div class="view full-page-intro" style="background-image: url('/images/alger.jpg') ; background-repeat: no-repeat; background-size: cover;">
 
     <!-- Mask & flexbox options-->
-    <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
       <!-- user photo update  -->
  <div class="card" style="background-color:#ffffff"><!-- gardient color -->
       <div class="card-body">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; border-bottom-color: #92a8d1; height:150px; float:left; border-radius:50%; margin-right:25px;"> 
+            <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; border-bottom-color: #92a8d1; height:150px; float:left; border-radius:50%; margin-right:25px;">
 
             <h2>{{ $user->name }} @lang('profile.photo_up')</h2>
             <form enctype="multipart/form-data" action="/profile" method="POST">
-                
+
                      <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
-                     <input type="file" name="avatar">        
-               
-                
+                     <input type="file" name="avatar">
+
+
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="submit" class="pull-right btn btn-info btn-primary">
             </form>
@@ -163,7 +163,7 @@
     </div>
      <div class="row">
         <div class="col-md-9 personal-info">
-            
+
             <form class="form-horizontal" method="POST" action="{{ route('edit-profile') }}">
                  {{ csrf_field() }}
                  @if (isset($errors) && count($errors) > 0)
@@ -182,7 +182,8 @@
                     <label class="col-lg-3 control-label"></label>
                     <div class="md-form">
                         <input class="form-control" placeholder="change your name" type="text" value="{{$user->name}}" name="name">
-                        <input type="submit" class="btn btn-primary" value="Save">
+                        <input type="submit" class="pull-right btn btn-info btn-primary">
+
                     </div>
                 </div>
             </form>
@@ -203,7 +204,7 @@
   <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 
- 
+
 
     <hr class="my-4">
 
@@ -251,7 +252,7 @@
     // Animations initialization
     new WOW().init();
   </script>
-  
+
 </body>
 
 </html>
