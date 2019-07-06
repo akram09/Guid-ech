@@ -59,6 +59,8 @@ Route::get('/{wilaya_id}/GuidTaxi/search' , 'SearchController@searchtaxi')->name
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::post('profile', 'UserController@update_avatar');
 Route::post('profiledit', 'UserController@editCurrentUserProfile')->name('edit-profile');
+Route::post('delete', 'UserController@destroy')->name('delete');
+
 //=======================================================================================//
 
 //password change =======================================================================//
