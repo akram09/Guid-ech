@@ -46,7 +46,11 @@ Route::post('/contact/{id}','ContactController@sendMessage')->name('contact.send
 
 //search ================================================================================//
 
+
 Route::get('/{wilaya_id}/Restaurant/search/' , 'SearchController@searchresto')->name('searchresto');
+=======
+Route::get('/{wilaya_id}/restaurants/search/' , 'SearchController@searchresto')->name('searchresto');
+
 Route::get('/{wilaya_id}/boutique/search' , 'SearchController@searchbout')->name('searchbout');
 Route::get('/{wilaya_id}/hotel/search' , 'SearchController@searchhot')->name('searchhot');
 Route::get('/{wilaya_id}/GuidFood/search' , 'SearchController@searchfood')->name('searchfood');
