@@ -18,6 +18,17 @@
   <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
   <!-- our custom styles (optional) ila bghitou tmodifiw -->
   <link href="css/style.min.css" rel="stylesheet">
+
+  <link href="{{ asset('affichageDisplay/css/rating.css') }}" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
 </head>
 <style type="text/css">
   h3{
@@ -127,7 +138,7 @@
   <!-- Navbar ------------------------------------------------------------------->
 
     <!--Main Navigation-->
-<div  style="background-image: url('/images/hotel.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 1350px;"> </div>
+<div  style="background-image: url('/images/hotel.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 100%;"> </div>
   <!--Main layout-->
 
 
@@ -162,6 +173,22 @@ de votre wilaya choisi.</h2>
               <i class="fas fa-play ml-2"></i>
             </a>
           </div>
+          <input id="input-1" name="input-1" class="rating rating-loading" 
+            data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}" 
+            data-size="xs" disabled="">
+            </p>
+            <form action="{{ route('ratehotel')}}" method="POST">
+            {{ csrf_field() }}
+              <div class="rating"> 
+                <input id="input-1" name="rate" class="rating rating-loading" 
+                data-min="0" data-max="5" data-step="1" 
+                value="{{ $element->userAverageRating }}" data-size="xs">
+                <input type="hidden" name="id" required="" value="{{ $element->id }}">
+                <span class="review-no"></span>
+                <br/>
+                <button class="btn btn-primary btn-md">Submit Review</button>
+              </div>
+            </form>  
           <!--Grid column-->
 
         </div>

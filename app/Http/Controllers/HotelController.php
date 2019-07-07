@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\HotelRequest;
 use Illuminate\Http\Request;
 use App\Hotel;
+use Auth;
 use Brian2694\Toastr\Facades\Toastr;
 
 class HotelController extends Controller
