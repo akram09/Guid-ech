@@ -49,9 +49,9 @@ return [
     |
     |
     */
-
+                // only authenticated users
     'settings'       => [
-        'auth'       => false,
+        'auth'       => true,
         'ga_id'      => ''
     ],
 
@@ -69,7 +69,7 @@ return [
     */
 
     'cache'       => [
-        'enabled' => false,
+        'enabled' => true,
         'period'  => 5
     ],
 

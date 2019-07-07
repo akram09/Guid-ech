@@ -85,7 +85,7 @@
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                
+
 
   </div>
   <!-- Collapsible content -->
@@ -105,19 +105,23 @@
 <div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
   @csrf
   <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>   @lang('profile.password_change')</a>
-  <div >
-        <a href="{{ route('logout') }}"
+
+        <a class="dropdown-item" href="{{ route('delete') }}"
+            onclick="event.preventDefault();
+            document.getElementById('delete').submit();">
+          <button type="button" class="dropdown-item">
+          <i class="fas fa-user-times"></i> @lang('profile.delete')</button>
+          <form id="delete" action="{{ route('delete') }}" method="POST" style="display: none;">@csrf</form>
+        </a>
+       <a class="dropdown-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
-
-          <button type="button" class="dropdown-item">
+            <button type="button" class="dropdown-item">
           <i class="fas fa-power-off"></i>  @lang('profile.logout')</button>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
         </a>
 
-     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-    </form>
-</div>
+
 
 
  </div>

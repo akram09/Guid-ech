@@ -5,3 +5,4 @@
     - [Credits](/{{route}}/{{version}}/Credits)
 
     - [Privacy](/{{route}}/{{version}}/privacy)
+    - [Key shortcuts](/{{route}}/{{version}}/key)
