@@ -39,7 +39,7 @@ class HotelController extends Controller
         
         $rating = $Hotel->ratings()->where('user_id' , Auth::user()->id)->first();
 
-        if(id_null($rating)){
+        if(is_null($rating)){
         $rating = new \willvincent\Rateable\Rating;
         $rating->rating = $request->rate;
         $rating->user_id = \Auth::id();

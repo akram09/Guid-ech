@@ -146,13 +146,11 @@ de votre wilaya choisi.</h2>
 
           <!--Grid column-->
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h4 class="black-text">{{ $element->name}}</h4>
-            <a href="#" target="_blank"
-              class="btn btn-primary btn-md">Visit
-              <i class="fas fa-play ml-2"></i>
-            </a>
-          </div>
-          <input id="input-1" name="input-1" class="rating rating-loading" 
+            <h4 class="black-text">{{ $element->name }}</h4>
+
+            <h6 class="black-text">{{ $element->déscription }}</h4>
+            <br>
+            <input id="input-1" name="input-1" class="rating rating-loading" 
             data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}" 
             data-size="xs" disabled="">
             </p>
@@ -168,6 +166,11 @@ de votre wilaya choisi.</h2>
                 <button class="btn btn-primary btn-md">Submit Review</button>
               </div>
             </form>  
+            <a href="#" target="_blank"
+              class="btn btn-primary btn-md">Visit
+              <i class="fas fa-play ml-2"></i>
+            </a>
+          </div>
           <!--Grid column-->
 
         </div>
@@ -178,13 +181,7 @@ de votre wilaya choisi.</h2>
         <hr class="mb-5">
               @endforeach
 
-        <hr class="mb-5">
-
-        <!--Pagination-->
-
-
-        {{ $elements -> links() }}
-
+              {{ $elements -> links() }}
 
 
       </section>
