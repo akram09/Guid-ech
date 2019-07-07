@@ -22,13 +22,13 @@ class SearchController extends Controller
     public function searchresto(REQUEST $request){
 
 
-        /*  wherelike() : macro function or custom build check boot() in 
+        /*  wherelike() : macro function or custom builderer check boot() in 
          *  "app/Providers/AppServiceProvider.php" file 
          */
         $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
         $wilaya = $uriSegments[1];
 
-        $search = $request -> get('q');
+        $search = $request -> get('term');
 
         $elements = Restaurant::whereLike(['name' , 'déscription' , 'adresse'] , '%'.$search.'%' )
                                 ->where('wilaya_id' , $wilaya )->paginate(5);
@@ -38,7 +38,7 @@ class SearchController extends Controller
     }
 
     public function searchbout(REQUEST $request){
-        /*  wherelike() : macro function or custom build check boot() in 
+        /*  wherelike() : macro function or custom builder check boot() in 
          *  "app/Providers/AppServiceProvider.php" file 
          */
 
@@ -55,7 +55,7 @@ class SearchController extends Controller
     }
 
     public function searchhot(REQUEST $request){
-        /*  wherelike() : macro function or custom build check boot() in 
+        /*  wherelike() : macro function or custom builder check boot() in 
          *  "app/Providers/AppServiceProvider.php" file 
          */
 
@@ -73,7 +73,7 @@ class SearchController extends Controller
 
 
     public function searchfood(REQUEST $request){
-        /*  wherelike() : macro function or custom build check boot() in 
+        /*  wherelike() : macro function or custom builder check boot() in 
          *  "app/Providers/AppServiceProvider.php" file 
          */
 
@@ -91,7 +91,7 @@ class SearchController extends Controller
 
 
     public function searchtaxi(REQUEST $request){
-        /*  wherelike() : macro function or custom build check boot() in 
+        /*  wherelike() : macro function or custom builder check boot() in 
          *  "app/Providers/AppServiceProvider.php" file 
          */
 
