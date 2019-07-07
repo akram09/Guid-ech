@@ -9,7 +9,7 @@
   <title>Guid  </title>
   @endforeach
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -38,6 +38,18 @@ body{overflow-x: hidden;}
   #search{
     color: black;
   }
+  .pow{
+    background-image:url('/images/D.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
+  }
+  .wowo{
+    background-image:url('/images/F.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
+  }
 </style>
 
 <body style="background-color: #ffffff;">
@@ -52,7 +64,7 @@ body{overflow-x: hidden;}
       <a class="navbar-brand" href="" target="_blank">
     <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
-      
+
 &nbsp; &nbsp;
 &nbsp;
       <!-- Collapse -->
@@ -79,24 +91,26 @@ body{overflow-x: hidden;}
         $wilaya = $uriSegments[1];
         ?>
 
-                <form class="form-inline ml-auto" 
+                <form class="form-inline ml-auto"
                 action=" {{ route('searchbout' , ['wilaya_id' => $wilaya]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" name="term" type="text" 
+                <input id="search" class="form-control" name="term" type="text"
                 placeholder="Search" aria-label="Search">
                 </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"  
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
                    type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
+               <a class="pow" href="{{ url('/localisation') }}"></a>
+               <a class="wowo" href="{{ url('/dis') }}"></a>
 
   </div>
   <!-- Collapsible content -->
 
-         
+
 
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons"> <!-- affichage username et la photo -->
-         
+
 
                   <div class="dropdown">
              <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
@@ -118,7 +132,7 @@ body{overflow-x: hidden;}
                                         @csrf
     </form>
 </div>
-    
+
  </div>
         </div>
 
@@ -189,12 +203,12 @@ de votre wilaya choisi.</h2>
 
         </div>
 
-        
+
         <!--Grid row-->
 
         <hr class="mb-5">
               @endforeach
-        
+
         <hr class="mb-5">
 
         <!--Pagination-->
@@ -274,7 +288,7 @@ de votre wilaya choisi.</h2>
       <a href="#" target="_blank">
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
-      
+
     </div>
     <!-- Social icons -->
 
