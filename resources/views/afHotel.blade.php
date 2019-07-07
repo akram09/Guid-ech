@@ -9,7 +9,7 @@
   <title>Guid  </title>
  <!-- @endforeach-->
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
- 
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -26,6 +26,18 @@
   #search{
     color: black;
   }
+  .pow{
+    background-image:url('/images/D.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
+  }
+  .wowo{
+    background-image:url('/images/F.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
+  }
 </style>
 
 <body style="background-color: #ffffff;">
@@ -41,7 +53,7 @@
     <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 
-      
+
 &nbsp; &nbsp;
 &nbsp;
       <!-- Collapse -->
@@ -63,62 +75,29 @@
 
         </ul>
         <!-- Collapsible content -->
-        
+
               <!--To provide parametre for resto route -->
-              <?php 
+              <?php
             $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             $wilaya_id = $uriSegments[1];
           ?>
               <!------------------------------------------>
-              
+
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <form class="form-inline ml-auto"
                 action=" {{ route('searchhot' , ['wilaya_id' => $wilaya_id]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" name ="term" 
+                <input id="search" class="form-control" name ="term"
                 type="text" placeholder="Search" aria-label="Search">
                 </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" 
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
                    type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
+               <a class="pow" href="{{ url('/localisation') }}"></a>
+               <a class="wowo" href="{{ url('/dis') }}"></a>
 
   </div>
-  <!-- Collapsible content -->
-
-         
-
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons"> <!-- affichage username et la photo -->
-         
-
-                  <div class="dropdown">
-             <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
-              </a>
-
-<div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
-  @csrf
-  <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
-  <div >
-        <a href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();">
-
-             <button type="button" class="dropdown-item">
-          <i class="fas fa-power-off"></i> Logout</button>
-
-        </a>
-
-     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-    </form>
-</div>
-    
- </div>
-        </div>
-
-        </ul>
 
       </div>
 
@@ -166,20 +145,20 @@ de votre wilaya choisi.</h2>
 
         </div>
 
-        
+
         <!--Grid row-->
 
         <hr class="mb-5">
               @endforeach
-        
+
         <hr class="mb-5">
 
         <!--Pagination-->
-        
+
 
         {{ $elements -> links() }}
 
-           
+
 
       </section>
       <!--Section: Cards-->
@@ -219,7 +198,7 @@ de votre wilaya choisi.</h2>
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
 
-     
+
 
       <a href="#" target="_blank">
         <i class="fab fa-pinterest mr-3"></i>
@@ -229,7 +208,7 @@ de votre wilaya choisi.</h2>
         <i class="fab fa-github mr-3"></i>
       </a>
 
-      
+
     </div>
     <!-- Social icons -->
 

@@ -28,6 +28,18 @@
    .view {
   height: 100%;
 }
+.pow{
+  background-image:url('/images/D.png');
+  height: 66px;
+  width: 75px;
+  background-repeat: no-repeat;
+}
+.wowo{
+  background-image:url('/images/F.png');
+  height: 66px;
+  width: 75px;
+  background-repeat: no-repeat;
+}
  .head
     {
       top:4;
@@ -82,20 +94,17 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <form class="form-inline ml-auto">
+             <form class="form-inline ml-auto">
                  <div class="md-form my-0">
                 <input class="form-control" type="text" placeholder="@lang('profile.search')" aria-label="Search">
                 </div>
                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i></button>
                </form>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="pow" href="{{ url('/localisation') }}"></a>
+  <a class="wowo" href="{{ url('/dis') }}"></a>
         <ul class="navbar-nav nav-flex-icons">
           <div class="dropdown">
              <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
@@ -112,15 +121,12 @@
         </div>
 
 
-
-
-
-        </ul>
+</ul>
 
   </div>
   <!-- Collapsible content -->
 
-         &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;
+
        </div>
 
     </div>

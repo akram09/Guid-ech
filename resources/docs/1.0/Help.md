@@ -10,6 +10,8 @@
 - [Localisation et Directions](#section-6)
 - [Admin Restaurant](#section-7)
 - [contactez nous](#section-8)
+- [Supprimer mon compte](#section-9)
+
 
 <a name="section-1"></a>
 
@@ -130,3 +132,9 @@ avec differents styles de map ,
 ![image](/Images/wow/27.png)
 
 ![image](/Images/wow/34.png)
+<a name="section-9"></a>
+## comment je peux supprimer mon compte ?
+# Supprimer
+Appuyez sur le button `delete my account` pour supprimer votre compte :
+![image](/Images/wow/35.png)
+### ET MERCI !
