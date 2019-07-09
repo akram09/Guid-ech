@@ -63,6 +63,12 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
         ],
+        'voyager' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public'),// change here something specific to your application need
+            'url' => env('APP_URL').'',
+            'visibility' => 'public',
+        ],
 
     ],
 

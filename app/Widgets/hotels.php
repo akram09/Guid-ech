@@ -30,7 +30,7 @@ class hotels extends BaseDimmer
             'text'   => __(' all hotels', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('View all '),
-                'link' => route('home'),
+                'link' => url('admin/hotels'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
         ]));

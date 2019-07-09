@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -87,7 +86,7 @@
         </ul>
         <!-- Collapsible content -->
 
-              <!--To provide parametre for resto route -->
+              <!--To provide parametre for route -->
               <?php
             $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             $wilaya_id = $uriSegments[1];
@@ -170,6 +169,22 @@ de votre wilaya choisi.</h2>
               class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
             </a>
+
+            
+            <!-------------------------------------------------------->
+            
+            <h5>Click to add to favourites</h5>
+           
+            <form action="{{ route('favh') }}" method="POST">
+            @csrf
+            <div class="click">           
+             <input type="hidden" name="idf" required="" value="{{ $element->id }}">
+	           <span onclick='document.forms[2].submit()' id="fav" class="fa fa-star-o"></a>
+	           <div class="ring"></div>
+	           <div class="ring2"></div>
+            </form>
+	           <p class="info">Added to favourites!</p>
+            </div>
           </div>
           <!--Grid column-->
 

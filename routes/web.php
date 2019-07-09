@@ -37,6 +37,14 @@ Route::post('/rater' , 'RestaurentController@rate')->name('rateresto');
 Route::post('/rateh' , 'HotelController@rate')->name('ratehotel');
 Route::post('/rateb' , 'BoutiqueController@rate')->name('ratebout');
 
+// favorite =============================================================================//
+
+Route::post('/favr' , 'RestaurantController@fav')->name('favr');
+Route::post('/favh' , 'HotelController@fav')->name('favh');
+Route::post('/favb' , 'BoutiqueController@fav')->name('favb');
+Route::post('/favt' , 'GuidTaxiController@fav')->name('favt');
+Route::post('/favf' , 'GuidFoodController@fav')->name('favf');
+
 
 //restoservice   ========================================================================//
 

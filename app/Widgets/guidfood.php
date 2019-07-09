@@ -31,7 +31,7 @@ class Guidfood extends BaseDimmer
             'text'   => __('all messages ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('view'),
-                'link' => url('/admin'),
+                'link' => url('/admin/guidfoods'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
         ]));
