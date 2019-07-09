@@ -5,6 +5,7 @@ use App\Boutique;
 use App\Http\Requests\BoutiqueRequest;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
+use Auth;
 
 class BoutiqueController extends Controller
 {

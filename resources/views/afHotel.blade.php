@@ -9,7 +9,7 @@
   <title>Guid  </title>
  <!-- @endforeach-->
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
- 
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -18,6 +18,17 @@
   <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
   <!-- our custom styles (optional) ila bghitou tmodifiw -->
   <link href="css/style.min.css" rel="stylesheet">
+
+  <link href="{{ asset('affichageDisplay/css/rating.css') }}" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
 </head>
 <style type="text/css">
   h3{
@@ -25,6 +36,18 @@
   }
   #search{
     color: black;
+  }
+  .pow{
+    background-image:url('/images/D.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
+  }
+  .wowo{
+    background-image:url('/images/F.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
   }
 </style>
 
@@ -41,7 +64,7 @@
     <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 
-      
+
 &nbsp; &nbsp;
 &nbsp;
       <!-- Collapse -->
@@ -63,62 +86,29 @@
 
         </ul>
         <!-- Collapsible content -->
-        
+
               <!--To provide parametre for resto route -->
-              <?php 
+              <?php
             $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             $wilaya_id = $uriSegments[1];
           ?>
               <!------------------------------------------>
-              
+
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <form class="form-inline ml-auto"
                 action=" {{ route('searchhot' , ['wilaya_id' => $wilaya_id]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" name ="term" 
+                <input id="search" class="form-control" name ="term"
                 type="text" placeholder="Search" aria-label="Search">
                 </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" 
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
                    type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
+               <a class="pow" href="{{ url('/localisation') }}"></a>
+               <a class="wowo" href="{{ url('/dis') }}"></a>
 
   </div>
-  <!-- Collapsible content -->
-
-         
-
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons"> <!-- affichage username et la photo -->
-         
-
-                  <div class="dropdown">
-             <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
-              </a>
-
-<div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
-  @csrf
-  <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
-  <div >
-        <a href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-            document.getElementById('logout-form').submit();">
-
-             <button type="button" class="dropdown-item">
-          <i class="fas fa-power-off"></i> Logout</button>
-
-        </a>
-
-     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-    </form>
-</div>
-    
- </div>
-        </div>
-
-        </ul>
 
       </div>
 
@@ -127,7 +117,7 @@
   <!-- Navbar ------------------------------------------------------------------->
 
     <!--Main Navigation-->
-<div  style="background-image: url('/images/hotel.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 1350px;"> </div>
+<div  style="background-image: url('/images/hotel.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 100%;"> </div>
   <!--Main layout-->
 
 
@@ -156,7 +146,26 @@ de votre wilaya choisi.</h2>
 
           <!--Grid column-->
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h4 class="black-text">{{ $element->name}}</h4>
+            <h4 class="black-text">{{ $element->name }}</h4>
+
+            <h6 class="black-text">{{ $element->déscription }}</h4>
+            <br>
+            <input id="input-1" name="input-1" class="rating rating-loading" 
+            data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}" 
+            data-size="xs" disabled="">
+            </p>
+            <form action="{{ route('ratehotel')}}" method="POST">
+            {{ csrf_field() }}
+              <div class="rating"> 
+                <input id="input-1" name="rate" class="rating rating-loading" 
+                data-min="0" data-max="5" data-step="1" 
+                value="{{ $element->userAverageRating }}" data-size="xs">
+                <input type="hidden" name="id" required="" value="{{ $element->id }}">
+                <span class="review-no"></span>
+                <br/>
+                <button class="btn btn-primary btn-md">Submit Review</button>
+              </div>
+            </form>  
             <a href="#" target="_blank"
               class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
@@ -166,20 +175,14 @@ de votre wilaya choisi.</h2>
 
         </div>
 
-        
+
         <!--Grid row-->
 
         <hr class="mb-5">
               @endforeach
-        
-        <hr class="mb-5">
 
-        <!--Pagination-->
-        
+              {{ $elements -> links() }}
 
-        {{ $elements -> links() }}
-
-           
 
       </section>
       <!--Section: Cards-->
@@ -219,7 +222,7 @@ de votre wilaya choisi.</h2>
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
 
-     
+
 
       <a href="#" target="_blank">
         <i class="fab fa-pinterest mr-3"></i>
@@ -229,7 +232,7 @@ de votre wilaya choisi.</h2>
         <i class="fab fa-github mr-3"></i>
       </a>
 
-      
+
     </div>
     <!-- Social icons -->
 

@@ -7,7 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Restaurants</title>
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -18,17 +18,30 @@
   <link href="css/style.min.css" rel="stylesheet">
 
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-  
+
   <link href="{{ asset('affichageDisplay/css/rating.css') }}" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
-  
+
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  
+  <style>
+  .pow{
+    background-image:url('/images/D.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
+  }
+  .wowo{
+    background-image:url('/images/F.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
+  }
+  </style>
 </head>
 
 <body>
@@ -49,7 +62,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-          
+
         </button>
 
         <!-- Links -->
@@ -59,47 +72,32 @@
 
           <!-- Left -->
           <ul class="navbar-nav mr-auto">
-           
+
             <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#"
+              <a class="nav-link waves-effect" href="{{url('/home')}}"
                 target="_blank">home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect" href="#" target="_blank">contact us</a>
-            </li>
           </ul>
 
           <!-- Right -->
           <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-              <a href="#" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            
+            <a class="pow" href="{{ url('/localisation') }}"></a>
+            <a class="wowo" href="{{ url('/dis') }}"></a>
+
               <!--To provide parametre for resto route -->
-          <?php 
+          <?php
             $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             $wilaya_id = $uriSegments[1];
           ?>
               <!------------------------------------------>
 
 
-                <form class="form-inline ml-auto" 
+                <form class="form-inline ml-auto"
                 action=" {{ route('searchresto' , ['wilaya_id' => $wilaya_id]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" name="term" type="text" 
+                <input id="search" class="form-control" name="term" type="text"
                 placeholder="Search" aria-label="Search">
                 </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"  
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
                    type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
 
@@ -150,14 +148,14 @@
         <div class="wow fadeIn">
           <!--Section heading-->
           <h2 class="h1 text-center mb-5">khallat f hdra w khlas </h2>
-          
+
           <p class="text-center">n3amrou lvide b kash jomla khfifa  </p>
           <p class="text-center mb-5 pb-5">guid-ech w les statistiques teh khorti
             <strong>1000 visiteurs</strong> wah khay wah</p>
         </div>
         <!-- Heading & Description -->
 
-            
+
         <!--Grid row-->
           @foreach ($elements as $element)
          <div class="row mt-3 wow fadeIn">
@@ -177,30 +175,30 @@
             <h3 class="mb-3 font-weight-bold dark-grey-text">
               <strong>{{ $element -> name }}</strong>
             </h3>
-            <p> 
-            <input id="input-1" name="input-1" class="rating rating-loading" 
-            data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}" 
+            <p>
+            <input id="input-1" name="input-1" class="rating rating-loading"
+            data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}"
             data-size="xs" disabled="">
             </p>
             <form action="{{ route('rateresto')}}" method="POST">
             {{ csrf_field() }}
-              <div class="rating"> 
-                <input id="input-1" name="rate" class="rating rating-loading" 
-                data-min="0" data-max="5" data-step="1" 
+              <div class="rating">
+                <input id="input-1" name="rate" class="rating rating-loading"
+                data-min="0" data-max="5" data-step="1"
                 value="{{ $element->userAverageRating }}" data-size="xs">
                 <input type="hidden" name="id" required="" value="{{ $element->id }}">
                 <span class="review-no"></span>
                 <br/>
                 <button class="btn btn-primary btn-md">Submit Review</button>
               </div>
-            </form>       
-            
+            </form>
 
-                     
-            <a href="{{ route('resto' , ['wilaya_id' => $wilaya_id , 'id'=> $element -> id ] )  }}" 
+
+
+            <a href="{{ route('resto' , ['wilaya_id' => $wilaya_id , 'id'=> $element -> id ] )  }}"
             target="_blank"  class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
-            </a>    
+            </a>
           </div>
 
           @endforeach
@@ -209,14 +207,14 @@
 
           <!--Grid column-->
 
-        
+
 
         </div>
         <!--Grid row-->
 
         <hr class="mb-5">
 
-       
+
         <!--Pagination-->
 
       </section>
@@ -256,7 +254,7 @@
       <a href="#" target="_blank">
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
-      
+
     </div>
     <!-- Social icons -->
 

@@ -9,7 +9,7 @@
   <title>Guid  </title>
   @endforeach
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -18,6 +18,17 @@
   <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
   <!-- our custom styles (optional) ila bghitou tmodifiw -->
   <link href="css/style.min.css" rel="stylesheet">
+
+  <link href="{{ asset('affichageDisplay/css/rating.css') }}" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
 </head>
 <style type="text/css">
 body{overflow-x: hidden;}
@@ -26,6 +37,18 @@ body{overflow-x: hidden;}
   }
   #search{
     color: black;
+  }
+  .pow{
+    background-image:url('/images/D.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
+  }
+  .wowo{
+    background-image:url('/images/F.png');
+    height: 66px;
+    width: 75px;
+    background-repeat: no-repeat;
   }
 </style>
 
@@ -41,7 +64,7 @@ body{overflow-x: hidden;}
       <a class="navbar-brand" href="" target="_blank">
     <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
-      
+
 &nbsp; &nbsp;
 &nbsp;
       <!-- Collapse -->
@@ -68,24 +91,26 @@ body{overflow-x: hidden;}
         $wilaya = $uriSegments[1];
         ?>
 
-                <form class="form-inline ml-auto" 
+                <form class="form-inline ml-auto"
                 action=" {{ route('searchbout' , ['wilaya_id' => $wilaya]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" name="term" type="text" 
+                <input id="search" class="form-control" name="term" type="text"
                 placeholder="Search" aria-label="Search">
                 </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"  
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
                    type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
+               <a class="pow" href="{{ url('/localisation') }}"></a>
+               <a class="wowo" href="{{ url('/dis') }}"></a>
 
   </div>
   <!-- Collapsible content -->
 
-         
+
 
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons"> <!-- affichage username et la photo -->
-         
+
 
                   <div class="dropdown">
              <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
@@ -107,7 +132,7 @@ body{overflow-x: hidden;}
                                         @csrf
     </form>
 </div>
-    
+
  </div>
         </div>
 
@@ -120,7 +145,7 @@ body{overflow-x: hidden;}
   <!-- Navbar ------------------------------------------------------------------->
 
     <!--Main Navigation-->
-<div  style="background-image: url('/images/btq.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 1250px;"> </div>
+<div  style="background-image: url('/images/btq.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 100%;"> </div>
   <!--Main layout-->
 
 
@@ -152,6 +177,23 @@ de votre wilaya choisi.</h2>
             <h4 class="black-text">{{ $element->name }}</h4>
 
             <h6 class="black-text">{{ $element->déscription }}</h4>
+            <br>
+            <input id="input-1" name="input-1" class="rating rating-loading" 
+            data-min="0" data-max="5" data-step="0.1" value="{{ $element-> averageRating }}" 
+            data-size="xs" disabled="">
+            </p>
+            <form action="{{ route('ratebout')}}" method="POST">
+            {{ csrf_field() }}
+              <div class="rating"> 
+                <input id="input-1" name="rate" class="rating rating-loading" 
+                data-min="0" data-max="5" data-step="1" 
+                value="{{ $element->userAverageRating }}" data-size="xs">
+                <input type="hidden" name="id" required="" value="{{ $element->id }}">
+                <span class="review-no"></span>
+                <br/>
+                <button class="btn btn-primary btn-md">Submit Review</button>
+              </div>
+            </form>  
             <a href="#" target="_blank"
               class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
@@ -161,53 +203,15 @@ de votre wilaya choisi.</h2>
 
         </div>
 
-        
+
         <!--Grid row-->
 
         <hr class="mb-5">
               @endforeach
-        
+
+              {{ $elements -> links() }}
+
         <hr class="mb-5">
-
-        <!--Pagination-->
-        <nav class="d-flex justify-content-center wow fadeIn">
-          <ul class="pagination pg-blue">
-
-            <!--Arrow left-->
-            <li class="page-item disabled">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
-              </a>
-            </li>
-
-            <li class="page-item active">
-              <a class="page-link" href="#">1
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">5</a>
-            </li>
-
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!--Pagination-->
 
       </section>
       <!--Section: Cards-->
@@ -246,7 +250,7 @@ de votre wilaya choisi.</h2>
       <a href="#" target="_blank">
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
-      
+
     </div>
     <!-- Social icons -->
 
