@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Data dispplay </title>
+  <title>Restaurants</title>
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
   
   <!-- Font Awesome -->
@@ -16,14 +16,19 @@
   <link href="{{ asset('affichageDisplay/css/mdb.min.css') }}" rel="stylesheet">
   <!-- our custom styles (optional) ila bghitou tmodifiw -->
   <link href="css/style.min.css" rel="stylesheet">
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  
+  <link href="{{ asset('affichageDisplay/css/rating.css') }}" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -88,7 +93,8 @@
               <!------------------------------------------>
 
 
-                <form class="form-inline ml-auto" action=" {{ route('searchresto' , ['wilaya_id' => $wilaya_id]) }} ">
+                <form class="form-inline ml-auto" 
+                action=" {{ route('searchresto' , ['wilaya_id' => $wilaya_id]) }} ">
                  <div class="md-form my-0">
                 <input id="search" class="form-control" name="term" type="text" 
                 placeholder="Search" aria-label="Search">
@@ -151,31 +157,22 @@
         </div>
         <!-- Heading & Description -->
 
+            
         <!--Grid row-->
+          @foreach ($elements as $element)
          <div class="row mt-3 wow fadeIn">
 
           <!--Grid column-->
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1">
-              <img src="#" class="img-fluid"
+              <img src="{{ $element->image }}" class="img-fluid"
                 alt="">
               <a href="#" target="_blank">
                 <div class="mask rgba-white-slight"></div>
               </a>
             </div>
           </div>
-          <!--Grid column-->
-
-              <!--To provide parametre for resto route -->
-          <?php 
-            $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-            $wilaya_id = $uriSegments[1];
-          ?>
-              <!------------------------------------------>
-
-          <!--Grid column-->
-          @foreach ($elements as $element)
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
             <h3 class="mb-3 font-weight-bold dark-grey-text">
               <strong>{{ $element -> name }}</strong>

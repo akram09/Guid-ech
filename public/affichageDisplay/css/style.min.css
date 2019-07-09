@@ -105,7 +105,7 @@ fill: #59b2d0;}
 .map__image  #DZ-03:hover{
 fill: #daa520;
 }
-.map__image, #DZ-30: hover{
+.map__image, #DZ-30:hover{
 	fill: #daa520;
 }
 .map__image  #DZ-47:hover{
@@ -157,4 +157,3 @@ fill: #daa520;
   width:100%;
   position:absolute;
 }
-

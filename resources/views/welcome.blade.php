@@ -638,108 +638,12 @@
     <div class="container">
 
 
-      <section class="mt-5 wow fadeIn">
+      
 
-
-
-      </section>
-
-
-      <hr class="my-5">
-
-
-      <section>
-
-
-        <h2 class="my-5 h3 text-center">@lang('welcome.title_fonct')</h2>
-
-        <!--First row-->
-        <div class="row features-small mb-5 mt-3 wow fadeIn">
-
-          <!--First column-->
-          <div class="col-md-4">
-            <!--First row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h4 class="feature-title">@lang('welcome.title_md_1')</h4>
-                <h6 class="grey-text">
-                   @lang('welcome.title_sm_1')
-                </h6>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/First row-->
-
-            <!--Second row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h4 class="feature-title">@lang('welcome.title_md_2')</h4>
-                <h6 class="grey-text">
-                  @lang('welcome.title_sm_2')
-                </h6>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Second row-->
-
-
-
-
-          </div>
-          <!--/First column-->
-
-          <!--Second column-->
-          <div class="col-md-4 flex-center">
-            <img src="images/gf.jpg" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid">
-          </div>
-          <!--/Second column-->
-
-          <!--Third column-->
-          <div class="col-md-4 mt-2">
-            <!--First row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h4 class="feature-title">@lang('welcome.title_md_3')</h4>
-                <h6 class="grey-text">  @lang('welcome.title_sm_3') </h6>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/First row-->
-
-            <!--second row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h4 class="feature-title">@lang('welcome.title_md_4')</h4>
-                <h6 class="grey-text">@lang('welcome.title_sm_4')</h6>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/second row-->
-
-
-
-          </div>
-          <!--/Third column-->
-
-        </div>
-        <!--/First row-->
-        <h2>    @lang('welcome.title_plus')<a href="#">  @lang('welcome.title_plus_clic'):</a></h2>
-      </section>
+      
       <!----------------------------------------Section: Not enough------------------------>
 
-      <hr class="my-5">
+      
 
       <!--------------------------Section: Main features & Quick Start---------------->
       <section>
@@ -790,7 +694,7 @@
                 <h5 class="feature-title">@lang('welcome.title_c3')</h5>
                 <p>@lang('welcome.title_contenu3')</p>
               </div>
-              <h2>@lang('welcome.title_plus_tip') <a href="#">@lang('welcome.title_plus')</a></h2>
+              <h2>@lang('welcome.title_plus_tip') <a href="/GF">@lang('welcome.title_plus')</a></h2>
 
             </div>
             <!--/Third row-->
@@ -824,7 +728,7 @@
     <!-- Grid column -->
     <div class="col-md-4 mb-md-0 mb-5">
       <div class="avatar mx-auto">
-        <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+        <img src="/images/wahid.jpeg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
       </div>
       <h4 class="font-weight-bold dark-grey-text my-4">Madani yousfi Abdelwahed</h4>
       <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>
@@ -847,7 +751,7 @@
  <!-- Grid column -->
  <div class="col-md-4">
   <div class="avatar mx-auto">
-    <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+    <img src="/images/regg.jpeg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
   </div>
   <h4 class="font-weight-bold dark-grey-text my-4">Moncef Reggam</h4>
   <h6 class="text-uppercase grey-text mb-3"><strong>Esi student</strong></h6>
@@ -870,7 +774,7 @@
  <!-- Grid column -->
  <div class="col-md-4">
   <div class="avatar mx-auto">
-    <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+    <img src="/images/kika.jpg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
   </div>
   <h4 class="font-weight-bold dark-grey-text my-4">Malika Dermi</h4>
   <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>
@@ -893,7 +797,7 @@
  <!-- Grid column -->
  <div class="col-md-4">
   <div class="avatar mx-auto">
-    <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+    <img src="/images/larbi.jpg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
   </div>
   <h4 class="font-weight-bold dark-grey-text my-4">Larbi riyane</h4>
   <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>
@@ -916,7 +820,7 @@
  <!-- Grid column -->
  <div class="col-md-4">
   <div class="avatar mx-auto">
-    <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+    <img src="/images/said.jpeg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
   </div>
   <h4 class="font-weight-bold dark-grey-text my-4">Said Bouabdallah</h4>
   <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>
@@ -938,7 +842,7 @@
     <!-- Grid column -->
     <div class="col-md-4">
       <div class="avatar mx-auto">
-        <img src="" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+        <img src="/images/zeblah.jpeg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
       </div>
       <h4 class="font-weight-bold dark-grey-text my-4">Ikhlas Zeblah</h4>
       <h6 class="text-uppercase grey-text mb-3"><strong>Esi student</strong></h6>

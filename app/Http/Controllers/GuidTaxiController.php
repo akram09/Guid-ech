@@ -12,7 +12,7 @@ class GuidTaxiController extends Controller
         $this->middleware('auth');
     }
     public function afficher($wilayas_id){
-    	$elements = Guidtaxi::where('wilaya_id', strval($wilayas_id))->paginate(5);
+    	$elements = Guidtaxi::where('wilaya_id', strval($wilayas_id))->paginate(6);
 
         return view('GuidTaxi', compact('elements'));
 

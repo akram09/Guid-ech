@@ -139,6 +139,7 @@
         <!--Grid row-->
         <div class="row wow fadeIn">
 
+
           <!--Grid column-->
           <div class="col-md-6 mb-4 white-text text-center text-md-left">
 <br>
@@ -163,6 +164,7 @@
 
           </div>
           <!--Grid column-->
+
 
           <!--Grid column-->
           <div class="col-md-6 col-xl-5 mb-4">
@@ -386,6 +388,91 @@
           <!--Grid column-->
 
         <!--Grid row-->
+        <h2 class="my-5 h3 text-center">@lang('welcome.title_fonct')</h2>
+
+        <!--First row-->
+        <div class="row features-small mb-5 mt-3 wow fadeIn">
+
+          <!--First column-->
+          <div class="col-md-4">
+            <!--First row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h4 class="feature-title">@lang('welcome.title_md_1')</h4>
+                <h6 class="grey-text">
+                   @lang('welcome.title_sm_1')
+                </h6>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h4 class="feature-title">@lang('welcome.title_md_2')</h4>
+                <h6 class="grey-text">
+                  @lang('welcome.title_sm_2')
+                </h6>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/Second row-->
+
+
+
+
+          </div>
+          <!--/First column-->
+
+          <!--Second column-->
+          <div class="col-md-4 flex-center">
+            <img src="images/gf.jpg" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid">
+          </div>
+          <!--/Second column-->
+
+          <!--Third column-->
+          <div class="col-md-4 mt-2">
+            <!--First row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h4 class="feature-title">@lang('welcome.title_md_3')</h4>
+                <h6 class="grey-text">  @lang('welcome.title_sm_3') </h6>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <!--second row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+              </div>
+              <div class="col-10">
+                <h4 class="feature-title">@lang('welcome.title_md_4')</h4>
+                <h6 class="grey-text">@lang('welcome.title_sm_4')</h6>
+                <div style="height:15px"></div>
+              </div>
+            </div>
+            <!--/second row-->
+
+
+
+          </div>
+          <!--/Third column-->
+
+        </div>
+        <!--/First row-->
+        <h2>    @lang('welcome.title_plus')<a href="#">  @lang('welcome.title_plus_clic'):</a></h2>
 
       </section>
   </main>

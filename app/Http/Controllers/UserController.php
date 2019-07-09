@@ -62,9 +62,12 @@ class UserController extends Controller
             ]);
             $user->name = $request["name"];
         }
-        $user->save(); 
+        $user->save();
         Session::flash('message', "Profile Successfully Updated!");
         return redirect()->back();
     }
-
-}
+    public function destroy(){ //user delete account
+      Auth::user()->delete();
+      return redirect('/');
+    }
+  }
