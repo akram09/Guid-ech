@@ -694,7 +694,7 @@
                 <h5 class="feature-title">@lang('welcome.title_c3')</h5>
                 <p>@lang('welcome.title_contenu3')</p>
               </div>
-              <h2>@lang('welcome.title_plus_tip') <a href="#">@lang('welcome.title_plus')</a></h2>
+              <h2>@lang('welcome.title_plus_tip') <a href="/GF">@lang('welcome.title_plus')</a></h2>
 
             </div>
             <!--/Third row-->
