@@ -478,7 +478,7 @@
 
         </div>
         <!--/First row-->
-        <h2>    @lang('welcome.title_plus')<a href="#">  @lang('welcome.title_plus_clic'):</a></h2>
+        <h2>    @lang('welcome.title_plus')<a href="{{ url('/docs') }}">  @lang('welcome.title_plus_clic'):</a></h2>
 
       </section>
   </main>
