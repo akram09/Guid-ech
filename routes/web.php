@@ -129,3 +129,6 @@ Route::get('event', 'EventController@index')->name('events.index');
 Route::post('event', 'EventController@addEvent')->name('events.add');
 
 //=======================================================================================//
+Route::get('/GF', function () {
+    return view('articles');
+});
