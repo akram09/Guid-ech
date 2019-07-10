@@ -96,7 +96,14 @@
 
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <img class="img-fluid" src="{{ asset('/images/GRestaurants.jpg') }}" alt="Resaturants" style="width: 500px;height: 300px;">
+
+         <?php 
+            $segments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $segments[1];
+          ?>
+        <img class="img-fluid" src="{{ asset('/images/GRestaurants.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+
+        
         <a href="{{ route('wilaya.restaurant' ,
              ['wilaya_id' => $wilaya_id ] ) }}" >
           <div class="mask rgba-black-strong">
@@ -108,6 +115,15 @@
     </div>
 
     <div class="col-md-6">
+
+      <!------------------------------------------>
+      <?php 
+            $segments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $segments[1];
+          ?>
+      <!------------------------------------------>    
+      <a href="#!" class="green-text">
+
 
 
       <a href="{{ route('wilaya.restaurant' , ['wilaya_id' => $wilaya_id ] ) }}" class="green-text">
@@ -153,7 +169,8 @@
 
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-2">
-        <img class="img-fluid" src="{{ asset('/images/Ghotel.jpg') }}" alt="Hotels" style="width: 500px;height: 300px;">
+        <img class="img-fluid" src="{{ asset('/images/Ghotel.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+        
         <a href="
       {{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}">
           <div class="mask rgba-black-strong"></div>
@@ -176,7 +193,9 @@
 
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <img class=" img-fluid" src="{{ asset('/images/Gbtq.jpg') }}" alt="Boutiques" style="width: 500px;height: 300px;">
+ 
+        <img class=" img-fluid" src="{{ asset('/images/Gbtq.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+        
          <a href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}">
           <div class="mask rgba-black-strong"></div>
         </a>
@@ -231,7 +250,10 @@
 
 
       <div class="view overlay rounded z-depth-2">
-        <img class="img-fluid" src="{{ asset('/images/Gtaxi.jpg') }}" alt="Taxis" style="width: 500px;height: 300px;">
+ 
+        <img class="img-fluid" src="{{ asset('/images/Gtaxi.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+
+       
         <a  href="{{ route( 'GuidTaxi' , ['wilaya_id' => $wilaya_id ] ) }}">
           <div class="mask rgba-black-strong"></div>
         </a>
@@ -252,7 +274,10 @@
 
 
       <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
-        <img class=" img-fluid" src="{{ asset('/images/GFood.jpg') }}" alt="Allo Food" style="width: 500px;height: 300px;">
+ 
+        <img class=" img-fluid" src="{{ asset('/images/GFood.jpg') }}" alt="Sample image" style="width: 500px;height: 300px;">
+
+     
        <a href="{{ route( 'GuidFood' , ['wilaya_id' => $wilaya_id ] ) }}">
           <div class="mask rgba-black-strong"></div>
         </a>
@@ -305,7 +330,10 @@
 
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-2">
-        <img class="img-fluid" src="{{ asset('/images/Glieux.jpg') }}" alt="Lieux"style="width: 500px;height: 300px;">
+ 
+        <img class="img-fluid" src="{{ asset('/images/Glieux.jpg') }}" alt="Sample image"style="width: 500px;height: 300px;">
+
+        
          <a>
           <div class="mask rgba-black-strong"></div>
         </a>

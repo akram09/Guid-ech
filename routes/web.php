@@ -139,4 +139,14 @@ Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@
 Route::get('event', 'EventController@index')->name('events.index');
 Route::post('event', 'EventController@addEvent')->name('events.add');
 
+
+/*=======================================================================*/
+Route::get('/Lieux', function () {
+    return view('GuidLieux');
+});
+
 //=======================================================================================//
+
+Route::get('/GF', function () {
+    return view('articles');
+});
