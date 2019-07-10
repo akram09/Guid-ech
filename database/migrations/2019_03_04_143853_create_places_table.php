@@ -17,10 +17,9 @@ class CreatePlacesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('adresse');
+            $table->string('image');
             $table->integer('wilaya_id')->unsigned();
-            $table->foreign('wilaya_id')->references('id')->on('wilayas'); 
-            $table->integer('type_id')->unsigned();
-            $table->foreign('type_id')->references('id')->on('places_type');
+            $table->foreign('wilaya_id')->references('id')->on('wilayas');
             $table->timestamps();
         });
     }

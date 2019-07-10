@@ -9,6 +9,7 @@ use App\Hotel;
 use App\Classe;
 use App\GuidTaxi;
 use App\GuidFood;
+use App\Place;
 
 class SearchController extends Controller
 {
@@ -104,6 +105,23 @@ class SearchController extends Controller
                                 ->where('wilaya_id' , $wilaya )->paginate(3);
                                 
         return view('GuidTaxi' , compact('elements'));
+
+    }
+
+    public function searchplace(REQUEST $request){
+        /*  wherelike() : macro function or custom builder check boot() in 
+         *  "app/Providers/AppServiceProvider.php" file 
+         */
+
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        $wilaya = $uriSegments[1];
+
+        $search = $request -> get('term');
+
+        $elements = Place::where('name' , 'Like' , '%'.$search.'%' )
+                                ->where('wilaya_id' , $wilaya )->paginate(3);
+                                
+        return view('GuidLieux' , compact('elements'));
 
     }
     

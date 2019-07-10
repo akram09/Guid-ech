@@ -157,3 +157,8 @@ fill: #daa520;
   width:100%;
   position:absolute;
 }
+
+.images{
+  height: 200px;
+  width : 500px;
+}

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  
-<title>GuidLieux</title>
+<title>Lieux</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -94,9 +93,8 @@ html,
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="#" target="_blank">
-        <strong>GuidLieux</strong>
-        
+      <a class="navbar-brand" href="" target="_blank">
+    <img class="animated zoomIn"  src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 
       
@@ -121,10 +119,17 @@ html,
         </ul>
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <!--To provide parametre for route -->
+       <?php
+            $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+            $wilaya_id = $uriSegments[1];
+          ?>
+              <!------------------------------------------>
 
-                <form class="form-inline ml-auto">
+                <form class="form-inline ml-auto" 
+                action="{{ route('searchplace' , ['wilaya_id' => $wilaya_id]) }}">
                  <div class="md-form my-0">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="text" name="term" placeholder="Search" aria-label="Search">
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
@@ -174,7 +179,48 @@ html,
 <div class="view full-page-intro" style="background-image: url('/images/lieux.jpg'); background-repeat: no-repeat; background-size: cover;">
 </div>
 <!----------------------->
-<h1 class="my-5 h1 text-center">Réstaurants qui font de la livraison à votre wilaya choisi </h1>
+<h1 class="my-5 h1 text-center"> </h1>
+<main class="mt-5 pt-5">
+    <div class="container">
+        @foreach($elements as $element)
+
+        <!--Grid row-->
+         <div class="row mt-3 wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-5 col-xl-4 mb-4">
+            <!--Featured image-->
+            <div class="view overlay rounded z-depth-1">
+              <img src="{{$element->image}}" class="images">
+              
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+          <br><br><br>
+            <h2 class="black-text">{{ $element->name }}</h2>
+                       
+            <!-------------------------------------------------------->         
+             
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <hr class="mb-5">
+              @endforeach
+
+              {{ $elements -> links() }}
+
+
+      </section>
+      <!--Section: Cards-->
+
+    </div>
+  </main>
 <!-- Portfolio Gallery Grid -->
 
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlacesTypeTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreatePlacesTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('places_type', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('type');
+            $table->string('name');
+            $table->integer('place_id')->unsigned();
+            $table->foreign('place_id')->references('id')->on('places');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreatePlacesTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('places_type');
+        Schema::dropIfExists('images');
     }
 }
