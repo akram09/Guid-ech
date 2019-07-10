@@ -123,19 +123,8 @@
         <div class="card-body text-white text-center py-5 px-5 my-5">
 
           <h1 class="mb-4">
-            <strong>Telftlk win takol</strong>
+            <strong>Vous allez aimer avoir faim !</strong>
           </h1>
-          <p>
-            <strong>Moncef ydabbber 3lik</strong>
-          </p>
-          <p class="mb-4">
-            <strong>Guid-ech descrpttion wow wpkhjvjnsnknvernvklr,gjinrenkvnkrnjrjnbv enjbjnknknubhvgxfg bjgvhjhvgcfcdbjh
-            bbycfchbjhgvhjbhhbvgcgj,jgcgvhj</strong>
-          </p>
-          <a target="_blank" href="#" class="btn btn-outline-white btn-lg">Guid-ech descraption
-            <i class="fas fa-badge-check-cap ml-2"></i>
-          </a>
-
         </div>
         <!-- Content -->
       </section>
@@ -147,11 +136,7 @@
         <!-- Heading & Description -->
         <div class="wow fadeIn">
           <!--Section heading-->
-          <h2 class="h1 text-center mb-5">khallat f hdra w khlas </h2>
-
-          <p class="text-center">n3amrou lvide b kash jomla khfifa  </p>
-          <p class="text-center mb-5 pb-5">guid-ech w les statistiques teh khorti
-            <strong>1000 visiteurs</strong> wah khay wah</p>
+          <h2 class="h1 text-center mb-5">On vous propose les meilleurs Restaurants </h2>
         </div>
         <!-- Heading & Description -->
 
@@ -277,11 +262,6 @@
   <script type="text/javascript" src="{{ asset('affichageDisplay/js/bootstrap.min.js') }}"></script>
   <!-- MDB core JavaScript -->
   <!-- Initializations -->
-  <script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
-
-  </script>
 </body>
 
 </html>

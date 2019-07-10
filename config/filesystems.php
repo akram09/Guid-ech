@@ -66,7 +66,7 @@ return [
         'voyager' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),// change here something specific to your application need
-            'url' => env('APP_URL').'',
+            'url' => 'http://127.0.0.1:8000'.'',
             'visibility' => 'public',
         ],
 

@@ -30,6 +30,7 @@ Route::get('/{wilayas_id}/Boutique/catégorie/{cat}', 'BoutiqueController@affich
 Route::get('/{wilayas_id}/GuidTaxi', 'GuidTaxiController@afficher')->name('GuidTaxi');
 Route::get('/{wilayas_id}/GuidFood', 'GuidFoodController@afficher')->name('GuidFood');
 Route::get('/{id}/wilaya', 'wilayaController@afficher')->name('Wilaya');
+Route::get('/{wilaya_id}/Place' , 'placeController@afficher')->name('place');
 
 //rating ================================================================================//
 
@@ -39,11 +40,11 @@ Route::post('/rateb' , 'BoutiqueController@rate')->name('ratebout');
 
 // favorite =============================================================================//
 
-Route::post('/favr' , 'RestaurantController@fav')->name('favr');
-Route::post('/favh' , 'HotelController@fav')->name('favh');
-Route::post('/favb' , 'BoutiqueController@fav')->name('favb');
-Route::post('/favt' , 'GuidTaxiController@fav')->name('favt');
-Route::post('/favf' , 'GuidFoodController@fav')->name('favf');
+Route::post('/favr/{id}' , 'RestaurantController@fav')->name('favr');
+Route::post('/favh/{id}' , 'HotelController@fav')->name('favh');
+Route::post('/favb/{id}' , 'BoutiqueController@fav')->name('favb');
+Route::post('/favt/{id}' , 'GuidTaxiController@fav')->name('favt');
+Route::post('/favf/{id}' , 'GuidFoodController@fav')->name('favf');
 
 
 //restoservice   ========================================================================//
@@ -61,6 +62,7 @@ Route::get('/{wilaya_id}/boutique/search' , 'SearchController@searchbout')->name
 Route::get('/{wilaya_id}/hotel/search' , 'SearchController@searchhot')->name('searchhot');
 Route::get('/{wilaya_id}/GuidFood/search' , 'SearchController@searchfood')->name('searchfood');
 Route::get('/{wilaya_id}/GuidTaxi/search' , 'SearchController@searchtaxi')->name('searchtaxi');
+Route::get('/{wilaya_id}/Place/search' , 'SearchController@searchplace')->name('searchplace');
 
 //=======================================================================================//
 
@@ -84,6 +86,7 @@ Route::group(['prefix'=>'admin','middleware'=>'admin','namespace'=>'admin'], fun
     Route::resource('slider','SliderController');
     Route::resource('category','CategoryController');
     Route::resource('item','ItemController');
+    
     Route::get('reservation','ReservationController@index')->name('reservation.index');
     Route::post('reservation/{id}','ReservationController@status')->name('reservation.status');
     Route::delete('reservation/{id}','ReservationController@destory')->name('reservation.destory');
@@ -127,11 +130,11 @@ Route::get('/voyager', function () {
 });
 
 
-//=======================================================================================//
-            /*contact us route*/
+//================/*contact us route*/====================================================//
+            
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
 
-//=======================================================================================//
+//=====================events============================================================//
 
 Route::get('event', 'EventController@index')->name('events.index');
 Route::post('event', 'EventController@addEvent')->name('events.add');
