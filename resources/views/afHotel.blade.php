@@ -134,8 +134,8 @@ de votre wilaya choisi.</h2>
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1">
-              <img src="{{$element->images}}" class="img-fluid"
-                alt="bt1">
+              <img src="\{{$element->images}}" class="img-fluid"
+                >
               <a href="#" target="_blank">
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -170,21 +170,6 @@ de votre wilaya choisi.</h2>
               <i class="fas fa-play ml-2"></i>
             </a>
 
-            
-            <!-------------------------------------------------------->
-            
-            <h5>Click to add to favourites</h5>
-           
-            <form action="{{ route('favh') }}" method="POST">
-            @csrf
-            <div class="click">           
-             <input type="hidden" name="idf" required="" value="{{ $element->id }}">
-	           <span onclick='document.forms[2].submit()' id="fav" class="fa fa-star-o"></a>
-	           <div class="ring"></div>
-	           <div class="ring2"></div>
-            </form>
-	           <p class="info">Added to favourites!</p>
-            </div>
           </div>
           <!--Grid column-->
 

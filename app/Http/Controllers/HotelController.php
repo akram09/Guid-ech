@@ -63,7 +63,7 @@ class HotelController extends Controller
 
         $id = $request->idf;
 
-        dd($id);
+        // dd($id);
           
         $user = \Auth::user();
         $hotel = Hotel::find($id);
@@ -81,7 +81,7 @@ class HotelController extends Controller
 
         } else {
           $u = \Auth::user();
-          $fav = Hotel::find(1);
+          $fav = Hotel::find($id);
           $fav->favoritedBy($u);
           $fav->removeFavorite();
         }
