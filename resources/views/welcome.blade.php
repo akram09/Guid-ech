@@ -728,7 +728,7 @@
     <!-- Grid column -->
     <div class="col-md-4 mb-md-0 mb-5">
       <div class="avatar mx-auto">
-        <img src="/images/wahid.jpeg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
+        <img src="/wahid.jpeg" height=250px class="rounded z-depth-1-half" alt="Sample avatar">
       </div>
       <h4 class="font-weight-bold dark-grey-text my-4">Madani yousfi Abdelwahed</h4>
       <h6 class="text-uppercase grey-text mb-3"><strong>Esi Student</strong></h6>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlacesTypeTable extends Migration
+class CreateFavoritesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreatePlacesTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('places_type', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('type');
+        Schema::create('favorites', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned()->index();
+            $table->morphs('favoriteable');
+            $table->primary(['user_id', 'favoriteable_id', 'favoriteable_type']);
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreatePlacesTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('places_type');
+        Schema::dropIfExists('favorites');
     }
 }

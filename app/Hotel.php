@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use willvincent\Rateable\Rateable;
+use ChristianKuri\LaravelFavorite\Traits\Favoriteable;
 
 class Hotel extends Model
 {
@@ -14,6 +15,8 @@ class Hotel extends Model
      * 
      * *******/
     use Rateable;
+
+    use Favoriteable;
 
     public function Wilaya(){
         return $this->belongsto('App\Wilaya');

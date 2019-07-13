@@ -5,7 +5,7 @@ namespace App\Widgets;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
-use DB;
+use App\ContactUs;
 
 class contact extends BaseDimmer
 {
@@ -22,7 +22,7 @@ class contact extends BaseDimmer
      */
     public function run()
     {
-        $count = DB::table('contactus')->count();
+        $count = ContactUs::count();
         $string = trans_choice('messages', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [

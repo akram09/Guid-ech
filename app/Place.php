@@ -17,7 +17,8 @@ class Place extends Model
         return $this->belongsTo('App\Wilaya');
     }
 
-    public function Placetype(){
-        return $this->belongsTo('App\Placestype');
+    public function Image(){
+        return $this->hasMany('App\Image');
     }
+
 }

@@ -53,6 +53,43 @@ class HotelController extends Controller
             return redirect()->back();
             }
     }
+
+    public function fav(REQUEST $request){
+
+        // $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        // $id = $uriSegments[2];
+
+        // dd($id);
+
+        $id = $request->idf;
+
+        // dd($id);
+          
+        $user = \Auth::user();
+        $hotel = Hotel::find($id);
+
+        // dd($request->id);
+
+        $test = $hotel->isFavorited();
+        // dd($test);
+
+
+        if ($test==false) {
+
+        $favo = Hotel::find($id);
+        $favo->addFavorite();
+
+        } else {
+          $u = \Auth::user();
+          $fav = Hotel::find($id);
+          $fav->favoritedBy($u);
+          $fav->removeFavorite();
+        }
+        //  dd($fav);
+
+        return redirect()->back();
+
+    }
    
 }
 

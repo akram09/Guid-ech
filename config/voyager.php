@@ -61,7 +61,7 @@ return [
     */
 
     'storage' => [
-        'disk' => env('FILESYSTEM_DRIVER', 'public'),
+        'disk' => 'voyager',
     ],
 
     /*

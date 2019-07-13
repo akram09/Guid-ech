@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use willvincent\Rateable\Rateable;
-
+use ChristianKuri\LaravelFavorite\Traits\Favoriteable;
 
 class Restaurant extends Model
 {
@@ -36,6 +36,8 @@ class Restaurant extends Model
     public function Category(){
         return $this->hasMany('App\Category');
     }
+
     use Rateable; 
 
+    use Favoriteable;
 }

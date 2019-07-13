@@ -14,8 +14,8 @@ Sous le but de la concrétisation d'un Projet Pluridisciplinaire qui consiste à
 réaliser une application Web dont ce dernier est  Guid-ech. Six Etudiants se sont mis
 à la tâche d'aboutir à la conception finale de ce projet : <br>
   <larecipe-badge type="primary" circle icon="fa fa-user"></larecipe-badge> Madani Yousfi Abdelwahed <br>
-  <larecipe-badge type="primary" circle icon="fa fa-user"></larecipe-badge>Bouabdallah Said Abdeldjalil <br>        
   <larecipe-badge type="primary" circle icon="fa fa-user"></larecipe-badge> Reggam Moncef <br>
+  <larecipe-badge type="primary" circle icon="fa fa-user"></larecipe-badge>Bouabdallah Said Abdeldjalil <br> 
   <larecipe-badge type="primary" circle icon="fa fa-user"></larecipe-badge> Dermi Malika <br>
   <larecipe-badge type="primary" circle icon="fa fa-user"></larecipe-badge> Zeblah Ikhlass  <br>
   <larecipe-badge type="primary" circle icon="fa fa-user"></larecipe-badge> Larbi Riyane  <br>

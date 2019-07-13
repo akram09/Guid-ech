@@ -30,7 +30,7 @@ class boutique extends BaseDimmer
             'text'   => __('boutique ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('View all '),
-                'link' => route('home'),
+                'link' => url('admin/boutiques'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/01.jpg'),
         ]));

@@ -167,6 +167,7 @@ return [
         Ghanem\Rating\RatingServiceProvider::class,
         willvincent\Rateable\RateableServiceProvider::class, //rating system
         ConsoleTVs\Links\LinksServiceProvider::class,
+        ChristianKuri\LaravelFavorite\FavoriteServiceProvider::class,
 
 
 

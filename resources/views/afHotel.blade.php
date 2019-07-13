@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -87,7 +86,7 @@
         </ul>
         <!-- Collapsible content -->
 
-              <!--To provide parametre for resto route -->
+              <!--To provide parametre for route -->
               <?php
             $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             $wilaya_id = $uriSegments[1];
@@ -135,8 +134,8 @@ de votre wilaya choisi.</h2>
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1">
-              <img src="{{$element->images}}" class="img-fluid"
-                alt="bt1">
+              <img src="\{{$element->images}}" class="img-fluid"
+                >
               <a href="#" target="_blank">
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -170,6 +169,7 @@ de votre wilaya choisi.</h2>
               class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
             </a>
+
           </div>
           <!--Grid column-->
 
