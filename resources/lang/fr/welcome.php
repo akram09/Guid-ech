@@ -25,7 +25,7 @@ return [
    'title_c2'=>'2',
    'title_c3'=>'3',
    'title_contenu1'=>'Shopping et artisanat, que ramener ?',
-   'title_contenu2'=>'3 raisons pour visiter l"Algérie ?',
+   'title_contenu2'=>'3 raisons pour visiter l"Algérie?',
    'title_contenu3'=>'Quels sont les activités à faire en Algérie ?',
    'title_plus_tip'=>'Pour plus de conseils et d`articles de ce type',
    

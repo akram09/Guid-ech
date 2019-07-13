@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail; // email verification
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use ChristianKuri\LaravelFavorite\Traits\Favoriteability;
+//use ChristianKuri\LaravelFavorite\Traits\Favoriteability;
 
 
 
@@ -49,7 +49,7 @@ class User extends \TCG\Voyager\Models\User  implements MustVerifyEmail // email
         'email_verified_at' => 'datetime',
     ];
 
-    use Favoriteability;
+    //use Favoriteability;
 
     public function Restaurants(){
         return $this->hasMany('App\Restaurant');

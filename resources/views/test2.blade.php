@@ -66,11 +66,37 @@
             <!-- Right -->
           &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;
 
+      <a href="{{ route ('events.index') }}" type="button" class="btn btn-primary">
 
+         Evennements à découvrir 
+      </a>
 
 
       </div>
 
+ <ul class="navbar-nav nav-flex-icons"> <!-- affichage username et la photo -->
+         
+
+                  <div class="dropdown">
+             <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
+                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
+              </a>
+
+<div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
+  @csrf
+  <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
+  <div >
+        <a href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+
+             <button type="button" class="btn btn-danger">Logout</button>
+
+        </a>
+
+     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+    </form>
     </div>
   </nav>
   <!-- Navbar -->
