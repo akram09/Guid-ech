@@ -86,17 +86,13 @@
   @csrf
   <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
   <div >
-        <a href="{{ route('logout') }}"
+           <a class="dropdown-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
-
-             <button type="button" class="btn btn-danger">Logout</button>
-
+            <button type="button" class="dropdown-item">
+          <i class="fas fa-power-off"></i>  @lang('profile.logout')</button>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
         </a>
-
-     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-    </form>
     </div>
   </nav>
   <!-- Navbar -->

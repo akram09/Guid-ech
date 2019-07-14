@@ -9,7 +9,8 @@
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css ">
+
   <!-- Bootstrap core CSS -->
   <link href="{{ asset('affichageDisplay/css/bootstrap.min.css') }}" rel="stylesheet">
   <!-- Material Design Bootstrap -->
@@ -47,7 +48,7 @@
 <body>
 
   <!--Main Navigation-->
-  <header>
+  
 
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
@@ -55,7 +56,7 @@
 
        <!-- Brand -->
       <a class="navbar-brand" href="{{route('home')}}" target="_blank">
-    <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
+    <img class="animated zoomIn"  src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 
         <!-- Collapse -->
@@ -80,6 +81,7 @@
 
           <!-- Right -->
           <ul class="navbar-nav nav-flex-icons">
+
             <a class="pow" href="{{ url('/localisation') }}"></a>
             <a class="wowo" href="{{ url('/dis') }}"></a>
 
@@ -89,9 +91,7 @@
             $wilaya_id = $uriSegments[1];
           ?>
               <!------------------------------------------>
-
-
-                <form class="form-inline ml-auto"
+         <form class="form-inline ml-auto"
                 action=" {{ route('searchresto' , ['wilaya_id' => $wilaya_id]) }} ">
                  <div class="md-form my-0">
                 <input id="search" class="form-control" name="term" type="text"
@@ -99,52 +99,49 @@
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
                    type="submit"><i class="fas fa-search"></i> OK</button>
-               </form>
-
+               </form> 
           </ul>
 
         </div>
+        <ul class="navbar-nav nav-flex-icons"> <!-- affichage username et la photo -->
+         
 
+                  <div class="dropdown">
+             <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
+                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:4px; left:10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
+              </a>
+
+<div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
+  @csrf
+  <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
+  <div >
+           <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+            <button type="button" class="dropdown-item">
+          <i class="fas fa-power-off"></i>  @lang('profile.logout')</button>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
+        </a>
+ 
       </div>
     </nav>
     <!-- Navbar -->
 
-  </header>
-  <!--Main Navigation-->
+      <section style="background-image: url('/images/gr.jpg') ; background-repeat: no-repeat; background-size: cover; height: 350px;width: 100%;">
 
-  <!--Main layout-->
-  <main class="mt-5 pt-5">
-    <div class="container">
-
-      <!--Section: Jumbotron-->
-      <section class="card blue-gradient wow fadeIn" id="intro">
-
-        <!-- Content -->
-        <div class="card-body text-white text-center py-5 px-5 my-5">
-
-          <h1 class="mb-4">
-            <strong>Vous allez aimer avoir faim !</strong>
-          </h1>
-        </div>
-        <!-- Content -->
       </section>
-      <!--Section: Jumbotron-->
 
-      <!--Section: Cards-->
-      <section class="pt-5">
-
-        <!-- Heading & Description -->
+  
+  
+  <!-- Heading & Description -->
         <div class="wow fadeIn">
           <!--Section heading-->
           <h2 class="h1 text-center mb-5">On vous propose les meilleurs Restaurants </h2>
         </div>
         <!-- Heading & Description -->
-
-
         <!--Grid row-->
           @foreach ($elements as $element)
          <div class="row mt-3 wow fadeIn">
-
           <!--Grid column-->
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
@@ -177,9 +174,6 @@
                 <button class="btn btn-primary btn-md">Submit Review</button>
               </div>
             </form>
-
-
-
             <a href="{{ route('resto' , ['wilaya_id' => $wilaya_id , 'id'=> $element -> id ] )  }}"
             target="_blank"  class="btn btn-primary btn-md">Visit
               <i class="fas fa-play ml-2"></i>
@@ -191,30 +185,16 @@
           {{ $elements -> links() }}
 
           <!--Grid column-->
-
-
-
         </div>
         <!--Grid row-->
-
         <hr class="mb-5">
-
-
-        <!--Pagination-->
-
-      </section>
-      <!--Section: Cards-->
-
-    </div>
-  </main>
-  <!--Main layout-->
-
+      
   <!--Footer-->
   <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
 
     <!--Call to action-->
     <div class="pt-4">
-      <a class="btn btn-outline-white" href="#" target="_blank" role="button">moore
+      <a class="btn btn-outline-white" href="#" target="_blank" role="button">more
         <i class="fas fa-graduation-cap ml-2"></i>
       </a>
     </div>

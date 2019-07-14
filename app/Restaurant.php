@@ -39,5 +39,5 @@ class Restaurant extends Model
 
     use Rateable; 
 
-    use Favoriteable;
+    // use Favoriteable;
 }
