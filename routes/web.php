@@ -6,12 +6,17 @@ Route::get('/test', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    if (!Auth::user()){
+
+    
+    return view('welcome');}
+    else {
+        return view('home');
+    }
+})->name('home');
 // authentication========================================================================//
 Auth::routes();
 //=======================================================================================//
-Route::get('/home', 'HomeController@index')->name('home');
 
 //email verification ====================================================================//
 Auth::routes(['verify' => true]);

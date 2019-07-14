@@ -54,7 +54,7 @@ class HotelController extends Controller
             }
     }
 
-    public function fav(REQUEST $request){
+    /*public function fav(REQUEST $request){
 
         // $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
         // $id = $uriSegments[2];
@@ -89,7 +89,7 @@ class HotelController extends Controller
 
         return redirect()->back();
 
-    }
+    }*/
    
 }
 

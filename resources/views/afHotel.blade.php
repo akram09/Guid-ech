@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
  <!-- @foreach($elements as $element)-->
-  <title>Guid  </title>
+  <title>Hotels</title>
  <!-- @endforeach-->
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
 
@@ -165,11 +165,6 @@ de votre wilaya choisi.</h2>
                 <button class="btn btn-primary btn-md">Submit Review</button>
               </div>
             </form>  
-            <a href="#" target="_blank"
-              class="btn btn-primary btn-md">Visit
-              <i class="fas fa-play ml-2"></i>
-            </a>
-
           </div>
           <!--Grid column-->
 
@@ -193,14 +188,6 @@ de votre wilaya choisi.</h2>
 
   <!--Footer-->
   <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
-
-    <!--Call to action-->
-    <div class="pt-4">
-      <a class="btn btn-outline-white" href="#" target="_blank" role="button">moore
-        <i class="fas fa-graduation-cap ml-2"></i>
-      </a>
-    </div>
-    <!--/.Call to action-->
 
     <hr class="my-4">
 
@@ -239,7 +226,7 @@ de votre wilaya choisi.</h2>
     <!--Copyright-->
     <div class="footer-copyright py-3">
       © 2019 Copyright:
-      <a href="www.esi-sba.dz" target="_blank"> Esi sba </a>
+      <a href="www.esi-sba.dz" target="_blank"> Esi Sba </a>
     </div>
     <!--/.Copyright-->
 

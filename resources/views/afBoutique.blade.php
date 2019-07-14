@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  @foreach($elements as $element)
-  <title>Guid  </title>
-  @endforeach
+  
+  <title>Boutiques  </title>
+ 
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
 
   <!-- Font Awesome -->
@@ -163,11 +163,7 @@ de votre wilaya choisi.</h2>
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1">
-              <img src="\{{$element->image}}" class="img-fluid"
-                alt="bt1">
-              <a href="#" target="_blank">
-                <div class="mask rgba-white-slight"></div>
-              </a>
+              <img src="\{{$element->image}}" class="img-fluid">
             </div>
           </div>
           <!--Grid column-->
@@ -194,10 +190,6 @@ de votre wilaya choisi.</h2>
                 <button class="btn btn-primary btn-md">Submit Review</button>
               </div>
             </form>  
-            <a href="#" target="_blank"
-              class="btn btn-primary btn-md">Visit
-              <i class="fas fa-play ml-2"></i>
-            </a>
           </div>
           <!--Grid column-->
 

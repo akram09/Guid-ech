@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
 
-    <title>Guid-ech | Restaurant Service </title>
+    <title>Restaurant Service</title>
       <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
           <!-- ========== Links ==========-->

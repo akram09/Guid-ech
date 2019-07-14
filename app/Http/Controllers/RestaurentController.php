@@ -30,7 +30,7 @@ class RestaurentController extends Controller
      * @author Moncef Reggam
      */
     public function afficher($wilayas_id){
-        $elements = Restaurant::where('wilaya_id', strval($wilayas_id))->paginate(5);
+        $elements = Restaurant::where('wilaya_id', strval($wilayas_id))->paginate(3);
         return view('affichageDisplay' , compact('elements'));
     }
 
