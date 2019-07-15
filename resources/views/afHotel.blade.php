@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
- <!-- @foreach($elements as $element)-->
+ 
   <title>Hotels</title>
- <!-- @endforeach-->
+ 
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
 
   <!-- Font Awesome -->
@@ -48,6 +48,9 @@
     width: 75px;
     background-repeat: no-repeat;
   }
+  nav {
+    background-color : #1C2331;
+  }
 </style>
 
 <body style="background-color: #ffffff;">
@@ -59,8 +62,8 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="" target="_blank">
-    <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
+      <a class="navbar-brand" href="{{ route('home') }}" target="_blank">
+    <img class="animated zoomIn"  src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
       </a>
 
 
@@ -76,14 +79,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: black;">
 
         <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/home') }}" style="color: black;">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-
-        </ul>
+        
+        
         <!-- Collapsible content -->
 
               <!--To provide parametre for route -->
@@ -98,7 +95,7 @@
                 <form class="form-inline ml-auto"
                 action=" {{ route('searchhot' , ['wilaya_id' => $wilaya_id]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" name ="term"
+                <input style="color : white;" id="search" class="form-control" name ="term"
                 type="text" placeholder="Search" aria-label="Search">
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
@@ -110,15 +107,39 @@
   </div>
 
       </div>
+      <ul class="navbar-nav nav-flex-icons"> <!-- affichage username et la photo -->
+         
+
+                  <div class="dropdown">
+             <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
+                  <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%"> {{ Auth::user()->name }} <span class="caret"></span>
+              </a>
+
+<div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
+  @csrf
+  <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
+    <div >
+           <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+            <button type="button" class="dropdown-item">
+          <i class="fas fa-power-off"></i>  @lang('profile.logout')</button>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
+        </a>
+    </div>
 
     </div>
   </nav>
   <!-- Navbar ------------------------------------------------------------------->
 
     <!--Main Navigation-->
-<div  style="background-image: url('/images/hotel.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 100%;"> </div>
+<div style="background-image: url('/images/hotel.jpg'); background-repeat: no-repeat; 
+background-size: cover; height: 550px; width: 100%;"> </div>
   <!--Main layout-->
 
+<br>
+
+<br>
 
   <h2 style="color: black;text-align: center;">On vous propose les meilleurs hôtels de tous types
 de votre wilaya choisi.</h2>
@@ -134,18 +155,14 @@ de votre wilaya choisi.</h2>
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1">
-              <img src="\{{$element->images}}" class="img-fluid"
-                >
-              <a href="#" target="_blank">
-                <div class="mask rgba-white-slight"></div>
-              </a>
+              <img src="\{{$element->images}}" class="img-fluid">
             </div>
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h4 class="black-text">{{ $element->name }}</h4>
+            <h4 class="black-text"><strong>Hotel {{ $element->name }}</strong></h4>
 
             <h6 class="black-text">{{ $element->déscription }}</h4>
             <br>
@@ -208,8 +225,6 @@ de votre wilaya choisi.</h2>
       <a href="#" target="_blank">
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
-
-
 
       <a href="#" target="_blank">
         <i class="fab fa-pinterest mr-3"></i>

@@ -162,3 +162,11 @@ fill: #daa520;
   height: 200px;
   width : 500px;
 }
+
+#event{
+background-color: rgb(67, 187, 231);
+}
+
+#event:hover{
+  background-color :rgb(74, 189, 232)
+}

@@ -28,6 +28,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
   
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
   .pow{
     background-image:url('/images/D.png');
     height: 66px;
@@ -40,6 +41,9 @@
     width: 75px;
     background-repeat: no-repeat;
   }
+  nav {
+    background-color : #1C2331;
+  }
 </style>
 
 <body style="background-color: #ffffff;">
@@ -51,8 +55,8 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="" target="_blank">
-    <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
+      <a class="navbar-brand" href="{{ route('home') }}" target="_blank">
+    <img class="animated zoomIn"  src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right">
       </a>
 
 &nbsp; &nbsp;
@@ -87,7 +91,7 @@
                 action=" {{ route('searchresto' , ['wilaya_id' => $wilaya_id]) }} ">
                  <div class="md-form my-0">
                 <input id="search" class="form-control" name="term" type="text"
-                placeholder="Search" aria-label="Search">
+                placeholder="Search" aria-label="Search" style="color : white;">
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
                    type="submit"><i class="fas fa-search"></i> OK</button>
@@ -117,6 +121,8 @@
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
 
+            </a>
+
       <button type="button" class="dropdown-item">
           <i class="fas fa-power-off"></i> Logout</button>
 
@@ -139,13 +145,16 @@
     <!--Main Navigation-->
 <div  style="background-image: url('/images/gr.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 100%;"> </div>
   <!--Main layout-->
+<br>
+@if (count($elements) > 0 )
 
+<h2 style="color: black;text-align: center;">On vous propose les meilleurs Restaurants</h2>
 
-  <h2 style="color: black;text-align: center;">On vous propose les meilleurs Restaurants</h2>
-
+@endif
   <main class="mt-5 pt-5">
-    <div class="container">
+    <div class="container">@if (count($elements) > 0)
         @foreach($elements as $element)
+        
 
         <!--Grid row-->
          <div class="row mt-3 wow fadeIn">
@@ -163,7 +172,7 @@
 
           <!--Grid column-->
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h4 class="black-text">{{ $element->name }}</h4>
+            <h4 class="black-text"><strong>Restaurant {{ $element->name }}</strong></h4>
 
             <p>
             <input id="input-1" name="input-1" class="rating rating-loading" 
@@ -183,7 +192,7 @@
               </div>
             </form> 
             <a href="{{ route('resto' , ['wilaya_id' => $wilaya_id , 'id'=> $element -> id ] )  }}"
-            target="_blank"  class="btn btn-primary btn-md">Visit
+            target="_blank"  class="btn btn-primary btn-md" style="width : 133.95px;">Explore
               <i class="fas fa-play ml-2"></i>
             </a> 
           </div>
@@ -198,6 +207,14 @@
               @endforeach
 
               {{ $elements -> links() }}
+
+              @else
+
+              <h1>Désolé Aucun Restaurant disponible pour le moment.</h1>
+              <a> Aidez-nous à ajouter des informations pour cette page.</a>
+              <br>
+
+              @endif
 
         <hr class="mb-5">
 

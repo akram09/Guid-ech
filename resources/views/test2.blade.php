@@ -66,9 +66,9 @@
             <!-- Right -->
           &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;
 
-      <a href="{{ route ('events.index') }}" type="button" class="btn btn-primary">
+      <a href="{{ route ('events.index') }}" type="button" class="btn btn-info waves-effect waves-light">
 
-         Evennements à découvrir 
+         Future Events In Algeria
       </a>
 
 
@@ -85,7 +85,7 @@
 <div class="dropdown-menu dropdown-primary">  <!-- drop menu logout and change password -->
   @csrf
   <a class="dropdown-item" href="{{ url('/changePassword') }}"><i class="fas fa-user-edit"></i>change password</a>
-  <div >
+    <div >
            <a class="dropdown-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
@@ -104,7 +104,7 @@
 
 
   <h2 class="h1-responsive font-weight-bold text-center my-5">Welcome dans GuidWilaya</h2>
-  <p class="text-center w-responsive mx-auto mb-5">Cliquez sur "visiter" pour voir plus de détails.</p>
+  <p class="text-center w-responsive mx-auto mb-5">Cliquez sur "Explorer" pour voir plus de détails.</p>
   <div class="row d-flex justify-content-center">
 
       <!------------------------------------------>
@@ -155,7 +155,7 @@
       <p> Trouvez de différentes catégories des restaurants dans la wilaya que vous avez choisi et profitez des offres de notre GuidRestaurants </p>
 
       <a class="btn btn-success btn-md"
-      href="{{ route('wilaya.restaurant' , ['wilaya_id' => $wilaya_id ] ) }}"> Visiter</a>
+      href="{{ route('wilaya.restaurant' , ['wilaya_id' => $wilaya_id ] ) }}"> Explorer</a>
 
     </div>
     <!-- Grid column -->
@@ -181,7 +181,7 @@
       ou un hôtel 5 étoiles, GuidHotel vous permet de trouver ce que vous cherchiez dans la wilaya que vous avez choisi.</p>
 
       <a class="btn btn-pink btn-md mb-lg-0 mb-4" href="
-      {{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}">Visiter</a>
+      {{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}">Explorer</a>
 
     </div>
     <!-- Grid column -->
@@ -239,7 +239,7 @@
 
       <!-- Read more button -->
       <a class="btn btn-indigo btn-md"
-      href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}">Visiter</a>
+      href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}">Explorer</a>
 
     </div>
 
@@ -264,7 +264,7 @@
       <p>GuidTaxi vous met à votre disposition pleins de numéros de taxieurs de la wilaya que vous avez choisi. </p>
 
       <a class="btn btn-success btn-md mb-lg-0 mb-4"
-      href="{{ route( 'GuidTaxi' , ['wilaya_id' => $wilaya_id ] ) }}">Visiter</a>
+      href="{{ route( 'GuidTaxi' , ['wilaya_id' => $wilaya_id ] ) }}">Explorer</a>
 
     </div>
 
@@ -319,7 +319,7 @@
 
 
       <a class="btn btn-indigo btn-md"
-      href="{{ route( 'GuidFood' , ['wilaya_id' => $wilaya_id ] ) }}">Visiter</a>
+      href="{{ route( 'GuidFood' , ['wilaya_id' => $wilaya_id ] ) }}">Explorer</a>
 
     </div>
 
@@ -340,10 +340,10 @@
       </a>
 
       <!-- Excerpt -->
-      <p>GuidLieux vous fait découvrir les meilleurs lieux touristiques à visiter dans la wilaya que vous avez choisi, des infos, et quelques extraits historiques.</p>
+      <p>GuidLieux vous fait découvrir les meilleurs lieux touristiques à Explorer dans la wilaya que vous avez choisi, des infos, et quelques extraits historiques.</p>
 
       <a href="{{route('place' , ['wilaya_id' => $wilaya_id])}}" 
-      class="btn btn-pink btn-md mb-lg-0 mb-4">Visiter</a>
+      class="btn btn-pink btn-md mb-lg-0 mb-4">Explorer</a>
 
     </div>
     <!-- Grid column -->

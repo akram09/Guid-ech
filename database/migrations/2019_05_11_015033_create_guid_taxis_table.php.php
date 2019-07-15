@@ -19,7 +19,7 @@ class CreateGuidTaxisTable extends Migration
             $table->integer('wilaya_id')->unsigned();
             $table->foreign('wilaya_id')->references('id')->on('wilayas'); 
             $table->string('NumTel');
-            $table->string('Details');
+            $table->string('image');
             $table->timestamps();
         });
     

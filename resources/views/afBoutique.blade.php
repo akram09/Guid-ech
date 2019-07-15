@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <title>Boutiques  </title>
+  <title>Boutiques</title>
  
   <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
 
@@ -50,6 +50,9 @@ body{overflow-x: hidden;}
     width: 75px;
     background-repeat: no-repeat;
   }
+  nav {
+    background-color : #1C2331;
+  }
 </style>
 
 <body style="background-color: #ffffff;">
@@ -61,8 +64,9 @@ body{overflow-x: hidden;}
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="" target="_blank">
-    <img class="animated zoomIn"  src="{{ asset('/images/GRIS.png') }}" width="175" height="50" class="float-right" alt="...">
+      <a class="navbar-brand" href="{{ route('home') }}" target="_blank">
+    <img class="animated zoomIn"  src="{{ asset('/images/CLA.png') }}"
+     width="175" height="50" class="float-right" alt="...">
       </a>
 
 &nbsp; &nbsp;
@@ -77,15 +81,10 @@ body{overflow-x: hidden;}
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: black;">
 
         <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/home') }}" style="color: black;">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
+        
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
        <?php
         $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
         $wilaya = $uriSegments[1];
@@ -124,6 +123,7 @@ body{overflow-x: hidden;}
         <a href="{{ route('logout') }}"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
+            </a>
 
       <button type="button" class="dropdown-item">
           <i class="fas fa-power-off"></i> Logout</button>
@@ -170,7 +170,7 @@ de votre wilaya choisi.</h2>
 
           <!--Grid column-->
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h4 class="black-text">{{ $element->name }}</h4>
+            <h4 class="black-text"><strong>Boutique {{ $element->name }}</strong></h4>
 
             <h6 class="black-text">{{ $element->déscription }}</h4>
             <br>
@@ -214,16 +214,7 @@ de votre wilaya choisi.</h2>
 
   <!--Footer-->
   <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
-
-    <!--Call to action-->
-    <div class="pt-4">
-      <a class="btn btn-outline-white" href="#" target="_blank" role="button">moore
-        <i class="fas fa-graduation-cap ml-2"></i>
-      </a>
-    </div>
-    <!--/.Call to action-->
-
-    <hr class="my-4">
+<br>
 
     <!-- Social icons -->
     <div class="pb-4">

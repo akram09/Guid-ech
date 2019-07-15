@@ -177,7 +177,7 @@ html,
   <div class="column ">
   
     <div class="content">
-      <img src="/images/icone.png" alt="Taxi_Icone" style="width:70%">
+      <img src="{{$element->image}}" alt="Taxi_Icone" style="width:70%">
       <h4>{{ $element->NumTel }} </h4> <!--numéro du taxieur-->
       <p>{{ $element->Details }}</p>
     </div>

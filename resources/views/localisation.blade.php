@@ -614,7 +614,7 @@ map.addControl(new mapboxgl.NavigationControl());
           address: ' 130000 Tlemcen, RADP',
           city: 'Tlemcen',
           name:'Bekhchi',
-          url: 'http://www.esi-sba.dz',
+          url: 'http://127.0.0.1:8000/31/restaurant/8',
         }
       },
          {

@@ -63,7 +63,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"> <!--==  for logo ==-->
+            <a class="navbar-brand" href="{{ route('home') }}"> <!--==  for logo ==-->
                 <img  src="{{ asset('/images/CLA.png') }}" width="175" height="50"  class="logo img-responsive">
             </a>
         </div>
@@ -86,8 +86,8 @@
     @foreach($sliders as $key=>$slider)
         <div class="item">
             <div class="container">
-                <div class="header-content">
-                    <h1 class="header-title">{{ $slider->title }}</h1>
+                <div class="header-content" style="background: rgba(204, 204, 204, 0.3); ">
+                    <h2 class="header-title">{{ $slider->title }}</h2>
                     <p class="header-sub-title">{{ $slider->sub_title }}</p>
                 </div> <!-- header-content -->
             </div>
@@ -125,7 +125,7 @@
 
                         @foreach($items as $item)    <!-- ========== items display ==========--> 
                             <li class="item" id="{{ $item->category->slug }}">
-                                <a href="#">
+                             <a href="#">   
                                     <img src="{{ asset('uploads/item/'.$item->image) }}" class="img-responsive" alt="Item" style="height: 300px; width: 369px;" >
                                     <div class="menu-desc text-center">
                                             <span>
@@ -133,7 +133,7 @@
                                                 {{ $item->description }}
                                             </span>
                                     </div>
-                                </a>
+                               </a> 
                                 <h2 class="white">DA{{ $item->price }}</h2>
                             </li>
                         @endforeach
@@ -152,9 +152,9 @@
 <section id="reserve" class="reserve">
     <div class="wrapper">
         <div class="container-fluid">
-            <div class="row dis-table">
-                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
-                    <h2 class="section-title">Reserve A Table !</h2>
+            <div class="row dis-table" style="width : 110%;">
+                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg" style="width : 50%;">
+                    <h2 class="section-title" style="padding-left : 20px;">Reserve A Table !</h2>
                 </div>
                 <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
 
@@ -179,26 +179,32 @@
                          $last = $uriSegments[3];  
 
 
-                        ?>
+                     ?>
                         
                         
                         <form class="reservation-form" method="post" action="{{ route('reservation.reserve' , [ 'id' => $last ]) }}">
                             @csrf  <!-- ========== token ==========--> 
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
+                                    
+                                        <input type="hidden" class="form-control reserve-form empty iconified" 
+                                        name="name" id="name"
+                                        value ="{{ Auth::user()->name }}">
+                                    
                                     <div class="form-group">
-                                        <input type="text" class="form-control reserve-form empty iconified" name="name" id="name"
-                                               placeholder="  &#xf007;  Name">
+                                        <input type="tel" class="form-control reserve-form empty 
+                                        iconified" name="phone" id="phone"  placeholder="  &#xf095;  Phone">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="email" name="email" class="form-control reserve-form empty iconified" id="email"  placeholder="  &#xf1d8;  e-mail">
-                                    </div>
+                                    
                                 </div>
 
                                 <div class="col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone"  placeholder="  &#xf095;  Phone">
-                                    </div>
+                                
+                                    
+                                    
+                                        <input type="hidden" name="email" class="form-control reserve-form empty iconified" id="email" 
+                                         value ="{{ Auth::user()->email }}" >
+                                    
                                     <div class="form-group">
                                         <input type="text" class="form-control reserve-form empty iconified" name="dateandtime" id="datetimepicker1" placeholder="&#xf017;  Time">
                                     </div>
@@ -254,18 +260,6 @@
                 <div class="section-content">
                     <p>Esi sba Adresse : BP 73, Bureau de poste EL WIAM, 22016 Sidi Bel Abbés, Algérie </p>
                     <p>+213 48 74 94 50 </p>
-                    <p>wahidmadano@gmail.com </p>
-                </div>
-            </div>
-        </div>
-        <div class="social-media">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <ul class="center-block">
-                        <li><a href="#" class="fb"></a></li>
-                        <li><a href="#" class="twit"></a></li>
-                        <li><a href="#" class="g-plus"></a></li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -280,21 +274,24 @@
                 <div class="row">
                     <form class="contact-form" method="post" action="{{ route('contact.send' , ['id' => $last ]) }}">
                         @csrf
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
                             <div class="form-group">
-                                <input  name="name" type="text" class="form-control" id="name" required="required" placeholder="  Name">
+                                <input  name="name" type="hidden" class="form-control" id="name" 
+                                required="required" value =" {{ Auth::user()->name }} ">
                             </div>
                             <div class="form-group">
-                                <input name="email" type="email" class="form-control" id="email" required="required" placeholder="  Email">
+                                <input name="email" type="hidden" class="form-control" id="email" 
+                                required="required" value =" {{ Auth::user()->email }}>
                             </div>
                             <div class="form-group">
                                 <input name="subject" type="text" class="form-control" id="subject" required="required" placeholder="  Subject">
                             </div>
+                            
+                            <textarea name="message" type="text" class="form-control" id="message" 
+                            rows="7" required="required" placeholder="  Message"></textarea>
                         </div>
 
-                        <div class="col-md-6 col-sm-6">
-                            <textarea name="message" type="text" class="form-control" id="message" rows="7" required="required" placeholder="  Message"></textarea>
-                        </div>
+                        
 
                         <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
                             <div class="text-center">

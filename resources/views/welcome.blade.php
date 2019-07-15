@@ -907,9 +907,9 @@
   aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
     <!--Content-->
-    <div class="modal-content">
+
       <!--Header-->
-      <div class="modal-header">
+      <div  class="modal-content modal-header">
         <p class="heading">@lang('welcome.language')</p>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -939,7 +939,7 @@
           </div>
         </div>
       </div>
-    </div>
+    
     <!--/.Content-->
   </div>
 </div>

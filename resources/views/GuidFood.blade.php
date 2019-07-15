@@ -3,6 +3,8 @@
 <head>
   
 <title>GuidFood</title>
+
+  <link rel="shortcut icon"  href="{{ asset('/images/G.ico') }}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -128,7 +130,7 @@ html,
 
                 <form class="form-inline ml-auto" action="{{ route('searchfood' , ['wilaya_id' => $wilaya_id]) }}">
                  <div class="md-form my-0">
-                <input class="form-control" type="text" name="term" placeholder="Search" aria-label="Search">
+                <input style="color : white;" class="form-control" type="text" name="term" placeholder="Search" aria-label="Search">
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
