@@ -114,13 +114,7 @@ html,
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/home') }}">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
+      
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <!--To provide parametre for route -->
@@ -185,7 +179,13 @@ html,
 <div class="view full-page-intro" style="background-image: url('/images/lieux.jpg'); background-repeat: no-repeat; background-size: cover;">
 </div>
 <!----------------------->
+@if (count($elements) > 0 )
+         <?php
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        ?>
+
 <h1 class="my-5 h1 text-center"> </h1>
+
 <main class="mt-5 pt-5">
     <div class="container">
         @foreach($elements as $element)
@@ -220,6 +220,31 @@ html,
               @endforeach
 
               {{ $elements -> links() }}
+              @elseif (count($all) == 0 )
+             <div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+               <h1>Désolé Aucun Place à afficher pour le moment.</h1>
+               <h4>Aidez-nous à ajouter des informations pour cette page en cliquant
+                 <a id="contact" href="{{ route('home') }}/#ContactUs"> ICI</a>.</h3>
+                 <style>
+                    
+                    #contact:visited { color: #1C2331; }
+                    #contact {
+                      color : #1C2331;
+                      text-decoration : underline;
+                    }
+}
+
+                   </style>
+               <br>
+             </div>@elseif ((count($elements) == 0) && (sizeof($uriSegments) == 4 ))
+
+<div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+  <h1>Désolé Aucun résultats trouvée.</h1>
+  <br>
+</div>             
+
+ @endif
+
 
 
       </section>

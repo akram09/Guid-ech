@@ -486,7 +486,7 @@
   <div id='map'></div>
   <!--Main layout-->
   <!-- Section: Contact v.2 -->
-<section class="my-5">
+<section class="my-5" id="ContactUs">
   <h2 class="h1-responsive font-weight-bold text-center my-5">@lang('welcome.title_contact')</h2>
   <p class="text-center w-responsive mx-auto mb-5">for any questions contact us </p>
 

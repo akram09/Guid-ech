@@ -96,8 +96,34 @@
     </div>
   </nav>
   <!-- Navbar -->
+  <section class="owl-carousel" style="padding-left: 15px; margin-top : 85px" id="Haut">
 
- <section><br><br><br></section>
+  <a href="#rest">
+  <img class="img-fluid" src="{{ asset('/images/GRestaurants.jpg') }}" style="width:16.3%;height: 172px;">
+  </a>
+
+  <a href="#hot">
+  <img  class="img-fluid" src="{{ asset('/images/Ghotel.jpg') }}" style="width:16.3%;height: 172px;">
+  </a>
+
+  <a href="#bout">
+  <img  class=" img-fluid" src="{{ asset('/images/Gbtq.jpg') }}" style="width:16.3%;height: 172px;">
+  </a>
+
+  <a href="#taxi">
+  <img  class="img-fluid" src="{{ asset('/images/Gtaxi.jpg') }}" style="width:16.3%;height: 172px;">
+  </a>
+
+  <a href="#food">
+  <img  class=" img-fluid" src="{{ asset('/images/GFood.jpg') }}" style="width:16.3%;height: 172px;">
+  </a>
+
+  <a href="#place">
+  <img  class="img-fluid" src="{{ asset('/images/Glieux.jpg') }}" style="width:16.3%;height: 172px;">
+  </a>
+  </section>
+
+ <section><br></section>
 
 
 <section class="my-5">
@@ -105,7 +131,7 @@
 
   <h2 class="h1-responsive font-weight-bold text-center my-5">Welcome dans GuidWilaya</h2>
   <p class="text-center w-responsive mx-auto mb-5">Cliquez sur "Explorer" pour voir plus de détails.</p>
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center" id="rest">
 
       <!------------------------------------------>
            <?php
@@ -156,6 +182,8 @@
 
       <a class="btn btn-success btn-md"
       href="{{ route('wilaya.restaurant' , ['wilaya_id' => $wilaya_id ] ) }}"> Explorer</a>
+      <a class="btn btn-success btn-md"
+      href="#Haut"> Vers Haut</a>
 
     </div>
     <!-- Grid column -->
@@ -166,7 +194,7 @@
   <hr class="my-5">
 
   <!-- Grid row -->
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center" id="hot">
 
     <!-- Grid column -->
     <div class="col-md-6">
@@ -182,6 +210,7 @@
 
       <a class="btn btn-pink btn-md mb-lg-0 mb-4" href="
       {{  route('wilaya.hotel' , [ 'wilaya_id' => $wilaya_id ])  }}">Explorer</a>
+      <a class="btn btn-pink btn-md mb-lg-0 mb-4" href="#Haut">Vers Haut</a>
 
     </div>
     <!-- Grid column -->
@@ -208,7 +237,7 @@
   <hr class="my-5">
 
   <!-- Grid row -->
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center" id="bout">
 
     <!-- Grid column -->
     <div class="col-md-6">
@@ -240,6 +269,9 @@
       <!-- Read more button -->
       <a class="btn btn-indigo btn-md"
       href="{{ route( 'wilaya.boutique' , ['wilaya_id' => $wilaya_id ] ) }}">Explorer</a>
+      
+      <a class="btn btn-indigo btn-md"
+      href="#Haut">Vers Haut</a>
 
     </div>
 
@@ -250,7 +282,7 @@
   <hr class="my-5">
 
 
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center" id="taxi">
 
 
     <div class="col-md-6">
@@ -265,6 +297,8 @@
 
       <a class="btn btn-success btn-md mb-lg-0 mb-4"
       href="{{ route( 'GuidTaxi' , ['wilaya_id' => $wilaya_id ] ) }}">Explorer</a>
+      <a class="btn btn-success btn-md mb-lg-0 mb-4"
+      href="#Haut">Vers Haut</a>
 
     </div>
 
@@ -289,7 +323,7 @@
    <hr class="my-5">
 
 
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center" id="food">
 
 
     <div class="col-md-6">
@@ -317,9 +351,10 @@
 
       <p>GuidFood vous offre des numéros des restaurants qui livrent dans votre wilaya choisi. </p>
 
-
+      
       <a class="btn btn-indigo btn-md"
       href="{{ route( 'GuidFood' , ['wilaya_id' => $wilaya_id ] ) }}">Explorer</a>
+      <a class="btn btn-indigo btn-md" href="#Haut">vers Haut</a>
 
     </div>
 
@@ -329,7 +364,7 @@
   <hr class="my-5">
 
 
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center" id="place">
 
 
     <div class="col-md-6">
@@ -344,6 +379,8 @@
 
       <a href="{{route('place' , ['wilaya_id' => $wilaya_id])}}" 
       class="btn btn-pink btn-md mb-lg-0 mb-4">Explorer</a>
+      <a href="#Haut" 
+      class="btn btn-pink btn-md mb-lg-0 mb-4">Vers Haut</a>
 
     </div>
     <!-- Grid column -->

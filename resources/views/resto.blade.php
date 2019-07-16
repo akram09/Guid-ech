@@ -193,7 +193,7 @@
                                     
                                     <div class="form-group">
                                         <input type="tel" class="form-control reserve-form empty 
-                                        iconified" name="phone" id="phone"  placeholder="  &#xf095;  Phone">
+                                        iconified" name="phone" required="required" id="phone"  placeholder="  &#xf095;  Phone">
                                     </div>
                                     
                                 </div>
@@ -206,12 +206,15 @@
                                          value ="{{ Auth::user()->email }}" >
                                     
                                     <div class="form-group">
-                                        <input type="text" class="form-control reserve-form empty iconified" name="dateandtime" id="datetimepicker1" placeholder="&#xf017;  Time">
+                                        <input type="text" class="form-control reserve-form empty iconified" 
+                                        name="dateandtime" id="datetimepicker1" placeholder="&#xf017;  Time">
                                     </div>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12">
-                                    <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3"  placeholder="  &#xf086;  We're listening"></textarea>
+                                    <textarea type="text" name="message" required="required"
+                                    class="form-control reserve-form empty iconified" id="message" rows="3"  
+                                    placeholder="  &#xf086;  We're listening"></textarea>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12">

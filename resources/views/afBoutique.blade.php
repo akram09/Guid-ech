@@ -93,7 +93,7 @@ body{overflow-x: hidden;}
                 <form class="form-inline ml-auto"
                 action=" {{ route('searchbout' , ['wilaya_id' => $wilaya]) }} ">
                  <div class="md-form my-0">
-                <input id="search" class="form-control" name="term" type="text"
+                <input id="search" style="color : white;" class="form-control" name="term" type="text"
                 placeholder="Search" aria-label="Search">
                 </div>
                    <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm"
@@ -148,7 +148,12 @@ body{overflow-x: hidden;}
 <div  style="background-image: url('/images/btq.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 100%;"> </div>
   <!--Main layout-->
 
+<br>
 
+@if (count($elements) > 0 )
+        <?php
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        ?>
   <h2 style="color: black;text-align: center;">On vous propose les meilleurs boutiques de tout types
 de votre wilaya choisi.</h2>
 
@@ -202,6 +207,32 @@ de votre wilaya choisi.</h2>
               @endforeach
 
               {{ $elements -> links() }}
+              @elseif (count($all) == 0 )
+             <div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+               <h1>Désolé aucun boutique à afficher pour le moment.</h1>
+               <h4>Aidez-nous à ajouter des informations pour cette page en cliquant
+                 <a id="contact" href="{{ route('home') }}/#ContactUs"> ICI</a>.</h3>
+                 <style>
+                    
+                    #contact:visited { color: #1C2331; }
+                    #contact {
+                      color : #1C2331;
+                      text-decoration : underline;
+                    }
+}
+
+                   </style>
+               <br>
+             </div>
+             @elseif ((count($elements) == 0) && (sizeof($uriSegments) == 4 ))
+
+<div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+  <h1>Désolé Aucun résultats trouvée.</h1>
+  <br>
+</div>             
+
+ @endif
+
 
         <hr class="mb-5">
 

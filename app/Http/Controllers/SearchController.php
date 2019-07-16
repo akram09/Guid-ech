@@ -33,8 +33,9 @@ class SearchController extends Controller
 
         $elements = Restaurant::whereLike(['name' , 'déscription' , 'adresse'] , '%'.$search.'%' )
                                 ->where('wilaya_id' , $wilaya )->paginate(5);
+                                $all = Restaurant::where('wilaya_id' , $wilaya)->get();
                                 
-        return view('affichageDisplay' , compact('elements'));
+        return view('affichageDisplay' , compact('elements' , 'all'));
 
     }
 
@@ -50,8 +51,10 @@ class SearchController extends Controller
 
         $elements = Boutique::whereLike(['name' , 'déscription' , 'adresse'] , '%'.$search.'%' )
                                 ->where('wilaya_id' , $wilaya )->paginate(3);
+
+                                $all = Boutique::where('wilaya_id' , $wilaya)->get();
                                 
-        return view('afBoutique' , compact('elements'));
+        return view('afBoutique' , compact('elements' , 'all'));
 
     }
 
@@ -67,8 +70,10 @@ class SearchController extends Controller
 
         $elements = Hotel::whereLike(['name' , 'déscription' , 'adresse' ] , '%'.$search.'%' )
                                 ->where('wilaya_id' , $wilaya )->paginate(3);
+
+                                $all = Hotel::where('wilaya_id' , $wilaya)->get();
                                 
-        return view('afHotel' , compact('elements'));
+        return view('afHotel' , compact('elements' , 'all'));
 
     }
 
@@ -85,8 +90,10 @@ class SearchController extends Controller
 
         $elements = GuidFood::where('name' , 'Like' , '%'.$search.'%' )
                                 ->where('wilaya_id' , $wilaya )->paginate(3);
+
+                                $all = GuidFood::where('wilaya_id' , $wilaya)->get();
                                 
-        return view('GuidFood' , compact('elements'));
+        return view('GuidFood' , compact('elements' ,'all'));
 
     }
 
@@ -103,8 +110,10 @@ class SearchController extends Controller
 
         $elements = GuidTaxi::where('name' , 'Like' , '%'.$search.'%' )
                                 ->where('wilaya_id' , $wilaya )->paginate(3);
+
+                                $all = GuidTaxi::where('wilaya_id' , $wilaya)->get();
                                 
-        return view('GuidTaxi' , compact('elements'));
+        return view('GuidTaxi' , compact('elements', 'all'));
 
     }
 
@@ -120,8 +129,10 @@ class SearchController extends Controller
 
         $elements = Place::where('name' , 'Like' , '%'.$search.'%' )
                                 ->where('wilaya_id' , $wilaya )->paginate(3);
+
+                                $all = Place::where('wilaya_id' , $wilaya)->get();
                                 
-        return view('GuidLieux' , compact('elements'));
+        return view('GuidLieux' , compact('elements' , 'all'));
 
     }
     

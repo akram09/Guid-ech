@@ -96,7 +96,8 @@ html,
     <div class="container">
 
       <!-- Brand -->
-      <img class="animated zoomIn"  src="{{ asset('/images/CLA.png') }}" width="175" height="50" class="float-right" alt="...">
+      <img class="animated zoomIn"  src="{{ asset('/images/CLA.png') }}" href="{{ route('home') }}"
+      width="175" height="50" class="float-right" alt="...">
 
       
 &nbsp; &nbsp;
@@ -111,13 +112,7 @@ html,
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/home') }}">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
+        
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -130,9 +125,11 @@ html,
 
                 <form class="form-inline ml-auto" action="{{ route('searchfood' , ['wilaya_id' => $wilaya_id]) }}">
                  <div class="md-form my-0">
-                <input style="color : white;" class="form-control" type="text" name="term" placeholder="Search" aria-label="Search">
+                <input style="color : white;" class="form-control" type="text" 
+                name="term" placeholder="Search" aria-label="Search">
                 </div>
-                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" type="submit"><i class="fas fa-search"></i> OK</button>
+                   <button class="btn btn-outline-primary btn-rounded waves-effect btn-sm" 
+                   type="submit"><i class="fas fa-search"></i> OK</button>
                </form>
 
   </div>
@@ -180,6 +177,11 @@ html,
 <div class="view full-page-intro" style="background-image: url('/images/guidfood.jpg'); background-repeat: no-repeat; background-size: cover;">
 </div>
 <!----------------------->
+@if (count($elements) > 0 )
+         <?php
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        ?>
+
 <h1 class="my-5 h1 text-center">Réstaurants qui font de la livraison à votre wilaya choisi </h1>
 <!-- Portfolio Gallery Grid -->
 <div class="row">
@@ -187,21 +189,42 @@ html,
   <div class="column ">
   
     <div class="content">
-      <img src="{{ $element->restPic }} "  style="width: 70%">
-
-      <!--code jquery of show and hide pic -->
-<button class="btn btn-warning" style="position: relative;right: 10px;">Cliquer pour afficher les menus</button>
-<img class="pic" src="{{ $element->menuPic }} "style="width: 70%;cursor: pointer; display: none;">
-      <!---------------------------------------->
-      <p>Numéro de Téléphone : {{ $element->NumTel }}</p>
+      <img src="\storage\{{ $element->Image_menu }} "  style="width: 70%">
+      <p>Contact : <strong>{{ $element->Num }}</strong></p>
     </div>
   </div>
   @endforeach
   
   {{ $elements -> links() }}
 </div>
- </div>    
 
+ </div>  
+ @elseif (count($all) == 0 )
+             <div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+               <h1>Désolé Aucun Restaurant à afficher pour le moment.</h1>
+               <h4>Aidez-nous à ajouter des informations pour cette page en cliquant
+                 <a id="contact" href="{{ route('home') }}/#ContactUs"> ICI</a>.</h3>
+                 <style>
+                    
+                    #contact:visited { color: #1C2331; }
+                    #contact {
+                      color : #1C2331;
+                      text-decoration : underline;
+                    }
+}
+
+                   </style>
+               <br>
+             </div>@elseif ((count($elements) == 0) && (sizeof($uriSegments) == 4 ))
+
+<div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+  <h1>Désolé Aucun résultats trouvée.</h1>
+  <br>
+</div>             
+
+ @endif
+
+              
 <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">
 

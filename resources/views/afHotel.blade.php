@@ -137,9 +137,12 @@
 background-size: cover; height: 550px; width: 100%;"> </div>
   <!--Main layout-->
 
-<br>
 
 <br>
+@if (count($elements) > 0 )
+         <?php
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        ?>
 
   <h2 style="color: black;text-align: center;">On vous propose les meilleurs hôtels de tous types
 de votre wilaya choisi.</h2>
@@ -190,11 +193,37 @@ de votre wilaya choisi.</h2>
 
         <!--Grid row-->
 
-        <hr class="mb-5">
+        
               @endforeach
 
               {{ $elements -> links() }}
+              @elseif (count($all) == 0 )
+             <div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+               <h1>Désolé Aucun Hotel à afficher pour le moment.</h1>
+               <h4>Aidez-nous à ajouter des informations pour cette page en cliquant
+                 <a id="contact" href="{{ route('home') }}/#ContactUs"> ICI</a>.</h3>
+                 <style>
+                    
+                    #contact:visited { color: #1C2331; }
+                    #contact {
+                      color : #1C2331;
+                      text-decoration : underline;
+                    }
+}
 
+                   </style>
+               <br>
+             </div>@elseif ((count($elements) == 0) && (sizeof($uriSegments) == 4 ))
+
+<div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+  <h1>Désolé Aucun résultats trouvée.</h1>
+  <br>
+</div>             
+
+ @endif
+
+              
+<hr class="mb-5">
 
       </section>
       <!--Section: Cards-->

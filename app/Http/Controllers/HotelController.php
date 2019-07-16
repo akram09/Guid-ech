@@ -27,7 +27,8 @@ class HotelController extends Controller
     public function affichertt($wilayas_id){
     
         $elements = Hotel::where('wilaya_id', strval($wilayas_id))->paginate(3);
-        return view('afHotel' , compact('elements'));
+        $all = Hotel::where('wilaya_id' , $wilayas_id)->get();
+        return view('afHotel' , compact('elements','all'));
     
     }
 

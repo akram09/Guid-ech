@@ -12,9 +12,11 @@ class GuidFoodController extends Controller
         $this->middleware('auth');
     }
     public function afficher($wilayas_id){
-    	$elements = GuidFood::where('wilaya_id', strval($wilayas_id))->paginate(6);
+        $elements = GuidFood::where('wilaya_id', strval($wilayas_id))->paginate(6);
+        $all = GuidFood::where('wilaya_id' , $wilayas_id)->get();
 
-        return view('GuidFood', compact('elements'));
+
+        return view('GuidFood', compact('elements','all'));
 
     }
     

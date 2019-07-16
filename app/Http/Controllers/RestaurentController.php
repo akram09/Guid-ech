@@ -31,7 +31,8 @@ class RestaurentController extends Controller
      */
     public function afficher($wilayas_id){
         $elements = Restaurant::where('wilaya_id', strval($wilayas_id))->paginate(3);
-        return view('affichageDisplay' , compact('elements'));
+        $all = Restaurant::where('wilaya_id' , $wilayas_id)->get();
+        return view('affichageDisplay' , compact('elements','all'));
     }
 
 

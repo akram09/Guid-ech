@@ -31,7 +31,8 @@ class BoutiqueController extends Controller
     public function affichertt($wilayas_id){
     
         $elements = Boutique::where('wilaya_id', strval($wilayas_id))->paginate(3);
-        return view('afBoutique' , compact('elements'));
+        $all = Boutique::where('wilaya_id' , $wilayas_id)->get();
+        return view('afBoutique' , compact('elements' , 'all'));
     
     }
 

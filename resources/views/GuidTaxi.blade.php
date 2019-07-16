@@ -170,16 +170,28 @@ html,
 <div class="view full-page-intro img-fluid" style="background-image: url('/images/taxi.jpg') ; background-repeat: no-repeat; background-size: cover;">
 </div>
 <!----------------------->
+@if (count($elements) > 0 )
+         <?php
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        ?>
+
 <h1 class="my-5 h1 text-center">Voici quelques numéros des taxieurs disponibles </h1>
-<!-- Portfolio Gallery Grid -->
+
 <div class="row">
    @foreach($elements as $element)
   <div class="column ">
   
     <div class="content">
-      <img src="{{$element->image}}" alt="Taxi_Icone" style="width:70%">
-      <h4>{{ $element->NumTel }} </h4> <!--numéro du taxieur-->
-      <p>{{ $element->Details }}</p>
+      @if ($element->image == "")
+      
+      <img src="/images/icone.png" alt="Taxi_Icone" style="width:70%">
+
+      @else
+
+      <img src="\storage\{{$element->image}}" alt="Taxi_Icone" style="width:70%">
+
+      @endif
+      <h4 style="text-align : center; padding-right: 150px;">Contact : {{ $element->NumTel }} </h4> <!--numéro du taxieur-->
     </div>
     
   </div>
@@ -187,6 +199,32 @@ html,
 
   
   {{ $elements -> links() }}
+  @elseif (count($all) == 0 )
+             <div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+               <h1>Désolé Aucun Taxi à afficher pour le moment.</h1>
+               <h4>Aidez-nous à ajouter des informations pour cette page en cliquant
+                 <a id="contact" href="{{ route('home') }}/#ContactUs"> ICI</a>.</h3>
+                 <style>
+                    
+                    #contact:visited { color: #1C2331; }
+                    #contact {
+                      color : #1C2331;
+                      text-decoration : underline;
+                    }
+}
+
+                   </style>
+               <br>
+             </div>@elseif ((count($elements) == 0) && (sizeof($uriSegments) == 4 ))
+
+<div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+  <h1>Désolé Aucun résultats trouvée.</h1>
+  <br>
+</div>             
+
+ @endif
+
+              
 </div>
  </div>    
 

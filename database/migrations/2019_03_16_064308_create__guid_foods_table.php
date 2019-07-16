@@ -16,10 +16,9 @@ class CreateGuidFoodsTable extends Migration
         Schema::create('guid_foods', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('NumTel');
-            $table->string('restPic');
-            $table->string('menuPic');
-            $table->string('details'); 
+            $table->integer('Num');
+            $table->string('Image_menu');
+            $table->string('Image_rest');
             $table->integer('wilaya_id')->unsigned();
             $table->foreign('wilaya_id')->references('id')->on('wilayas'); 
             $table->timestamps();

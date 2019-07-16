@@ -71,13 +71,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: black;">
 
         <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/home') }}" style="color: black;">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-        </ul>
+        
         <!-- Collapsible content -->
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -146,13 +140,16 @@
 <div  style="background-image: url('/images/gr.jpg'); background-repeat: no-repeat; background-size: cover; height: 550px; width: 100%;"> </div>
   <!--Main layout-->
 <br>
-@if (count($elements) > 0 )
+@if (count($elements) > 0 ) 
+        <?php
+        $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+        ?>
 
 <h2 style="color: black;text-align: center;">On vous propose les meilleurs Restaurants</h2>
 
-@endif
+
   <main class="mt-5 pt-5">
-    <div class="container">@if (count($elements) > 0)
+    <div class="container">
         @foreach($elements as $element)
         
 
@@ -163,7 +160,7 @@
           <div class="col-lg-5 col-xl-4 mb-4">
             <!--Featured image-->
             <div class="view overlay rounded z-depth-1">
-              <img src="{{$element->image}}" class="img-fluid">
+              <img src="\storage\{{$element->image}}" class="img-fluid">
                <a href="{{ route('resto' , ['wilaya_id' => $wilaya_id , 'id'=> $element -> id ] )  }}" target="_blank">
                 <div class="mask rgba-white-slight"></div>
               </a></div>
@@ -208,11 +205,29 @@
 
               {{ $elements -> links() }}
 
-              @else
+              @elseif (count($all) == 0 )
+             <div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+               <h1>Désolé Aucun Restaurant à afficher pour le moment.</h1>
+               <h4>Aidez-nous à ajouter des informations pour cette page en cliquant
+                 <a id="contact" href="{{ route('home') }}/#ContactUs"> ICI</a>.</h3>
+                 <style>
+                    
+                    #contact:visited { color: #1C2331; }
+                    #contact {
+                      color : #1C2331;
+                      text-decoration : underline;
+                    }
+}
 
-              <h1>Désolé Aucun Restaurant disponible pour le moment.</h1>
-              <a> Aidez-nous à ajouter des informations pour cette page.</a>
-              <br>
+                   </style>
+               <br>
+             </div>
+             @elseif ((count($elements) == 0) && (sizeof($uriSegments) == 4 ))
+
+             <div class="vide" style="margin-left: 20%;margin-top: 3%;margin-bottom: 3%;">
+               <h1>Désolé Aucun résultats trouvée.</h1>
+               <br>
+             </div>             
 
               @endif
 
