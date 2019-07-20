@@ -28,4 +28,8 @@ class Boutique extends Model
         return $this->belongsTo('App\Classe');
     }
 
+    public function images(){
+        return $this->morphMany('App\Image' , 'imageable');
+    }
+
 }

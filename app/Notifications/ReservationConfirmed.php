@@ -41,8 +41,8 @@ class ReservationConfirmed extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('sahit mon frr reservation has been confirmed ')
-                    ->line('Thank you for using Guidech wow omg');
+                    ->line('Your reservation has been confirmed.')
+                    ->line('Thank you for using Guidech.');
     }
 
     /**

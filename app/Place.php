@@ -17,8 +17,8 @@ class Place extends Model
         return $this->belongsTo('App\Wilaya');
     }
 
-    public function Image(){
-        return $this->hasMany('App\Image');
+    public function images(){
+        return $this->morphMany('App\Image' , 'imageable');
     }
 
 }

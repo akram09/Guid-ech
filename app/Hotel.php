@@ -22,6 +22,10 @@ class Hotel extends Model
         return $this->belongsto('App\Wilaya');
     }
 
+    public function images(){
+        return $this->morphMany('App\Image' , 'imageable');
+    }
+
     
 }
 

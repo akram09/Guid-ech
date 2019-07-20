@@ -2,7 +2,7 @@
 
     <div class="logo">
         <a href="{{ route('admin.dashboard') }}" class="simple-text">
-            Guid-ech
+            <img src="{{ asset('images/GRIS.png') }}">
         </a>
     </div>
     <div class="sidebar-wrapper">
